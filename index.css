@@ -1,0 +1,28 @@
+body {
+	text-align: center;
+	background-img: url(photos/1.jpg);
+}
+
+#photos {
+	width: 900px;
+	margin: auto;
+	padding: 20px;
+	background: red;
+}
+
+#phot {
+	width: 500px;
+	height: 500px
+}
+#videos {
+	width: 900px;
+	margin: auto;
+	padding: 20px;
+	background: blue;
+}
+
+iframe {
+	width: 250px;
+	height: 150px; 
+	margin: 5px;
+}
