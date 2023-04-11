@@ -1,28 +1,58 @@
 body {
+	margin: 0;
+    height: 100%;
 	text-align: center;
-	background-img: url(photos/1.jpg);
+	background-image:  url(gif/stars.gif);
+	color: white;
 }
 
-#photos {
-	width: 900px;
-	margin: auto;
-	padding: 20px;
-	background: red;
+h1 {
+	color: red;
+}
+h2 {
+	color: pink;
 }
 
-#phot {
-	width: 500px;
-	height: 500px
+button {
+	background-color: black;
+	color: white;
 }
-#videos {
-	width: 900px;
-	margin: auto;
-	padding: 20px;
-	background: blue;
-}
+
 
 iframe {
-	width: 250px;
-	height: 150px; 
-	margin: 5px;
+	height: 450px;
+	width: 800px;
 }
+
+#tabMenu {
+	display: inline-block;
+
+}
+
+.tab {
+	display: inline-block;
+	margin-right: 35px;
+	margin-left: 35px;
+	cursor: url(forward.png), auto;
+}
+
+.button {
+	cursor: url(forward.png), auto;
+}
+
+.page {
+	display: none;
+}
+
+.caption {
+	display: block;
+}
+
+#photo {
+	height: 500px;
+	width: 500px;
+}
+
+
+
+

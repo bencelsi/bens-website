@@ -1,69 +1,146 @@
+<!-- 
+TODOS: 
+use '/photo' etc to navigate tabs
+support subsections - gif per subsection
+add writing
+add art 
+ad music
+ -->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang='en'>
 	<head>
-		<title>Ben Celsi's Website</title>
-		<style type="text/css">index.css</style>
-		<link href="index.css" type="text/css" rel="stylesheet" />
-		<script src="index.js" type="text/javascript"></script>
+		<title>Ben's Homepage!!!</title>
+		<style type='text/css'>index.css</style>
+		<link rel='icon' type='image/x-icon' href='favicon2.ico'>
+		<link href='index.css' type='text/css' rel='stylesheet' />
+		<script src='index.js' type='text/javascript'></script>
 	</head>
 	<body>
-		<h1>Ben Celsi's Website!!!</h1>
-		<div>Games
-			<div>
-				<a href="https://bencelsi.github.io/automata">Automata<a/>
+		<div style='display: inline-block' id='header'>
+			<div style='float: left'>
+				<img src='gif/disco.gif'/>
+				<img src='gif/disco.gif'/>
+				<img src='gif/disco.gif'/>
 			</div>
-			<div>
-				<a href="https://bencelsi.github.io/riven-tetris">Riven Tetris<a/>
+			<div style='float: left'>
+				<img src='gif/letters/B3.gif'/>
+				<img src='gif/letters/E4.gif'/>
+				<img src='gif/letters/N3.gif'/>
+				<img src='gif/letters/apostrophe.gif'/>
+				<img src='gif/letters/S.gif'/>
+				<span class='caption' > <h2>H  O  M  E  P  A  G  E ! ! !</h2></span>
 			</div>
-			<div>
-				<a href="https://bencelsi.github.io/apartment">Good Vibes<a/>
-			</div>
-			<div>
-				<a href="https://bencelsi.github.io/dead-end">Dead End<a/>
+			<div style='float: right'>
+				<img src='gif/disco.gif'/>
+				<img src='gif/disco.gif'/>
+				<img src='gif/disco.gif'/>
 			</div>
 		</div>
-		<div>
-			<img src="gifs/skull.gif"/>
+		<div></div>
+		<div id='tabMenu'>
+			<div class='tab' page='music'>
+				<img src='gif/guitar.gif'/>
+				<span class='caption'>Music</span>
+			</div>
+			<div class='tab' page='games'>
+				<img src='gif/joystick.gif'/>
+				<span class='caption'>Games</span>
+			</div>
+			<div class='tab' page='art' >
+				<img src='gif/palette.gif'/>
+				<span class='caption'>Art</span>
+			</div>
+			<div class='tab' page='video' >
+				<img src='gif/TV.gif'/>
+				<span class='caption'>Video</span>
+			</div>
+			<div class='tab' page='photos' >
+				<img src='gif/camera.gif'/>
+				<span class='caption'>Photo</span>
+			</div>
+			<div class='tab' page='writing' >
+				<img src='gif/book.gif'/>
+				<span class='caption'>Writing</span>
+			</div>
 		</div>
 
-		<div id = photos>
-			<h2>PHOTO</h2>
-			<img id=photo src="photos/1.jpg"/>
+		<!-- MUSIC -->
+		<div class=page id=music>
+			<h1>Music<h1>
+				<!-- <div>
+					<img src='album.png' style='width: 400px; height: 400px;'>
+				</div> -->
+			<img src='gif/construction.gif'>
+		</div>
+
+		<!-- GAMES -->
+		<div class=page id=games>
+			<h1>Games</h1>
+			<div id=gameLinks>
+				<h2><a href='https://bencelsi.github.io/riven-tetris'>Tetriven</a></h2>
+				<!-- <h2><a href='https://bencelsi.github.io/automata'>Catan-o-Rama</a></h2>
+				<h2><a href='https://bencelsi.github.io/automata'>Nabanagrams</a></h2> -->
+				<h2><a href='https://bencelsi.github.io/automata'>Automata</a></h2>
+				<h2><a href='https://bencelsi.github.io/apartment-tour'>Apartment Tour</a></h2>
+				<h2><a href='https://www.atmos.washington.edu/~dargan/EarthGamesUW/Drop.html'>Drop</a></h2>
+				<h2><a href='https://scratch.mit.edu/projects/1448075/fullscreen'>Griven</a></h2>
+			</div>
+			<div>
+				See source code <a href=' https://github.com/bencelsi'>here</a>
+			</div>
+			<div>
+				Old Scratch projects are
+				<a href='https://scratch.mit.edu/search/projects?q=bentheneighbor'>here</a> and 
+				<a href='https://scratch.mit.edu/search/projects?q=bentheneighborbonus'>here</a>
+			</div>
 		</div>
 
 
-		<div id=videos>
-			<h2>VIDEO</h2>
-			<iframe
-				src="https://www.youtube.com/embed/LaAjKX-p5hk">
-			</iframe>
-			<iframe
-				src="https://www.youtube.com/embed/Tdb0E7uegyc">
-			</iframe>
-			<iframe
-				src="https://www.youtube.com/embed/aqviXXbtiUg">
-			</iframe>
-			<iframe
-				src="https://www.youtube.com/embed/1l3XTtqRtTg">
-			</iframe>
-			<iframe
-				src="https://www.youtube.com/embed/W-ofqDuES7U">
-			</iframe>
-			<iframe
-				src="https://www.youtube.com/embed/Es_YxQToays">
-			</iframe>
-			<iframe
-				src="https://www.youtube.com/embed/0o0ZN87-Yj4">
-			</iframe>
-			<iframe
-				src="https://www.youtube.com/embed/tEFIzkKNBFs">
-			</iframe>
-			<iframe
-				src="https://www.youtube.com/embed/dtdh8s74GI4">
-			</iframe>
+		<!-- VIDEO -->
+		<div class=page id=video>
+			<h1>Video</h1>
+			<div>
+				<img src='gif/arrowl.gif' class=button id='videoLeft'/>
+				<iframe id=videoScreen src='https://www.youtube.com/embed/LaAjKX-p5hk'></iframe>
+				<img src='gif/arrowr.gif' class=button id='videoRight'/ >
+			</div>
+			<img class=button id=videoRandom src='gif/random.gif'/>
+		</div>
+
+
+		<!-- ART -->
+		<div class=page id=art>
+			<h1>Art<h1>
+			<img src='gif/construction.gif'>
+		</div>
+		
+
+		<!-- PHOTO -->
+		<div class=page id=photos>
+			<h1>Photo</h1>
+			<div>
+				<img src='gif/arrowl.gif' class=button id='photoLeft'/>
+				<img id=photo src='photos/0.jpg'/>
+				<img src='gif/arrowr.gif' class=button id='photoRight'/ >
+			</div>
+			<img class=button id=photoRandom src='gif/random.gif'/>
+		</div>
+
+
+		<!-- WRITING -->
+		<div class=page id=writing>
+			<h1>Writing</h1>
+			<img src='gif/construction.gif'>
 		</div>
 	</body>
+
+	<footer>
+		<!-- <img src='gif/roses.gif'>
+		 --><!-- 
+		 <div>
+			<img src='gif/divider.gif'/>
+		</div> -->
+	</footer>
 	
 
 </html>
