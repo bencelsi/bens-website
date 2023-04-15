@@ -1,28 +1,28 @@
 (function(){
 	window.onload = function() {
 
-		playSound('joeloop', .7, true, 'mp3')
+		//playSound('joeloop', .7, true, 'mp3')
 		
 		// MUSIC LOGIC
-		let musicPlaying = false
-		let music = null
-		get('header').onclick = () => {
-			if (music == null) {
-				music = new Audio()
-				music.src = 'aud/joeloop.wav'
-				music.onended = function(){
-					music.play();
-				}
-				music.play();
-			} 
-			if (musicPlaying) {
-				music.volume = 0
-				musicPlaying = false
-			} else {	
-				music.volume = .3
-				musicPlaying = true
-			}	
-		}
+		// let musicPlaying = false
+		// let music = null
+		// get('header').onclick = () => {
+		// if (music == null) {
+		// 		music = new Audio()
+		// 		music.src = 'aud/joeloop.wav'
+		// 		music.onended = function(){
+		// 			music.play();
+		// 		}
+		// 		music.play();
+		// 	} 
+		// 	if (musicPlaying) {
+		// 		music.volume = 0
+		// 		musicPlaying = false
+		// 	} else {	
+		// 		music.volume = .3
+		// 		musicPlaying = true
+		// 	}	
+		// }
 
 		// TAB LOGIC
 		var tabs = getAll('tab')
@@ -51,7 +51,7 @@
 			'https://www.youtube.com/embed/dtdh8s74GI4', // Video Lab Detritus
 			'https://www.youtube.com/embed/5qnW6m7BPpI', // Snakehips
 			'https://www.youtube.com/embed/NzcUOxN2IuM', // Champagne Music
-			'https://www.youtube.com/watch/Bne3uCHS-Bw', // ABBA SHREDS
+			'https://www.youtube.com/embed/Bne3uCHS-Bw', // ABBA SHREDS
 			'https://www.youtube.com/embed/emlw9bLSbcA', // Dream A Little Dream Of God
 			'https://www.youtube.com/embed/Wcy7xzgBQis', // Everything Right is Wrong Again
 			'https://www.youtube.com/embed/eIqaIGZZzLg', // Intersections

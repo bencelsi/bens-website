@@ -9,6 +9,7 @@ body {
 h1 {
 	color: red;
 }
+
 h2 {
 	color: pink;
 }
@@ -18,15 +19,21 @@ button {
 	color: white;
 }
 
-
 iframe {
 	height: 450px;
 	width: 800px;
 }
 
-#tabMenu {
-	display: inline-block;
 
+a:link, a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+  background-color: transparent;
 }
 
 .tab {
@@ -46,6 +53,10 @@ iframe {
 
 .caption {
 	display: block;
+}
+
+#tabMenu {
+	display: inline-block;
 }
 
 #photo {
