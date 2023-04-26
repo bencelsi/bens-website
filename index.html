@@ -1,20 +1,27 @@
 <!-- 
-TODOS: 
-use '/photo' etc to navigate tabs
+    ____            _          _       __     __         _ __     
+   / __ )___  ____ ( )_____   | |     / /__  / /_  _____(_) /____ 
+  / __  / _ \/ __ \|// ___/   | | /| / / _ \/ __ \/ ___/ / __/ _ \
+ / /_/ /  __/ / / / (__  )    | |/ |/ /  __/ /_/ (__  ) / /_/  __/
+/_____/\___/_/ /_/ /____/     |__/|__/\___/_.___/____/_/\__/\___/ 
+                                                                  
+(ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
+
+TODOS:
+use '/photo' etc to navigate tabs?
 support subsections - gif per subsection
 add writing
 add art 
-ad music
+and music
 custom domain?
 scale down disco balls
+-->
 
- -->
 <!DOCTYPE html>
 <html lang='en'>
 	<head>
-		<title>Ben's Homepage!!!</title>
-		<style type='text/css'>index.css</style>
-		<link rel='icon' type='image/x-icon' href='favicon2.ico'>
+		<title style="color: white">Ben's Website!!!</title>
+		<link rel='icon' type='image/x-icon' href='ico/favicon.ico'>
 		<script src='index.js' type='text/javascript'></script>
 <style type="text/css">
 	body {
@@ -26,11 +33,11 @@ scale down disco balls
 	}
 
 	h1 {
-		color: red;
+		text-shadow : 0 0 32px black;
 	}
 
 	h2 {
-		color: pink;
+		color: white;
 	}
 
 	button {
@@ -42,7 +49,6 @@ scale down disco balls
 		height: 450px;
 		width: 800px;
 	}
-
 
 	a:link, a:visited {
 	  color: pink;
@@ -88,9 +94,11 @@ scale down disco balls
 	<body>
 		<div style='display: inline-block' id='header'>
 			<div style='float: left'>
+				<!-- <img src='gif/disco.gif'/>
 				<img src='gif/disco.gif'/>
-				<img src='gif/disco.gif'/>
-				<img src='gif/disco.gif'/>
+				<img src='gif/disco.gif'/> -->
+
+				<img src='gif/earth.gif'/> 
 			</div>
 			<div style='float: left'>
 				<img src='gif/letters/B.gif'/>
@@ -98,31 +106,32 @@ scale down disco balls
 				<img src='gif/letters/N.gif'/>
 				<img src='gif/letters/apostrophe.gif'/>
 				<img src='gif/letters/S.gif'/>
-				<span class='caption' > <h2>H  O  M  E  P  A  G  E ! ! !</h2></span>
+				<span class='caption' > <h2>W E B S I T E ! ! !</h2></span>
 			</div>
 			<div style='float: right'>
+				<img src='gif/earth.gif'/> 
+			<!--<img src='gif/disco.gif'/>
 				<img src='gif/disco.gif'/>
-				<img src='gif/disco.gif'/>
-				<img src='gif/disco.gif'/>
+				<img src='gif/disco.gif'/> -->
 			</div>
 		</div>
 		<div></div>
 		<div id='tabMenu'>
-			<div class='tab' page='music'>
-				<img src='gif/guitar.gif'/>
-				<span class='caption'>Music</span>
-			</div>
 			<div class='tab' page='games'>
 				<img src='gif/joystick.gif'/>
 				<span class='caption'>Games</span>
 			</div>
-			<div class='tab' page='art' >
-				<img src='gif/palette.gif'/>
-				<span class='caption'>Art</span>
-			</div>
 			<div class='tab' page='video' >
 				<img src='gif/TV.gif'/>
 				<span class='caption'>Video</span>
+			</div>
+			<div class='tab' page='art'>
+				<img src='gif/palette.gif'/>
+				<span class='caption'>Art</span>
+			</div>
+			<div class='tab' page='music'>
+				<img src='gif/guitar.gif'/>
+				<span class='caption'>Music</span>
 			</div>
 			<div class='tab' page='photos' >
 				<img src='gif/camera.gif'/>
@@ -135,33 +144,19 @@ scale down disco balls
 		</div>
 
 		<!-- MUSIC -->
-		<div class=page id=music>
-			<h1>Music<h1>
-			<!-- <div>
-				
-				<div>
-					<img src='album.png' style='width: 400px; height: 400px;'>
-				</div>
-				<div>
-					<audio controls src="aud/joeloop.wav">
-					<audio controls src="aud/dont_get_me_down.mp3">
-				</div>
-			</div>
- -->
-			<img src='gif/construction.gif'>
-			</div>
+		
 
 		<!-- GAMES -->
 		<div class=page id=games>
-			<h1>Games</h1>
+			<h1 style="color: green">Games</h1>
 			<div id=gameLinks>
-				<h2><a href='https://bencelsi.github.io/riven-tetris'>Tetriven</a></h2>
+				<h2><a href='https://bencelsi.github.io/tetriven'>Tetriven</a></h2>
 				<h2><a href='https://bencelsi.github.io/catan-o-rama/'>Catan-o-Rama!</a></h2>
 				<!-- <h2><a href='https://bencelsi.github.io/automata'>Nabanagrams</a></h2> -->
 				<h2><a href='https://bencelsi.github.io/automata'>Automata</a></h2>
 				<h2><a href='https://bencelsi.github.io/apartment-tour'>Apartment Tour</a></h2>
 				<h2><a href='https://www.atmos.washington.edu/~dargan/EarthGamesUW/Drop.html'>Drop</a></h2>
-				<h2><a href='https://scratch.mit.edu/projects/1448075/fullscreen'>Griven</a></h2>
+				<h2><a href='https://scratch.mit.edu/projects/1448075/fullscreen'>Griven (2013)</a></h2>
 			</div>
 			<div>
 				See source code <a href='https://github.com/bencelsi'>here</a>
@@ -175,7 +170,7 @@ scale down disco balls
 
 		<!-- VIDEO -->
 		<div class=page id=video>
-			<h1>Video</h1>
+			<h1 style="color: blue;">Video</h1>
 			<div>
 				<img src='gif/arrowl.gif' class=button id='videoLeft'/>
 				<iframe id=videoScreen src='https://www.youtube.com/embed/LaAjKX-p5hk'></iframe>
@@ -186,13 +181,28 @@ scale down disco balls
 
 		<!-- ART -->
 		<div class=page id=art>
-			<h1>Art<h1>
+			<h1 style="color: purple;">Art<h1>
+			<img src='gif/construction.gif'>
+		</div>
+
+		<div class=page id=music>
+			<h1 style="color: red;">Music<h1>
+			<!-- <div>
+				<div>
+					<img src='album.png' style='width: 400px; height: 400px;'>
+				</div>
+				<div>
+					<audio controls src="aud/joeloop.wav">
+					<audio controls src="aud/dont_get_me_down.mp3">
+				</div>
+			</div>
+ 			-->
 			<img src='gif/construction.gif'>
 		</div>
 		
 		<!-- PHOTO -->
 		<div class=page id=photos>
-			<h1>Photo</h1>
+			<h1 style="color: orange;">Photo</h1>
 			<div>
 				<img src='gif/arrowl.gif' class=button id='photoLeft'/>
 				<img id=photo src='photos/0.jpg'/>
@@ -203,11 +213,14 @@ scale down disco balls
 
 		<!-- WRITING -->
 		<div class=page id=writing>
-			<h1>Writing</h1>
+			<h1 style="color: yellow;">Writing</h1>
+<!-- 
+			<h2><a href='https://bencelsi.github.io/writing/great-apes.html'>Great Apes</a></h2>
+			<h2><a href='https://bencelsi.github.io/writing/christian-bok.html'>Christian Bok: A Critic's Notations on His Book</a></h2>
+			<h2><a href='https://bencelsi.github.io/writing/youre-little.html'>You're Little</a></h2>
+ -->
 			<img src='gif/construction.gif'>
 		</div>
-
-
 
 
 <!--  				-->
@@ -216,8 +229,8 @@ scale down disco balls
 <!--  				-->
 <!-- 				-->
 <script type="text/javascript">
-			//playSound('joeloop', .7, true, 'mp3')
-		
+	
+	//playSound('joeloop', .7, true, 'mp3')	
 	// MUSIC LOGIC
 	// let musicPlaying = false
 	// let music = null
