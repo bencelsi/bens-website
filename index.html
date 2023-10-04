@@ -19,362 +19,584 @@ scale down disco balls
 
 <!DOCTYPE html>
 <html lang='en'>
-	<head>
-		<title style="color: white">Ben's Website!!!</title>
-		<link rel='icon' type='image/x-icon' href='ico/favicon.ico'>
-		<script src='index.js' type='text/javascript'></script>
-<style type="text/css">
-	body {
-		margin: 0;
-	    height: 100%;
-		text-align: center;
-		background-image:  url(gif/stars.gif);
-		color: white;
-	}
-
-	h1 {
-		text-shadow : 0 0 32px black;
-	}
-
-	h2 {
-		color: white;
-	}
-
-	button {
-		background-color: black;
-		color: white;
-	}
-
-	iframe {
-		height: 450px;
-		width: 800px;
-	}
-
-	a:link, a:visited {
-	  color: pink;
-	  background-color: transparent;
-	  text-decoration: none;
-	}
-
-	a:hover {
-	  color: orange;
-	  background-color: transparent;
-	}
-
-	.tab {
-		display: inline-block;
-		margin-right: 35px;
-		margin-left: 35px;
-		cursor: url(forward.png), auto;
-	}
-
-	.button {
-		cursor: url(forward.png), auto;
-	}
-
-	.page {
-		display: none;
-	}
-
-	.caption {
-		display: block;
-	}
-
-	#tabMenu {
-		display: inline-block;
-	}
-
-	#photo {
-		height: 500px;
-		width: 500px;
-	}
-
-</style>
-	</head>
-	<body>
-		<div style='display: inline-block' id='header'>
-			<div style='float: left'>
-				<!-- <img src='gif/disco.gif'/>
-				<img src='gif/disco.gif'/>
-				<img src='gif/disco.gif'/> -->
-
-				<img src='gif/earth.gif'/> 
-			</div>
-			<div style='float: left'>
-				<img src='gif/letters/B.gif'/>
-				<img src='gif/letters/E.gif'/>
-				<img src='gif/letters/N.gif'/>
-				<img src='gif/letters/apostrophe.gif'/>
-				<img src='gif/letters/S.gif'/>
-				<span class='caption' > <h2>W E B S I T E ! ! !</h2></span>
-			</div>
-			<div style='float: right'>
-				<img src='gif/earth.gif'/> 
-			<!--<img src='gif/disco.gif'/>
-				<img src='gif/disco.gif'/>
-				<img src='gif/disco.gif'/> -->
-			</div>
-		</div>
-		<div></div>
-		<div id='tabMenu'>
-			<div class='tab' page='games'>
-				<img src='gif/joystick.gif'/>
-				<span class='caption'>Games</span>
-			</div>
-			<div class='tab' page='video' >
-				<img src='gif/TV.gif'/>
-				<span class='caption'>Video</span>
-			</div>
-			<div class='tab' page='art'>
-				<img src='gif/palette.gif'/>
-				<span class='caption'>Art</span>
-			</div>
-			<div class='tab' page='music'>
-				<img src='gif/guitar.gif'/>
-				<span class='caption'>Music</span>
-			</div>
-			<div class='tab' page='photos' >
-				<img src='gif/camera.gif'/>
-				<span class='caption'>Photo</span>
-			</div>
-			<div class='tab' page='writing' >
-				<img src='gif/book.gif'/>
-				<span class='caption'>Writing</span>
-			</div>
-		</div>
-
-		<!-- MUSIC -->
-		
-
-		<!-- GAMES -->
-		<div class=page id=games>
-			<h1 style="color: green">Games</h1>
-			<div id=gameLinks>
-				<h2><a href='https://bencelsi.github.io/tetriven'>Tetriven</a></h2>
-				<h2><a href='https://bencelsi.github.io/catan-o-rama/'>Catan-o-Rama!</a></h2>
-				<!-- <h2><a href='https://bencelsi.github.io/automata'>Nabanagrams</a></h2> -->
-				<h2><a href='https://bencelsi.github.io/automata'>Automata</a></h2>
-				<h2><a href='https://bencelsi.github.io/apartment-tour'>Apartment Tour</a></h2>
-				<h2><a href='https://www.atmos.washington.edu/~dargan/EarthGamesUW/Drop.html'>Drop</a></h2>
-				<h2><a href='https://scratch.mit.edu/projects/1448075/fullscreen'>Griven</a></h2>
-			</div>
-			<!-- <div>
-				See source code <a href='https://github.com/bencelsi'>here</a>
-			</div>
-			<div>
-				Old Scratch projects are
-				<a href='https://scratch.mit.edu/search/projects?q=bentheneighbor'>here</a> and 
-				<a href='https://scratch.mit.edu/search/projects?q=bentheneighborbonus'>here</a>
-			</div> -->
-		</div>
-
-		<!-- VIDEO -->
-		<div class=page id=video>
-			<h1 style="color: blue;">Video</h1>
-			<div>
-				<img src='gif/arrowl.gif' class=button id='videoLeft'/>
-				<iframe id=videoScreen src='https://www.youtube.com/embed/LaAjKX-p5hk'></iframe>
-				<img src='gif/arrowr.gif' class=button id='videoRight'/ >
-			</div>
-			<img class=button id=videoRandom src='gif/random.gif'/>
-		</div>
-
-		<!-- ART -->
-		<div class=page id=art>
-			<h1 style="color: purple;">Art<h1>
-			<img src='gif/construction.gif'>
-		</div>
-
-		<div class=page id=music>
-			<h1 style="color: red;">Music<h1>
-			<!-- <div>
-				<div>
-					<img src='album.png' style='width: 400px; height: 400px;'>
-				</div>
-				<div>
-					<audio controls src="aud/joeloop.wav">
-					<audio controls src="aud/dont_get_me_down.mp3">
-				</div>
-			</div>
- 			-->
-			<img src='gif/construction.gif'>
-		</div>
-		
-		<!-- PHOTO -->
-		<div class=page id=photos>
-			<h1 style="color: orange;">Photo</h1>
-			<div>
-				<img src='gif/arrowl.gif' class=button id='photoLeft'/>
-				<img id=photo src='photos/0.jpg'/>
-				<img src='gif/arrowr.gif' class=button id='photoRight'/ >
-			</div>
-			<img class=button id=photoRandom src='gif/random.gif'/>
-		</div>
-
-		<!-- WRITING -->
-		<div class=page id=writing>
-			<h1 style="color: yellow;">Writing</h1>
-<!-- 
-			<h2><a href='https://bencelsi.github.io/writing/great-apes.html'>Great Apes</a></h2>
-			<h2><a href='https://bencelsi.github.io/writing/christian-bok.html'>Christian Bok: A Critic's Notations on His Book</a></h2>
-			<h2><a href='https://bencelsi.github.io/writing/youre-little.html'>You're Little</a></h2>
- -->
-			<img src='gif/construction.gif'>
-		</div>
-
-
-<!--  				-->
-<!--  				-->
-<!-- 	SCRIPT		-->
-<!--  				-->
-<!-- 				-->
-<script type="text/javascript">
-	
-	//playSound('joeloop', .7, true, 'mp3')	
-	// MUSIC LOGIC
-	// let musicPlaying = false
-	// let music = null
-	// get('header').onclick = () => {
-	// if (music == null) {
-	// 		music = new Audio()
-	// 		music.src = 'aud/joeloop.wav'
-	// 		music.onended = function(){
-	// 			music.play();
-	// 		}
-	// 		music.play();
-	// 	} 
-	// 	if (musicPlaying) {
-	// 		music.volume = 0
-	// 		musicPlaying = false
-	// 	} else {	
-	// 		music.volume = .3
-	// 		musicPlaying = true
-	// 	}	
-	// }
-
-	// TAB LOGIC
-	var tabs = getAll('tab')
-	Array.from(tabs).forEach(
-		(tab, index, array) => {
-		tab.onclick = (tab) => {
-			playSound('click2', .7)
-			hidePages()
-			page = get(event.target.parentElement.getAttribute('page'))
-			page.style.display = 'inline'
+<head>
+	<title style="color: white">Ben's Website!!!</title>
+	<link rel='icon' type='image/x-icon' href='ico/favicon.ico'>
+	<!------------------------------------------------>
+	<!-- S T Y L E -->
+	<!------------------------------------------------>
+	<style type="text/css">
+		body {
+			margin: 0;
+			height: 100%;
+			text-align: center;
+			background-image:  url(gif/stars.gif);
+			color: white;
 		}
-	})
 
-	// VIDEO LOGIC
-	let videos = [
-		'https://www.youtube.com/embed/LaAjKX-p5hk', // One Second a Day
-		'https://www.youtube.com/embed/v_5L8a_xal0', // Dad, Listen
-		'https://www.youtube.com/embed/7_Iday6w0kI', // Casiopea Forever
-		'https://www.youtube.com/embed/Tdb0E7uegyc', // I Yam What I Yam
-		'https://www.youtube.com/embed/aqviXXbtiUg', // California Girls
-		'https://www.youtube.com/embed/1l3XTtqRtTg', // Nose
-		'https://www.youtube.com/embed/W-ofqDuES7U', // Cat Reacts
-		'https://www.youtube.com/embed/Es_YxQToays', // Ok, Let's Go Ahead And Get Started
-		'https://www.youtube.com/embed/0o0ZN87-Yj4', // I Am A Robot
-		'https://www.youtube.com/embed/tEFIzkKNBFs', // University of Washington (Opening Credits)
-		'https://www.youtube.com/embed/dtdh8s74GI4', // Video Lab Detritus
-		'https://www.youtube.com/embed/5qnW6m7BPpI', // Snakehips
-		'https://www.youtube.com/embed/NzcUOxN2IuM', // Champagne Music
-		'https://www.youtube.com/embed/Bne3uCHS-Bw', // ABBA SHREDS
-		'https://www.youtube.com/embed/emlw9bLSbcA', // Dream A Little Dream Of God
-		'https://www.youtube.com/embed/Wcy7xzgBQis', // Everything Right is Wrong Again
-		'https://www.youtube.com/embed/eIqaIGZZzLg', // Intersections
-	]
-	shuffle(videos)
-	let videoIndex = 0
-	get('videoScreen').src = videos[videoIndex]
-	get('videoRight').onclick = () => {
-		playSound('click', .5)
-		videoIndex = (videoIndex == videos.length - 1 ? 0 : videoIndex + 1)
-		get('videoScreen').src = videos[videoIndex]
-	}
-	get('videoLeft').onclick = () => {
-		playSound('click', .5)
-		videoIndex = (videoIndex == 0 ? videos.length - 1 : videoIndex - 1)
-		get('videoScreen').src = videos[videoIndex]
-	}
-	get('videoRandom').onclick = () => {
-		playSound('trill', .5)
-		videoIndex = random(0, videos.length - 1)
-		get('videoScreen').src = videos[videoIndex]
-	}
+		h1 { text-shadow : 0 0 32px black; }
 
-	// PHOTO LOGIC
-	let maxPhoto = 201
-	let photos = [...Array(maxPhoto + 1).keys()]
-	shuffle(photos)
-	let photoIndex = 0
-	get('photo').src = 'photos/' + photos[photoIndex] + '.jpeg'
-	get('photoRight').onclick = () => {
-		playSound('click', .5)
-		photoIndex = (photoIndex == maxPhoto ? 0 : photoIndex + 1)
-		get('photo').src = 'photos/' + photos[photoIndex] + '.jpeg'
-	}
-	get('photoLeft').onclick = () => {
-		playSound('click', .5)
-		photoIndex = (photoIndex == 0 ? maxPhoto : photoIndex - 1)
-		get('photo').src = 'photos/' + photos[photoIndex] + '.jpeg'
-	}
-	get('photoRandom').onclick = () => {
-		playSound('trill', .5)
-		photoIndex = random(0, maxPhoto)
-		get('photo').src = 'photos/' + photos[photoIndex] + '.jpeg'
-	}
+		h2 { color: white; }
 
+		button {
+			background-color: black;
+			color: white;
+		}
 
-		
-	// HELPERS
-	function playSound(name, volume = 1, format='.wav') {
-		audio = new Audio();
-		audio.volume = volume
-		//audio.playbackRate = 1.2
-		audio.src = 'aud/' + name + format
-		
-		audio.play();
-	}
+		iframe {
+			height: 450px;
+			width: 800px;
+		}
+
+		a:link, a:visited {
+			color: pink;
+			background-color: transparent;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: orange;
+			background-color: transparent;
+		}
+
+		.tab {
+			display: inline-block;
+			margin-right: 35px;
+			margin-left: 35px;
+			cursor: url(forward.png), auto;
+		}
+
+		.button {
+			cursor: url(forward.png), auto;
+		}
+
+		.page {
+			display: none;
+		}
+
+		.caption {
+			display: block;
+		}
+
+		#tabMenu {
+			display: inline-block;
+		}
+
+		#photoScreen {
+			height: 500px;
+			width: 500px;
+		}
+	</style>
+</head>
 	
-	function hidePages() {
-		pages = getAll('page')
-		Array.from(pages).forEach(
-			(page) => {
-				page.style.display = 'none'
+<body>
+	<!------------------------------------------------>
+	<!-- H E L P E R   S C R I P T S -->
+	<!------------------------------------------------>
+	<script> 
+		function getAll(clazz) {
+			return document.getElementsByClassName(clazz)
+		}
+
+		function get(id) {
+			return document.getElementById(id)
+		}
+
+		function random(min, max) { 
+			return (min + (Math.floor(Math.random() * (max - min))))
+		}
+
+		function shuffle(array) {
+			for (i = 0; i < array.length; i++) {
+				randomIndex = random(i, array.length - 1)
+				temp = array[i]
+				array[i] = array[randomIndex]
+				array[randomIndex] = temp
 			}
-		)	
-	}
-
-	function shuffle(array) {
-		for (i = 0; i < array.length; i++) {
-			randomIndex = random(i, array.length - 1)
-			temp = array[i]
-			array[i] = array[randomIndex]
-			array[randomIndex] = temp
 		}
-	}
+		
+		function playSound(name, volume = 1, format='.wav') {
+			audio = new Audio();
+			audio.volume = volume
+			audio.src = 'aud/' + name + format
+			audio.play();
+		}
+		
+		function hidePages() {
+			pages = getAll('page')
+			Array.from(pages).forEach(
+				(page) => {
+					page.style.display = 'none'
+				}
+			)
+		}
 
-	function random(min, max) { 
-		return (min + (Math.floor(Math.random() * (max - min))))
-	}
+		function randomButton(value, maxValue) {
+			let result = random(0, maxValue)
+			while (result == value) {
+				result = random(0, maxValue)
+			}
+			return result
+		}
 
-	function getAll(clazz) {
-		return document.getElementsByClassName(clazz)
-	}
+		function increment(value, maxValue) {
+			return value == maxValue ? 0 : value + 1;
+		}
 
-	function get(id) {
-		return document.getElementById(id)
-	}
+		function decrement(value, maxValue) {
+			return value == 0 ? maxValue : value - 1;
+		}
 
-</script>
+		function getButtonFunction(index, indexFunction, display, content, folder = null) {
+			return () => {
+				playSound('click', .5)
+				index[0] = indexFunction(index[0], content.length - 1)
+				if (folder == null) {
+					display.src = content[index[0]]
+				} else {
+					display.src = folder + '/' + content[index[0]]
+				}
+			}
+		}
+	</script>
+
+	<!------------------------------------------------>
+	<!-- H E A D I N G -->
+	<!------------------------------------------------>
+	<div style='display: inline-block' id='header'>
+		<div style='float: left'>
+			<!-- <img src='gif/disco.gif'/>
+			<img src='gif/disco.gif'/>
+			<img src='gif/disco.gif'/> -->
+			<img src='gif/earth.gif'/>
+			<img src='gif/earth.gif'/>
+			<img src='gif/earth.gif'/> 
+		</div>
+		<div style='float: left'>
+			<img src='gif/letters/B.gif'/>
+			<img src='gif/letters/E.gif'/>
+			<img src='gif/letters/N.gif'/>
+			<img src='gif/letters/apostrophe.gif'/>
+			<img src='gif/letters/S.gif'/>
+			<span class='caption' > <h2>W E B S I T E ! ! !</h2></span>
+		</div>
+		<div style='float: right'>
+			<img src='gif/earth.gif'/>
+			<img src='gif/earth.gif'/>
+			<img src='gif/earth.gif'/>
+		<!--<img src='gif/disco.gif'/>
+			<img src='gif/disco.gif'/>
+			<img src='gif/disco.gif'/> -->
+		</div>
+	</div>
+
+	<!------------------------------------------------>
+	<!-- T A B S -->
+	<!------------------------------------------------>
+	<div id='tabMenu'>
+		<div class='tab' page='games'>
+			<img src='gif/joystick.gif'/>
+			<span class='caption'>Games</span>
+		</div>
+		<div class='tab' page='video' >
+			<img src='gif/TV.gif'/>
+			<span class='caption'>Video</span>
+		</div>
+		<div class='tab' page='art'>
+			<img src='gif/palette.gif'/>
+			<span class='caption'>Art</span>
+		</div>
+		<div class='tab' page='music'>
+			<img src='gif/guitar.gif'/>
+			<span class='caption'>Music</span>
+		</div>
+		<div class='tab' page='photo' >
+			<img src='gif/camera.gif'/>
+			<span class='caption'>Photo</span>
+		</div>
+		<div class='tab' page='writing' >
+			<img src='gif/book.gif'/>
+			<span class='caption'>Writing</span>
+		</div>
+	</div>
+	<script>
+		let tabs = getAll('tab')
+		Array.from(tabs).forEach(
+			(tab, index, array) => {
+				tab.onclick = (tab) => {
+					playSound('click2', .7)
+					hidePages()
+					page = get(event.target.parentElement.getAttribute('page'))
+					page.style.display = 'inline'
+				}
+			}
+		)
+	</script>
+	
+	<!------------------------------------------------>
+	<!-- G A M E S -->
+	<!------------------------------------------------>
+	<div class=page id=games>
+		<h1 style="color: green">Games</h1>
+		<div id=gameLinks>
+			<h2><a href='https://bencelsi.github.io/tetriven'>Tetriven</a></h2>
+			<h2><a href='https://bencelsi.github.io/catan-o-rama/'>Catan-o-Rama!</a></h2>
+			<!-- <h2><a href='https://bencelsi.github.io/automata'>Nabanagrams</a></h2> -->
+			<h2><a href='https://bencelsi.github.io/automata'>Automata</a></h2>
+			<h2><a href='https://bencelsi.github.io/apartment-tour'>Apartment Tour</a></h2>
+			<h2><a href='https://www.atmos.washington.edu/~dargan/EarthGamesUW/Drop.html'>Drop</a></h2>
+			<h2><a href='https://scratch.mit.edu/projects/1448075/fullscreen'>Griven	</a></h2>
+		</div>
+		<!-- <div>
+			See source code <a href='https://github.com/bencelsi'>here</a>
+		</div>
+		<div>
+			Old Scratch projects are
+			<a href='https://scratch.mit.edu/search/projects?q=bentheneighbor'>here</a> and 
+			<a href='https://scratch.mit.edu/search/projects?q=bentheneighborbonus'>here</a>
+		</div> -->
+	</div>
+
+	<!------------------------------------------------>
+	<!-- V I D E O -->
+	<!------------------------------------------------>
+	<div class=page id=video>
+		<h1 style="color: blue;">Video</h1>
+		<div>
+			<img src='gif/arrowl.gif' class=button id='videoLeft'/>
+			<iframe id=videoScreen src='https://www.youtube.com/embed/LaAjKX-p5hk'></iframe>
+			<img src='gif/arrowr.gif' class=button id='videoRight'/ >
+		</div>
+		<img class=button id=videoRandom src='gif/random.gif'/>
+	</div>
+	<script>
+		let videos = [
+			'https://www.youtube.com/embed/v_5L8a_xal0', // Dad, Listen
+			'https://www.youtube.com/embed/LaAjKX-p5hk', // One Second a Day
+			'https://www.youtube.com/embed/7_Iday6w0kI', // Casiopea Forever
+			'https://www.youtube.com/embed/Tdb0E7uegyc', // I Yam What I Yam
+			'https://www.youtube.com/embed/aqviXXbtiUg', // California Girls
+			'https://www.youtube.com/embed/1l3XTtqRtTg', // Nose
+			'https://www.youtube.com/embed/W-ofqDuES7U', // Cat Reacts
+			'https://www.youtube.com/embed/Es_YxQToays', // Ok, Let's Go Ahead And Get Started
+			'https://www.youtube.com/embed/0o0ZN87-Yj4', // I Am A Robot
+			'https://www.youtube.com/embed/tEFIzkKNBFs', // University of Washington (Opening Credits)
+			'https://www.youtube.com/embed/dtdh8s74GI4', // Video Lab Detritus
+			'https://www.youtube.com/embed/5qnW6m7BPpI', // Snakehips
+			'https://www.youtube.com/embed/NzcUOxN2IuM', // Champagne Music
+			'https://www.youtube.com/embed/Bne3uCHS-Bw', // ABBA SHREDS
+			'https://www.youtube.com/embed/emlw9bLSbcA', // Dream A Little Dream Of God
+			'https://www.youtube.com/embed/Wcy7xzgBQis', // Everything Right is Wrong Again
+			'https://www.youtube.com/embed/eIqaIGZZzLg' // Intersections
+		]
+		let videoIndex = [0] //use array to pass by reference
+		shuffle(videos)
+		get('videoScreen').src = videos[videoIndex]
+		get('videoLeft').onclick = getButtonFunction(videoIndex, decrement, get('videoScreen'), videos)
+		get('videoRight').onclick = getButtonFunction(videoIndex, increment, get('videoScreen'), videos)
+		get('videoRandom').onclick = getButtonFunction(videoIndex, randomButton, get('videoScreen'), videos)
+	</script>
+
+	<!------------------------------------------------>
+	<!-- A R T -->
+	<!------------------------------------------------>
+	<div class=page id=art>
+		<h1 style="color: purple;">Art<h1>
+		<div>
+			<img src='gif/arrowl.gif' class=button id='artLeft'/>
+			<img id=artScreen src='art/BottleAndGoblet.jpg'/>
+			<img src='gif/arrowr.gif' class=button id='artRight'/>
+		</div>
+		<!-- <img src='gif/construction.gif'> -->
+	</div>
+	<script>
+		let art = [
+			'BottleAndGoblet.jpg',
+			//'Parents.JPG',
+			//'Pomegranate.JPG',
+			'WineAndOnion.jpg'
+		]
+		let artIndex = [0]
+		shuffle(art)
+		get('art').src = 'art/' + art[artIndex[0]]
+		get('artLeft').onclick = getButtonFunction(artIndex, decrement, get('artScreen'), art, 'art')
+		get('artRight').onclick = getButtonFunction(artIndex, increment, get('artScreen'), art, 'art')
+	</script>
+
+	<!------------------------------------------------>
+	<!-- M U S I C -->
+	<!------------------------------------------------>
+	<div class=page id=music>
+		<h1 style="color: red;">Music<h1>
+		<div>
+			<audio controls src="music/420loop.mp3">
+		</div>
+		<!-- <div>
+			<div>
+				<img src='album.png' style='width: 400px; height: 400px;'>
+			</div>
+		</div>
+		-->
+		<!-- <img src='gif/construction.gif'> -->
+	</div>
+	
+	<!------------------------------------------------>
+	<!-- P H O T O -->
+	<!------------------------------------------------>
+	<div class=page id=photo>
+		<h1 style="color: orange;">Photo</h1>
+		<div>
+			<img src='gif/arrowl.gif' class=button id='photoLeft'/>
+			<img id=photoScreen />
+			<img src='gif/arrowr.gif' class=button id='photoRight'/>
+		</div>
+		<img class=button id=photoRandom src='gif/random.gif'/>
+	</div>
+	<script>
+		let photos = [
+			"nearDeath.jpeg",
+			"rec.jpeg",
+			"linux.jpeg",
+			"cat.jpeg",
+			"laws2.jpeg",
+			"drHummus.jpeg",
+			"daTuba.jpeg",
+			"dyin.jpeg",
+			"prettyTired.jpeg",
+			"roughRoad.jpeg",
+			"tacoBell.jpeg",
+			"veggies.jpeg",
+			"dogEar.jpeg",
+			"savage.jpeg",
+			"salmon.jpeg",
+			"spring.jpeg",
+			"boomers.jpeg",
+			"closed.jpeg",
+			"bePretty.jpeg",
+			"cow.jpeg",
+			"regularFlavor.jpeg",
+			"earth.jpeg",
+			"ranch.jpeg",
+			"smiley.jpeg",
+			"wow.jpeg",
+			"smirk.jpeg",
+			"upperDoor.jpeg",
+			"rock.jpeg",
+			"smallDoor.jpeg",
+			"nothingOfValue.jpeg",
+			"f.jpeg",
+			"ucsf.jpeg",
+			"god.jpeg",
+			".DS_Store",
+			"be.jpeg",
+			"shoulder.jpeg",
+			"bigDog.jpeg",
+			"dontLive.jpeg",
+			"menOof.jpeg",
+			"pizza.jpeg",
+			"ravennaInteriors.jpeg",
+			"stairs.jpeg",
+			"queen.jpeg",
+			"willis.jpeg",
+			"zombies.jpeg",
+			"perms.jpeg",
+			"pain.jpeg",
+			"sheldon.jpeg",
+			"funCard.jpeg",
+			"gun.jpeg",
+			"gramma.jpeg",
+			"food.jpeg",
+			"clowns.jpeg",
+			"mysteryMachine.jpeg",
+			"youHead.jpeg",
+			"sealedAir.jpeg",
+			"dab.jpeg",
+			"whatever.jpeg",
+			"rudolph.jpeg",
+			"copCar.jpeg",
+			"trust.jpeg",
+			"spaghetti.jpeg",
+			"beehive.jpeg",
+			"bodyWindow.jpeg",
+			"akwer.jpeg",
+			"chairs.jpeg",
+			"outrage.jpeg",
+			"dock.jpeg",
+			"mannekin.jpeg",
+			"whereAmI.jpeg",
+			"cleff.jpeg",
+			"toilets.jpeg",
+			"meanWell.jpeg",
+			"nlog.jpeg",
+			"clock.jpeg",
+			"accountability.jpeg",
+			"lord.jpeg",
+			"geico.jpeg",
+			"carefullyBurn.jpeg",
+			"doritos.jpeg",
+			"love.jpeg",
+			"goAway.jpeg",
+			"tshirt.jpeg",
+			"jeans.jpeg",
+			"elvis.jpeg",
+			"squareDance.jpeg",
+			"pizzaMaker.jpeg",
+			"babyStore.jpeg",
+			"stopp.jpeg",
+			"veganDog.jpeg",
+			"babyStroller.jpeg",
+			"justMarried.jpeg",
+			"0: needs crop",
+			"dad.jpeg",
+			"iDontKnow.jpeg",
+			"wang.jpeg",
+			"outlets.jpeg",
+			"daiTogether.jpeg",
+			"miguels.jpeg",
+			"hm.jpeg",
+			"kokane.jpeg",
+			"0: scripts",
+			"instagram.jpeg",
+			"amazon.jpeg",
+			"best.jpeg",
+			"isolationRoom.jpeg",
+			"neighsHoarsely.jpeg",
+			"newMexico.jpeg",
+			"selectOne.jpeg",
+			"spicy.jpeg",
+			"beefBend.jpeg",
+			"washingtonFederal.jpeg",
+			"criticallyAcclaimed.jpeg",
+			"this.jpeg",
+			"macaroni.jpeg",
+			"construction.jpeg",
+			"endTheInternet.jpeg",
+			"asianMan.jpeg",
+			"boyButter.jpeg",
+			"id.jpeg",
+			"stillIRise.jpeg",
+			"wig.jpeg",
+			"catSign.jpeg",
+			"sauce.jpeg",
+			"window.jpeg",
+			"succ.jpeg",
+			"born.jpeg",
+			"no.jpeg",
+			"internet.jpeg",
+			"realEstate.jpeg",
+			"zza.jpeg",
+			"fenceWindow.jpeg",
+			"stop.jpeg",
+			"amazonHertz.jpeg",
+			"tongli.jpeg",
+			"handSanitizer.jpeg",
+			"darkness.jpeg",
+			"usa.jpeg",
+			"eczema.jpeg",
+			"horseySauce.jpeg",
+			"taiwam.jpeg",
+			"homeless.jpeg",
+			"carts.jpeg",
+			"handJob.jpeg",
+			"sklmraw.jpeg",
+			"toiletGlow.jpeg",
+			"walkSign.jpeg",
+			"smile.jpeg",
+			"momGay.jpeg",
+			"asbestos.jpeg",
+			"children.jpeg",
+			"dull.jpeg",
+			"iDontNow.jpeg",
+			"moisture.jpeg",
+			"photo.jpeg",
+			"horse.jpeg",
+			"nightmare.jpeg",
+			"treeSign.jpeg",
+			"calciumOmg.jpeg",
+			"legend.jpeg",
+			"bear.jpeg",
+			"noodle.jpeg",
+			"myBurrito.jpeg",
+			"rename_as_numbers.sh",
+			"drugsUrinal.jpeg",
+			"cocktails.jpeg",
+			"tires.jpeg",
+			"blank.jpeg",
+			"mom.jpeg",
+			"sad.jpeg",
+			"caution.jpeg",
+			"laws.jpeg",
+			"ass.jpeg",
+			"sandwich.jpeg",
+			"rainier.jpeg",
+			"artKeys.jpeg",
+			"waffles.jpeg",
+			"cat2.jpeg",
+			"deadEnd.jpeg",
+			"arning.jpeg",
+			"neverGiveUp.jpeg",
+			"manRepair.jpeg",
+			"subjective.jpeg",
+			"hey.jpeg",
+			"stress.jpeg",
+			"fresh.jpeg",
+			"robot.jpeg",
+			"grammaBin.jpeg",
+			"hello.jpeg",
+			"pumpkinShake.jpeg",
+			"powerade.jpeg",
+			"jeff.jpeg",
+			"mice.jpeg",
+			"sexyLife.jpeg",
+			"daddysDonuts.jpeg",
+			"nameDate.jpeg",
+			"pikachu.jpeg",
+			"plantBox.jpeg",
+			"trending.jpeg",
+			"gaitronics.jpeg",
+			"shitCatan.jpeg",
+			"voteNo.jpeg",
+			"ooof.jpeg",
+			"balloons.jpeg",
+			"myBad.jpeg",
+			"body.jpeg",
+			"outlet.jpeg",
+			"peeece.jpeg",
+			"wetCement.jpeg",
+			"congratulations.jpeg",
+			"grub.jpeg",
+			"noRules.jpeg",
+			"pinching.jpeg",
+			"fakeMoney.jpeg",
+			"restart.jpeg",
+			"sassy.jpeg",
+			"jeffEpstein.jpeg"]
+		let photoIndex = [0]
+		shuffle(photos)
+		get('photoScreen').src = 'photo/' + photos[photoIndex[0]]	
+		get('photoLeft').onclick = getButtonFunction(photoIndex, decrement, get('photoScreen'), photos, 'photo')
+		get('photoRight').onclick = getButtonFunction(photoIndex, increment, get('photoScreen'), photos, 'photo')
+		get('photoRandom').onclick = getButtonFunction(photoIndex, randomButton, get('photoScreen'), photos, 'photo')
+	</script>
+
+	<!------------------------------------------------>
+	<!-- W R I T I N G -->
+	<!------------------------------------------------>
+	<div class=page id=writing>
+		<h1 style="color: yellow;">Writing</h1>
+<!-- 
+		<h2><a href='https://bencelsi.github.io/writing/great-apes.html'>Great Apes</a></h2>
+		<h2><a href='https://bencelsi.github.io/writing/christian-bok.html'>Christian Bok: A Critic's Notations on His Book</a></h2>
+-->
+		<h2><a href='https://bencelsi.github.io/writing/youre-little.html'>You're Little</a></h2>
+		<!-- <img src='gif/construction.gif'> -->
+	</div>
 </body>
 <footer>
-		<!-- <img src='gif/roses.gif'>
-		 --><!-- 
-		 <div>
-			<img src='gif/divider.gif'/>
-		</div> -->
+	<!-- <img src='gif/roses.gif'>
+	<div>
+		<img src='gif/divider.gif'/>
+	</div>
+	-->
 </footer>	
 </html>
-
