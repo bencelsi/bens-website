@@ -10,11 +10,7 @@
 TODOS:
 use '/photo' etc to navigate tabs?
 support subsections - gif per subsection
-add writing
-add art 
-and music
 custom domain?
-scale down disco balls
 -->
 
 <!DOCTYPE html>
@@ -94,12 +90,12 @@ scale down disco balls
 	<!-- H E L P E R   S C R I P T S -->
 	<!------------------------------------------------>
 	<script> 
-		function getAll(clazz) {
-			return document.getElementsByClassName(clazz)
-		}
-
 		function get(id) {
 			return document.getElementById(id)
+		}
+
+		function getAll(clazz) {
+			return document.getElementsByClassName(clazz)
 		}
 
 		function random(min, max) { 
@@ -121,23 +117,6 @@ scale down disco balls
 			audio.src = 'aud/' + name + format
 			audio.play();
 		}
-		
-		function hidePages() {
-			pages = getAll('page')
-			Array.from(pages).forEach(
-				(page) => {
-					page.style.display = 'none'
-				}
-			)
-		}
-
-		function randomButton(value, maxValue) {
-			let result = random(0, maxValue)
-			while (result == value) {
-				result = random(0, maxValue)
-			}
-			return result
-		}
 
 		function increment(value, maxValue) {
 			return value == maxValue ? 0 : value + 1;
@@ -145,6 +124,15 @@ scale down disco balls
 
 		function decrement(value, maxValue) {
 			return value == 0 ? maxValue : value - 1;
+		}
+
+		function randomButton(value, maxValue) {
+			while (true) {
+				result = random(0, maxValue)
+				if (result != value) {
+					return result
+				}
+			}
 		}
 
 		function getButtonFunction(index, indexFunction, display, content, folder = null) {
@@ -165,11 +153,7 @@ scale down disco balls
 	<!------------------------------------------------>
 	<div style='display: inline-block' id='header'>
 		<div style='float: left'>
-			<!-- <img src='gif/disco.gif'/>
-			<img src='gif/disco.gif'/>
-			<img src='gif/disco.gif'/> -->
-			<img src='gif/earth.gif'/>
-			<img src='gif/earth.gif'/>
+			<!-- <img src='gif/disco.gif'/> -->
 			<img src='gif/earth.gif'/> 
 		</div>
 		<div style='float: left'>
@@ -182,11 +166,7 @@ scale down disco balls
 		</div>
 		<div style='float: right'>
 			<img src='gif/earth.gif'/>
-			<img src='gif/earth.gif'/>
-			<img src='gif/earth.gif'/>
-		<!--<img src='gif/disco.gif'/>
-			<img src='gif/disco.gif'/>
-			<img src='gif/disco.gif'/> -->
+			<!-- <img src='gif/disco.gif'/> -->
 		</div>
 	</div>
 
@@ -232,6 +212,15 @@ scale down disco balls
 				}
 			}
 		)
+
+		function hidePages() {
+			pages = getAll('page')
+			Array.from(pages).forEach(
+				(page) => {
+					page.style.display = 'none'
+				}
+			)
+		}
 	</script>
 	
 	<!------------------------------------------------>
@@ -308,7 +297,6 @@ scale down disco balls
 			<img id=artScreen src='art/BottleAndGoblet.jpg'/>
 			<img src='gif/arrowr.gif' class=button id='artRight'/>
 		</div>
-		<!-- <img src='gif/construction.gif'> -->
 	</div>
 	<script>
 		let art = [
@@ -338,7 +326,6 @@ scale down disco balls
 			</div>
 		</div>
 		-->
-		<!-- <img src='gif/construction.gif'> -->
 	</div>
 	
 	<!------------------------------------------------>
@@ -590,14 +577,6 @@ scale down disco balls
 		<h2><a href='https://bencelsi.github.io/writing/christian-bok.html'>Christian Bok: A Critic's Notations on His Book</a></h2>
 -->
 		<h2><a href='https://bencelsi.github.io/writing/youre-little.html'>You're Little</a></h2>
-		<!-- <img src='gif/construction.gif'> -->
 	</div>
 </body>
-<footer>
-	<!-- <img src='gif/roses.gif'>
-	<div>
-		<img src='gif/divider.gif'/>
-	</div>
-	-->
-</footer>	
 </html>
