@@ -56,10 +56,26 @@ custom domain?
 		}
 
 		.tab {
+			/* box-shadow: 0px 0px 50px #fff; */
 			display: inline-block;
-			margin-right: 35px;
-			margin-left: 35px;
+			margin-right: 40px;
+			margin-left: 40px;
 			cursor: url(forward.png), auto;
+			img {
+				width: 70px;
+			}
+		}
+
+		div[highlighted] {
+			filter: drop-shadow(0 0 0.75rem rgb(255, 217, 0));
+		}
+		
+		#artTab {
+			margin-right: 20px;
+			margin-left: 20px;
+			img {
+				width: 90px;
+			}
 		}
 
 		.button {
@@ -86,69 +102,7 @@ custom domain?
 </head>
 	
 <body>
-	<!------------------------------------------------>
-	<!-- H E L P E R   S C R I P T S -->
-	<!------------------------------------------------>
-	<script> 
-		
-
-		function get(id) {
-			return document.getElementById(id)
-		}
-
-		function getAll(clazz) {
-			return document.getElementsByClassName(clazz)
-		}
-
-		function random(min, max) { 
-			return (min + (Math.floor(Math.random() * (max - min))))
-		}
-
-		function shuffle(array) {
-			for (i = 0; i < array.length; i++) {
-				randomIndex = random(i, array.length - 1)
-				temp = array[i]
-				array[i] = array[randomIndex]
-				array[randomIndex] = temp
-			}
-		}
-		
-		function playSound(name, volume = 1, format='.wav') {
-			audio = new Audio();
-			audio.volume = volume
-			audio.src = 'aud/' + name + format
-			audio.play();
-		}
-
-		function increment(value, maxValue) {
-			return value == maxValue ? 0 : value + 1;
-		}
-
-		function decrement(value, maxValue) {
-			return value == 0 ? maxValue : value - 1;
-		}
-
-		function randomButton(value, maxValue) {
-			while (true) {
-				result = random(0, maxValue)
-				if (result != value) {
-					return result
-				}
-			}
-		}
-
-		function getButtonFunction(index, indexFunction, display, content, folder = null) {
-			return () => {
-				playSound('click', .5)
-				index[0] = indexFunction(index[0], content.length - 1)
-				if (folder == null) {
-					display.src = content[index[0]]
-				} else {
-					display.src = folder + '/' + content[index[0]]
-				}
-			}
-		}
-	</script>
+	
 
 	<!------------------------------------------------>
 	<!-- H E A D I N G -->
@@ -172,33 +126,85 @@ custom domain?
 		</div>
 	</div>
 
+	<!------------------------------------------------>
+	<!-- H E L P E R   S C R I P T S -->
+	<!------------------------------------------------>
+	<script> 
+		function get(id) { return document.getElementById(id) }
+
+		function getAll(clazz) { return document.getElementsByClassName(clazz) }
+
+		function random(min, max) { return (min + (Math.floor(Math.random() * (max - min)))) }
+
+		function shuffle(array) {
+			for (i = 0; i < array.length; i++) {
+				randomIndex = random(i, array.length - 1)
+				temp = array[i]
+				array[i] = array[randomIndex]
+				array[randomIndex] = temp
+			}
+		}
+		
+		function playSound(name, volume = 1, format='.wav') {
+			audio = new Audio();
+			audio.volume = volume
+			audio.src = 'aud/' + name + format
+			audio.play();
+		}
+
+		function increment(value, maxValue) { return value == maxValue ? 0 : value + 1 }
+
+		function decrement(value, maxValue) { return value == 0 ? maxValue : value - 1 }
+
+		function randomButton(value, maxValue) {
+			while (true) {
+				result = random(0, maxValue)
+				if (result != value) {
+					return result
+				}
+			}
+		}
+
+		function getButtonFunction(index, indexFunction, display, content, folder = null) {
+			return () => {
+				playSound('click', .5)
+				index[0] = indexFunction(index[0], content.length - 1)
+				if (folder == null) {
+					display.src = content[index[0]]
+				} else {
+					display.src = folder + '/' + content[index[0]]
+				}
+			}
+		}
+	</script>
+
 	<br>
 	<!------------------------------------------------>
 	<!-- T A B S -->
 	<!------------------------------------------------>
 	<div id='tabMenu'>
 		<div class='tab' page='games'>
-			<img src='gif/joystick.gif'/>
+			<img src='gif/tabs/joystick.gif'/>
 			<span class='caption'>Games</span>
 		</div>
 		<div class='tab' page='video' >
-			<img src='gif/TV.gif'/>
+			<img src='gif/tabs/TV.gif'/>
 			<span class='caption'>Video</span>
 		</div>
-		<div class='tab' page='art'>
-			<img src='gif/palette.gif'/>
+		<div class='tab' id='artTab' page='art'>
+			<img src='gif/tabs/paintbrush.gif'/>
 			<span class='caption'>Art</span>
 		</div>
 		<div class='tab' page='music'>
-			<img src='gif/guitar.gif'/>
+			<img src='gif/tabs/guitar.gif'/>
 			<span class='caption'>Music</span>
 		</div>
 		<div class='tab' page='photo' >
-			<img src='gif/camera.gif'/>
+			<img src='gif/tabs/camera.gif'/>
 			<span class='caption'>Photo</span>
 		</div>
 		<div class='tab' page='writing' >
-			<img src='gif/book.gif'/>
+			<img src='gif/tabs/book.gif'/>
 			<span class='caption'>Writing</span>
 		</div>
 	</div>
@@ -210,6 +216,8 @@ custom domain?
 					playSound('click2', .7)
 					hidePages()
 					page = get(event.target.parentElement.getAttribute('page'))
+					deselectTabs()
+					event.target.parentElement.setAttribute('highlighted', '')
 					page.style.display = 'inline'
 				}
 			}
@@ -220,6 +228,15 @@ custom domain?
 			Array.from(pages).forEach(
 				(page) => {
 					page.style.display = 'none'
+				}
+			)
+		}
+
+		function deselectTabs() {
+			tabs = getAll('tab')
+			Array.from(tabs).forEach(
+				(tab) => {
+					tab.removeAttribute('highlighted')
 				}
 			)
 		}
@@ -324,7 +341,8 @@ custom domain?
 			<audio controls src="music/420loop.mp3">
 		</div>
 		<div>
-			<audio controls src=(mediaBaseUrl + 'music/420Loop.mp3')>
+
+			<audio controls src='https://raw.githubusercontent.com/bencelsi/bencelsi.github.io/master/music/.mp3'>
 		</div>
 		<!-- <div>
 			<div>
@@ -593,8 +611,7 @@ custom domain?
 		<h2><a href='https://bencelsi.github.io/writing/great-apes.html'>Great Apes</a></h2>
 		<h2><a href='https://bencelsi.github.io/writing/christian-bok.html'>Christian Bok: A Critic's Notations on His Book</a></h2>
 -->
-		<h2><a href='https://githubusercontent.com/bencelsi/bencelsi.github.io/master/writing/great-apes.html'>Great Apes</a></h2>
-		<h2><a href='https://bencelsi.github.io/writing/great-apes.html'>Great Apes</a></h2>
+		<h2><a href='writing/great-apes.html'>Great Apes</a></h2>
 
 	</div>
 </body>
