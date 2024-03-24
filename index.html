@@ -90,6 +90,8 @@ custom domain?
 	<!-- H E L P E R   S C R I P T S -->
 	<!------------------------------------------------>
 	<script> 
+		
+
 		function get(id) {
 			return document.getElementById(id)
 		}
@@ -318,11 +320,11 @@ custom domain?
 	<!------------------------------------------------>
 	<div class=page id=music>
 		<h1 style="color: red;">Music<h1>
-		<div>
+		<div id=songs>
 			<audio controls src="music/420loop.mp3">
 		</div>
 		<div>
-			<audio controls src="https://raw.githubusercontent.com/bencelsi/bencelsi.github.io/master/music/420loop.mp3">
+			<audio controls src=(mediaBaseUrl + 'music/420Loop.mp3')>
 		</div>
 		<!-- <div>
 			<div>
@@ -331,6 +333,17 @@ custom domain?
 		</div>
 		-->
 	</div>
+	<script type="text/javascript">
+		let songs = [
+			'420Loop.mp3',
+			'JoeFrank.mp3'
+		]
+		get('songs').innerhtml = ''
+		for (i = 0; i < songs.length; i++) {
+			
+
+		}
+	</script>
 	
 	<!------------------------------------------------>
 	<!-- P H O T O -->
@@ -580,7 +593,9 @@ custom domain?
 		<h2><a href='https://bencelsi.github.io/writing/great-apes.html'>Great Apes</a></h2>
 		<h2><a href='https://bencelsi.github.io/writing/christian-bok.html'>Christian Bok: A Critic's Notations on His Book</a></h2>
 -->
-		<h2><a href='https://bencelsi.github.io/writing/youre-little.html'>You're Little</a></h2>
+		<h2><a href='https://githubusercontent.com/bencelsi/bencelsi.github.io/master/writing/great-apes.html'>Great Apes</a></h2>
+		<h2><a href='https://bencelsi.github.io/great-apes.html'>Great Apes</a></h2>
+		
 	</div>
 </body>
 </html>
