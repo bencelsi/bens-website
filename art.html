@@ -1,0 +1,154 @@
+<!-- 
+    ___         __ 
+   /   |  _____/ /_
+  / /| | / ___/ __/
+ / ___ |/ /  / /_  
+/_/  |_/_/   \__/  
+
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title style="color: white">Ben's Website!!!</title>
+	<link rel='icon' type='image/x-icon' href='ico/favicon.ico'>
+	<!------------------------------------------------>
+	<!-- S T Y L E -->
+	<!------------------------------------------------>
+	<style type="text/css">
+		body {
+			margin: 0;
+			height: 100%;
+			text-align: center;
+			background-image:  url(gif/stars.gif);
+			color: white;
+			font-family: "Lucida Console", monospace;
+		}
+		
+		#header:hover {
+			filter: drop-shadow(0 0 0.8rem rgb(157, 0, 255));
+		}
+
+		#artScreen { height: 700px; }
+
+		h1 { text-shadow : 0 0 40px red; }
+		
+		.tab img { width: 30px; }
+
+		a:link, a:visited {
+			color: pink;
+			text-decoration: none;
+		}
+
+		.button { cursor: url(forward.png), auto; }
+
+		.caption { display: block; }
+	</style>
+</head>
+	
+<body>
+	<!------------------------------------------------>
+	<!-- BEN'S WEBSITE -->
+	<!------------------------------------------------>
+	<div style='display: inline-block' id='header'>
+		<a href="index.html">
+			<div style='float: left'>
+				<img src='gif/earth.gif'/> 
+			</div>
+			<div style='float: left'>
+				<img src='gif/letters/B.gif'/>
+				<img src='gif/letters/E.gif'/>
+				<img src='gif/letters/N.gif'/>
+				<img src='gif/letters/apostrophe.gif'/>
+				<img src='gif/letters/S.gif'/>
+			</div>
+			<div style='float: right'>
+				<img src='gif/earth.gif'/>
+			</div>
+		</a>
+	</div>
+			
+	<!------------------------------------------------>
+	<!-- HELPER SCRIPTS-->
+	<!------------------------------------------------>
+	<script> 
+		function get(id) { return document.getElementById(id) }
+
+		function getAll(clazz) { return document.getElementsByClassName(clazz) }
+
+		function random(min, max) { return (min + (Math.floor(Math.random() * (max - min)))) }
+
+		function shuffle(array) {
+			for (i = 0; i < array.length; i++) {
+				randomIndex = random(i, array.length - 1)
+				temp = array[i]
+				array[i] = array[randomIndex]
+				array[randomIndex] = temp
+			}
+		}
+		
+		function playSound(name, volume = 1, format='.wav') {
+			audio = new Audio();
+			audio.volume = volume
+			audio.src = 'aud/' + name + format
+			audio.play();
+		}
+
+		function increment(value, maxValue) { return value == maxValue ? 0 : value + 1 }
+
+		function decrement(value, maxValue) { return value == 0 ? maxValue : value - 1 }
+
+		function randomButton(value, maxValue) {
+			while (true) {
+				result = random(0, maxValue)
+				if (result != value) {
+					return result
+				}
+			}
+		}
+
+		function getButtonFunction(index, indexFunction, display, content, folder = null) {
+			return () => {
+				playSound('click', .5)
+				index[0] = indexFunction(index[0], content.length - 1)
+				if (folder == null) {
+					display.src = content[index[0]]
+				} else {
+					display.src = folder + '/' + content[index[0]]
+				}
+			}
+		}
+	</script>
+
+	<!------------------------------------------------>
+	<!-- ART -->
+	<!------------------------------------------------>	
+	<div>
+		<h1 style="color: purple;">Art<h1>
+		<div>
+			<img src='gif/arrowl.gif' class=button id='artLeft'/>
+			<img id="artScreen"/>
+			<img src='gif/arrowr.gif' class=button id='artRight'/>
+		</div>
+	</div>
+	<script>
+		let art = [
+			"Artichoke.jpg",
+			'Bottle and Goblet.jpg',
+			"Chantarelle.jpg",
+			'Parents.JPG',
+			'Cherry Tree.jpg',
+			'Pomegranate.JPG',
+			"Wine and Onion.jpg",
+			"Skull Painting.JPG",
+			"Self Portrait.jpg"
+		]
+		let artIndex = [0]
+		shuffle(art)
+		get('artScreen').src = 'art/' + art[artIndex[0]]
+		get('artLeft').onclick = getButtonFunction(artIndex, decrement, get('artScreen'), art, 'art')
+		get('artRight').onclick = getButtonFunction(artIndex, increment, get('artScreen'), art, 'art')
+	</script>
+
+</body>
+</html>

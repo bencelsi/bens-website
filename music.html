@@ -1,0 +1,249 @@
+<!-- 
+    __  ___           _     
+   /  |/  /_  _______(_)____
+  / /|_/ / / / / ___/ / ___/
+ / /  / / /_/ (__  ) / /__  
+/_/  /_/\__,_/____/_/\___/  
+
+
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Ben's Website!!!</title>
+	<link rel='icon' type='image/x-icon' href='ico/favicon.ico'>
+	<!------------------------------------------------>
+	<!-- S T Y L E -->
+	<!------------------------------------------------>
+	<style type="text/css">
+		body {
+			margin: 0;
+			text-align: center;
+			background-image: url(gif/stars.gif);
+			color: white;
+			font-family: "Lucida Console", monospace;
+		}
+
+		#header:hover {
+			filter: drop-shadow(0 0 0.8rem rgb(255, 0, 0));
+		}
+
+		audio {
+			height: 30px;
+			width: 230px;
+		}
+
+		h1 { text-shadow: 0 0 40px red; }
+		
+		.tab img { width: 30px; }
+
+		a:link, a:visited {
+			color: pink;
+			text-decoration: none;
+		}
+
+		.caption { 
+			display: block; 
+			color: white;
+			text-decoration: none;
+		}
+
+		.column {
+			float: left;
+			width: 50%;
+		}
+
+		.row { display: table; }
+		
+		.button { cursor: url(forward.png), auto; }
+
+		.albumButton { 
+			cursor: url(forward.png), auto; 
+			display: inline-block;
+			:hover {
+				filter: drop-shadow(0 0 4.0rem rgb(122, 235, 255));
+			}
+		}
+
+		#songs {
+			margin-left: auto;
+  			margin-right: auto;
+		}
+
+		td {
+			color:rgb(119, 171, 255);
+			text-align: left;
+			text-shadow: 0 0 30px rgb(0, 0, 0);
+			filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
+		}
+
+		.button { cursor: url(forward.png), auto; }
+
+	</style>
+</head>
+	
+<body>
+	<!------------------------------------------------>
+	<!-- BEN'S -->
+	<!------------------------------------------------>
+	<div style="display: inline-block" id="header" >
+		<a href="index.html" class="button">
+			<div style='float: left; margin-right: 20px;'>
+				<img src='gif/earth.gif'/> 
+			</div>
+			<div style='float: left'>
+				<img src='gif/letters/B.gif'/>
+				<img src='gif/letters/E.gif'/>
+				<img src='gif/letters/N.gif'/>
+				<img src='gif/letters/apostrophe.gif'/>
+				<img src='gif/letters/S.gif'/>
+			</div>
+			<div style='float: right; margin-left: 15px'>
+				<img src='gif/earth.gif'/>
+			</div>
+		</a>
+	</div>
+
+	<!------------------------------------------------>
+	<!-- MUSIC -->
+	<!------------------------------------------------>
+	<h1 style="color: rgb(128, 0, 0)">Music</h1>
+
+	<div id="albums" style=" margin: 40px"> 
+		<div style="display: inline-block;" id="MossRockButton" class="albumButton">
+			<img src='music/Moss Rock.png' style='width: 300px; height: 300px;'>
+			<span class='caption'>Moss Rock</span>
+		</div>
+		<br><br>
+		<div style="display: block;" class="albumButton" class="button">
+			<img src='music/Sunroom.jpg' style='width: 300px; height: 300px;'>
+			<span class='caption'>Sunroom</span>
+		</div>
+	</div>
+
+	<div id="MossRock" style="display: none;">
+		<img id="backButton" src="gif/back.gif" class="button">
+		<h2>Moss Rock</h2>
+		<img src="music/Moss Rock.png" style="width: 400px; height: 400px; filter: drop-shadow(0 0 4.5rem rgb(0, 79, 136));">
+		<!-- 'https://raw.githubusercontent.com/bencelsi/bencelsi.github.io/master/music/.mp3' -->
+		<br><br>
+		<table id="songs">
+		</table>
+	<div>
+	<br><br>
+	<script> 
+		function get(id) { return document.getElementById(id) }
+
+		function getAll(clazz) { return document.getElementsByClassName(clazz) }
+	
+		get("MossRockButton").onclick = function() {
+			get("albums").style.display = "none";
+			get("MossRock").style.display = "block";
+		}
+
+		get("backButton").onclick = function() {
+			get("albums").style.display = "block";
+			get("MossRock").style.display = "none";
+			stopAudios()
+			// get("Sunroom").style.display = "none";
+		}
+// Todo - add autoplay & disallow multiple audios
+
+		let songs = [
+			"Advocating",
+			"Another World",
+			"Beetle",
+			"Burn",
+			"Cats",
+			"Daisy",
+			"Don't Get Me Down",
+			"Electric",
+			"Embarrassed",
+			"Feel Like a Fraud",
+			"Free",
+			"Gettin' Over It",
+			"Golden Gate",
+			"Great American",
+			"Hangin' On",
+			"Happened By Now",
+			"High Art",
+			"Highschool",
+			"Inner Shell",
+			"Hard to Write a Song on a Guitar",
+			"Jinx",
+			"Joanie",
+			"Keep Down",
+			"Let's Go Down",
+			"Miyazaki Movies",
+			"Music Flows Through Me",
+			"Oh My Darling",
+			"One Love",
+			"Rest Up",
+			"Round and Around",
+			"Soul is Tired Today",
+			"Spaghetti",
+			"Surf Song",
+			"Take A Picture",
+			"True Crime",
+			"Walking in the Dark",
+			"Way Back",
+			"Woke Up",
+			"Writing's on the Wall"
+		]
+		let mossRock = [
+			//Side A
+			"Cats",
+			"One Love",
+			"Beetle",
+			"Electric",
+			"Spaghetti",
+			"Miyazaki Movies",
+			"Wherever You Go", //Maddie?
+			"Happened By Now",
+			"Don't Get Me Down",
+			"Feel Like a Fraud",
+			//Side B
+			"Woke Up",
+			"Miss You When You Go",
+			"Jinx",
+			"Gettin' Over It",
+			"Free",
+			"Oh My Darling",
+			"Rest Up",
+			"Walking in the Dark",
+			"Leaves Fall Down"
+		]
+		//	let songsDiv = get("songs")
+		let songDiv = document.getElementById("songs")
+		let totalLength = 0;
+		let songAudios = []
+		for (let i = 0; i < mossRock.length; i++) {
+			let tr = document.createElement("tr")
+			let songTitle = document.createElement("td")
+			songTitle.innerHTML = i + 1 + ". " + mossRock[i]
+			tr.appendChild(songTitle)
+
+			let songAudioTd = document.createElement("td")
+			let songAudio = document.createElement("audio")
+			songAudio.src = "music/songs/" + mossRock[i] + ".mp3"
+			songAudio.controls = true
+
+			songAudios.push(songAudio)
+			songAudioTd.appendChild(songAudio)
+			tr.appendChild(songAudioTd)
+			songDiv.appendChild(tr)
+			console.log("hello")
+		}
+		for (let i = 0; i < songAudios.length; i++) {
+			console.log(songAudios[i].duration)
+		}
+
+		function stopAudios() {
+			for (let i = 0; i < songAudios.length; i++) {
+				songAudios[i].pause()
+			}
+		}
+	</script>
+</body>
+</html>

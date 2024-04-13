@@ -1,0 +1,168 @@
+<!-- 
+ _    ___     __         
+| |  / (_)___/ /__  ____ 
+| | / / / __  / _ \/ __ \
+| |/ / / /_/ /  __/ /_/ /
+|___/_/\__,_/\___/\____/ 
+                                                                                  
+(ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title style="color: white">Ben's Website!!!</title>
+	<link rel='icon' type='image/x-icon' href='ico/favicon.ico'>
+	<!------------------------------------------------>
+	<!-- S T Y L E -->
+	<!------------------------------------------------>
+	<style type="text/css">
+		body {
+			background-image:  url(gif/stars.gif);
+			font-family: "Lucida Console", monospace;
+			color: white;
+			margin: 0;
+			height: 100%;
+			text-align: center;
+		}
+
+		#header:hover {
+			filter: drop-shadow(0 0 0.8rem rgb(0, 81, 255));
+		}
+
+		#videoScreen {
+			height: 480px;
+			width: 854px;
+		}
+
+		h1 { text-shadow : 0 0 40px red; }
+		
+		.tab img { width: 30px; }
+
+		a:link, a:visited {
+			color: pink;
+			text-decoration: none;
+		}
+
+		.button { cursor: url(forward.png), auto; }
+
+		.caption { display: block; }
+	</style>
+</head>
+	
+<body>
+	<!------------------------------------------------>
+	<!-- BEN'S WEBSITE -->
+	<!------------------------------------------------>
+	<div style='display: inline-block' id='header'>
+		<a href="index.html">
+			<div style='float: left'>
+				<img src='gif/earth.gif'/> 
+			</div>
+			<div style='float: left'>
+				<img src='gif/letters/B.gif'/>
+				<img src='gif/letters/E.gif'/>
+				<img src='gif/letters/N.gif'/>
+				<img src='gif/letters/apostrophe.gif'/>
+				<img src='gif/letters/S.gif'/>
+			</div>
+			<div style='float: right'>
+				<img src='gif/earth.gif'/>
+			</div>
+		</a>
+	</div>
+			
+	<!------------------------------------------------>
+	<!-- HELPER SCRIPTS-->
+	<!------------------------------------------------>
+	<script> 
+		function get(id) { return document.getElementById(id) }
+
+		function getAll(clazz) { return document.getElementsByClassName(clazz) }
+
+		function random(min, max) { return (min + (Math.floor(Math.random() * (max - min)))) }
+
+		function shuffle(array) {
+			for (i = 0; i < array.length; i++) {
+				randomIndex = random(i, array.length - 1)
+				temp = array[i]
+				array[i] = array[randomIndex]
+				array[randomIndex] = temp
+			}
+		}
+		
+		function playSound(name, volume = 1, format='.wav') {
+			audio = new Audio();
+			audio.volume = volume
+			audio.src = 'aud/' + name + format
+			audio.play();
+		}
+
+		function increment(value, maxValue) { return value == maxValue ? 0 : value + 1 }
+
+		function decrement(value, maxValue) { return value == 0 ? maxValue : value - 1 }
+
+		function randomButton(value, maxValue) {
+			while (true) {
+				result = random(0, maxValue)
+				if (result != value) {
+					return result
+				}
+			}
+		}
+
+		function getButtonFunction(index, indexFunction, display, content, folder = null) {
+			return () => {
+				playSound('click', .5)
+				index[0] = indexFunction(index[0], content.length - 1)
+				if (folder == null) {
+					display.src = content[index[0]]
+				} else {
+					display.src = folder + '/' + content[index[0]]
+				}
+			}
+		}
+	</script>
+
+	<!------------------------------------------------>
+	<!-- V I D E O -->
+	<!------------------------------------------------>
+	<div>
+		<h1 style="color: blue;">Video</h1>
+		<div>
+			<img src='gif/arrowl.gif' class=button id='videoLeft'/>
+			<iframe id=videoScreen src='https://www.youtube.com/embed/LaAjKX-p5hk'></iframe>
+			<img src='gif/arrowr.gif' class=button id='videoRight'/>
+		</div>
+		<img class=button id=videoRandom src='gif/random.gif'/>
+	</div>
+	<script>
+		let videos = [
+			'https://www.youtube.com/embed/v_5L8a_xal0', // Dad, Listen
+			'https://www.youtube.com/embed/LaAjKX-p5hk', // One Second a Day
+			'https://www.youtube.com/embed/7_Iday6w0kI', // Casiopea Forever
+			'https://www.youtube.com/embed/Tdb0E7uegyc', // I Yam What I Yam
+			'https://www.youtube.com/embed/aqviXXbtiUg', // California Girls
+			'https://www.youtube.com/embed/1l3XTtqRtTg', // Nose
+			'https://www.youtube.com/embed/W-ofqDuES7U', // Cat Reacts
+			'https://www.youtube.com/embed/Es_YxQToays', // Ok, Let's Go Ahead And Get Started
+			'https://www.youtube.com/embed/0o0ZN87-Yj4', // I Am A Robot
+			'https://www.youtube.com/embed/tEFIzkKNBFs', // University of Washington (Opening Credits)
+			'https://www.youtube.com/embed/dtdh8s74GI4', // Video Lab Detritus
+			'https://www.youtube.com/embed/5qnW6m7BPpI', // Snakehips
+			'https://www.youtube.com/embed/NzcUOxN2IuM', // Champagne Music
+			'https://www.youtube.com/embed/Bne3uCHS-Bw', // ABBA SHREDS
+			'https://www.youtube.com/embed/emlw9bLSbcA', // Dream A Little Dream Of God
+			'https://www.youtube.com/embed/Wcy7xzgBQis', // Everything Right is Wrong Again
+			'https://www.youtube.com/embed/eIqaIGZZzLg' // Intersections
+		]
+		let videoIndex = [0] //use array to pass by reference
+		shuffle(videos)
+		get('videoScreen').src = videos[videoIndex]
+		get('videoLeft').onclick = getButtonFunction(videoIndex, decrement, get('videoScreen'), videos)
+		get('videoRight').onclick = getButtonFunction(videoIndex, increment, get('videoScreen'), videos)
+		get('videoRandom').onclick = getButtonFunction(videoIndex, randomButton, get('videoScreen'), videos)
+	</script>
+
+</body>
+</html>
