@@ -6,31 +6,30 @@
     body {
         background-image:  url(../gif/stars.gif);
         color: white;
-        white-space: pre-wrap;
-        margin: auto; text-align: center;
-        text-align: center;
         font-family: "Lucida Console", monospace;
-        text-shadow: blue;
-    }
-    h1 {
+        white-space: pre-wrap;
+        margin: auto;
         text-align: center;
-        text-shadow: red;
+        text-shadow: #000000 0 0 25px;
     }
     .button {
         cursor: url(../forward.png), auto;
+        :hover {    
+            filter: drop-shadow(0 0 1.0rem rgb(255, 255, 255));
+        }
     }
 </style>
 <div>
     <a href="../writing.html"><img src="../gif/back.gif" class="button" style="float: left;"></a>
     <h1>Palindromes</h1>
-</div>
-<div>
+    <!-- <div style="display: flex; width: fit-content; margin: auto;"> -->
+    <div id="palindrome"></div>
+    <!-- </div> -->
     <div style="display: flex; width: fit-content; margin: auto;">
         <img src="../gif/arrowl.gif" class="button" id="left" style="float: left; padding-right: 20px;"/>
-        <div id="palindrome"></div>
+        <img class=button id="random" src='../gif/random.gif'/>
         <img src="../gif/arrowr.gif" class="button" id="right" style="float: right; padding-left: 20px;"/>
     </div>
-    <img class=button id="random" src='../gif/random.gif'/>
 </div>
 <!------------------------------------------------>
 <!-- HELPER SCRIPTS-->
@@ -79,7 +78,8 @@
     }
     get('random').onclick = () => {
         playSound('click')
-        index = random(index, palindromes.size)
+        index = random(0, palindromes.length - 1)
+        console.log(index)
         palindromeDiv.innerHTML = palindromes[index].replace("\n", "<br>")
     }
 </script> 

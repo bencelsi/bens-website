@@ -221,7 +221,7 @@ let palindromes = [
 // "Rod odor",
 // "Ego doge",
 "Ya gay?",
-"Doc Marco got dirt, says, “Sassy Astrid to go cram cod!”",
+"Doc Marco got dirt, says: “Sassy Astrid to go cram cod!”",
 "Yo, bald Emiliano! Go nail Imelda, boy!",
 "“Hot. I sign it: lemon salad, I decided.”\n“Ice did, alas, no melting.”\n“Is it? Oh.”",
 "Ma, I wonder- it’s a panini art train?	I nap, as tired now I am.",
