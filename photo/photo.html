@@ -1,0 +1,368 @@
+<!-- 
+    ____  __          __      
+   / __ \/ /_  ____  / /_____ 
+  / /_/ / __ \/ __ \/ __/ __ \
+ / ____/ / / / /_/ / /_/ /_/ /
+/_/   /_/ /_/\____/\__/\____/ 
+                                                                                                                                                
+(ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title style="color: white">Ben's Website!!!</title>
+	<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
+	<!------------------------------------------------>
+	<!-- S T Y L E -->
+	<!------------------------------------------------>
+	<style type="text/css">
+		body {
+			margin: 0;
+			height: 100%;
+			text-align: center;
+			background-image:  url(../gif/stars.gif);
+			color: white;
+			font-family: "Lucida Console", monospace;
+		}
+		
+		#header:hover { filter: drop-shadow(0 0 0.8rem rgb(255, 128, 0)); }
+
+		#photoScreen {
+			height: 500px;
+			width: 500px;
+		}
+
+		h1 { text-shadow : 0 0 40px red; }
+		
+		.tab img { width: 30px; }
+
+		a {
+			color: rgb(255, 255, 255);
+			text-decoration: none;
+		}
+
+		.button { cursor: url(../forward.png), auto; }
+
+		.caption { display: block; }
+	</style>
+</head>
+	
+<body>
+	<!------------------------------------------------>
+	<!-- BEN'S WEBSITE -->
+	<!------------------------------------------------>
+	<div style="display: inline-block" id="header" >
+		<a href="../index.html" class="button">
+			<div style='float: left; margin-right: 20px;'>
+				<img src='../gif/earth.gif'/> 
+			</div>
+			<div style='float: left'>
+				<img src='../gif/letters/B.gif'/>
+				<img src='../gif/letters/E.gif'/>
+				<img src='../gif/letters/N.gif'/>
+				<img src='../gif/letters/apostrophe.gif'/>
+				<img src='../gif/letters/S.gif'/>
+				<span class='caption'><h3>W E B S I T E ! ! !</h3></span>
+			</div>
+			<div style='float: right; margin-left: 15px'>
+				<img src='../gif/earth.gif'/>
+			</div>
+		</a>
+	</div>
+			
+	<!------------------------------------------------>
+	<!-- HELPER SCRIPTS-->
+	<!------------------------------------------------>
+	<script> 
+		function get(id) { return document.getElementById(id) }
+
+		function getAll(clazz) { return document.getElementsByClassName(clazz) }
+
+		function random(min, max) { return (min + (Math.floor(Math.random() * (max - min)))) }
+
+		function shuffle(array) {
+			for (i = 0; i < array.length; i++) {
+				randomIndex = random(i, array.length - 1)
+				temp = array[i]
+				array[i] = array[randomIndex]
+				array[randomIndex] = temp
+			}
+		}
+		
+		function playSound(name, volume = 1, format='.wav') {
+			audio = new Audio();
+			audio.volume = volume
+			audio.src = 'aud/' + name + format
+			audio.play();
+		}
+
+		function increment(value, maxValue) { return value == maxValue ? 0 : value + 1 }
+
+		function decrement(value, maxValue) { return value == 0 ? maxValue : value - 1 }
+
+		function randomButton(value, maxValue) {
+			while (true) {
+				result = random(0, maxValue)
+				if (result != value) {
+					return result
+				}
+			}
+		}
+
+		function getButtonFunction(index, indexFunction, display, content, folder = null) {
+			return () => {
+				playSound('click', .5)
+				index[0] = indexFunction(index[0], content.length - 1)
+				if (folder == null) {
+					display.src = content[index[0]]
+				} else {
+					display.src = folder + '/' + content[index[0]]
+				}
+			}
+		}
+	</script>
+
+	<!------------------------------------------------>
+	<!-- PHOTO -->
+	<!------------------------------------------------>
+	<div class=page id=photo>
+		<!-- <h1 style="color: orange;">Photo</h1> -->
+		<div>
+			<img id=photoScreen />	
+		</div>
+		<div>
+			<img src='../gif/arrowl.gif' class=button id='photoLeft'/>
+			<img class=button id=photoRandom src='../gif/random.gif'/>
+			<img src='../gif/arrowr.gif' class=button id='photoRight'/>
+		</div>
+	</div>
+	<script>
+		let photos = [
+			"nearDeath.jpeg",
+			"rec.jpeg",
+			"linux.jpeg",
+			"cat.jpeg",
+			"laws2.jpeg",
+			"drHummus.jpeg",
+			"daTuba.jpeg",
+			"dyin.jpeg",
+			"prettyTired.jpeg",
+			"roughRoad.jpeg",
+			"tacoBell.jpeg",
+			"veggies.jpeg",
+			"dogEar.jpeg",
+			"savage.jpeg",
+			"salmon.jpeg",
+			"spring.jpeg",
+			"boomers.jpeg",
+			"closed.jpeg",
+			"bePretty.jpeg",
+			"cow.jpeg",
+			"regularFlavor.jpeg",
+			"earth.jpeg",
+			"ranch.jpeg",
+			"smiley.jpeg",
+			"wow.jpeg",
+			"smirk.jpeg",
+			"upperDoor.jpeg",
+			"rock.jpeg",
+			"smallDoor.jpeg",
+			"nothingOfValue.jpeg",
+			"f.jpeg",
+			"ucsf.jpeg",
+			"god.jpeg",
+			".DS_Store",
+			"be.jpeg",
+			"shoulder.jpeg",
+			"bigDog.jpeg",
+			"dontLive.jpeg",
+			"menOof.jpeg",
+			"pizza.jpeg",
+			"ravennaInteriors.jpeg",
+			"stairs.jpeg",
+			"queen.jpeg",
+			"willis.jpeg",
+			"zombies.jpeg",
+			"perms.jpeg",
+			"pain.jpeg",
+			"sheldon.jpeg",
+			"funCard.jpeg",
+			"gun.jpeg",
+			"gramma.jpeg",
+			"food.jpeg",
+			"clowns.jpeg",
+			"mysteryMachine.jpeg",
+			"youHead.jpeg",
+			"sealedAir.jpeg",
+			"dab.jpeg",
+			"whatever.jpeg",
+			"rudolph.jpeg",
+			"copCar.jpeg",
+			"trust.jpeg",
+			"spaghetti.jpeg",
+			"beehive.jpeg",
+			"bodyWindow.jpeg",
+			"akwer.jpeg",
+			"chairs.jpeg",
+			"outrage.jpeg",
+			"dock.jpeg",
+			"mannekin.jpeg",
+			"whereAmI.jpeg",
+			"cleff.jpeg",
+			"toilets.jpeg",
+			"meanWell.jpeg",
+			"nlog.jpeg",
+			"clock.jpeg",
+			"accountability.jpeg",
+			"lord.jpeg",
+			"geico.jpeg",
+			"carefullyBurn.jpeg",
+			"doritos.jpeg",
+			"love.jpeg",
+			"goAway.jpeg",
+			"tshirt.jpeg",
+			"jeans.jpeg",
+			"elvis.jpeg",
+			"squareDance.jpeg",
+			"pizzaMaker.jpeg",
+			"babyStore.jpeg",
+			"stopp.jpeg",
+			"veganDog.jpeg",
+			"babyStroller.jpeg",
+			"justMarried.jpeg",
+			"0: needs crop",
+			"dad.jpeg",
+			"iDontKnow.jpeg",
+			"wang.jpeg",
+			"outlets.jpeg",
+			"daiTogether.jpeg",
+			"miguels.jpeg",
+			"hm.jpeg",
+			"kokane.jpeg",
+			"0: scripts",
+			"instagram.jpeg",
+			"amazon.jpeg",
+			"best.jpeg",
+			"isolationRoom.jpeg",
+			"neighsHoarsely.jpeg",
+			"newMexico.jpeg",
+			"selectOne.jpeg",
+			"spicy.jpeg",
+			"beefBend.jpeg",
+			"washingtonFederal.jpeg",
+			"criticallyAcclaimed.jpeg",
+			"this.jpeg",
+			"macaroni.jpeg",
+			"construction.jpeg",
+			"endTheInternet.jpeg",
+			"asianMan.jpeg",
+			"boyButter.jpeg",
+			"id.jpeg",
+			"stillIRise.jpeg",
+			"wig.jpeg",
+			"catSign.jpeg",
+			"sauce.jpeg",
+			"window.jpeg",
+			"succ.jpeg",
+			"born.jpeg",
+			"no.jpeg",
+			"internet.jpeg",
+			"realEstate.jpeg",
+			"zza.jpeg",
+			"fenceWindow.jpeg",
+			"stop.jpeg",
+			"amazonHertz.jpeg",
+			"tongli.jpeg",
+			"handSanitizer.jpeg",
+			"darkness.jpeg",
+			"usa.jpeg",
+			"eczema.jpeg",
+			"horseySauce.jpeg",
+			"taiwam.jpeg",
+			"homeless.jpeg",
+			"carts.jpeg",
+			"handJob.jpeg",
+			"sklmraw.jpeg",
+			"toiletGlow.jpeg",
+			"walkSign.jpeg",
+			"smile.jpeg",
+			"momGay.jpeg",
+			"asbestos.jpeg",
+			"children.jpeg",
+			"dull.jpeg",
+			"iDontNow.jpeg",
+			"moisture.jpeg",
+			"photo.jpeg",
+			"horse.jpeg",
+			"nightmare.jpeg",
+			"treeSign.jpeg",
+			"calciumOmg.jpeg",
+			"legend.jpeg",
+			"bear.jpeg",
+			"noodle.jpeg",
+			"myBurrito.jpeg",
+			"rename_as_numbers.sh",
+			"drugsUrinal.jpeg",
+			"cocktails.jpeg",
+			"tires.jpeg",
+			"blank.jpeg",
+			"mom.jpeg",
+			"sad.jpeg",
+			"caution.jpeg",
+			"laws.jpeg",
+			"ass.jpeg",
+			"sandwich.jpeg",
+			"rainier.jpeg",
+			"artKeys.jpeg",
+			"waffles.jpeg",
+			"cat2.jpeg",
+			"deadEnd.jpeg",
+			"arning.jpeg",
+			"neverGiveUp.jpeg",
+			"manRepair.jpeg",
+			"subjective.jpeg",
+			"hey.jpeg",
+			"stress.jpeg",
+			"fresh.jpeg",
+			"robot.jpeg",
+			"grammaBin.jpeg",
+			"hello.jpeg",
+			"pumpkinShake.jpeg",
+			"powerade.jpeg",
+			"jeff.jpeg",
+			"mice.jpeg",
+			"sexyLife.jpeg",
+			"daddysDonuts.jpeg",
+			"nameDate.jpeg",
+			"pikachu.jpeg",
+			"plantBox.jpeg",
+			"trending.jpeg",
+			"gaitronics.jpeg",
+			"shitCatan.jpeg",
+			"voteNo.jpeg",
+			"ooof.jpeg",
+			"balloons.jpeg",
+			"myBad.jpeg",
+			"body.jpeg",
+			"outlet.jpeg",
+			"peeece.jpeg",
+			"wetCement.jpeg",
+			"congratulations.jpeg",
+			"grub.jpeg",
+			"noRules.jpeg",
+			"pinching.jpeg",
+			"fakeMoney.jpeg",
+			"restart.jpeg",
+			"sassy.jpeg",
+			"jeffEpstein.jpeg"]
+		let photoIndex = [0]
+		shuffle(photos)
+		get('photoScreen').src = 'photos/' + photos[photoIndex[0]]	
+		get('photoLeft').onclick = getButtonFunction(photoIndex, decrement, get('photoScreen'), photos, 'photos')
+		get('photoRight').onclick = getButtonFunction(photoIndex, increment, get('photoScreen'), photos, 'photos')
+		get('photoRandom').onclick = getButtonFunction(photoIndex, randomButton, get('photoScreen'), photos, 'photos')
+	</script>
+
+</body>
+</html>
