@@ -31,7 +31,7 @@ let palindromes = [
 "Go help! Miss Nadia deified Aidan’s simple hog!",
 "Name’s Rat. A fast nap, pants- a fat arse man.",
 "No, it is! Opera music is, um... a reposition?",
-"Test a cool gif of igloo cats, E.T.",
+"I lost a cool gif of igloo cats, Oli",
 "Drawn, is it? Rafael’s leaf art is... inward.",
 "“Go last!” I yell up a pulley. “It’s a log!”",
 "Key West? Angstier are it's gnats- ew, yek!",
@@ -103,7 +103,7 @@ let palindromes = [
 "Yo, battalion oil? Atta-boy!",
 "We won tons o’ snot now? Ew!",
 "Tim: madman in ‘nam, dammit!",
-"Marcia I ram, Maria I cram.",
+"Maria I cram, Marcia I ram.",
 "Crass orgasms? A gross arc.",
 "A Japan show? Oh snap, Aja!",
 "Wonder if Sid is fired now?",
@@ -141,7 +141,7 @@ let palindromes = [
 "Ma, is I zany nazis? ...I am?",
 "He wondered: Now, eh?",
 "Son, I'm odd. DOMINOS!",
-// "Ref-assigning is safer",
+// "Ref-assigning is safe",
 "Ma! Jamall! Llama jam!",
 "An angel’s leg, nana!",
 "War data’s a tad raw.",
@@ -337,7 +337,7 @@ let palindromes = [
 // Bonobos so bonobos
 // Banana bonobo 
 // Belt Subtle, belt bustle. Belt
-
+// Mahjong is a sign; OJ, ham.
 // Drat- Bill Lord’s a droll libtard.
 // Drat, Bill, I’ve named ‘em an evil libtard!
 // “Drat, Bill, I’ve lived as a devil. Evil Libtard!”
