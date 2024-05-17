@@ -207,6 +207,7 @@ let photos = [
 "outlet.jpeg",
 "outletFaces.jpeg",
 "outrage.jpeg",
+"packagedWithPride.jpeg",
 "pain.jpeg",
 "pavementJoint.jpeg",
 "peeece.jpeg",
