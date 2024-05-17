@@ -94,7 +94,6 @@ let photos = [
 "drugsUrinal.jpeg",
 "dull.jpeg",
 "dumpsterPhoto.jpeg",
-"dyin.jpeg",
 "earth.jpeg",
 "eczema.jpeg",
 "elvis.jpeg",
