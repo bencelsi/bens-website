@@ -92,11 +92,13 @@ shuffle(photos)
 get('photoLeft').onclick = () => {
 	//playSound('click', .5)
 	photoIndex = decrement(photoIndex, photos.length - 1)
+	console.log(photoIndex + ": " + photos[photoIndex])
 	get('photoScreen').src = 'photos/' + photos[photoIndex]
 }
 get('photoRight').onclick = () => {
 	//playSound('click', .5)
 	photoIndex = increment(photoIndex, photos.length - 1)
+	console.log(photoIndex + ": " + photos[photoIndex])
 	get('photoScreen').src = 'photos/' + photos[photoIndex]
 }
 get('photoScreen').src = 'photos/' + photos[photoIndex]
