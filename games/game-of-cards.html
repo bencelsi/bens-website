@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title style="color: white">Game of Cards</title>
+        <link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
+        <!------------------------------------------------>
+        <!-- S T Y L E -->
+        <!------------------------------------------------>
+        <style type="text/css">
+            body {
+                font-family: "Lucida Console", monospace;
+                margin: 0;
+                height: 100%;
+                text-align: center;
+                background-image:  url(../gif/stars2.gif);
+                color: white;
+            }
+
+            .card {
+                margin: 20px;
+                background-color: white;
+                color: black;
+                border-radius: 10px;
+                display: inline-block;
+                height: 250px;
+                width: 150px;
+            }
+        </style>
+    </head>
+<body>
+    <h1>Game of Cards</h1>
+    <br>
+    <div id="center">
+    </div>
+</body>
+<script>
+    let numPlayers = 2
+    let playerPoints = []
+    for (let i = 0; i < numPlayers; i++) {
+        playerPoints[i] = 0
+    }
+    
+    let cards = [
+        ["Mirror",                  "Swap all possessed cards with an opponent",
+            () => { alert("Hi")}],
+        ["The Bernie Sanders",      "Player with most points gives 5 points to player with least",
+            () => { alert("Hi")}],
+        ["Fake ID",                 "After this turn, play your opponent's turn for them",
+            () => { alert("Hi")}],
+        ["Money Boy",               "+1 point per possessed card",
+            () => { alert("Hi")}],
+        ["Dumpster Dive",           "Take or play any card from the discard",
+            () => { alert("Hi")}],
+        ["Lottery",                 "Take or play a random card from the deck",
+            () => { alert("Hi")}],
+        ["Shuffle",                 "Shuffle all possessed cards and evenly re-distribute them",
+            () => { alert("Hi")}],
+        ["Even Steven",             "If you've an even # of points, +2 pts",
+            () => { alert("Hi")}],
+        ["Treasure",                "+5 pts",
+            () => { alert("Hi")}],
+        ["Tradesies",               "Trade a possessed card with an opponent",
+            () => { alert("Hi")}],
+        ["Discard Datcard",         "Discard a possessed card (yours or opponent's)",
+            () => { alert("Hi")}],
+        ["Thief",                   "Steal 2 points from an opponent",
+            () => { alert("Hi")}],
+        
+
+    ]
+
+    let deck = [...Array(cards.length).keys()];
+    shuffle(deck)
+    console.log(deck)
+
+    let center = []
+    for (let i = 0 ; i < 3; i++) {
+        center.push(deck.pop())
+    }
+
+    let discard = []
+
+    function shuffle(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+    renderState()
+    function renderState() {
+        for (let i = 0; i < center.length; i++) {
+            renderCard(center[i])
+        }
+    }
+
+    function renderCard(num) {
+        let newCard = document.createElement("div")
+        newCard.setAttribute("class", "card")
+        newCard.innerHTML = "<b>" + cards[num][0] + "</b><br><br>" + cards[num][1]
+        newCard.onclick = cards[num][2]
+
+        document.getElementById("center").appendChild(newCard)
+    }
+    
+</script>

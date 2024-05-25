@@ -11,7 +11,7 @@
 <html lang='en'>
 <head>
 	<title>Ben's Website!!!</title>
-	<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
+	<link rel='icon' type='image/x-icon' href='../../ico/favicon.ico'>
 	<!------------------------------------------------>
 	<!-- S T Y L E -->
 	<!------------------------------------------------>
@@ -28,8 +28,6 @@
 		#header:hover {
 			filter: drop-shadow(0 0 0.8rem rgb(157, 0, 255));
 		}
-
-		#artScreen { height: 700px; }
 
 		h1 { text-shadow : 0 0 40px red; }
 		
@@ -73,83 +71,37 @@
 	<!-- HELPER SCRIPTS-->
 	<!------------------------------------------------>
 	<script> 
-		function get(id) { return document.getElementById(id) }
-
-		function getAll(clazz) { return document.getElementsByClassName(clazz) }
-
-		function random(min, max) { return (min + (Math.floor(Math.random() * (max - min)))) }
-
-		function shuffle(array) {
-			for (i = 0; i < array.length; i++) {
-				randomIndex = random(i, array.length - 1)
-				temp = array[i]
-				array[i] = array[randomIndex]
-				array[randomIndex] = temp
-			}
-		}
-		
 		function playSound(name, volume = 1, format='.wav') {
 			audio = new Audio();
 			audio.volume = volume
 			audio.src = 'aud/' + name + format
 			audio.play();
 		}
-
-		function increment(value, maxValue) { return value == maxValue ? 0 : value + 1 }
-
-		function decrement(value, maxValue) { return value == 0 ? maxValue : value - 1 }
-
-		function randomButton(value, maxValue) {
-			while (true) {
-				result = random(0, maxValue)
-				if (result != value) {
-					return result
-				}
-			}
-		}
 	</script>
 
 	<!------------------------------------------------>
 	<!-- ART -->
 	<!------------------------------------------------>	
-	<div>
-		<!-- <h1 style="color: purple;">Art<h1> -->
-		<div>
-			<img id="artScreen"/>
-		</div>
-		<div>
-			<img src='../gif/arrowl.gif' class=button id='artLeft'/>
-			<img src='../gif/arrowr.gif' class=button id='artRight'/>
-		</div>
+	
+	<div id=gameLinks>
+		<h2><a href='paintings.html'> 
+			Paintings
+		</a></h2>
+		<!-- <h2><a href='photo/photos.html'>
+			Drawings 
+		</a></h2> -->
+		<h2><a href='photo/photo.html'>
+			Photos
+		</a></h2>
+		<!-- <h2><a href='paintings.html'>
+			Graphic Design 
+		</a></h2>
+		<h2><a href='paintings.html'> 
+			UW Daily Illustrations
+		</a></h2>
+		<h2><a href='paintings.html'>
+			Other
+		</a></h2> -->
 	</div>
-	<script>
-		let art = [
-			"Artichoke.jpg",
-			"BottleAndGoblet.jpg",
-			"Chantarelle.jpg",
-			"Parents.JPG",
-			"CherryTree.jpg",
-			"Pomegranate.JPG",
-			"Popcorn.JPG",
-			"Renaissance.jpg",
-			"SelfPortrait.jpg",
-			"SkullPainting.JPG",
-			"Skull.JPG",
-			"WineAndOnion.jpg",
-		]
-		let artIndex = 0
-		shuffle(art)
-		get('artLeft').onclick = () => {
-			playSound('click', .5)
-			artIndex = decrement(artIndex, art.length - 1)
-			get('artScreen').src = 'art/' + art[artIndex]
-		}
-		get('artRight').onclick = () => {
-			playSound('click', .5)
-			artIndex = increment(artIndex, art.length - 1)
-			get('artScreen').src = 'art/' + art[artIndex]
-		}
-		get('artScreen').src = 'art/' + art[artIndex]
-	</script>
 </body>
 </html>

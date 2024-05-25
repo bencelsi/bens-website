@@ -1,0 +1,131 @@
+<!-- 
+    ____  __          __      
+   / __ \/ /_  ____  / /_____ 
+  / /_/ / __ \/ __ \/ __/ __ \
+ / ____/ / / / /_/ / /_/ /_/ /
+/_/   /_/ /_/\____/\__/\____/ 
+                                                                                                                                                
+(ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title style="color: white">Ben's Website!!!</title>
+	<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
+	<!------------------------------------------------>
+	<!-- S T Y L E -->
+	<!------------------------------------------------>
+	<style type="text/css">
+		body {
+			margin: 0;
+			height: 100%;
+			text-align: center;
+			background-image:  url(../../gif/stars.gif);
+			color: white;
+			font-family: "Lucida Console", monospace;
+		}
+		
+		#header:hover { filter: drop-shadow(0 0 0.8rem rgb(255, 128, 0)); }
+
+		#photoScreen {
+			height: 600px;
+			width: 600px;
+		}
+
+		h1 { text-shadow : 0 0 40px red; }
+		
+		.tab img { width: 30px; }
+
+		a {
+			color: rgb(255, 255, 255);
+			text-decoration: none;
+		}
+
+		.button { cursor: url(../forward.png), auto; }
+
+		.caption { display: block; }
+	</style>
+</head>
+	
+<body>
+	<!------------------------------------------------>
+	<!-- BEN'S WEBSITE -->
+	<!------------------------------------------------>
+	<div style="display: inline-block" id="header" >
+		<a href="../art.html" class="button">
+			<div style='float: left; margin-right: 20px;'>
+				<img src='../../gif/earth.gif'/> 
+			</div>
+			<div style='float: left'>
+				<img src='../../gif/letters/B.gif'/>
+				<img src='../../gif/letters/E.gif'/>
+				<img src='../../gif/letters/N.gif'/>
+				<img src='../../gif/letters/apostrophe.gif'/>
+				<img src='../../gif/letters/S.gif'/>
+				<span class='caption'><h3>W E B S I T E ! ! !</h3></span>
+			</div>
+			<div style='float: right; margin-left: 15px'>
+				<img src='../../gif/earth.gif'/>
+			</div>
+		</a>
+	</div>
+
+	<!------------------------------------------------>
+	<!-- PHOTO -->
+	<!------------------------------------------------>
+	<div class=page id=photo>
+		<!-- <h1 style="color: orange;">Photo</h1> -->
+		<div>
+			<img id=photoScreen />	
+		</div>
+		<div>
+			<img src='../../gif/arrowl.gif' class=button id='photoLeft'/>
+			<img src='../../gif/random.gif' class=button id=photoRandom'/>
+			<img src='../../gif/arrowr.gif' class=button id='photoRight'/>
+		</div>
+	</div>
+<script src="photos.js"></script>
+<script>
+let photoIndex = 0
+shuffle(photos)
+get('photoLeft').onclick = () => {
+	//playSound('click', .5)
+	photoIndex = decrement(photoIndex, photos.length - 1)
+	console.log(photoIndex + ": " + photos[photoIndex])
+	get('photoScreen').src = 'photos/' + photos[photoIndex]
+}
+get('photoRight').onclick = () => {
+	//playSound('click', .5)
+	photoIndex = increment(photoIndex, photos.length - 1)
+	console.log(photoIndex + ": " + photos[photoIndex])
+	get('photoScreen').src = 'photos/' + photos[photoIndex]
+}
+get('photoScreen').src = 'photos/' + photos[photoIndex]
+
+function get(id) { return document.getElementById(id) }
+
+function random(min, max) { return (min + (Math.floor(Math.random() * (max - min)))) }
+
+function shuffle(array) {
+	for (i = 0; i < array.length; i++) {
+		randomIndex = random(i, array.length - 1)
+		temp = array[i]
+		array[i] = array[randomIndex]
+		array[randomIndex] = temp
+	}
+}
+
+function playSound(name, volume = 1, format='.wav') {
+	audio = new Audio();
+	audio.volume = volume
+	audio.src = 'aud/' + name + format
+	audio.play();
+}
+
+function increment(value, maxValue) { return value == maxValue ? 0 : value + 1 }
+
+function decrement(value, maxValue) { return value == 0 ? maxValue : value - 1 }
+</script>
+</body>
+</html>
