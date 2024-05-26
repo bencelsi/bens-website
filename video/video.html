@@ -75,22 +75,27 @@
 	</div>
 	<script>
 		// TODO: https://git-lfs.com/
+		// TODO: add 'thumbnails'
 		let videos = [
-			["ABBA Shreds!",					"mp4",		1280,	720],	
-			// ["The Banana Man",					"mp4",		1280,	720],
-			["Funny Fall",						"mp4",		640,	480],
-			["I Am a Robot",					"mp4",		1280,	720],
-			["Intersections!",					"mov",		1280,	720],
-			// ["My First Blender Movie",		"mov",		1280,	720],
-			["Underwear (Official Trailer)",	"mp4",		1280,	720],
-			["Untitled",						"mp4",		1280,	720],
-
+			["ABBA Shreds!",					"mp4"],	
+			["All Star But It's The Same As The Original And I Get A Copyright Strike", "mp4"],
+			["Dad Listen, Just Listen!", 		"mp4"],
+			["Don't Worry Be Happy", 			"mov"],
+			["Funny Fall",						"mp4"],
+			["Homework",						"mov"],
+			["I Am a Robot",					"mp4"],
+			["Intersections!",					"mov"],
+			// ["My First Blender Movie",		"mp4"],
+			["Underwear (Official Trailer)",	"mp4"],
+			["Untitled",						"mp4"],
 		]
-		let videoIndex = 1 //use array to pass by reference
+
+		let videoIndex = 0
 		shuffle(videos)
 		setVideo()
 
 		get('videoLeft').onclick = function() {
+			console.log(videoIndex)
 			videoIndex = decrement(videoIndex, videos.length - 1)
 			setVideo()
 		}
@@ -110,8 +115,6 @@
 			get('videoScreen').src = 'videos/' + videoInfo[0] + "." + videoInfo[1]
 			//get('videoSource').type = 'video/' + videoInfo[1]
 			get('videoTitle').innerHTML = videoInfo[0]
-			//get('videoScreen').width = videoInfo[2]
-			//get('videoScreen').height = videoInfo[3]
 		}	
 		function get(id) { return document.getElementById(id) }
 
