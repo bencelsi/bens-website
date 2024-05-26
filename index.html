@@ -13,8 +13,9 @@ Local mode indicator - favicon?
 custom domain?
 Strike right balance of organization, discovery, and shuffling
 Standardize/tidy cursor and sound
+Create 'shared' js file for shared stuff
+Once every tab is just pages of links, maybe incorporate them back into main page
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,19 +80,7 @@ Standardize/tidy cursor and sound
 			<!-- <img src="gif/earth.gif"/> -->
 		</div>
 	</div>
-	<script> 
-		// if (location.hostname === "") {
-    	// 	alert("It's a local server!");
-		// }
-		function get(id) { return document.getElementById(id) }
-		function getAll(clazz) { return document.getElementsByClassName(clazz) }
-		function playSound(name, volume = 1, format=".wav") {
-			audio = new Audio();
-			audio.volume = volume
-			audio.src = "aud/" + name + format
-			audio.play();
-		}
-	</script>
+	
 	<br><br><br>
 	<!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
 	<div id="tabMenu">
@@ -127,4 +116,5 @@ Standardize/tidy cursor and sound
 		</div>
 	</div>
 </body>
+<script src="shared.js"></script>
 </html>
