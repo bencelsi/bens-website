@@ -11,35 +11,9 @@ TODOS:
 Secret key for local mode?
 support subsections - gif per subsection
 custom domain?
-Eventually - separate page per tab. 
-Make photos a subs	ection of art
-Make custom favicon
 Utilize more separate webpages?
 Strike right balance of organization, discovery, and shuffling
-Games
 
-Video
-
-Music
-	Albums
-	Chords
-	Lyrics
-	Music Videos
-
-Art
-	Painting
-	Drawings
-	Memes
-		Business Spooner
-	UW Daily Illustrations
-	Misc (graphic design)
-		Business Spooner
-		Wolf of Wall Street
-		Thicc Spaghetti
-
-Photos
-
-Writing
 
 -->
 
@@ -58,19 +32,16 @@ Writing
 			text-align: center;
 		}
 		button {
-			background-color: black;
 			color: white;
 		}
 
 		a { text-decoration: none; }
 		
-		#games:hover { filter: drop-shadow(0 0 1.0rem rgb(0, 139, 39)); }
-		#video:hover { filter: drop-shadow(0 0 1.0rem rgb(0, 117, 234)); }
-		#music:hover { filter: drop-shadow(0 0 1.0rem rgb(255, 0, 0)); }
-		#art:hover { filter: drop-shadow(0 0 1.0rem rgb(195, 0, 255));
-			a img { filter: drop-shadow(0 0 1.0rem rgb(195, 0, 255)); }}
-		#writing:hover { filter: drop-shadow(0 0 1.0rem rgb(241, 201, 0)); }
-		#photo:hover { filter: drop-shadow(0 0 1.0rem rgb(255, 94, 0)); }
+		#games:hover	{ filter: drop-shadow(0 0 1.0rem rgb(0, 139, 39)); }
+		#video:hover	{ filter: drop-shadow(0 0 1.0rem rgb(0, 117, 234)); }
+		#music:hover	{ filter: drop-shadow(0 0 1.0rem rgb(255, 0, 0)); }
+		#art:hover		{ filter: drop-shadow(0 0 1.0rem rgb(195, 0, 255)); }
+		#writing:hover	{ filter: drop-shadow(0 0 1.0rem rgb(241, 201, 0)); }
 
 		.tab {
 			/* box-shadow: 0px 0px 50px #fff; */
@@ -78,24 +49,12 @@ Writing
 			margin-right: 60px;
 			margin-left: 60px;
 			cursor: url(forward.png), auto;
-			img {
-				width: 70px;
-			}
-			/* a:hover {
-				filter: drop-shadow(0 0 1.5rem rgb(206, 120, 255));
-			} */
-		}	
-
-		#art a img:hover {
-			filter: drop-shadow(0 0 1.0rem rgb(206, 120, 255));
 		}
-
 
 		.button { cursor: url(forward.png), auto; }
 
 		.caption { 
-			display: block; 
-			/* color: white; */
+			display: block;
 			text-decoration: none;
 			font-weight: bold;
 			filter: drop-shadow(0 0 1.0rem rgb(0, 0, 0));
@@ -125,10 +84,10 @@ Writing
 			<img src="gif/earth.gif"/>
 		</div>
 	</div>
-	<!------------------------------------------------>
-	<!-- H E L P E R   S C R I P T S -->
-	<!------------------------------------------------>
 	<script> 
+		// if (location.hostname === "") {
+    	// 	alert("It's a local server!");
+		// }
 		function get(id) { return document.getElementById(id) }
 		function getAll(clazz) { return document.getElementsByClassName(clazz) }
 		function playSound(name, volume = 1, format=".wav") {
@@ -138,46 +97,37 @@ Writing
 			audio.play();
 		}
 	</script>
-	<br>
-	<br>
-	<!------------------------------------------------>
-	<!-- T A B S -->
-	<!------------------------------------------------>
+	<br><br><br>
 	<div id="tabMenu">
-		<div class="tab" id="games">
-			<a href="games/games.html">	
-				<img src="gif/tabs/joystick.gif"/>
-				<!-- <span class="caption" style="color: rgb(0, 255, 0)">Games</span> -->
-			</a>
-		</div>
-		<div class=tab id="video">
-			<a href="video/video.html">
-				<img src="gif/tabs/TV.gif"/>
-				<!-- <span class=caption style="color: blue">Video</span> -->
-			</a>
-		</div>
-		<div class=tab id="art">
-			<a href="art/art.html">
-				<img src="gif/tabs/paintbrush.gif"/>
-				<!-- <span class=caption style="color: purple">Art</span> -->
-			</a>
-		</div>
 		<div class=tab id="music">
 			<a href="music/music.html">
 				<img src="gif/tabs/guitar.gif"/>
 				<!-- <span class="caption" style="color: red">Music</span> -->
 			</a>
 		</div>
-		<!-- <div class=tab id="photo">
-			<a href="photo/photo.html">
-				<img src="gif/tabs/camera.gif"/>
-				<span class="caption" style="color: orange">Photos</span>
+		
+		<div class=tab id="art">
+			<a href="art/art.html">
+				<img src="gif/tabs/pallette.gif"/>
+				<!-- <span class=caption style="color: purple">Art</span> -->
 			</a>
-		</div> -->
+		</div>
+		<div class="tab" id="games">
+			<a href="games/games.html">	
+				<img src="gif/tabs/computer.gif"/>
+				<!-- <span class="caption" style="color: rgb(0, 255, 0)">Games</span> -->
+			</a>
+		</div>
 		<div class=tab id="writing">
 			<a href="writing/writing.html">
 				<img src="gif/tabs/book.gif"/>
 				<!-- <span class="caption" style="color: yellow">Writing</span> -->
+			</a>
+		</div>
+		<div class=tab id="video">
+			<a href="video/video.html">
+				<img src="gif/tabs/TV.gif"/>
+				<!-- <span class=caption style="color: blue">Video</span> -->
 			</a>
 		</div>
 	</div>
