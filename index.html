@@ -39,8 +39,9 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 
 		a { 
 			text-decoration: none;
+			cursor: url(cursor.png), auto;
 		}
-		
+
 		#musicTab:not(.selected):hover, #musicTab.selected { 
 			filter: drop-shadow(0 0 .8rem rgb(204, 0, 255)); }
 		#artTab:not(.selected):hover, #artTab.selected { 
@@ -61,10 +62,10 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 			display: inline-block;
 			margin-right: 60px;
 			margin-left: 60px;
-			cursor: url(forward.png), auto;
+			cursor: url(cursor.png), auto;
 		}
 
-		.button { cursor: url(forward.png), auto; }
+		.button { cursor: url(cursor.png), auto; }
 
 		.page {
 			display: none;
@@ -76,23 +77,21 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 			text-align: left;
 			a {
 				color: lightgreen
+			}	
+			a:hover {
+				color: rgb(255, 149, 0);
+				background-color: transparent;
+				filter: drop-shadow(0 0 1.0rem rgb(255, 149, 0));
 			}
-			
-		}
-
-		#gamesPage a:hover {
-			color: rgb(255, 149, 0);
-			background-color: transparent;
-			filter: drop-shadow(0 0 1.0rem rgb(255, 149, 0));
 		}
 		
 		#writingPage a {
 			color: lightyellow	
 		}
+
 		#artPage a {
 			color: pink	
 		}
-
 	</style>
 </head>
 <body>
