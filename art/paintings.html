@@ -51,7 +51,7 @@
 	<!-- BEN'S WEBSITE -->
 	<!------------------------------------------------>
 	<div style='display: inline-block' id='header'>
-		<a href="art.html">
+		<a href="../index.html">
 			<div style='float: left'>
 				<img src='../gif/earth.gif'/> 
 			</div>
@@ -89,17 +89,13 @@
 	<script src="../shared.js"></script>
 	<script>
 		let art = [
-			"Artichoke.jpg",
 			"BottleAndGoblet.jpg",
 			"Chantarelle.jpg",
-			"Parents.JPG",
-			"CherryTree.jpg",
 			"Pomegranate.JPG",
-			"Popcorn.JPG",
-			"Renaissance.jpg",
+			"McKinley.JPG",
+			"Renaissance.JPG",
 			"SelfPortrait.jpg",
 			"SkullPainting.JPG",
-			"Skull.JPG",
 			"WineAndOnion.jpg",
 		]
 		let artIndex = 0
@@ -107,14 +103,14 @@
 		get('artLeft').onclick = () => {
 			playSound('click', .5)
 			artIndex = decrement(artIndex, art.length - 1)
-			get('artScreen').src = 'art/' + art[artIndex]
+			get('artScreen').src = 'paintings/' + art[artIndex]
 		}
 		get('artRight').onclick = () => {
 			playSound('click', .5)
 			artIndex = increment(artIndex, art.length - 1)
-			get('artScreen').src = 'art/' + art[artIndex]
+			get('artScreen').src = 'paintings/' + art[artIndex]
 		}
-		get('artScreen').src = 'art/' + art[artIndex]
+		get('artScreen').src = 'paintings/' + art[artIndex]
 	</script>
 </body>
 </html>

@@ -62,11 +62,13 @@
 	</script>
 	<div>
 		<div>
+
+			<h2 id="videoTitle"></h2>
+			<br>
 			<!-- <iframe id=videoScreen src='https://www.youtube.com/embed/LaAjKX-p5hk'></iframe> -->
 			<video id="videoScreen" width=1280 height="720" controls>
 				<source id="videoSource" type="video/mp4">
 			</video> 
-			<h2 id="videoTitle"></h2>
 			<br>
 		</div>
 		<img src='../gif/arrowl.gif' class=button id='videoLeft'/>
@@ -79,18 +81,18 @@
 		// TODO: add 'thumbnails'
 		// TODO: Don't show titles on videos?
 		let videos = [
-			["ABBA Shreds!",					"mp4"],	
-			["All Star But It's The Same As The Original And I Get A Copyright Strike", "mp4"],
-			["Dad Listen, Just Listen!", 		"mp4"],
-			["Don't Worry Be Happy", 			"mov"],
-			["Funny Fall",						"mp4"],
-			["Homework",						"mov"],
-			["I Am a Robot",					"mp4"],
-			["Intersections!",					"mov"],
-			//["My First Blender Movie",			"mov"],
-			["Underwear (Official Trailer)",	"mp4"],
-			["University of Washington",		"mp4"],
-			["Untitled",						"mp4"],
+			"ABBA Shreds!",	
+			"All Star But It's The Same As The Original And I Get A Copyright Strike",
+			"Dad Listen, Just Listen!",
+			"Don't Worry Be Happy", 		
+			"Funny Fall",						
+			"Homework",
+			"I Am a Robot",			
+			"Intersections!",			
+			"My First Blender Movie",
+			"Underwear (Official Trailer)",
+			"University of Washington",
+			"Untitled"
 		]
 
 		let videoIndex = 0
@@ -114,10 +116,8 @@
 		}
 
 		function setVideo() {
-			let videoInfo = videos[videoIndex]
-			get('videoScreen').src = 'videos/' + videoInfo[0] + "." + videoInfo[1]
-			//get('videoSource').type = 'video/' + videoInfo[1]
-			get('videoTitle').innerHTML = videoInfo[0]
+			get('videoScreen').src = 'videos/' + videos[videoIndex] + ".mp4"
+			get('videoTitle').innerHTML = videos[videoIndex]
 		}	
 		
 	</script>
