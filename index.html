@@ -30,18 +30,30 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 			height: 100%;
 			text-align: center;
 		}
-		
+
+		#tabMenu { display: inline-block; }
+
 		button {
 			color: white;
 		}
 
-		a { text-decoration: none; }
+		a { 
+			text-decoration: none;
+		}
+		#musicTab:not(.selected):hover, #musicTab.selected { 
+			filter: drop-shadow(0 0 .8rem rgb(170, 0, 255)); }
+		#artTab:not(.selected):hover, #artTab.selected { 
+			filter: drop-shadow(0 0 .8rem rgb(255, 0, 0)); }
+		#gamesTab:not(.selected):hover, #gamesTab.selected { 
+			filter: drop-shadow(0 0 .8rem rgb(0, 198, 56)); }
+		#writingTab:not(.selected):hover, #writingTab.selected { 
+			filter: drop-shadow(0 0 .8rem rgb(255, 213, 0)); }
+		#videoTab:not(.selected):hover, #videoTab.selected { 
+			filter: drop-shadow(0 0 .8rem rgb(0, 128, 255)); }
 		
-		#games:hover	{ filter: drop-shadow(0 0 1.0rem rgb(0, 139, 39)); }
-		#video:hover	{ filter: drop-shadow(0 0 1.0rem rgb(0, 117, 234)); }
-		#music:hover	{ filter: drop-shadow(0 0 1.0rem rgb(255, 0, 0)); }
-		#art:hover		{ filter: drop-shadow(0 0 1.0rem rgb(195, 0, 255)); }
-		#writing:hover	{ filter: drop-shadow(0 0 1.0rem rgb(241, 201, 0)); }
+		.selected img {
+			filter: drop-shadow(0 0 1.5rem rgb(255, 189, 132));
+		}
 
 		.tab {
 			/* box-shadow: 0px 0px 50px #fff; */
@@ -53,14 +65,33 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 
 		.button { cursor: url(forward.png), auto; }
 
-		.caption { 
-			display: block;
-			text-decoration: none;
-			font-weight: bold;
-			filter: drop-shadow(0 0 1.0rem rgb(0, 0, 0));
+		.page {
+			display: none;
 		}
 
-		#tabMenu { display: inline-block; }
+		#gamesPage {
+			margin: auto;
+			width: fit-content;
+			text-align: left;
+			a {
+				color: lightgreen
+			}
+			
+		}
+
+		#gamesPage a:hover {
+			color: rgb(255, 149, 0);
+			background-color: transparent;
+			filter: drop-shadow(0 0 1.0rem rgb(255, 149, 0));
+		}
+		
+		#writingPage a {
+			color: lightyellow	
+		}
+		#artPage a {
+			color: pink	
+		}
+
 	</style>
 </head>
 <body>
@@ -80,41 +111,159 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 			<!-- <img src="gif/earth.gif"/> -->
 		</div>
 	</div>
-	
-	<br><br><br>
+	<br>
 	<!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
 	<div id="tabMenu">
-		<div class=tab id="music">
+		<div class="tab" id="musicTab">
 			<a href="music/music.html">
 				<img src="gif/tabs/guitar.gif"/>
-				<!-- <span class="caption" style="color: red">Music</span> -->
 			</a>
 		</div>
-		<div class=tab id="art">
-			<a href="art/art.html">
-				<img src="gif/tabs/pallette.gif"/>
-				<!-- <span class=caption style="color: purple">Art</span> -->
-			</a>
+		<div class="tab" id="artTab" >
+			<img src="gif/tabs/pallette.gif"/>	
 		</div>
-		<div class="tab" id="games">
-			<a href="games/games.html">	
-				<img src="gif/tabs/computer.gif"/>
-				<!-- <span class="caption" style="color: rgb(0, 255, 0)">Games</span> -->
-			</a>
+		<div class="tab" id="gamesTab">
+			<img src="gif/tabs/computer.gif"/>
 		</div>
-		<div class=tab id="writing">
-			<a href="writing/writing.html">
-				<img src="gif/tabs/book.gif"/>
-				<!-- <span class="caption" style="color: yellow">Writing</span> -->
-			</a>
+		<div class="tab" id="writingTab">
+			<img src="gif/tabs/book.gif"/>
 		</div>
-		<div class=tab id="video">
+		<div class="tab" id="videoTab">
 			<a href="video/video.html">
 				<img src="gif/tabs/TV.gif"/>
-				<!-- <span class=caption style="color: blue">Video</span> -->
 			</a>
 		</div>
 	</div>
+	<br><br>
+
+<!------------------------------------------------>
+<!-- A R T -->
+<!------------------------------------------------>
+	<div id="artPage" class="page">
+		<h2><a href="paintings.html"> 
+			Paintings
+		</a></h2>
+		<!-- <h2><a href='photo/photos.html'>
+			Drawings 
+		</a></h2> -->
+		<h2><a href='photo/photo.html'>
+			Photos
+		</a></h2>
+		<!-- <h2><a href='paintings.html'>
+			Graphic Design 
+		</a></h2>
+		<h2><a href='paintings.html'> 
+			UW Daily Illustrations
+		</a></h2>
+		<h2><a href='paintings.html'>
+			Other
+		</a></h2> -->
+	</div>
+
+<!------------------------------------------------>
+<!-- G A M E S -->
+<!------------------------------------------------>
+	<div id="gamesPage" class="page">
+		<a href='https://bencelsi.github.io/chord-wheel'> 
+			<h2><img src="games/ico/chord-wheel.ico"> Chord Wheel</h2>
+		</a>
+		<a href='https://bencelsi.github.io/tetriven'>
+			<h2><img src="games/ico/tetriven2.ico"> Tetriven</h2>
+		</a>
+		<a href='https://bencelsi.github.io/nabanagrams'> 
+			<h2><img src="games/ico/nabanagrams.ico"> Nabanagrams</h2>
+		</a>
+		<a href='https://en.wikipedia.org/wiki/Soviet_Union'>
+			<h2><img src="games/ico/soviet-monopoly.ico"> Soviet Monopoly</h2>
+		</a>
+		<a href='https://bencelsi.github.io/automata'>
+			<h2><img src="games/ico/automata.ico"> Automata</h2>
+		</a>
+		<a href='https://bencelsi.github.io/catan-o-rama'>
+			<h2><img src="games/ico/catanorama.ico"> Catan-o-Rama!</h2>
+		</a>
+		<a href='https://bencelsi.github.io/ivans-game'> 
+			<h2><img src="games/ico/ivans-game.ico"> Ivan's Game</h2>
+		</a>
+		<a href='https://bencelsi.github.io/mxbbi'>
+			<h2><img src="games/ico/mxbbi.ico"> Mxbbi</h2>
+		</a>
+		<!-- <h2><a href='https://bencelsi.github.io/apartment-tour'>
+				Apartment Tour
+		</a></h2> -->
+		<h2><a href='DROP.html'>
+			<img src="games/ico/drop.ico"> Drop
+		</a></h2>
+		<h2><a href='https://scratch.mit.edu/projects/1448075/fullscreen'>
+			<img src="games/ico/griven.ico"> Griven
+		</a></h2>
+		<h2><a href='https://scratch.mit.edu/projects/379323/fullscreen/'>
+			<img src="games/ico/grounded.ico"> Grounded
+				<!-- TODO: Add songs to grounded radio - ABC - In every heart - Bobby Mcferrin?  -->
+		</a></h2>
+	</div>
+
+<!------------------------------------------------>
+<!-- W R I T I N G -->
+<!------------------------------------------------>
+	<div id="writingPage" class="page">
+		<!-- <h1 style="color: yellow;">Writing</h1> -->
+		<!-- <a href="writing/christian-bok.html"><h2>Christian Bök</h2></a> -->
+		<!-- <a href="writing/youre-little.html"><h2>You're Little</h2></a> -->
+		<!-- <a href="writing/great-apes.html"><h2>Great Apes</h2></a> -->
+		<a href="writing/palindromes.html"><h2>Palindromes</h2></a>
+		<!-- <h2><a href='writing/shakespearean-friday.html'>Shakespearean Friday</a></h2> -->
+	</div>
 </body>
+
+
 <script src="shared.js"></script>
+<script>
+		let selected = "none"
+		get("gamesTab").onclick = function() {
+			selected = "games"
+			changePage()
+			changeTab() 
+		}
+		get("artTab").onclick = function() {
+			selected = "art"
+			changePage()
+			changeTab() 
+		}
+		get("writingTab").onclick = function() {
+			selected = "writing"
+			changePage()
+			changeTab() 
+		}
+		
+
+		let tabs = getAll("tab")
+		changeTab()
+		function changeTab() {
+			for (let i = 0; i < tabs.length; i++) {
+				let tab = tabs[i]
+				if (tab.id == selected + "Tab") {
+					tab.classList.add("selected")
+				} else {
+					tab.classList.remove("selected")
+				}
+			}
+		}
+
+		let pages = getAll("page")
+		
+		function changePage() {
+			for (let i = 0; i < pages.length; i++) {
+				let page = pages[i]
+				if (page.id == selected + "Page") {
+					page.style.display = 'inline-block'
+				} else {
+					page.style.display = 'none'
+				}
+			}
+		}
+
+		// for page in pages - hide if not selected, else show
+
+</script>
 </html>
