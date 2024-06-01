@@ -8,6 +8,7 @@
 (ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
 
 TODOS:
+Make header letters changeable when clicked
 Secret key for local mode?
 Local mode indicator - favicon?
 custom domain?
@@ -39,7 +40,7 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 
 		a { 
 			text-decoration: none;
-			cursor: url(cursor.png), auto;
+			cursor: url(shared/cursor.png), auto;
 		}
 
 		#musicTab:not(.selected):hover, #musicTab.selected { 
@@ -62,10 +63,10 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 			display: inline-block;
 			margin-right: 60px;
 			margin-left: 60px;
-			cursor: url(cursor.png), auto;
+			cursor: url(shared/cursor.png), auto;
 		}
 
-		.button { cursor: url(cursor.png), auto; }
+		.button { cursor: url(shared/cursor.png), auto; }
 
 		.page {
 			display: none;
@@ -139,85 +140,88 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 <!------------------------------------------------>
 <!-- A R T -->
 <!------------------------------------------------>
-	<div id="artPage" class="page">
-		<h2><a href="art/paintings.html"> 
-			Paintings
-		</a></h2>
-		<!-- <h2><a href='photo/photos.html'>
-			Drawings 
-		</a></h2> -->
-		<h2><a href='art/photo/photo.html'>
-			Photos
-		</a></h2>
-		<!-- <h2><a href='paintings.html'>
-			Graphic Design 
-		</a></h2>
-		<h2><a href='paintings.html'> 
-			UW Daily Illustrations
-		</a></h2>
-		<h2><a href='paintings.html'>
-			Other
-		</a></h2> -->
-	</div>
+<div id="artPage" class="page">
+	<h2><a href="art/paintings.html"> 
+		Paintings
+	</a></h2>
+	<!-- <h2><a href='photo/photos.html'>
+		Drawings 
+	</a></h2> -->
+	<h2><a href='art/photo/photo.html'>
+		Photos
+	</a></h2>
+	<!-- <h2><a href='paintings.html'>
+		Graphic Design 
+	</a></h2>
+	<h2><a href='paintings.html'> 
+		UW Daily Illustrations
+	</a></h2>
+	<h2><a href='paintings.html'>
+		Other
+	</a></h2> -->
+</div>
 
 <!------------------------------------------------>
 <!-- G A M E S -->
 <!------------------------------------------------>
-	<div id="gamesPage" class="page">
-		<a href='https://bencelsi.github.io/chord-wheel'> 
-			<h2><img src="games/ico/chord-wheel.ico"> Chord Wheel</h2>
-		</a>
-		<a href='https://bencelsi.github.io/tetriven'>
-			<h2><img src="games/ico/tetriven2.ico"> Tetriven</h2>
-		</a>
-		<a href='https://bencelsi.github.io/nabanagrams'> 
-			<h2><img src="games/ico/nabanagrams.ico"> Nabanagrams</h2>
-		</a>
-		<a href='https://en.wikipedia.org/wiki/Soviet_Union'>
-			<h2><img src="games/ico/soviet-monopoly.ico"> Soviet Monopoly</h2>
-		</a>
-		<a href='https://bencelsi.github.io/automata'>
-			<h2><img src="games/ico/automata.ico"> Automata</h2>
-		</a>
-		<a href='https://bencelsi.github.io/catan-o-rama'>
-			<h2><img src="games/ico/catanorama.ico"> Catan-o-Rama!</h2>
-		</a>
-		<a href='https://bencelsi.github.io/ivans-game'> 
-			<h2><img src="games/ico/ivans-game.ico"> Ivan's Game</h2>
-		</a>
-		<a href='https://bencelsi.github.io/mxbbi'>
-			<h2><img src="games/ico/mxbbi.ico"> Mxbbi</h2>
-		</a>
-		<!-- <h2><a href='https://bencelsi.github.io/apartment-tour'>
-				Apartment Tour
-		</a></h2> -->
-		<h2><a href='DROP.html'>
-			<img src="games/ico/drop.ico"> Drop
-		</a></h2>
-		<h2><a href='https://scratch.mit.edu/projects/1448075/fullscreen'>
-			<img src="games/ico/griven.ico"> Griven
-		</a></h2>
-		<h2><a href='https://scratch.mit.edu/projects/379323/fullscreen/'>
-			<img src="games/ico/grounded.ico"> Grounded
-				<!-- TODO: Add songs to grounded radio - ABC - In every heart - Bobby Mcferrin?  -->
-		</a></h2>
-	</div>
+<div id="gamesPage" class="page">
+	<a href='https://bencelsi.github.io/chord-wheel'> 
+		<h2><img src="games/ico/chord-wheel.ico"> Chord Wheel</h2>
+	</a>
+	<a href='https://bencelsi.github.io/tetriven'>
+		<h2><img src="games/ico/tetriven2.ico"> Tetriven</h2>
+	</a>
+	<a href='https://bencelsi.github.io/nabanagrams'> 
+		<h2><img src="games/ico/nabanagrams.ico"> Nabanagrams</h2>
+	</a>
+	<a href='https://en.wikipedia.org/wiki/Soviet_Union'>
+		<h2><img src="games/ico/soviet-monopoly.ico"> Soviet Monopoly</h2>
+	</a>
+	<a href='https://en.wikipedia.org/wiki/Card_game'>
+		<h2><img src="games/ico/game-of-cards.ico"> Game of Cards</h2>
+	</a>
+	<a href='https://bencelsi.github.io/automata'>
+		<h2><img src="games/ico/automata.ico"> Automata</h2>
+	</a>
+	<a href='https://bencelsi.github.io/catan-o-rama'>
+		<h2><img src="games/ico/catanorama.ico"> Catan-o-Rama!</h2>
+	</a>
+	<a href='https://bencelsi.github.io/ivans-game'> 
+		<h2><img src="games/ico/ivans-game.ico"> Ivan's Game</h2>
+	</a>
+	<a href='https://bencelsi.github.io/mxbbi'>
+		<h2><img src="games/ico/mxbbi.ico"> MXBBI</h2>
+	</a>
+	<!-- <h2><a href='https://bencelsi.github.io/apartment-tour'>
+			Apartment Tour
+	</a></h2> -->
+	<h2><a href='DROP.html'>
+		<img src="games/ico/drop.ico"> Drop
+	</a></h2>
+	<h2><a href='https://scratch.mit.edu/projects/1448075/fullscreen'>
+		<img src="games/ico/griven.ico"> Griven
+	</a></h2>
+	<h2><a href='https://scratch.mit.edu/projects/379323/fullscreen/'>
+		<img src="games/ico/grounded.ico"> Grounded
+			<!-- TODO: Add songs to grounded radio - ABC - In every heart - Bobby Mcferrin?  -->
+	</a></h2>
+</div>
 
 <!------------------------------------------------>
 <!-- W R I T I N G -->
 <!------------------------------------------------>
-	<div id="writingPage" class="page">
-		<!-- <h1 style="color: yellow;">Writing</h1> -->
-		<!-- <a href="writing/christian-bok.html"><h2>Christian Bök</h2></a> -->
-		<!-- <a href="writing/youre-little.html"><h2>You're Little</h2></a> -->
-		<!-- <a href="writing/great-apes.html"><h2>Great Apes</h2></a> -->
-		<a href="writing/palindromes.html"><h2>Palindromes</h2></a>
-		<!-- <h2><a href='writing/shakespearean-friday.html'>Shakespearean Friday</a></h2> -->
-	</div>
+<div id="writingPage" class="page">
+	<!-- <h1 style="color: yellow;">Writing</h1> -->
+	<!-- <a href="writing/christian-bok.html"><h2>Christian Bök</h2></a> -->
+	<!-- <a href="writing/youre-little.html"><h2>You're Little</h2></a> -->
+	<!-- <a href="writing/great-apes.html"><h2>Great Apes</h2></a> -->
+	<a href="writing/palindromes.html"><h2>Palindromes</h2></a>
+	<!-- <h2><a href='writing/shakespearean-friday.html'>Shakespearean Friday</a></h2> -->
+</div>
+
 </body>
 
-
-<script src="shared.js"></script>
+<script src="shared/shared.js"></script>
 <script>
 		let selected = "none"
 		get("gamesTab").onclick = function() {
@@ -235,10 +239,8 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 			changePage()
 			changeTab() 
 		}
-		
 
 		let tabs = getAll("tab")
-		changeTab()
 		function changeTab() {
 			for (let i = 0; i < tabs.length; i++) {
 				let tab = tabs[i]

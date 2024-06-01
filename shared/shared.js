@@ -1,5 +1,5 @@
 if (location.hostname === "") {
-    document.title = "(L) " + document.title
+    document.title = document.title.toLowerCase()
 }
 
 function get(id) { return document.getElementById(id) }
