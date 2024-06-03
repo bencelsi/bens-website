@@ -70,8 +70,7 @@ Strike right balance of organization, discovery, and shuffling
 			text-align: left;
 			a {
 				color: lightgreen
-			}	
-			
+			}
 		}
 		a:hover {
 			color: rgb(255, 149, 0);
@@ -121,9 +120,7 @@ Strike right balance of organization, discovery, and shuffling
 			<img src="gif/tabs/book.gif"/>
 		</div>
 		<div class="tab" id="videoTab">
-			<a href="video/video.html">
-				<img src="gif/tabs/TV.gif"/>
-			</a>
+			<img src="gif/tabs/TV.gif"/>
 		</div>
 	</div>
 	<br><br>
@@ -231,8 +228,8 @@ Strike right balance of organization, discovery, and shuffling
 <!--VIDEO -->
 <!------------------------------------------------>
 <div id="videoPage" class="page">
+	<a href="video/video.html"><h2>Video</h2></a>
 </div>
-
 </body>
 
 
@@ -259,6 +256,7 @@ Strike right balance of organization, discovery, and shuffling
 		get("artTab").onclick = () => selectTab("art")
 		get("gamesTab").onclick = () => selectTab("games")
 		get("writingTab").onclick = () => selectTab("writing")
+		get("videoTab").onclick = () => selectTab("video")
 
 		
 		function refreshPage() {
