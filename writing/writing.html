@@ -1,0 +1,79 @@
+<head>
+    <title>Palindromes</title>
+    <link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
+</head>
+<style type="text/css">
+    body {
+        background-image:  url(../gif/stars2.gif);
+        color: white;
+        font-family: "Lucida Console", monospace;
+        white-space: pre-wrap;
+        margin: auto;
+        text-align: center;
+        text-shadow: #000000 0 0 25px;
+    }
+    .button {
+        cursor: url(../../shared/cursor.png), auto;
+        :hover {
+            filter: drop-shadow(0 0 1.0rem rgb(255, 255, 255));
+        }
+    }
+</style>
+<div>
+    <a href="../index.html"><img src="../gif/back.gif" class="button" style="float: left;"></a>
+    <h1 id="title"></h1>
+    <!-- <div style="display: flex; width: fit-content; margin: auto;"> -->
+    <div id="writing"></div>
+    <!-- </div> -->
+    <div style="display: flex; width: fit-content; margin: auto;">
+        <img src="../gif/arrowl.gif" class="button" id="left" style="float: left; padding-right: 20px;"/>
+        <img class=button id="random" src='../gif/random.gif'/>
+        <img src="../gif/arrowr.gif" class="button" id="right" style="float: right; padding-left: 20px;"/>
+    </div>
+</div>
+<script src="../shared/shared.js"></script>
+<script src="palindromes.js"></script>
+<script src="alphabet-sayings.js"></script>
+
+<script>
+    var writings
+    var title
+    if (window.location.search === "?palindromes") {
+        writings = palindromes
+        title = "Palindromes"
+    } else if (window.location.search === "?spoonerisms") {
+        writings = spoonerisms
+        title = "Spoonerisms"
+    } else if (window.location.search === "?alphabet-sayings") {
+        writings = alphabetSayings
+        title = "Alphabet Sayings"
+    }   
+    
+    let index = 0
+    shuffle(writings)
+    let writingDiv = get('writing')
+    
+    get('left').onclick = () => {
+        //playSound('click')
+        index = decrement(index, writings.length - 1)
+        setWriting()
+    }
+
+    get('right').onclick = () => {
+        //playSound('click')
+        index = increment(index, writings.length - 1)
+        setWriting()
+    }
+
+    get('random').onclick = () => {
+        //playSound('click')
+        index = random(0, writings.length - 1)
+        setWriting()
+    }
+
+    function setWriting() {
+        writingDiv.innerHTML = writings[index].replace("\n", "<br>")
+    }
+    
+    setWriting()
+</script>

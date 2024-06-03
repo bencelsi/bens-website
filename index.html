@@ -10,12 +10,12 @@
 TODOS:
 Make header letters changeable when clicked
 Secret key for local mode?
-Local mode indicator - favicon?
 custom domain?
-Strike right balance of organization, discovery, and shuffling
 Standardize/tidy cursor and sound
-Create 'shared' js file for shared stuff
 Once every tab is just pages of links, maybe incorporate them back into main page
+
+Strike right balance of organization, discovery, and shuffling
+
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -34,26 +34,22 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 
 		#tabMenu { display: inline-block; }
 
-		button {
-			color: white;
-		}
-
 		a { 
 			text-decoration: none;
 			cursor: url(shared/cursor.png), auto;
 		}
 
 		#musicTab:not(.selected):hover, #musicTab.selected { 
-			filter: drop-shadow(0 0 .8rem rgb(204, 0, 255)); }
+			filter: drop-shadow(0 0 .9rem rgb(204, 0, 255)); }
 		#artTab:not(.selected):hover, #artTab.selected { 
-			filter: drop-shadow(0 0 .8rem rgb(255, 0, 0)); }
+			filter: drop-shadow(0 0 .9rem rgb(255, 0, 0)); }
 		#gamesTab:not(.selected):hover, #gamesTab.selected { 
-			filter: drop-shadow(0 0 .8rem rgb(0, 198, 56)); }
+			filter: drop-shadow(0 0 .9rem rgb(0, 198, 56)); }
 		#writingTab:not(.selected):hover, #writingTab.selected { 
-			filter: drop-shadow(0 0 .8rem rgb(255, 213, 0)); }
+			filter: drop-shadow(0 0 .9rem rgb(255, 213, 0)); }
 		#videoTab:not(.selected):hover, #videoTab.selected { 
-			filter: drop-shadow(0 0 .8rem rgb(0, 128, 255)); }
-		
+			filter: drop-shadow(0 0 .9rem rgb(0, 128, 255)); }
+
 		.selected img {
 			filter: drop-shadow(0 0 1.5rem rgb(255, 189, 132));
 		}
@@ -66,11 +62,7 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 			cursor: url(shared/cursor.png), auto;
 		}
 
-		.button { cursor: url(shared/cursor.png), auto; }
-
-		.page {
-			display: none;
-		}
+		.page { display: none; }
 
 		#gamesPage {
 			margin: auto;
@@ -79,11 +71,12 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 			a {
 				color: lightgreen
 			}	
-			a:hover {
-				color: rgb(255, 149, 0);
-				background-color: transparent;
-				filter: drop-shadow(0 0 1.0rem rgb(255, 149, 0));
-			}
+			
+		}
+		a:hover {
+			color: rgb(255, 149, 0);
+			background-color: transparent;
+			filter: drop-shadow(0 0 1.0rem rgb(255, 149, 0));
 		}
 		
 		#writingPage a {
@@ -116,9 +109,7 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 	<!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
 	<div id="tabMenu">
 		<div class="tab" id="musicTab">
-			<a href="music/music.html">
-				<img src="gif/tabs/guitar.gif"/>
-			</a>
+			<img src="gif/tabs/guitar.gif"/>
 		</div>
 		<div class="tab" id="artTab" >
 			<img src="gif/tabs/pallette.gif"/>	
@@ -138,17 +129,32 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 	<br><br>
 
 <!------------------------------------------------>
+<!-- M U S I C -->
+<!------------------------------------------------>
+<div id="musicPage" class="page">
+<h2><a href="music/album.html?mashups"> 
+	Mashups
+</a></h2>
+</div>
+
+<!------------------------------------------------>
 <!-- A R T -->
 <!------------------------------------------------>
 <div id="artPage" class="page">
-	<h2><a href="art/paintings.html"> 
-		Paintings
+	<h2><a href="art/art.html?paintings"> 
+		<!-- <img src='art/gif/paintbrush.gif'/>
+		Paintings -->
+		<img src='art/gif/paintbrush.gif'/>
 	</a></h2>
-	<!-- <h2><a href='photo/photos.html'>
-		Drawings 
-	</a></h2> -->
-	<h2><a href='art/photo/photo.html'>
-		Photos
+	<h2><a href='art/art.html?drawings'>
+		<!-- <img src='art/gif/pencilcrazy.gif'/>
+		Drawings -->
+		<img src='art/gif/pencilcrazy.gif'/>
+	</a></h2>
+	<h2><a href='art/art.html?photos'>
+		<!-- <img src='art/gif/camera.gif'/>
+		Photos -->
+		<img src='art/gif/camera.gif'/>
 	</a></h2>
 	<!-- <h2><a href='paintings.html'>
 		Graphic Design 
@@ -214,34 +220,48 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 	<!-- <h1 style="color: yellow;">Writing</h1> -->
 	<!-- <a href="writing/christian-bok.html"><h2>Christian Bök</h2></a> -->
 	<!-- <a href="writing/youre-little.html"><h2>You're Little</h2></a> -->
-	<!-- <a href="writing/great-apes.html"><h2>Great Apes</h2></a> -->
-	<a href="writing/palindromes.html"><h2>Palindromes</h2></a>
+	<a href="writing/writing.html?palindromes"><h2>Palindromes</h2></a>
+	<a href="writing/writing.html?alphabet-sayings"><h2>Alphabet Sayings</h2></a>
+	<a href="writing/writing.html?spoonerisms"><h2>Spoonerisms</h2></a>
+	<a href="writing/great-apes.html"><h2>Great Apes</h2></a>
 	<!-- <h2><a href='writing/shakespearean-friday.html'>Shakespearean Friday</a></h2> -->
+</div>
+
+<!------------------------------------------------>
+<!--VIDEO -->
+<!------------------------------------------------>
+<div id="videoPage" class="page">
 </div>
 
 </body>
 
+
 <script src="shared/shared.js"></script>
 <script>
 		let selected = "none"
-		get("gamesTab").onclick = function() {
-			selected = "games"
-			changePage()
-			changeTab() 
+		let tabs = getAll("tab")
+		let pages = getAll("page")
+
+		if (window.location.search === "?music" ||
+			window.location.search === "?art" ||
+			window.location.search === "?games" ||
+			window.location.search === "?writing" ||
+			window.location.search === "?writing") {
+			selectTab(window.location.search.substring(1, window.location.search.length))
 		}
-		get("artTab").onclick = function() {
-			selected = "art"
-			changePage()
-			changeTab() 
-		}
-		get("writingTab").onclick = function() {
-			selected = "writing"
-			changePage()
-			changeTab() 
+		
+		function selectTab(name) {
+			selected = name
+			refreshPage()
 		}
 
-		let tabs = getAll("tab")
-		function changeTab() {
+		get("musicTab").onclick = () => selectTab("music")
+		get("artTab").onclick = () => selectTab("art")
+		get("gamesTab").onclick = () => selectTab("games")
+		get("writingTab").onclick = () => selectTab("writing")
+
+		
+		function refreshPage() {
 			for (let i = 0; i < tabs.length; i++) {
 				let tab = tabs[i]
 				if (tab.id == selected + "Tab") {
@@ -249,13 +269,6 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 				} else {
 					tab.classList.remove("selected")
 				}
-			}
-		}
-
-		let pages = getAll("page")
-		
-		function changePage() {
-			for (let i = 0; i < pages.length; i++) {
 				let page = pages[i]
 				if (page.id == selected + "Page") {
 					page.style.display = 'inline-block'
@@ -264,8 +277,6 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 				}
 			}
 		}
-
 		// for page in pages - hide if not selected, else show
-
 </script>
 </html>

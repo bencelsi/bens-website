@@ -1,0 +1,221 @@
+<!-- 
+    __  ___           _     
+   /  |/  /_  _______(_)____
+  / /|_/ / / / / ___/ / ___/
+ / /  / / /_/ (__  ) / /__  
+/_/  /_/\__,_/____/_/\___/  
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Ben's Website!!!</title>
+	<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
+	<style type="text/css">
+		body {
+			background-image: url(../gif/stars2.gif);
+			color: white;
+			font-family: "Lucida Console", monospace;
+			margin: auto;
+			text-align: center;
+			width: 500px;
+		}
+
+		#header:hover {
+			filter: drop-shadow(0 0 0.8rem rgb(255, 0, 0));
+		}
+
+		audio {
+			height: 30px;
+			width: 250px;
+		}
+
+		h1 { text-shadow: 0 0 40px red; }
+		
+
+		.caption { 
+			display: block; 
+			color: white;
+			text-decoration: none;
+		}
+
+		.row { display: table; }
+		
+		.button { cursor: url(../shared/cursor.png), auto; }
+
+		.albumCover {
+			width: 400px; 
+			height: 400px; 
+			filter: drop-shadow(0 0 4.5rem rgb(0, 79, 136));
+		}
+
+		#songs {
+			margin-left: auto;
+  			margin-right: auto;
+		}
+
+		td {
+			color:rgb(119, 171, 255);
+			text-align: left;
+			text-shadow: 0 0 30px rgb(0, 0, 0);
+			filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
+		}
+
+		.button { cursor: url(../forward.png), auto; }
+
+	</style>
+</head>
+<body>
+	<div id="AllSongs">
+		<h2 id="title"></h2>
+		<br>
+		<a href="../index.html">
+			<img id="backButton" src="../gif/back.gif" class="button" style="float: left;">
+		</a>
+		<br><br>
+		<img id="albumCover" style="width: 300px; height: 300px; filter: drop-shadow(0 0 4.5rem rgb(0, 79, 136));">
+		<!-- 'https://raw.githubusercontent.com/bencelsi/bencelsi.github.io/master/music/.mp3' -->
+		<br><br>
+		Autoplay <input type="checkbox" id="autoplay" checked />
+		Shuffle <input type="checkbox" id="shuffle" />
+		<br><br>
+		<table id="songs">
+		</table>
+	<div>
+	<br><br>
+
+<script src="all-songs.js"></script>
+<script src="../shared/shared.js"></script>
+<script> 
+
+let mossRock = [
+	"Cats",
+	"Oh My Darling",
+	"Beetle",
+	"Happened By Now",
+	"Feel Like a Fraud",
+	"Don't Get Me Down",
+	"Free",
+	"Walking in the Dark",
+	"Rest Up",
+	"Advocating"
+]
+
+let spaceJam = [
+	"Miyazaki Movies",
+	"Like a Star",
+	"Joanie",
+	"Joe Frank",
+	"Tightrope",
+	"Dark Sky"
+]
+
+let mashups = [
+	"Disco.aif",
+	"One Impala.wav",
+	"Don't Bring Me Diamonds.wav",
+	"California Girls Shepard Tone.mp3",
+	"Mountains at Last.mp3",
+	"1-4-5.wav",
+	"Dream a Little Dream of God.mp3"
+]
+
+let songs = []
+let albumCover = ""
+let title = ""
+let songFolder = "songs/"
+let extension =".mp3"
+if (window.location.search === "?moss-rock") {
+	songs = mossRock
+	albumCover = "Moss Rock.png"
+	title = "Moss Rock"
+} else if (window.location.search === "?space-jams") {
+	songs = spaceJam
+	albumCover = "Space Jams.jpeg"
+	title = "Space Jams"
+} else if (window.location.search === "?all-songs") {
+	allSongs.sort()
+	songs = allSongs
+	albumCover = "All Songs.jpg"
+	title = "All Songs"
+} else if (window.location.search === "?mashups") {
+	songFolder = "mashups/"
+	songs = mashups
+	albumCover = "Mashups.jpg"
+	title = "Mashups"
+	extension = ""
+}
+
+let autoplayCheckbox = get("autoplay")
+let shuffleCheckbox = get("shuffle")
+
+autoplayCheckbox.onclick = function() {
+	if (autoplayCheckbox.checked && shuffleCheckbox) {
+		shuffleCheckbox.checked = false
+	}
+}
+
+shuffleCheckbox.onclick = function() {
+	if (autoplayCheckbox.checked && shuffleCheckbox) {
+		autoplayCheckbox.checked = false
+	}
+}
+
+get("albumCover").src = "albumCovers/" + albumCover
+get("title").innerHTML = title
+
+//	let songsDiv = get("songs")
+let songDiv = get("songs")
+let totalLength = 0;
+let songAudios = []
+
+for (let i = 0; i < songs.length; i++) {
+	let tr = document.createElement("tr")
+	let number = document.createElement("td")
+	number.innerHTML = i + 1 + "."
+	let songTitle = document.createElement("td")
+	songTitle.innerHTML = songs[i]
+	tr.appendChild(number)
+	tr.appendChild(songTitle)
+
+	let songAudioTd = document.createElement("td")
+	let songAudio = document.createElement("audio")
+	songAudio.src = songFolder + songs[i] + extension
+	songAudio.controls = true
+
+	songAudio.addEventListener("play", function() {
+		stopAudios(i)
+	})
+
+	songAudio.addEventListener("ended", function() {
+		songAudios[i].currentTime = 0
+		if (shuffleCheckbox.checked) {
+			let randomIndex = i
+			while (randomIndex == i) {
+				randomIndex = random(0, songAudios.length - 1)
+			}
+			songAudios[randomIndex].currentTime = 0
+			songAudios[randomIndex].play()
+		} else if (autoplayCheckbox.checked && i < songAudios.length - 1) {
+			songAudios[i + 1].currentTime = 0
+			songAudios[i + 1].play()
+		}
+    })
+
+	songAudios.push(songAudio)
+	songAudioTd.appendChild(songAudio)
+	tr.appendChild(songAudioTd)
+	songDiv.appendChild(tr)
+}
+
+function stopAudios(toSkip) {
+	for (let i = 0; i < songAudios.length; i++) {
+		if (i != toSkip) {
+			songAudios[i].pause()
+		}
+	}
+}
+
+</script>
+</body>
+</html>

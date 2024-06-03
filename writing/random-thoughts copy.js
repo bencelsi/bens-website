@@ -1,0 +1,37 @@
+let oneLiners = [
+"No one ever talks about the yellow columns of texas",
+"Shouldn’t 'the shitter' be called 'the shittee'",
+"Being ‘up for something’ and being ‘down for something’ mean the same thing",
+"Cribbage sounds like a cabbage that went bad",
+"Your parents’ grandparents and your grandparents’ parents are the same people",
+"Don’t trust a milkshake that becomes more solid the more it melts",
+"Tofu + crouton = futon",
+"People get upset if you use the word ‘literally’ figuratively, but no one gets upset if you use the word ‘figuratively’ literally",
+"Soup of the day implies soup of the night",
+"Cucumbers are just unripe pickles",
+"Turns out, Kevin Spacey’s career was the house of cards",
+"Any company that requires a drug test fails the drug test test",
+"PhD? More like PhDon’t",
+"Sharpies aren’t sharp",
+"I’m not gay for pay, but I could be bi for pie",
+"Forget medicare, pedicures for all",
+"It’s not a nap if you wake up in the morning",
+"Its not premarital sex if you never get married",
+"You’re not late if you never show up",
+"If you click an IQ test on Facebook, you’re already dumb",
+"People talk a lot about V for Vendetta, but they often forget that A is for Apple",
+"Movies can be so bad they’re good, but restaurants can’t",
+"In the 70s, the Bee Gees went through reverse puberty",
+"Why are they called waiters when I'm the one who’s been waiting 45 minutes for my damn spaghetti",
+
+"I don’t have a Doctor of Philosophy, but I do have a Doctor Phil-osophy",
+"Nightmare before Christmas is a cautionary tale about cultural appropriation",
+"Life is like chess: you’re at a disadvantage if you’re black",
+"Everything a chef ever creates turns to shit.",
+
+
+"Porn stars should get their name tattoo so everyone can google them easily",
+"Anyone shorter than me who criticizes my posture is a hypocrite",
+"Chat GPT is a virtue signaller	",
+"Plaid pantry / olive garden logos are not accurate"
+[]

@@ -1,0 +1,141 @@
+<!-- 
+    ___         __ 
+   /   |  _____/ /_
+  / /| | / ___/ __/
+ / ___ |/ /  / /_  
+/_/  |_/_/   \__/  
+
+-->
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Ben's Website!!!</title>
+	<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
+	<style type="text/css">
+		body {
+			background-image: url(../gif/stars2.gif);
+			color: white;
+			font-family: "Lucida Console", monospace;
+			margin: 0;
+			height: 100%;
+			text-align: center;
+		}
+		
+		#header:hover {
+			filter: drop-shadow(0 0 0.8rem rgb(157, 0, 255));
+		}
+
+		#artScreen { height: 700px; }
+
+		h1 { text-shadow : 0 0 40px red; }
+		
+		.tab img { width: 30px; }
+
+		a:link, a:visited {
+			color: pink;
+			text-decoration: none;
+		}
+
+		.button { cursor: url(../forward.png), auto; }
+
+		.caption { display: block; }
+	</style>
+</head>
+	
+<body>
+	<div style='display: inline-block' id='header'>
+		<a href="../index.html">
+			<div style='float: left'>
+				<img src='../gif/earth.gif'/> 
+			</div>
+			<div style='float: left'>
+				<img src='../gif/letters/B.gif'/>
+				<img src='../gif/letters/E.gif'/>
+				<img src='../gif/letters/N.gif'/>
+				<img src='../gif/letters/apostrophe.gif'/>
+				<img src='../gif/letters/S.gif'/>
+				<span class='caption'><h3>W E B S I T E ! ! !</h3></span>
+			</div>
+			<div style='float: right'>
+				<img src='../gif/earth.gif'/>
+			</div>
+		</a>
+	</div>
+	<div>
+		<!-- <h1 style="color: purple;">Art<h1> -->
+		<div>
+			<img id="artScreen"/>
+		</div>
+		<div>
+			<img src='../gif/arrowl.gif' class=button id="left"/>
+			<img src="../gif/random.gif" class=button id="random"/>
+			<img src='../gif/arrowr.gif' class=button id="right"/>
+		</div>
+	</div>
+	<script src="../shared/shared.js"></script>
+	<script src="photos.js"></script>
+	<script>
+		let paintings = [
+			"BottleAndGoblet.jpg",
+			"Chantarelle.jpg",
+			"Pomegranate.JPG",
+			"McKinley.JPG",
+			"Renaissance.JPG",
+			"SelfPortrait.jpg",
+			"SkullPainting.JPG",
+			"WineAndOnion.jpg",
+		]
+
+		let drawings = [
+			"Artichoke.JPG",
+			"CherryTree.jpg",
+			"LivingRoom.JPG",
+			"Parents.JPG",
+			"Popcorn.JPG",
+			"Sanjay.JPG",
+			"Skull.JPG",
+			"Sunflowers.JPG",
+		]
+
+		var images
+		var folder
+		if (window.location.search === "?paintings") {
+			console.log("ok")
+			images = paintings
+			folder = "paintings"
+		} else if (window.location.search === "?drawings") {
+			images = drawings
+			folder = "drawings"
+		} else if (window.location.search === "?photos") {
+			images = photos
+			folder = "photos"
+		}
+
+		let index = 0
+		shuffle(images)
+		get('left').onclick = () => {
+			//playSound('click', .5)
+			index = decrement(index, images.length - 1)
+			setImage()
+		}
+
+		get('right').onclick = () => {
+			//playSound('click', .5)
+			index = increment(index, images.length - 1)
+			setImage()
+		}
+
+		get("random").onclick = () => {
+			//playSound('click', .5)
+			index = random(0, images.length - 1)
+			setImage()
+		}
+
+		function setImage() {
+			get('artScreen').src = folder + "/" + images[index]
+		}
+		
+		setImage()
+	</script>
+</body>
+</html>
