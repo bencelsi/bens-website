@@ -7,7 +7,7 @@ let alphabetSayings = [
 "G Y R U B N N E L\n\nGee, why are you bein' an eel?",
 "E Z P L\n\nEasy peel",
 "R N T P Z Z\n\nAren't tee-pees easy?",
-"H I T\n\nA chai tea",
+"L F H I T\n\nI'll have a chai tea",
 "I M A W C\n\nI am a double, you see",
 //"I P N A",
 "F A R E\n\nA fairy",
