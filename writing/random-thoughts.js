@@ -1,4 +1,4 @@
-let oneLiners = [
+let randomThoughts = [
 "No one ever talks about the yellow columns of texas",
 "Shouldn’t 'the shitter' be called 'the shittee'",
 "Being ‘up for something’ and being ‘down for something’ mean the same thing",
@@ -30,8 +30,8 @@ let oneLiners = [
 "Everything a chef ever creates turns to shit.",
 
 
-"Porn stars should get their name tattoo so everyone can google them easily",
+///"Porn stars should get their name tattoo so everyone can google them easily",
 "Anyone shorter than me who criticizes my posture is a hypocrite",
-"Chat GPT is a virtue signaller	",
-"Plaid pantry / olive garden logos are not accurate"
-[]
+"Chat GPT is a virtue signaller",
+//"Plaid pantry logo isn't plaid, and olive garden's logos isn't olives"
+]

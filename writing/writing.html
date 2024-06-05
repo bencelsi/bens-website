@@ -21,6 +21,7 @@
 </style>
 <div>
     <a href="../index.html"><img src="../gif/back.gif" class="button" style="float: left;"></a>
+    
     <h1 id="title"></h1>
     <!-- <div style="display: flex; width: fit-content; margin: auto;"> -->
     <div id="writing"></div>
@@ -35,6 +36,11 @@
 <script src="palindromes.js"></script>
 <script src="alphabet-sayings.js"></script>
 
+<script src="jokes.js"></script>
+<script src="one-liners.js"></script>
+<script src="random-thoughts.js"></script>
+<script src="random-questions.js"></script>
+<script src="spoonerisms.js"></script>
 <script>
     var writings
     var title
@@ -47,12 +53,16 @@
     } else if (window.location.search === "?alphabet-sayings") {
         writings = alphabetSayings
         title = "Alphabet Sayings"
-    }   
+    } else if (window.location.search === "?miscellaneous") {
+        title = "Miscellaneous"
+        writings = oneLiners.concat(jokes).concat(randomThoughts).concat(randomQuestions).concat(spoonerisms)
+    }
     
     let index = 0
     shuffle(writings)
     let writingDiv = get('writing')
-    
+    get("title").innerHTML = title
+
     get('left').onclick = () => {
         //playSound('click')
         index = decrement(index, writings.length - 1)

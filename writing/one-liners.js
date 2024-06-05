@@ -2,7 +2,7 @@ let oneLiners = [
 "Do you prefer pencils or pens? Da pens",
 "Ruffles: ridged for her pleasure?",
 "Ask not for whom the Taco Bell tolls, it tolls for thee",
-"Young Sheldon should’ve been called little bang theory ",
+"Young Sheldon should’ve been called Little Bang Theory ",
 "Bella Hadid WHAT?",
 "I’m-a from-a the FBI, the Federal Bureau of Italians",
 "I don’t give a hoot about owls ",

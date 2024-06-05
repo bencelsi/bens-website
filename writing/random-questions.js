@@ -7,7 +7,7 @@ let randomQuestions = [
 "Pulp fiction or no-pulp fiction?",
 "Whatever happened to Classic Sporin?",
 "If you have a genius idea for a wreath, do you say urethra?",
-"Do starfish have 5 armpits, or 1 armpit ?",
+"Do starfish have 5 armpits, or 1 armpit?",
 "Is it considered ghosting if they died?",
 "When will.i.am dies will he become become will.i.was?",
 "What do Earth Wind and Fire have against water?",
@@ -34,7 +34,7 @@ let randomQuestions = [
 "Is a front door inside or outside?",
 "Boxer briefs? More like brief boxers",
 "Which is worse, TikToks or Ted talks?",
-"Is divorce the opposite of wife sharing?",
+"Is divorce the opposite of polygamy?",
 
 //MASKERS
 
@@ -56,7 +56,7 @@ let randomQuestions = [
 "French dressing + ranch: Franch? or rench?",
 "If you accidentally call a prostitute, is it a Booty call or a butt dial?",
 "Harry Melling in Buster Scrubs: buster stubbs?",
-"Are Jewish people bible hipsters?",
+"Are the Jews bible hipsters?",
 "Did hitler have a bunk bed in his bunker?",
 "Is Trivial pursuit the only board game with an existential crisis?",
 "The American Revolutionary War: Washington Vs. Poshington?",
