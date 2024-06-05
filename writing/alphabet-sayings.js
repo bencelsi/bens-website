@@ -1,6 +1,6 @@
 let alphabetSayings = [
 "M A B\n\nEh, maybe",
-"E N O\n\n..Yeah no",
+"E N O\n\n...Yeah no",
 "I M L A D\n\nI am a lady",
 "U R R E L A D\n\nYou are a real lady",
 "M L E K R E\n\nEmily Carey",

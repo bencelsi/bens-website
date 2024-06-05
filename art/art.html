@@ -62,7 +62,7 @@
 		</a>
 	</div>
 	<div>
-		<!-- <h1 style="color: purple;">Art<h1> -->
+		<h1 style="color: purple;" id="title"><h1>
 		<div>
 			<img id="artScreen"/>
 		</div>
@@ -75,43 +75,51 @@
 	<script src="../shared/shared.js"></script>
 	<script src="photos.js"></script>
 	<script>
-		let paintings = [
-			"BottleAndGoblet.jpg",
-			"Chantarelle.jpg",
-			"Pomegranate.JPG",
-			"McKinley.JPG",
-			"Renaissance.JPG",
-			"SelfPortrait.jpg",
-			"SkullPainting.JPG",
-			"WineAndOnion.jpg",
-		]
-
-		let drawings = [
-			"Artichoke.JPG",
-			"CherryTree.jpg",
-			"LivingRoom.JPG",
-			"Parents.JPG",
-			"Popcorn.JPG",
-			"Sanjay.JPG",
-			"Skull.JPG",
-			"Sunflowers.JPG",
-		]
+		let allImages = {
+			"paintings": [
+				"BottleAndGoblet.jpg",
+				"Chantarelle.jpg",
+				"Pomegranate.JPG",
+				"McKinley.JPG",
+				"Renaissance.JPG",
+				"SelfPortrait.jpg",
+				"SkullPainting.JPG",
+				"WineAndOnion.jpg"
+			],
+			"drawings": [
+				"Artichoke.JPG",
+				"CherryTree.jpg",
+				"LivingRoom.JPG",
+				"Parents.JPG",
+				"Popcorn.JPG",
+				"Sanjay.JPG",
+				"Skull.JPG",
+				"Sunflowers.JPG"
+			]
+		}
 
 		var images
 		var folder
+		var title
+
+		folder = window.location.search.slice(1)
+		images = allImages[folder]
 		if (window.location.search === "?paintings") {
-			console.log("ok")
-			images = paintings
-			folder = "paintings"
+			title = "Paintings"
 		} else if (window.location.search === "?drawings") {
-			images = drawings
-			folder = "drawings"
+			title = "Drawings"
 		} else if (window.location.search === "?photos") {
+			title = "Photos"
+			get("artScreen").style.width = "700px"
 			images = photos
-			folder = "photos"
-			get('artScreen').style.width = "700px"
+		} else if (window.location.search === "?uw-daily-illustrations") {
+			title = "UW Daily Illustrations"
+		} else if (window.location.search === "?photoshop") {
+			title = "Photoshop"
 		}
 
+
+		get("title").innerHTML = title
 		let index = 0
 		shuffle(images)
 		get('left').onclick = () => {
