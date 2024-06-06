@@ -14,7 +14,8 @@ let alphabetSayings = [
 "L M N T V\n\nElement TV",
 "U R A Q T\n\nYou are a cutie",
 "I M N N M E N N N M E J L\n\nI am enemy, in an enemy jail",
-"P N S T M\n\n Pianist team"
+"P N S T M\n\n Pianist team",
+"L F N T R\n\nElephant ear"
 ]
 
 //bee, cee, dee, ee, gee, pee, tee, vee

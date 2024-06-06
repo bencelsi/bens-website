@@ -9,11 +9,10 @@ let randomQuestions = [
 "If you have a genius idea for a wreath, do you say urethra?",
 "Do starfish have 5 armpits, or 1 armpit?",
 "Is it considered ghosting if they died?",
-"When will.i.am dies will he become become will.i.was?",
+"When will.i.am dies, does he become become will.i.was?",
 "What do Earth Wind and Fire have against water?",
 "Haddock: tintin’s foil?",
 "Gal Gadot’s husband: Guy Gadot?",
-"Is white slavery cultural appropriation?",
 "German Las Vegas: Das Vegas?",
 "Is God a one hit wonder?",
 "Death: the original cancel culture?",
@@ -40,32 +39,33 @@ let randomQuestions = [
 
 "Moths: just dusty butterflies?",
 "Magic mushrooms: the first edibles?",
-"If you have an ecosystem full of eagles, could you call it an eaglesystem?",
+"If you have an ecosystem full of eagles, is it an eaglesystem?",
 "Mad men? More like sad men",
 "Do cats fuck doggystyle?",
 "How many barbers went out of business in the 60s?",
 "Margarita pizza: just normal pizza with less stuff on it?",
 
-"If Wacca Flocka Flame was white, would he be Walker flocker flame?",
+"If Wacca Flocka Flame was white, would he be Walker Flocker Flame?",
 "Are there too many paintings in the world or not enough?",
 
 "Spinning: the steroids of foosball?",
-"Dogs: uncle tom of the animal kingdom?",
+"Dogs: Uncle Tom of the animal kingdom?",
 
 "Free “Pussy Riot” or “Free Pussy” Riot?",
-"French dressing + ranch: Franch? or rench?",
-"If you accidentally call a prostitute, is it a Booty call or a butt dial?",
+"French dressing + ranch: Franch? or Rench?",
 "Harry Melling in Buster Scrubs: buster stubbs?",
 "Are the Jews bible hipsters?",
-"Did hitler have a bunk bed in his bunker?",
-"Is Trivial pursuit the only board game with an existential crisis?",
 "The American Revolutionary War: Washington Vs. Poshington?",
 "Could a sugar daddy also be called a “friends with healthcare benefits?",
 "Can you refer to a glass of water and a pair of glasses collectively as ‘glasses’",
 
-"Did god commit abortion during the plagues of Egypt",
+//"During the plagues of Egypt, did God commit abortions?",
+//"Is white slavery cultural appropriation?",
 
 //VISUAL
 //"Alternate way to make a bagel sandwich: cut sideways, along different access",
+//"Did Hitler have a bunk bed in his bunker?",
+//"Is Trivial pursuit the only board game with an existential crisis?",
+//"If you accidentally call a prostitute, is it a booty call or a butt dial?",
 
 ]
