@@ -22,8 +22,7 @@ let spoonerisms = [
 "Qualuudes > Lewd quails",
 "Better hard to get than get too hard",
 "Is this video game playing hard to get, or just getting hard to play?",
-//"Piece of shit / Shit of peach / Sheesh a pit",
-"On the other hand , the shoe is on the other foot",
+"On the other hand, the shoe is on the other foot",
 "Better four point 0 than 0 point four",
 "Reverse psychology > ygolohcysp esreveR",
 "Sweeney Dan > Steely Todd",
@@ -42,5 +41,7 @@ let spoonerisms = [
 "Keep on onning keep",
 "There are Mountain Dews and Mountain Donts",
 "Shanwows and shamwhats",
+//"Piece of shit / Shit of peach / Sheesh a pit",
+
 //Drew burns = bruce dern
 ]

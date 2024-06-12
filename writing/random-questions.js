@@ -36,7 +36,7 @@ let randomQuestions = [
 "Is divorce the opposite of polygamy?",
 
 //MASKERS
-
+"Jesus: the original nepo baby?",
 "Moths: just dusty butterflies?",
 "Magic mushrooms: the first edibles?",
 "If you have an ecosystem full of eagles, is it an eaglesystem?",

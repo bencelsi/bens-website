@@ -4,17 +4,17 @@ from os import listdir, walk
 from os.path import isfile, join
 
 # TODO: copy short songs, covers, mashups
-# 
- 
-# Rename song (Lonely -> Joanie)
-# Keep each version (for major versions)
+# TODO: Rename song (Lonely -> Joanie)
+# TODO: Keep each version (for major versions)
+# TODO: Specify version (for major versions)
 
 srcDir = "/Users/bencelsi/LocalDrive/MUSIC•••••••••••••••••••••••••/Audio/Bounces/Songs"
-destDir = "/Users/bencelsi/LocalDrive/CODE•••••••••••••••••••••••••/github/bencelsi.github.io/music/songs"
+websiteDir = "/Users/bencelsi/LocalDrive/CODE•••••••••••••••••••••••••/github/bencelsi.github.io/music/songs"
+googleDriveDir = "/Users/bencelsi/Google Drive/Music/Bounces (Google Drive)"
 
 # map of SongName to list of bounce files
 
-def copyNewestSongsToDir(src, dest, listName):
+def copyNewestSongsToDir(src, destDirs, listName):
     songMap = {}
     for filename in listdir(src):
         if not filename.endswith(".mp3"):
@@ -38,27 +38,28 @@ def copyNewestSongsToDir(src, dest, listName):
         
         songMap[songName].append(filename)
     
-    
-
-    # Write to listFile
+    # Open listFile
     listFile = listName + ".js"
     if os.path.exists(listFile):
         os.remove(listFile)
     f = open(listFile, "a")
     f.write("let " + listName + " = [\n")
     
-    # Clear src dir
-    if os.path.exists(dest):
-        shutil.rmtree(dest)
-    os.makedirs(dest)
+    # Clear dest dirs
+    for dest in destDirs:
+        if os.path.exists(dest):
+            shutil.rmtree(dest)
+        os.makedirs(dest)
 
+    # Write to list file and dest dirs
     for songName in songMap:
         maxBounce = songMap[songName][0]
         for bounce in songMap[songName]:
             if (isGreaterThan(bounce, maxBounce)):
                 maxBounce = bounce
         print(maxBounce)
-        shutil.copyfile(src + "/" + maxBounce +  ".mp3", dest + "/" + songName + ".mp3")
+        for dest in destDirs:
+            shutil.copyfile(src + "/" + maxBounce + ".mp3", dest + "/" + songName + ".mp3")
         f.write("\"" + songName + "\",\n")
     f.write("]")
     f.close()
@@ -100,5 +101,5 @@ def getNumberFromSong(song):
             return splitSong[i]
     return -1
 
-#print ("\n".join(songMap.keys()))
-copyNewestSongsToDir(srcDir, destDir, "all-songs")
+
+copyNewestSongsToDir(srcDir, [websiteDir, googleDriveDir], "allSongs")

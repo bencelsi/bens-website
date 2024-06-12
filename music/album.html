@@ -76,8 +76,8 @@
 		<img id="albumCover" style="width: 300px; height: 300px; filter: drop-shadow(0 0 4.5rem rgb(0, 79, 136));">
 		<!-- 'https://raw.githubusercontent.com/bencelsi/bencelsi.github.io/master/music/.mp3' -->
 		<br><br>
-		Autoplay <input type="checkbox" id="autoplay" checked />
-		Shuffle <input type="checkbox" id="shuffle" />
+		Autoplay <input type="checkbox" id="autoplay" checked/>
+		Shuffle <input type="checkbox" id="shuffle"/>
 		<br><br>
 		<table id="songs">
 		</table>
@@ -111,13 +111,13 @@ let spaceJam = [
 ]
 
 let mashups = [
-	"Disco.aif",
-	"One Impala.wav",
-	"Don't Bring Me Diamonds.wav",
-	"California Girls Shepard Tone.mp3",
-	"Mountains at Last.mp3",
-	"1-4-5.wav",
-	"Dream a Little Dream of God.mp3"
+	"Disco",
+	"One Impala",
+	"Don't Bring Me Diamonds",
+	"Mountains at Last",
+	"I Wish They All Could Be California",
+	"I-IV-V",
+	"Dream a Little Dream of God"
 ]
 
 let songs = []
@@ -136,14 +136,13 @@ if (window.location.search === "?moss-rock") {
 } else if (window.location.search === "?all-songs") {
 	allSongs.sort()
 	songs = allSongs
-	albumCover = "All Songs.jpg"
+	albumCover = "Day Break.jpeg"
 	title = "All Songs"
 } else if (window.location.search === "?mashups") {
 	songFolder = "mashups/"
 	songs = mashups
 	albumCover = "Mashups.jpg"
 	title = "Mashups"
-	extension = ""
 }
 
 let autoplayCheckbox = get("autoplay")
