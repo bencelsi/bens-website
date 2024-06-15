@@ -41,8 +41,8 @@ let randomQuestions = [
 "Magic mushrooms: the first edibles?",
 "If you have an ecosystem full of eagles, is it an eaglesystem?",
 "Mad men? More like sad men",
-"Do cats fuck doggystyle?",
-"How many barbers went out of business in the 60s?",
+"Do cats do it doggystyle?",
+//"How many barbers went out of business in the 60s?",
 "Margarita pizza: just normal pizza with less stuff on it?",
 
 "If Wacca Flocka Flame was white, would he be Walker Flocker Flame?",
