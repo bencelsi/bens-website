@@ -46,7 +46,7 @@ let randomQuestions = [
 "Margarita pizza: just normal pizza with less stuff on it?",
 
 "If Wacca Flocka Flame was white, would he be Walker Flocker Flame?",
-"Are there too many paintings in the world or not enough?",
+"Are there too many paintings in the world, or not enough?",
 
 "Spinning: the steroids of foosball?",
 "Dogs: Uncle Tom of the animal kingdom?",
@@ -57,7 +57,7 @@ let randomQuestions = [
 "Are the Jews bible hipsters?",
 "The American Revolutionary War: Washington Vs. Poshington?",
 "Could a sugar daddy also be called a “friends with healthcare benefits?",
-"Can you refer to a glass of water and a pair of glasses collectively as ‘glasses’",
+"If you have one glass of water and one pair of glasses, how many glasses do you have?",
 
 //"During the plagues of Egypt, did God commit abortions?",
 //"Is white slavery cultural appropriation?",
