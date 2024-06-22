@@ -39,7 +39,7 @@ let spoonerisms = [
 "I can't see the view but I can view the sea",
 "I’m hardly easy, but I'm easily hard",
 "Keep on onning keep",
-"There are Mountain Dews and Mountain Donts",
+"There are Mountain Dews, and Mountain Don'ts",
 "Shanwows and shamwhats",
 //"Piece of shit / Shit of peach / Sheesh a pit",
 
