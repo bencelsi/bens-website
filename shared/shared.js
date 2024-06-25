@@ -27,3 +27,26 @@ function playSound(name, volume = 1, format='.wav') {
 function increment(value, maxValue) { return value == maxValue ? 0 : value + 1 }
 
 function decrement(value, maxValue) { return value == 0 ? maxValue : value - 1 }
+try {
+    get("homeHeader").innerHTML = 
+        "<div>" +
+        "   <img src='gif/letters/B.gif'/>" +
+        "   <img src='gif/letters/E.gif'/>" +
+        "   <img src='gif/letters/N.gif'/>" +
+        "   <img src='gif/letters/apostrophe.gif'/>" +
+        "   <img src='gif/letters/S.gif'/>" +
+        "   <span><h3>W E B S I T E ! ! !</h3></span>" +
+        "</div>"
+} catch(e) {}
+
+try {
+    get("header").innerHTML = 
+        "<div>" +
+        "   <img src='../gif/letters/B.gif'/>" +
+        "   <img src='../gif/letters/E.gif'/>" +
+        "   <img src='../gif/letters/N.gif'/>" +
+        "   <img src='../gif/letters/apostrophe.gif'/>" +
+        "   <img src='../gif/letters/S.gif'/>" +
+        "   <span><h3>W E B S I T E ! ! !</h3></span>" +
+        "</div>"
+} catch(e) {}

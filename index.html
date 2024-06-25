@@ -33,11 +33,18 @@ Strike right balance of organization, discovery, and shuffling
 			text-align: center;
 		}
 
+
 		#tabMenu { display: inline-block; }
 
+		/* Turns off game icos */
 		a { 
 			text-decoration: none;
 			cursor: url(shared/cursor.png), auto;
+			h2 {
+				img {
+					display: none; 
+				}
+			}
 		}
 
 		#musicTab:not(.selected):hover, #musicTab.selected { 
@@ -69,49 +76,45 @@ Strike right balance of organization, discovery, and shuffling
 			margin: auto;
 			width: fit-content;
 			a {
-				color: lightgreen
+				color: lightgreen;
+				:hover {
+					color: green;
+				}
 			}
 		}
-		a:hover {
-			color: rgb(255, 149, 0);
-			background-color: transparent;
-			filter: drop-shadow(0 0 1.0rem rgb(255, 149, 0));
+
+		#musicPage a {
+			color: lavender;
+			:hover { color: magenta; }
 		}
 		
 		#writingPage a {
-			color: lightyellow	
+			color: lightyellow;
+			:hover { color: yellow; }
 		}
 
 		#artPage a {
 			color: pink;
-			display: inline-block;
-			margin: 30px;
+			/* display: inline-block; */
+			/* margin: 30px; */
+			:hover { color: red; }
 		}
 
 		#videoPage a {
 			color: rgb(141, 204, 255);
 			display: inline-block;
 			margin: 30px;
+			:hover { color: blue; }
+		}
+
+		a:hover {
+			background-color: transparent;
+			filter: drop-shadow(0 0 0.9rem rgb(255, 205, 66));
 		}
 	</style>
 </head>
 <body>
-	<div style="display: inline-block" id="header">
-		<div style="float: left">
-			<!-- <img src="gif/earth.gif"/>  -->
-		</div>
-		<div style="float: left">
-			<img src="gif/letters/B.gif"/>
-			<img src="gif/letters/E.gif"/>
-			<img src="gif/letters/N.gif"/>
-			<img src="gif/letters/apostrophe.gif"/>
-			<img src="gif/letters/S.gif"/>
-			<span class="caption"><h3>W E B S I T E ! ! !</h3></span>
-		</div>
-		<div style="float: right">
-			<!-- <img src="gif/earth.gif"/> -->
-		</div>
-	</div>
+	<div style="display: inline-block" id="homeHeader"></div>
 	<br>
 	<!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
 	<div id="tabMenu">
@@ -137,12 +140,18 @@ Strike right balance of organization, discovery, and shuffling
 <!-- M U S I C -->
 <!------------------------------------------------>
 <div id="musicPage" class="page">
-	<a href="music/album.html?mashups"> 
+	<a href="music/songs.html?mashups"> 
 		<h2>Mashups</h2>
 	</a>
-	<a href="music/albums.html"> 
+	<!-- <a href="music/albums.html"> 
 		<h2>Albums</h2>
+	</a> -->
+	<!-- <a href="music/albums.html"> 
+		<h2>Music Videos</h2>
 	</a>
+	<a href="music/albums.html"> 
+		<h2>Chords</h2>
+	</a> -->
 </div>
 
 <!------------------------------------------------>
@@ -150,27 +159,21 @@ Strike right balance of organization, discovery, and shuffling
 <!------------------------------------------------>
 <div id="artPage" class="page">
 	<a href="art/art.html?paintings"> 
-		<h3>Paintings</h3>
+		<h2>Paintings</h2>
 	</a>
 	<a href='art/art.html?drawings'>
-		<h3>Drawings</h3>
+		<h2>Drawings</h2>
 	</a>
 	<a href='art/art.html?photos'>
-		<h3>Photos</h3>
+		<h2>Photos</h2>
 	</a>
 	<a href='art/art.html?miscellaneous'>
-		<h3>Miscellaneous</h3>
+		<h2>Miscellaneous</h2>
 	</a>
 	<!-- <a href='art/art.html?uw-daily-illustrations'> 
 		<img src='art/gif/newspaper.gif'/>
 			UW Daily Illustrations
 		<img src='art/gif/newspaper.gif'/>
-	</a>
-	<br>
-	<a href='art/art.html?photoshop'> 
-		<img src='art/gif/photoshop.gif'/>
-			Photoshop
-		<img src='art/gif/photoshop.gif'/>
 	</a> -->
 </div>
 
@@ -188,6 +191,11 @@ Strike right balance of organization, discovery, and shuffling
 			Tetriven
 		<img src="games/ico/tetriven2.ico"></h2>
 	</a>
+	<a href='https://bencelsi.github.io/catan-o-rama'>
+		<h2><img src="games/ico/catanorama.ico">
+			Catan-o-Rama!
+		<img src="games/ico/catanorama.ico"></h2>
+	</a>
 	<a href='https://bencelsi.github.io/nabanagrams'> 
 		<h2><img src="games/ico/nabanagrams.ico"> 
 			Nabanagrams
@@ -203,11 +211,6 @@ Strike right balance of organization, discovery, and shuffling
 		<h2><img src="games/ico/automata.ico">
 			Automata
 		<img src="games/ico/automata.ico"></h2>
-	</a>
-	<a href='https://bencelsi.github.io/catan-o-rama'>
-		<h2><img src="games/ico/catanorama.ico">
-			Catan-o-Rama!
-		<img src="games/ico/catanorama.ico"></h2>
 	</a>
 	<a href='https://bencelsi.github.io/ivans-game'> 
 		<h2><img src="games/ico/ivans-game.ico">
@@ -244,69 +247,65 @@ Strike right balance of organization, discovery, and shuffling
 <!-- W R I T I N G -->
 <!------------------------------------------------>
 <div id="writingPage" class="page">
-	<!-- <h1 style="color: yellow;">Writing</h1> -->
 	<!-- <a href="writing/christian-bok.html"><h2>Christian Bök</h2></a> -->
-	<a href="writing/great-apes.html"><h2>Great Apes</h2></a>
-	
 	<!-- <a href="writing/youre-little.html"><h2>You're Little</h2></a> -->
+	<a href="writing/great-apes.html"><h2>Great Apes</h2></a>
 	<a href="writing/writing.html?palindromes"><h2>Palindromes</h2></a>
 	<a href="writing/writing.html?alphabet-sayings"><h2>Alphabet Sayings</h2></a>
-	<!-- <a href="writing/writing.html?spoonerisms"><h2>Spoonerisms</h2></a> -->
 	<a href="writing/writing.html?miscellaneous"><h2>Miscellaneous</h2></a>
-	<!-- <h2><a href='writing/shakespearean-friday.html'>Shakespearean Friday</a></h2> -->
+	<a href='writing/shakespearean-friday.html'><h2>Shakespearean Friday</h2></a>
 </div>
 
 <!------------------------------------------------>
 <!--VIDEO -->
 <!------------------------------------------------>
 <div id="videoPage" class="page">
-	<a href="video/video.html"><h2>Video</h2></a>
+	<a href="video/video.html">
+		<h2>Videos</h2>
+	</a>
 </div>
 </body>
 
-
 <script src="shared/shared.js"></script>
 <script>
-		let selected = "none"
-		let tabs = getAll("tab")
-		let pages = getAll("page")
+	let selected = "none"
+	let tabs = getAll("tab")
+	let pages = getAll("page")
 
-		if (window.location.search === "?music" ||
-			window.location.search === "?art" ||
-			window.location.search === "?games" ||
-			window.location.search === "?writing" ||
-			window.location.search === "?writing") {
-			selectTab(window.location.search.substring(1, window.location.search.length))
-		}
-		
-		function selectTab(name) {
-			selected = name
-			refreshPage()
-		}
+	if (window.location.search === "?music" ||
+		window.location.search === "?art" ||
+		window.location.search === "?games" ||
+		window.location.search === "?writing" ||
+		window.location.search === "?writing") {
+		selectTab(window.location.search.substring(1, window.location.search.length))
+	}
+	
+	function selectTab(name) {
+		selected = name
+		refreshPage()
+	}
 
-		get("musicTab").onclick = () => selectTab("music")
-		get("artTab").onclick = () => selectTab("art")
-		get("gamesTab").onclick = () => selectTab("games")
-		get("writingTab").onclick = () => selectTab("writing")
-		get("videoTab").onclick = () => selectTab("video")
-
-		
-		function refreshPage() {
-			for (let i = 0; i < tabs.length; i++) {
-				let tab = tabs[i]
-				if (tab.id == selected + "Tab") {
-					tab.classList.add("selected")
-				} else {
-					tab.classList.remove("selected")
-				}
-				let page = pages[i]
-				if (page.id == selected + "Page") {
-					page.style.display = 'inline-block'
-				} else {
-					page.style.display = 'none'
-				}
+	get("musicTab").onclick = () => selectTab("music")
+	get("artTab").onclick = () => selectTab("art")
+	get("gamesTab").onclick = () => selectTab("games")
+	get("writingTab").onclick = () => selectTab("writing")
+	get("videoTab").onclick = () => selectTab("video")
+	
+	function refreshPage() {
+		for (let i = 0; i < tabs.length; i++) {
+			let tab = tabs[i]
+			if (tab.id == selected + "Tab") {
+				tab.classList.add("selected")
+			} else {
+				tab.classList.remove("selected")
+			}
+			let page = pages[i]
+			if (page.id == selected + "Page") {
+				page.style.display = 'inline-block'
+			} else {
+				page.style.display = 'none'
 			}
 		}
-		// for page in pages - hide if not selected, else show
+	}
 </script>
 </html>
