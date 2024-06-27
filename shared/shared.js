@@ -1,7 +1,12 @@
 let local = false
+let num = 4
 if (location.hostname === "") {
     document.title = "." + document.title
     local = true
+}
+
+function isLocal() {
+    return location.hostname === ""
 }
 
 function get(id) { return document.getElementById(id) }
