@@ -275,15 +275,12 @@ Strike right balance of organization, discovery, and shuffling
 	let selected = "none"
 	let tabs = getAll("tab")
 	let pages = getAll("page")
-	if (isLocal()) {
+	if (isLocal) {
 		let locals = getAll("localOnly")
 		for (let i = 0; i < locals.length; i++) {
 			locals[i].style.display = "block"
 		}
 	}
-
-	console.log(num)
-	console.log(local)
 
 	if (window.location.search === "?music" ||
 		window.location.search === "?art" ||
