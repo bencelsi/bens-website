@@ -111,6 +111,10 @@ Strike right balance of organization, discovery, and shuffling
 			background-color: transparent;
 			filter: drop-shadow(0 0 0.9rem rgb(255, 205, 66));
 		}
+
+		.localOnly {
+			display: none;
+		}
 	</style>
 </head>
 <body>
@@ -143,9 +147,9 @@ Strike right balance of organization, discovery, and shuffling
 	<a href="music/songs.html?mashups"> 
 		<h2>Mashups</h2>
 	</a>
-	<!-- <a href="music/albums.html"> 
+	<a href="music/albums.html" class="localOnly"> 
 		<h2>Albums</h2>
-	</a> -->
+	</a>
 	<!-- <a href="music/albums.html"> 
 		<h2>Music Videos</h2>
 	</a>
@@ -201,12 +205,12 @@ Strike right balance of organization, discovery, and shuffling
 			Nabanagrams
 		<img src="games/ico/nabanagrams.ico"></h2>
 	</a>
-	<!-- <a href='https://en.wikipedia.org/wiki/Soviet_Union'>
+	<a href="file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/soviet-monopoly/soviet-monopoly.html" class="localOnly">
 		<h2><img src="games/ico/soviet-monopoly.ico"> Soviet Monopoly</h2>
 	</a>
-	<a href='https://en.wikipedia.org/wiki/Card_game'>
+	<a href='file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/game-of-cards/game-of-cards.html' class="localOnly">
 		<h2><img src="games/ico/game-of-cards.ico"> Game of Cards</h2>
-	</a> -->
+	</a>
 	<a href='https://bencelsi.github.io/automata'>
 		<h2><img src="games/ico/automata.ico">
 			Automata
@@ -247,8 +251,8 @@ Strike right balance of organization, discovery, and shuffling
 <!-- W R I T I N G -->
 <!------------------------------------------------>
 <div id="writingPage" class="page">
-	<!-- <a href="writing/christian-bok.html"><h2>Christian Bök</h2></a> -->
-	<!-- <a href="writing/youre-little.html"><h2>You're Little</h2></a> -->
+	<a href="writing/christian-bok.html" class="localOnly"><h2>Christian Bök</h2></a>
+	<a href="writing/youre-little.html" class="localOnly"><h2>You're Little</h2></a>
 	<a href="writing/great-apes.html"><h2>Great Apes</h2></a>
 	<a href="writing/writing.html?palindromes"><h2>Palindromes</h2></a>
 	<a href="writing/writing.html?alphabet-sayings"><h2>Alphabet Sayings</h2></a>
@@ -271,6 +275,13 @@ Strike right balance of organization, discovery, and shuffling
 	let selected = "none"
 	let tabs = getAll("tab")
 	let pages = getAll("page")
+
+	if (local) {
+		let locals = getAll("localOnly")
+		for (let i = 0; i < locals.length; i++) {
+			locals[i].style.display = "block"
+		}
+	}
 
 	if (window.location.search === "?music" ||
 		window.location.search === "?art" ||

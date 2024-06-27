@@ -1,6 +1,3 @@
-
-
-
 // STRUCTURE
 let structure = {
     "I1": {
@@ -10,7 +7,7 @@ let structure = {
         bars: 2
     },
     "V2": {
-
+        
     }
 
 }

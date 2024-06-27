@@ -5,7 +5,7 @@
 	<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
 	<style type="text/css">
 		body {
-			/* background-image: url(../gif/stars2.gif); */
+			background-image: url(../gif/stars2.gif);
 			background-color: black;
 			color: white;
 			font-family: "Lucida Console", monospace;
@@ -24,7 +24,6 @@
 		}
 
 		h1 { text-shadow: 0 0 40px red; }
-		
 
 		.caption { 
 			display: block; 
@@ -62,18 +61,16 @@
 	<div id="AllSongs">
 		<h2 id="title"></h2>
 		<br>
-		<a href="../index.html?music">
-			<img id="backButton" src="../gif/back.gif" class="button" style="float: left;">
-		</a>
 		<br><br>
 		<img id="albumCover" style="width: 300px; height: 300px; filter: drop-shadow(0 0 4.5rem rgb(0, 79, 136));">
 		<!-- 'https://raw.githubusercontent.com/bencelsi/bencelsi.github.io/master/music/.mp3' -->
 		<br><br>
+		<table id="songs">
+		</table>
+		<br><br>
 		Autoplay <input type="checkbox" id="autoplay" checked/>
 		Shuffle <input type="checkbox" id="shuffle"/>
 		<br><br>
-		<table id="songs">
-		</table>
 	<div>
 	<br><br>
 
@@ -208,6 +205,8 @@ for (let i = 0; i < songs.length; i++) {
 	tr.appendChild(songAudioTd)
 	songDiv.appendChild(tr)
 }
+
+// TODO - way to keep playing song when browsing website?
 
 function stopAudios(toSkip) {
 	for (let i = 0; i < songAudios.length; i++) {
