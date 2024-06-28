@@ -68,6 +68,11 @@
 		<table id="songs">
 		</table>
 		<br><br>
+		<div>
+			<img src="../gif/arrowl.gif" class="button" id="left"/>
+			<img src="../gif/arrowr.gif" class="button" id="right"/>
+		</div>
+		<br>
 		Autoplay <input type="checkbox" id="autoplay" checked/>
 		Shuffle <input type="checkbox" id="shuffle"/>
 		<br><br>
@@ -93,6 +98,8 @@ let mossRock = [
 	"Don't Get Me Down",
 	"Free",
 	"Walking in the Dark",
+	"When I'm Gone",
+	"Hangin' On",
 	"Rest Up",
 	"Advocating",
 	"When I'm Gone",
@@ -124,24 +131,27 @@ let albumCover = ""
 let title = ""
 let songFolder = "songs/"
 let extension =".mp3"
-if (window.location.search === "?moss-rock") {
-	songs = mossRock
-	albumCover = "Moss Rock.png"
-	title = "Moss Rock"
-} else if (window.location.search === "?space-jams") {
-	songs = spaceJam
-	albumCover = "Space Jams.jpeg"
-	title = "Space Jams"
-} else if (window.location.search === "?all-songs") {
-	allSongs.sort()
-	songs = allSongs
-	albumCover = "Day Break.jpeg"
-	title = "All Songs"
-} else if (window.location.search === "?mashups") {
-	songFolder = "mashups/"
-	songs = mashups
-	albumCover = "Mashups.jpg"
-	title = "Mashups"
+switch (window.location.search) {
+	case "?all-songs":
+		songs = spaceJam
+		albumCover = "Space Jams.jpeg"
+		title = "Space Jams"
+		break
+	case "?moss-rock":
+		songs = mossRock
+		albumCover = "Moss Rock.png"
+		title = "Moss Rock"
+		break
+	case "?space-jams":
+		songs = spaceJam
+		albumCover = "Space Jams.jpeg"
+		title = "Space Jams"
+		break
+	case "?mashups": 
+		songFolder = "mashups/"
+		songs = mashups
+		albumCover = "Mashups.jpg"
+		title = "Mashups"
 }
 
 let autoplayCheckbox = get("autoplay")

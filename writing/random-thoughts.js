@@ -19,7 +19,7 @@ let randomThoughts = [
 "Its not premarital sex if you never get married",
 "You’re not late if you never show up",
 "If you click an IQ test on Facebook, you’re already dumb",
-"People talk a lot about V for Vendetta, but they often forget that A is for Apple",
+"People talk a lot about V for Vendetta, but they often forget about A is for Apple",
 "Movies can be so bad they’re good, but restaurants can’t",
 "In the 70s, the Bee Gees went through reverse puberty",
 "Why are they called waiters when I'm the one who’s been waiting 45 minutes for my damn spaghetti",

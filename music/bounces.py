@@ -103,3 +103,11 @@ def getNumberFromSong(song):
 
 
 copyNewestSongsToDir(srcDir, [websiteDir, googleDriveDir], "allSongs")
+
+
+
+#def renameSong():
+    # ask for current title
+    # ask for new title
+    # rename logic files, files in bounces folder - keep metadata?
+    # rename website files? 
