@@ -29,9 +29,9 @@ let randomThoughts = [
 "Life is like chess: you’re at a disadvantage if you’re black",
 "Everything a chef ever creates turns to shit.",
 
-
 ///"Porn stars should get their name tattoo so everyone can google them easily",
 "Anyone shorter than me who criticizes my posture is a hypocrite",
 "Chat GPT is a virtue signaller",
-//"Plaid pantry logo isn't plaid, and olive garden's logos isn't olives"
+//"Plaid pantry logo isn't plaid, and olive garden's logos isn't olives",
+//"A door is to a doorway as a donut hole is to a donut"
 ]
