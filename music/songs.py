@@ -4,9 +4,10 @@ from os import listdir, walk
 from os.path import isfile, join
 
 # TODO: copy short songs, covers, mashups
-# TODO: Rename song (Lonely -> Joanie)
+# TODO: Rename songs (Lonely -> Joanie)
 # TODO: Option to show greatest of each major versions
 # TODO: create backup of src dir before any action, for safety?
+# TODO: Sort Logic files into folders
 
 srcDir = "/Users/bencelsi/LocalDrive/MUSIC•••••••••••••••••••••••••/Audio/Bounces/Songs"
 websiteDir = "/Users/bencelsi/LocalDrive/CODE•••••••••••••••••••••••••/github/bencelsi.github.io/music/songs"
