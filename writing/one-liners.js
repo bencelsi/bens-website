@@ -52,6 +52,12 @@ let oneLiners = [
 //"Rim Job? more like grim job",
 "I can cry on demand:\n“ON DEMAND!\”",
 "It was so hot out, I went to a sauna to cool down",
-"Do Eskimos use refrigerators to keep their food warm?"
-
+"I never repeat myself. I NEVER repeat myself.",
+"To each Charlize Theron",
+"#DespicableMeTooMovement",
+"Carpe dayum!",
+"Taj your own Hal!",
+"No, YOU goslavia",
+"If it's any constellation... the big dipper",
+"It's not my fault, it's San Andreas fault"
 ]

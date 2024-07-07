@@ -139,6 +139,8 @@ Strike right balance of organization, discovery, and shuffling
 	</div>
 	<br><br>
 
+
+
 <!------------------------------------------------>
 <!-- M U S I C -->
 <!------------------------------------------------>
@@ -268,6 +270,11 @@ Strike right balance of organization, discovery, and shuffling
 		<h2>Videos</h2>
 	</a>
 </div>
+
+<br><br>
+
+<div id = 'test'></div>
+
 </body>
 
 <!------------------------------------------------>
@@ -275,6 +282,15 @@ Strike right balance of organization, discovery, and shuffling
 <!------------------------------------------------>
 <script src="shared/shared.js"></script>
 <script>
+	const testDiv = get("test")
+	
+	fetch("/test.html")
+		.header("Access-Control-Allow-Origin: *")
+		.then(res => res.text())
+		.then(data => {
+			testDiv.innerHTML = data
+		})
+
 	let selected = "none"
 	let tabs = getAll("tab")
 	let pages = getAll("page")

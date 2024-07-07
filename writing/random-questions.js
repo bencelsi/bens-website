@@ -53,11 +53,14 @@ let randomQuestions = [
 
 "Free “Pussy Riot” or “Free Pussy” Riot?",
 "French dressing + ranch: Franch? or Rench?",
-"Harry Melling in Buster Scrubs: buster stubbs?",
+"Harry Melling in Buster Scrubs: Buster Stubbs?",
 "Are the Jews bible hipsters?",
 "The American Revolutionary War: Washington Vs. Poshington?",
 "Could a sugar daddy also be called a “friends with healthcare benefits?",
 "If you have one glass of water and one pair of glasses, how many glasses do you have?",
+"How many nulls could a null check check if a null check could nulls?\nNil",
+"How many nuns could a nunchuck chuck if a nunchuck could chuck nuns?\nNone",
+"Do Eskimos use refrigerators to keep their food warm?"
 
 //"During the plagues of Egypt, did God commit abortions?",
 //"Is white slavery cultural appropriation?",

@@ -83,15 +83,22 @@
 <script src="../shared/shared.js"></script>
 <script> 
 
-let mossRock = [
+let topSongs = [
+	"Cats",
+	"Woke Up",
+	"Happened By Now",
+	"Play the Game",
+	"One Love",
+	"Feel Like a Fraud"
+]
+
+let moss_rock = [
 	"Cats",
 	"Take You With Me",
 	"Happened By Now",
 	"Daisy",	
 	"Play the Game",
-	"Beetle",
-	"Spaghetti", 
-	"Joe Frank",
+	"Spaghetti",
 	"Woke Up",
 	"Miss You When You Go",
 	"Feel Like a Fraud",
@@ -100,14 +107,14 @@ let mossRock = [
 	"Walking in the Dark",
 	"When I'm Gone",
 	"Hangin' On",
+	"Beetle",
 	"Rest Up",
 	"Advocating",
-	"When I'm Gone",
 	"For You",
 	"Coming to a Close"
 ]
 
-let spaceJam = [
+let space_jam = [
 	"Miyazaki Movies",
 	"Like a Star",
 	"Joanie",
@@ -134,16 +141,17 @@ let extension =".mp3"
 switch (window.location.search) {
 	case "?all-songs":
 		songs = allSongs
+		songs.sort()
 		albumCover = "Day Break.jpeg"
 		title = "All Songs"
 		break
 	case "?moss-rock":
-		songs = mossRock
+		songs = moss_rock
 		albumCover = "Moss Rock.png"
 		title = "Moss Rock"
 		break
 	case "?space-jams":
-		songs = spaceJam
+		songs = space_jam
 		albumCover = "Space Jams.jpeg"
 		title = "Space Jams"
 		break

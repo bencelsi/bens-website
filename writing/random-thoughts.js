@@ -4,13 +4,13 @@ let randomThoughts = [
 "Being ‘up for something’ and being ‘down for something’ mean the same thing",
 "Cribbage sounds like a cabbage that went bad",
 "Your parents’ grandparents and your grandparents’ parents are the same people",
-"Don’t trust a milkshake that becomes more solid the more it melts",
+"Never trust a milkshake that gets more solid as it melts",
 "Tofu + crouton = futon",
 "People get upset if you use the word ‘literally’ figuratively, but no one gets upset if you use the word ‘figuratively’ literally",
 "Soup of the day implies soup of the night",
 "Cucumbers are just unripe pickles",
 "Turns out, Kevin Spacey’s career was the house of cards",
-"Any company that requires a drug test fails the drug test test",
+"Any job that requires a drug test fails the drug test test",
 "PhD? More like PhDon’t",
 "Sharpies aren’t sharp",
 "I’m not gay for pay, but I could be bi for pie",
@@ -25,13 +25,20 @@ let randomThoughts = [
 "Why are they called waiters when I'm the one who’s been waiting 45 minutes for my damn spaghetti",
 
 "I don’t have a Doctor of Philosophy, but I do have a Doctor Phil-osophy",
-"Nightmare before Christmas is a cautionary tale about cultural appropriation",
+"Nightmare Before Christmas is a cautionary tale about cultural appropriation",
 "Life is like chess: you’re at a disadvantage if you’re black",
 "Everything a chef ever creates turns to shit.",
-
-///"Porn stars should get their name tattoo so everyone can google them easily",
 "Anyone shorter than me who criticizes my posture is a hypocrite",
-"Chat GPT is a virtue signaller",
+
+//"Porn stars should get their name tattoo so everyone can google them easily",
+//"Chat GPT is a virtue signaller",
 //"Plaid pantry logo isn't plaid, and olive garden's logos isn't olives",
-//"A door is to a doorway as a donut hole is to a donut"
+//"A door is to a doorway as a donut hole is to a donut",
+"Any bar can become a rooftop bar if you go on the roof",
+"Never shop for food while hungry, never shop for clothes while naked",
+"Law school should be called 'School of Law'",
+"When it comes to colonizing India, there are Hindus and Hindon'ts",
+"Smokey needs a shirt and Pooh needs pants",
+"Would Ryan Gosling be as famous if he was named Ryan Duckling",
+"Is Finding Nemo a fish out of water story?"
 ]
