@@ -285,7 +285,6 @@ Strike right balance of organization, discovery, and shuffling
 	const testDiv = get("test")
 	
 	fetch("/test.html")
-		.header("Access-Control-Allow-Origin: *")
 		.then(res => res.text())
 		.then(data => {
 			testDiv.innerHTML = data
