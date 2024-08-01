@@ -47,18 +47,18 @@ Strike right balance of organization, discovery, and shuffling
 		}
 
 		#musicTab:not(.selected):hover, #musicTab.selected { 
-			filter: drop-shadow(0 0 .9rem rgb(204, 0, 255)); }
+			filter: drop-shadow(0 0 1rem rgb(204, 0, 255)); }
 		#artTab:not(.selected):hover, #artTab.selected { 
-			filter: drop-shadow(0 0 .9rem rgb(255, 0, 0)); }
+			filter: drop-shadow(0 0 1rem rgb(255, 0, 0)); }
 		#gamesTab:not(.selected):hover, #gamesTab.selected { 
-			filter: drop-shadow(0 0 .9rem rgb(0, 198, 56)); }
+			filter: drop-shadow(0 0 1rem rgb(0, 198, 56)); }
 		#writingTab:not(.selected):hover, #writingTab.selected { 
-			filter: drop-shadow(0 0 .9rem rgb(255, 213, 0)); }
+			filter: drop-shadow(0 0 1rem rgb(255, 213, 0)); }
 		#videoTab:not(.selected):hover, #videoTab.selected { 
-			filter: drop-shadow(0 0 .9rem rgb(0, 128, 255)); }
+			filter: drop-shadow(0 0 1rem rgb(0, 128, 255)); }
 
 		.selected img {
-			filter: drop-shadow(0 0 1.5rem rgb(255, 189, 132));
+			filter: drop-shadow(0 0 1.5rem rgb(134, 132, 255));
 		}
 
 		.tab {
@@ -108,7 +108,7 @@ Strike right balance of organization, discovery, and shuffling
 
 		a:hover {
 			background-color: transparent;
-			filter: drop-shadow(0 0 0.9rem rgb(255, 205, 66));
+			/* filter: drop-shadow(0 0 0.9rem rgb(255, 205, 66)); */
 		}
 
 		.localOnly {
@@ -151,9 +151,6 @@ Strike right balance of organization, discovery, and shuffling
 	<a href="music/albums.html" class="localOnly"> 
 		<h2>Albums</h2>
 	</a>
-	<a href="music/music-production.html" class="localOnly"> 
-		<h2>Creation</h2>
-	</a>
 	<!-- <a href="music/albums.html"> 
 		<h2>Music Videos</h2>
 	</a>
@@ -175,12 +172,12 @@ Strike right balance of organization, discovery, and shuffling
 	<a href="art/art.html?photos">
 		<h2>Photos</h2>
 	</a>
+	<a href="art/art.html?uw-daily-illustrations">
+		<h2>UW Daily Illustrations</h2>
+	</a>
 	<a href="art/art.html?miscellaneous">
 		<h2>Miscellaneous</h2>
 	</a>
-	<!-- <a href="art/art.html?uw-daily-illustrations">
-		<h2>UW Daily Illustrations</h2>
-	</a> -->
 </div>
 
 <!------------------------------------------------>
@@ -254,7 +251,7 @@ Strike right balance of organization, discovery, and shuffling
 <!------------------------------------------------>
 <div id="writingPage" class="page">
 	<a href="writing/christian-bok.html" class="localOnly"><h2>Christian Bök</h2></a>
-	<a href="writing/youre-little.html" class="localOnly"><h2>You"re Little</h2></a>
+	<a href="writing/youre-little.html" class="localOnly"><h2>You're Little</h2></a>
 	<a href="writing/great-apes.html"><h2>Great Apes</h2></a>
 	<a href="writing/writing.html?palindromes"><h2>Palindromes</h2></a>
 	<a href="writing/writing.html?alphabet-sayings"><h2>Alphabet Sayings</h2></a>
@@ -284,11 +281,6 @@ Strike right balance of organization, discovery, and shuffling
 <script>
 	const testDiv = get("test")
 	
-	fetch("/test.html")
-		.then(res => res.text())
-		.then(data => {
-			testDiv.innerHTML = data
-		})
 
 	let selected = "none"
 	let tabs = getAll("tab")

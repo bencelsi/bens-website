@@ -21,7 +21,7 @@
 
 		h1 { text-shadow : 0 0 40px red; }
 		
-		.tab img { width: 30px; }
+		.tab img { width: 90px; }
 
 		a:link, a:visited {
 			color: pink;
@@ -48,6 +48,23 @@
 			<img src="../gif/random.gif" class=button id="random"/>
 			<img src='../gif/arrowr.gif' class=button id="right"/>
 		</div>
+		<!-- <div id="tabMenu">
+			<div class="tab">
+				<img src="gif/newspaper.gif"/>
+			</div>
+			<div class="tab">
+				<img src="gif/pencil.gif"/>	
+			</div>
+			<div class="tab">
+				<img src="gif/paintbrush.gif"/>
+			</div>
+			<div class="tab" >
+				<img src="gif/photoshop.gif"/>
+			</div>
+			<div class="tab">
+				<img src="gif/camera.gif"/>
+			</div>
+		</div> -->
 	</div>
 	<script src="../shared/shared.js"></script>
 	<script src="photos.js"></script>
@@ -73,6 +90,75 @@
 				"Sanjay.JPG",
 				"Skull.JPG",
 				"Sunflowers.JPG"
+			],
+			
+			"uw-daily-illustrations": [
+				"420.jpg",
+				"Hillary.jpg",
+				"Stars.jpg",
+				"aderall.jpg",
+				"aggression.jpg",
+				"apartment.jpg",
+				"bezos.jpg",
+				"big data.jpg",
+				"bikini.jpg",
+				"bird and bee.jpg",
+				"bob hasegawa.JPG",
+				"breathe.jpg",
+				"bring them to heel.jpg",
+				"budget.jpg",
+				"cary moon.jpg",
+				"cat.jpg",
+				"chronic pain.jpg",
+				"class.jpg",
+				"coddled.jpg",
+				"condon.jpg",
+				"cross.jpg",
+				"crowded uw.jpg",
+				"dragon.jpg",
+				"dropout.jpg",
+				"eating disorder.JPG",
+				"education.jpg",
+				"election feelings.jpg",
+				"environment.jpg",
+				"excel.jpg",
+				"feminist ad color 2.jpg",
+				"fish.jpg",
+				"frats.jpg",
+				"ghosts.jpg",
+				"good place.jpg",
+				"hanging.jpg",
+				"ice.jpg",
+				"jenny durkin.JPG",
+				"jessyn farrell.jpg",
+				"lawmaker.jpg",
+				"leaves.jpg",
+				"mimimum wage color.jpg",
+				"monkey.JPG",
+				"obamaKim.JPG",
+				"online activism.jpg",
+				"oxxxford.jpg",
+				"palace.jpg",
+				"pregnancy.jpg",
+				"primate.jpg",
+				"pumpkin.jpg",
+				"ratings.jpg",
+				"restroom.jpg",
+				"sex ed.jpg",
+				"shoes.JPG",
+				"social media.jpg",
+				"stem.jpg",
+				"stuff.JPG",
+				"summer.jpg",
+				"tech love bw.jpg",
+				"tech vs nature.jpg",
+				"thoughts.jpg",
+				"to the bone.jpg",
+				"trump.jpg",
+				"trumpers.jpg",
+				"vegetables.jpg",
+				"vets.jpg",
+				"women in stem 2.jpg"
 			],
 			"miscellaneous": [
 				"BusinessSpooner.jpeg",
@@ -107,13 +193,13 @@
 		get("title").innerHTML = title
 		let index = 0
 		shuffle(images)
-		get('left').onclick = () => {
+		get("left").onclick = () => {
 			//playSound('click', .5)
 			index = decrement(index, images.length - 1)
 			setImage()
 		}
 
-		get('right').onclick = () => {
+		get("right").onclick = () => {
 			//playSound('click', .5)
 			index = increment(index, images.length - 1)
 			setImage()
