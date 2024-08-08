@@ -41,6 +41,7 @@ let spoonerisms = [
 "Keep on onning keep",
 "There are Mountain Dews, and Mountain Don'ts",
 "Shanwows and shamwhats",
+"I'm pickin down what you’re laying up"
 //"Piece of shit / Shit of peach / Sheesh a pit",
 
 //Drew burns = bruce dern
