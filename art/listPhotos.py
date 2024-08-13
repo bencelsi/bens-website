@@ -1,13 +1,12 @@
 import os
 
-# List names of photos in /photos in photos.js (or designated directory)
+# List names of photos in /photos into photos.js (or designated directory)
 
-name = "photos"
+name = "dead-end"
 
 photos = []
 for filename in os.listdir("/Users/bencelsi/LocalDrive/CODE•••••••••••••••••••••••••/github/bencelsi.github.io/art/" + name):
-    if filename.endswith(".jpeg"):
-        photos.append(filename)
+    photos.append(filename)
 photos.sort()
 
 if os.path.exists(name + ".js"):

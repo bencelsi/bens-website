@@ -184,6 +184,9 @@ Strike right balance of organization, discovery, and shuffling
 	<a href="art/art.html?uw-daily-illustrations">
 		<h2>UW Daily Illustrations</h2>
 	</a>
+	<a href="art/art.html?dead-end">
+		<h2>Dead End Test Renders</h2>
+	</a>
 	<a href="art/art.html?miscellaneous">
 		<h2>Miscellaneous</h2>
 	</a>
@@ -265,7 +268,6 @@ Strike right balance of organization, discovery, and shuffling
 	<a href="writing/planet-limericks.html"><h2>Planet Limericks</h2></a>
 	<a href="writing/shakespearean-friday.html"><h2>Shakespearean Friday</h2></a>
 
-
 	<a href="writing/writing.html?palindromes"><h2>Palindromes</h2></a>
 	<a href="writing/writing.html?alphabet-sayings"><h2>Alphabet Sayings</h2></a>
 	<a href="writing/writing.html?miscellaneous"><h2>Miscellaneous</h2></a>
@@ -282,9 +284,24 @@ Strike right balance of organization, discovery, and shuffling
 
 <br><br>
 
-<div id = 'test'></div>
-
 </body>
+
+
+<!-- misc. links -->
+<!-- 
+https://yvettesbridalformal.p1r8.net/ 
+https://www.peteranswers.com/
+https://radio.garden/visit/caleta-olivia/0oALAXD6
+http://www.windows93.net/
+https://www.cameronsworld.net/
+https://gifcities.org/
+https://jacklance.github.io/
+https://petittube.com/
+http://mystarchive.com/rivenil/main.html
+https://lhohq.info/
+http://web.archive.org/web/20030219072854/http://timecube.com/
+-->
+
 
 <!------------------------------------------------>
 <!-- S C R I P T S -->
@@ -292,15 +309,13 @@ Strike right balance of organization, discovery, and shuffling
 <script src="shared/shared.js"></script>
 <script>
 	const testDiv = get("test")
-	
-
 	let selected = "none"
 	let tabs = getAll("tab")
 	let pages = getAll("page")
 
 	if (isLocal) {
 		let locals = getAll("localOnly")
-		for ( i = 0; i < locals.length; i++) {
+		for (i = 0; i < locals.length; i++) {
 			locals[i].style.display = "block"
 		}
 	}
@@ -308,7 +323,6 @@ Strike right balance of organization, discovery, and shuffling
 	if (window.location.search === "?music" ||
 		window.location.search === "?art" ||
 		window.location.search === "?games" ||
-		window.location.search === "?writing" ||
 		window.location.search === "?writing") {
 		selectTab(window.location.search.substring(1, window.location.search.length))
 	}

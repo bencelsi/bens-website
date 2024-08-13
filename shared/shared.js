@@ -7,7 +7,7 @@ function get(id) { return document.getElementById(id) }
 
 function getAll(clazz) { return document.getElementsByClassName(clazz) }
 
-function random(min, max) { return (min + (Math.floor(Math.random() * (max - min)))) }
+function random(min, max) { return (min + (Math.floor(Math.random() * (max + 1 - min)))) }
 
 function increment(value, maxValue) { return value === maxValue ? 0 : value + 1 }
 
