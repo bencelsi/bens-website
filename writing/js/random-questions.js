@@ -53,7 +53,7 @@ let randomQuestions = [
 
 "Free “Pussy Riot” or “Free Pussy” Riot?",
 "French dressing + ranch: Franch? or Rench?",
-"Harry Melling in Buster Scrubs: Buster Stubbs?",
+"Harry Melling in Buster Scruggs: Buster Stubbs?",
 "Are the Jews bible hipsters?",
 "The American Revolutionary War: Washington Vs. Poshington?",
 "Could a sugar daddy also be called a “friends with healthcare benefits?",

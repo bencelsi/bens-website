@@ -25,7 +25,7 @@ let oneLiners = [
 "Why is it so bad to hate crime?",
 "I’ve got to see a horse about a man",
 "If I tell a joke, and nobody laughs, was it actually funny? ",
-"This changes everything… OR DOES IT",
+"This changes everything… OR DOES IT?",
 "Let the commencement… commence",
 "I tried to take Binary 101, turns out it was 5th in the series",
 "Harder done than said",
@@ -47,7 +47,8 @@ let oneLiners = [
 "No capital pains, no capital gains",
 "We are in agreeance that ‘agreeance’ is not a word",
 "It’s not just amazing, it’s the mazing!",
-"Now that's an ass I could get behind",
+//"Now that's an ass I could get behind",
+"Jackson 5 more like Jackson 4",
 
 //"Rim Job? more like grim job",
 "I can cry on demand:\n“ON DEMAND!\”",

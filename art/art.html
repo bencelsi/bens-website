@@ -13,9 +13,7 @@
 			text-align: center;
 		}
 		
-		#header:hover {
-			filter: drop-shadow(0 0 0.8rem rgb(255, 0, 0));
-		}
+		#header:hover { filter: drop-shadow(0 0 0.8rem rgb(255, 0, 0)) }
 
 		#artScreen { height: 700px; }
 
@@ -28,21 +26,20 @@
 			text-decoration: none;
 		}
 
-		.button { cursor: url(../forward.png), auto; }
+		.button, a { cursor: url(../shared/cursor.png), auto; }
 
 		.caption { display: block; }
+
+		#home { :hover { filter: drop-shadow(0 0 2rem rgb(255, 255, 255)) }}
 	</style>
 </head>
 	
 <body>
-	<a href="../index.html">
-		<div style='display: inline-block' id='header'></div>
-	</a>
+	<br>
+	<a href="../index.html?art" id="home"><img src="../gif/earth.gif"></a>
 	<div>
 		<h1 style="color: purple;" id="title"><h1>
-		<div>
-			<img id="artScreen"/>
-		</div>
+		<div><img id="artScreen"/></div>
 		<div>
 			<img src='../gif/arrowl.gif' class=button id="left"/>
 			<img src="../gif/random.gif" class=button id="random"/>
@@ -183,56 +180,48 @@
 				"BusinessSpooner.jpeg",
 				"OffallyGood!.jpeg",
 				"SovietMonopoly.jpeg",
+				"TheActualBeachBoys.jpeg",
 				"TrainParking.jpeg",
 				"WolfOfWallStreetVHS.jpeg"
 			]
 		}
 
-		var images
-		var folder
-		var title
+		let images, folder, title
 
 		folder = window.location.search.slice(1)
 		images = allImages[folder]
-		if (window.location.search === "?paintings") {
-			title = "Paintings"
-		} else if (window.location.search === "?drawings") {
-			title = "Drawings"
-		} else if (window.location.search === "?photos") {
+		if (window.location.search === "?paintings") { title = "Paintings" }
+		else if (window.location.search === "?drawings") { title = "Drawings" } 
+		else if (window.location.search === "?photos") {
 			title = "Photos"
 			get("artScreen").style.width = "700px"
-			images = photos
-		} else if (window.location.search === "?uw-daily-illustrations") {
-			title = "UW Daily Illustrations"
-		} else if (window.location.search === "?miscellaneous") {
-			title = "Miscellaneous"
-		}
-
+			images = photos } 
+		else if (window.location.search === "?uw-daily-illustrations") { title = "UW Daily Illustrations" }
+		else if (window.location.search === "?dead-end") { title = "Dead End Test Renders" }
+		else if (window.location.search === "?miscellaneous") { title = "Miscellaneous" }
 
 		get("title").innerHTML = title
 		let index = 0
 		shuffle(images)
 		get("left").onclick = () => {
-			//playSound('click', .5)
+			playSound('../shared/click', .5)
 			index = decrement(index, images.length - 1)
 			setImage()
 		}
 
 		get("right").onclick = () => {
-			//playSound('click', .5)
+			playSound('../shared/click', .5)
 			index = increment(index, images.length - 1)
 			setImage()
 		}
 
 		get("random").onclick = () => {
-			//playSound('click', .5)
+			playSound('shared/trill', .5)
 			index = random(0, images.length - 1)
 			setImage()
 		}
 
-		function setImage() {
-			get('artScreen').src = folder + "/" + images[index]
-		}
+		function setImage() { get('artScreen').src = folder + "/" + images[index] }
 		
 		setImage()
 	</script>

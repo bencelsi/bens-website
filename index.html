@@ -14,7 +14,6 @@ Standardize/tidy cursor and sound
 Once every tab is just pages of links, maybe incorporate them back into main page
 
 Strike right balance of organization, discovery, and shuffling
-
 -->
 
 <!DOCTYPE html>
@@ -32,18 +31,13 @@ Strike right balance of organization, discovery, and shuffling
 			text-align: center;
 		}
 
-
 		#tabMenu { display: inline-block; }
 
 		/* Turns off game icos */
 		a { 
 			text-decoration: none;
 			cursor: url(shared/cursor.png), auto;
-			h2 {
-				img {
-					display: none; 
-				}
-			}
+			h2 { img { display: none; } }
 		}
 
 		#musicTab:not(.selected):hover { 
@@ -56,7 +50,6 @@ Strike right balance of organization, discovery, and shuffling
 			filter: drop-shadow(0 0 1rem rgb(255, 210, 0)); }
 		#videoTab:not(.selected):hover { 
 			filter: drop-shadow(0 0 1rem rgb(0, 130, 255)); }
-
 		#musicTab.selected { 	
 			filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
 		#artTab.selected { 
@@ -68,9 +61,7 @@ Strike right balance of organization, discovery, and shuffling
 		#videoTab.selected { 
 			filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
 
-		.selected img {
-			filter: drop-shadow(0 0 .3rem rgb(255, 214, 64));
-		}
+		.selected img { filter: drop-shadow(0 0 .3rem rgb(255, 214, 64)) }
 
 		.tab {
 			/* box-shadow: 0px 0px 50px #fff; */
@@ -87,9 +78,7 @@ Strike right balance of organization, discovery, and shuffling
 			width: fit-content;
 			a {
 				color: lightgreen;
-				:hover {
-					color: green;
-				}
+				:hover { color: green; }
 			}
 		}
 
@@ -119,15 +108,14 @@ Strike right balance of organization, discovery, and shuffling
 
 		a:hover {
 			background-color: transparent;
-			/* filter: drop-shadow(0 0 0.9rem rgb(255, 205, 66)); */
+			filter: drop-shadow(0 0 2rem rgb(255, 255, 255));
 		}
 
-		.localOnly {
-			display: none;
-		}
+		.local { display: none; }
 	</style>
 </head>
 <body>
+	<br><br>
 	<div style="display: inline-block" id="homeHeader"></div>
 	<br>
 	<!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
@@ -157,7 +145,7 @@ Strike right balance of organization, discovery, and shuffling
 	<a href="music/songs.html?mashups"> 
 		<h2>Mashups</h2>
 	</a>
-	<a href="music/albums.html" class="localOnly"> 
+	<a href="music/albums.html" class="local"> 
 		<h2>Albums</h2>
 	</a>
 	<!-- <a href="music/albums.html"> 
@@ -173,29 +161,28 @@ Strike right balance of organization, discovery, and shuffling
 <!------------------------------------------------>
 <div id="artPage" class="page">
 	<a href="art/art.html?paintings"> 
-		<h2>Paintings</h2>
-	</a>
+		<h2>Paintings</h2></a>
 	<a href="art/art.html?drawings">
-		<h2>Drawings</h2>
-	</a>
+		<h2>Drawings</h2></a>
 	<a href="art/art.html?photos">
-		<h2>Photos</h2>
-	</a>
+		<h2>Photos</h2></a>
 	<a href="art/art.html?uw-daily-illustrations">
-		<h2>UW Daily Illustrations</h2>
-	</a>
+		<h2>UW Daily Illustrations</h2></a>
 	<a href="art/art.html?dead-end">
-		<h2>Dead End Test Renders</h2>
-	</a>
+		<h2>Dead End Test Renders</h2></a>
 	<a href="art/art.html?miscellaneous">
-		<h2>Miscellaneous</h2>
-	</a>
+		<h2>Miscellaneous</h2></a>
 </div>
 
 <!------------------------------------------------>
 <!-- G A M E S -->
 <!------------------------------------------------>
 <div id="gamesPage" class="page">
+	<a href="https://bencelsi.github.io/point-and-clicks"> 
+		<h2><img src="games/ico/chord-wheel.ico">
+			Point & Clicks
+		<img src="games/ico/chord-wheel.ico"></h2>
+	</a>
 	<a href="https://bencelsi.github.io/chord-wheel"> 
 		<h2><img src="games/ico/chord-wheel.ico">
 			Chord Wheel
@@ -216,10 +203,10 @@ Strike right balance of organization, discovery, and shuffling
 			Nabanagrams
 		<img src="games/ico/nabanagrams.ico"></h2>
 	</a>
-	<a href="file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/soviet-monopoly/soviet-monopoly.html" class="localOnly">
+	<a href="file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/soviet-monopoly/soviet-monopoly.html" class="local">
 		<h2><img src="games/ico/soviet-monopoly.ico"> Soviet Monopoly</h2>
 	</a>
-	<a href="file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/game-of-cards/game-of-cards.html" class="localOnly">
+	<a href="file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/game-of-cards/game-of-cards.html" class="local">
 		<h2><img src="games/ico/game-of-cards.ico"> Game of Cards</h2>
 	</a>
 	<a href="https://bencelsi.github.io/automata">
@@ -229,7 +216,7 @@ Strike right balance of organization, discovery, and shuffling
 	</a>
 	<a href="https://bencelsi.github.io/ivans-game"> 
 		<h2><img src="games/ico/ivans-game.ico">
-			Ivan's Game
+			Cirque de Sabotage
 		<img src="games/ico/ivans-game.ico"></h2>
 	</a>
 	<a href="https://bencelsi.github.io/mxbbi">
@@ -237,9 +224,6 @@ Strike right balance of organization, discovery, and shuffling
 			MXBBI
 		<img src="games/ico/mxbbi.ico"></h2>
 	</a>
-	<!-- <h2><a href="https://bencelsi.github.io/apartment-tour">
-			Apartment Tour
-	</a></h2> -->
 	<a href="https://atmos.uw.edu/~dargan/EarthGamesUW/Drop.html">
 		<h2><img src="games/ico/drop.ico">
 			Drop
@@ -262,12 +246,11 @@ Strike right balance of organization, discovery, and shuffling
 <!-- W R I T I N G -->
 <!------------------------------------------------>
 <div id="writingPage" class="page">
-	<a href="writing/christian-bok.html" class="localOnly"><h2>Christian Bök</h2></a>
-	<a href="writing/youre-little.html" class="localOnly"><h2>You're Little</h2></a>
+	<a href="writing/christian-bok.html" class="local"><h2>Christian Bök</h2></a>
+	<a href="writing/youre-little.html" class="local"><h2>You're Little</h2></a>
 	<a href="writing/great-apes.html"><h2>Great Apes</h2></a>
 	<a href="writing/planet-limericks.html"><h2>Planet Limericks</h2></a>
 	<a href="writing/shakespearean-friday.html"><h2>Shakespearean Friday</h2></a>
-
 	<a href="writing/writing.html?palindromes"><h2>Palindromes</h2></a>
 	<a href="writing/writing.html?alphabet-sayings"><h2>Alphabet Sayings</h2></a>
 	<a href="writing/writing.html?miscellaneous"><h2>Miscellaneous</h2></a>
@@ -314,23 +297,16 @@ http://web.archive.org/web/20030219072854/http://timecube.com/
 	let pages = getAll("page")
 
 	if (isLocal) {
-		let locals = getAll("localOnly")
-		for (i = 0; i < locals.length; i++) {
-			locals[i].style.display = "block"
-		}
+		let locals = getAll("local")
+		for (i = 0; i < locals.length; i++) { locals[i].style.display = "block" }
 	}
 
-	if (window.location.search === "?music" ||
-		window.location.search === "?art" ||
-		window.location.search === "?games" ||
-		window.location.search === "?writing") {
+	if (window.location.search.startsWith("?music") || window.location.search.startsWith("?art") ||
+		window.location.search.startsWith("?games") || window.location.search.startsWith("?writing")) {
 		selectTab(window.location.search.substring(1, window.location.search.length))
 	}
 	
-	function selectTab(name) {
-		selected = name
-		refreshPage()
-	}
+	function selectTab(name) { playSound('shared/click'); selected = name; refreshPage() }
 
 	get("musicTab").onclick = () => selectTab("music")
 	get("artTab").onclick = () => selectTab("art")
@@ -341,17 +317,11 @@ http://web.archive.org/web/20030219072854/http://timecube.com/
 	function refreshPage() {
 		for (let i = 0; i < tabs.length; i++) {
 			let tab = tabs[i]
-			if (tab.id === selected + "Tab") {
-				tab.classList.add("selected")
-			} else {
-				tab.classList.remove("selected")
-			}
+			if (tab.id === selected + "Tab") { tab.classList.add("selected") }
+			else { tab.classList.remove("selected") }
 			let page = pages[i]
-			if (page.id === selected + "Page") {
-				page.style.display = "inline-block"
-			} else {
-				page.style.display = "none"
-			}
+			if (page.id === selected + "Page") { page.style.display = "inline-block" } 
+			else { page.style.display = "none" }
 		}
 	}
 </script>

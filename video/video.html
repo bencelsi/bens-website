@@ -30,15 +30,18 @@
 			color: pink;
 			text-decoration: none;
 		}
+		#home {
+			:hover {  filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }
+		}
 
-		.button { cursor: url(..shared/cursor.png), auto; }
+		.button, a { cursor: url(../shared/cursor.png), auto; }
 	</style>
 </head>
 	
 <body>
-	<a href="../index.html">
-		<div style='display: inline-block' id='header'></div>
-	</a>
+	<br>
+	<a href="../index.html?video" id="home"><img src="../gif/earth.gif"></a>
+	<br><br>
 	<div>
 		<div>
 			<h2 id="videoTitle"></h2>

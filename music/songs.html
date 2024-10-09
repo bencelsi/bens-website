@@ -53,25 +53,27 @@
 			filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
 		}
 
-		.button { cursor: url(../forward.png), auto; }
+		.button, a { cursor: url(../shared/cursor.png), auto; }
 
+		#home:hover { filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }
 	</style>
 </head>
 <body>
+	<br>
+	<a href="../index.html?music" id="home"></a>
 	<div id="AllSongs">
 		<h2 id="title"></h2>
 		<br>
-		<br><br>
 		<img id="albumCover" style="width: 300px; height: 300px; filter: drop-shadow(0 0 4.5rem rgb(0, 79, 136));">
 		<!-- 'https://raw.githubusercontent.com/bencelsi/bencelsi.github.io/master/music/.mp3' -->
 		<br><br>
 		<table id="songs">
 		</table>
-		<br><br>
-		<div>
+		<br>
+		<!-- <div>
 			<img src="../gif/arrowl.gif" class="button" id="left"/>
 			<img src="../gif/arrowr.gif" class="button" id="right"/>
-		</div>
+		</div> -->
 		<br>
 		Autoplay <input type="checkbox" id="autoplay" checked/>
 		Shuffle <input type="checkbox" id="shuffle"/>
@@ -186,13 +188,12 @@ let totalLength = 0;
 let songAudios = []
 
 for (let i = 0; i < songs.length; i++) {
-	let tr = document.createElement("tr")
-	let number = document.createElement("td")
-	number.innerHTML = i + 1 + "."
+	let songNumber = document.createElement("td")
+	songNumber.innerHTML = i + 1 + "."
+	
 	let songTitle = document.createElement("td")
 	songTitle.innerHTML = songs[i]
-	tr.appendChild(number)
-	tr.appendChild(songTitle)
+	
 
 	let songAudioTd = document.createElement("td")
 	let songAudio = document.createElement("audio")
@@ -220,8 +221,12 @@ for (let i = 0; i < songs.length; i++) {
 
 	songAudios.push(songAudio)
 	songAudioTd.appendChild(songAudio)
-	tr.appendChild(songAudioTd)
-	songDiv.appendChild(tr)
+	
+	let row = document.createElement("tr")
+	row.appendChild(songNumber)
+	row.appendChild(songTitle)
+	row.appendChild(songAudioTd)
+	songDiv.appendChild(row)
 }
 
 // TODO - way to keep playing song when browsing website?

@@ -22,23 +22,26 @@ function shuffle(array) {
     }
 }
 
-function playSound(name, volume = 1, format='.wav') {
-    audio = new Audio();
+let audio = new Audio();
+function playSound(name, volume = 1, format='.wav') { 
+    console.log(name)
     audio.volume = volume
-    audio.src = 'aud/' + name + format
+    let src = name + format
+    if (audio.src != src) { audio.src = src }
     audio.play();
 }
 
 try {
-    get("homeHeader").innerHTML = 
-`<div>
-    <img src='gif/letters/B1.gif'/>
-    <img src='gif/letters/E1.gif'/>
-    <img src='gif/letters/N1.gif'/>
-    <img src='gif/letters/apostrophe.gif'/>
-    <img src='gif/letters/S1.gif'/>
-    <span><h3>W E B S I T E ! ! !</h3></span>
-</div>`
+    get("home").innerHTML = 
+    `<img src='bens.jpg'>`
+// `<div>
+//     <img src='gif/letters/B1.gif'/>
+//     <img src='gif/letters/E1.gif'/>
+//     <img src='gif/letters/N1.gif'/>
+//     <img src='gif/letters/apostrophe.gif'/>
+//     <img src='gif/letters/S1.gif'/>
+//     <span><h3>W E B S I T E ! ! !</h3></span>
+// </div>`
 } catch(e) {}
 
 try {
