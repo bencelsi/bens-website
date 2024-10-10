@@ -20,7 +20,7 @@ Strike right balance of organization, discovery, and shuffling
 <html lang="en">
 <head>
 	<title style="color: white">Ben's Website!!!</title>
-	<link rel="icon" type="image/x-icon" href="ico/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="shared/ico/favicon.ico">
 	<style type="text/css">
 		body {
 			background-image: url(gif/stars.gif);
@@ -115,8 +115,15 @@ Strike right balance of organization, discovery, and shuffling
 	</style>
 </head>
 <body>
-	<br><br>
-	<div style="display: inline-block" id="homeHeader"></div>
+	<br>
+	<div>
+		<img src='gif/letters/B1.gif'/>
+		<img src='gif/letters/E1.gif'/>
+		<img src='gif/letters/N1.gif'/>
+		<img src='gif/letters/apostrophe.gif'/>
+		<img src='gif/letters/S1.gif'/>
+		<span><h3>W E B S I T E ! ! !</h3></span>
+	</div>
 	<br>
 	<!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
 	<div id="tabMenu">
@@ -264,9 +271,7 @@ Strike right balance of organization, discovery, and shuffling
 		<h2>Videos</h2>
 	</a>
 </div>
-
 <br><br>
-
 </body>
 
 
@@ -306,7 +311,7 @@ http://web.archive.org/web/20030219072854/http://timecube.com/
 		selectTab(window.location.search.substring(1, window.location.search.length))
 	}
 	
-	function selectTab(name) { playSound('shared/click'); selected = name; refreshPage() }
+	function selectTab(name) { playSound('shared/sound/click'); selected = name; refreshPage() }
 
 	get("musicTab").onclick = () => selectTab("music")
 	get("artTab").onclick = () => selectTab("art")

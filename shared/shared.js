@@ -33,7 +33,8 @@ function playSound(name, volume = 1, format='.wav') {
 
 try {
     get("home").innerHTML = 
-    `<img src='bens.jpg'>`
+    // `<img src='../shared/bens.jpg' style='width: 125px'>`
+    `<img src='../gif/earth3.gif' >`
 // `<div>
 //     <img src='gif/letters/B1.gif'/>
 //     <img src='gif/letters/E1.gif'/>
