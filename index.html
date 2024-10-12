@@ -18,151 +18,93 @@ Strike right balance of organization, discovery, and shuffling
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title style="color: white">Ben's Website!!!</title>
-	<link rel="icon" type="image/x-icon" href="shared/ico/favicon.ico">
-	<style type="text/css">
-		body {
-			background-image: url(gif/stars.gif);
-			color: white;
-			font-family: "Lucida Console", monospace;
-			margin: 0;
-			height: 100%;
-			text-align: center;
-		}
+<head><title>Ben's Website!!!</title><link rel="icon" type="image/x-icon" href="shared/ico/favicon.ico">
+<style type="text/css">
+body {
+	background-image: url(gif/stars.gif); color: white; font-family: "Lucida Console", monospace;
+	margin: 0; height: 100%;
+	text-align: center;
+}
 
-		#tabMenu { display: inline-block; }
+#header  {
+	filter: drop-shadow(0 0 2rem rgb(255, 255, 255))
+}
 
-		/* Turns off game icos */
-		a { 
-			text-decoration: none;
-			cursor: url(shared/cursor.png), auto;
-			h2 { img { display: none; } }
-		}
 
-		#musicTab:not(.selected):hover { 
-			filter: drop-shadow(0 0 1rem rgb(200, 0, 255)); }
-		#artTab:not(.selected):hover { 
-			filter: drop-shadow(0 0 1rem rgb(255, 0, 0)); }
-		#gamesTab:not(.selected):hover { 
-			filter: drop-shadow(0 0 1rem rgb(0, 200, 55)); }
-		#writingTab:not(.selected):hover { 
-			filter: drop-shadow(0 0 1rem rgb(255, 210, 0)); }
-		#videoTab:not(.selected):hover { 
-			filter: drop-shadow(0 0 1rem rgb(0, 130, 255)); }
-		#musicTab.selected { 	
-			filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
-		#artTab.selected { 
-			filter: drop-shadow(0 0 1.5rem rgb(255, 0, 0)); }
-		#gamesTab.selected { 
-			filter: drop-shadow(0 0 1.5rem rgb(0, 200, 55)); }
-		#writingTab.selected { 
-			filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
-		#videoTab.selected { 
-			filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
+a { /* Turns off game icos */
+	text-decoration: none;
+	cursor: url(shared/cursor.png), auto;
+	h2 { img { display: none; } }
+}
 
-		.selected img { filter: drop-shadow(0 0 .3rem rgb(255, 214, 64)) }
+#tabMenu { display: inline-block; }
+#musicTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(200, 0, 255)); }
+#artTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(255, 0, 0)); }
+#gamesTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(0, 200, 55)); }
+#writingTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(255, 210, 0)); }
+#videoTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(0, 130, 255)); }
+#musicTab.selected { filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
+#artTab.selected { filter: drop-shadow(0 0 1.5rem rgb(255, 0, 0)); }
+#gamesTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 200, 55)); }
+#writingTab.selected { filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
+#videoTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
 
-		.tab {
-			/* box-shadow: 0px 0px 50px #fff; */
-			display: inline-block;
-			margin-right: 60px;
-			margin-left: 60px;
-			cursor: url(shared/cursor.png), auto;
-		}
+.selected img { filter: drop-shadow(0 0 .3rem rgb(255, 214, 64)) }
 
-		.page { display: none; }
+.tab {
+	/* box-shadow: 0px 0px 50px #fff; */
+	display: inline-block;
+	margin-right: 60px;
+	margin-left: 60px;
+	cursor: url(shared/cursor.png), auto;
+}
 
-		#gamesPage {
-			margin: auto;
-			width: fit-content;
-			a {
-				color: lightgreen;
-				:hover { color: green; }
-			}
-		}
+.page { display: none; }
 
-		#musicPage a {
-			color: lavender;
-			:hover { color: magenta; }
-		}
-		
-		#writingPage a {
-			color: lightyellow;
-			:hover { color: yellow; }
-		}
+#gamesPage { a {color: lightgreen; :hover { color: green; }}
+	margin: auto; width: fit-content }
+#musicPage a { color: lavender; :hover { color: magenta; } }
+#writingPage a { color: lightyellow; :hover { color: yellow; } }
+#artPage a { color: pink; :hover { color: red; }
+	/* display: inline-block; margin: 30px; */ }
+#videoPage a { color: rgb(141, 204, 255); :hover { color: blue; }
+	display: inline-block; margin: 30px; }
 
-		#artPage a {
-			color: pink;
-			/* display: inline-block; */
-			/* margin: 30px; */
-			:hover { color: red; }
-		}
+a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 255, 255)); }
 
-		#videoPage a {
-			color: rgb(141, 204, 255);
-			display: inline-block;
-			margin: 30px;
-			:hover { color: blue; }
-		}
-
-		a:hover {
-			background-color: transparent;
-			filter: drop-shadow(0 0 2rem rgb(255, 255, 255));
-		}
-
-		.local { display: none; }
-	</style>
+.local { display: none; }
+</style>
 </head>
+<!--------------------------------------------------------------------------->
 <body>
-	<br>
-	<div>
-		<img src='gif/letters/B1.gif'/>
-		<img src='gif/letters/E1.gif'/>
-		<img src='gif/letters/N1.gif'/>
-		<img src='gif/letters/apostrophe.gif'/>
-		<img src='gif/letters/S1.gif'/>
-		<span><h3>W E B S I T E ! ! !</h3></span>
-	</div>
-	<br>
-	<!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
-	<div id="tabMenu">
-		<div class="tab" id="musicTab">
-			<img src="gif/tabs/guitar.gif"/>
-		</div>
-		<div class="tab" id="artTab" >
-			<img src="gif/tabs/pallette.gif"/>	
-		</div>
-		<div class="tab" id="gamesTab">
-			<img src="gif/tabs/computer.gif"/>
-		</div>
-		<div class="tab" id="writingTab">
-			<img src="gif/tabs/book.gif"/>
-		</div>
-		<div class="tab" id="videoTab">
-			<img src="gif/tabs/TV.gif"/>
-		</div>
-	</div>
-	<br><br>
-
+<br>
+<div id="header">
+	<img src='gif/letters/B1.gif'/>
+	<img src='gif/letters/E1.gif'/>
+	<img src='gif/letters/N1.gif'/>
+	<img src='gif/letters/apostrophe.gif'/>
+	<img src='gif/letters/S1.gif'/>
+	<span><h3>W E B S I T E ! ! !</h3></span>
+</div>
+<br>
+<!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
+<div id="tabMenu">
+	<div class="tab" id="musicTab"><img src="gif/tabs/guitar.gif"/></div>
+	<div class="tab" id="artTab" ><img src="gif/tabs/pallette.gif"/></div>
+	<div class="tab" id="gamesTab"><img src="gif/tabs/computer.gif"/></div>
+	<div class="tab" id="writingTab"><img src="gif/tabs/book.gif"/></div>
+	<div class="tab" id="videoTab"><img src="gif/tabs/TV.gif"/></div>
+</div>
+<br><br>
 <!------------------------------------------------>
 <!-- M U S I C -->
 <!------------------------------------------------>
 <div id="musicPage" class="page">
-	<a href="music/songs.html?mashups"> 
-		<h2>Mashups</h2>
-	</a>
-	<a href="music/albums.html" class="local"> 
-		<h2>Albums</h2>
-	</a>
-	<!-- <a href="music/albums.html"> 
-		<h2>Music Videos</h2>
-	</a>
-	<a href="music/albums.html"> 
-		<h2>Chords</h2>
-	</a> -->
+	<a href="music/songs.html?mashups"><h2>Mashups</h2></a>
+	<a href="music/albums.html" class="local"><h2>Albums</h2></a>
+	<!-- <a href="music/albums.html"><h2>Music Videos</h2></a>
+	<a href="music/albums.html"><h2>Chords</h2></a> -->
 </div>
-
 <!------------------------------------------------>
 <!-- A R T -->
 <!------------------------------------------------>
@@ -221,10 +163,10 @@ Strike right balance of organization, discovery, and shuffling
 			Automata
 		<img src="games/ico/automata.ico"></h2>
 	</a>
-	<a href="https://bencelsi.github.io/ivans-game"> 
-		<h2><img src="games/ico/ivans-game.ico">
+	<a href="https://bencelsi.github.io/cirque-de-sabotage"> 
+		<h2><img src="games/ico/cirque-de-sabotage.ico">
 			Cirque de Sabotage
-		<img src="games/ico/ivans-game.ico"></h2>
+		<img src="games/ico/cirque-de-sabotage.ico"></h2>
 	</a>
 	<a href="https://bencelsi.github.io/mxbbi">
 		<h2><img src="games/ico/mxbbi.ico">
@@ -257,7 +199,6 @@ Strike right balance of organization, discovery, and shuffling
 	<a href="writing/youre-little.html" class="local"><h2>You're Little</h2></a>
 	<a href="writing/great-apes.html"><h2>Great Apes</h2></a>
 	<a href="writing/planet-limericks.html"><h2>Planet Limericks</h2></a>
-	<a href="writing/shakespearean-friday.html"><h2>Shakespearean Friday</h2></a>
 	<a href="writing/writing.html?palindromes"><h2>Palindromes</h2></a>
 	<a href="writing/writing.html?alphabet-sayings"><h2>Alphabet Sayings</h2></a>
 	<a href="writing/writing.html?miscellaneous"><h2>Miscellaneous</h2></a>
