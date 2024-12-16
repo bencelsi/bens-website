@@ -1,14 +1,12 @@
 let spoonerisms = [
-"If enough people say a crazy phrase it becomes a phrasy craze",
+"If enough people say a crazy phrase, it becomes a phrasy craze",
 "Better a turducken than a duckturdin",
-"Don't kid your parents, but parent your kids",
+"Don't kid your parents, but do parent your kids",
 "That’s the way the crumble cooks",
 "It's good if something smells tasty, but not if it tastes smelly",
 "Max and Mitch mix and match",
 "In case of stairs use fire", //- maddi
 "Spherical mirrors are miracle spheres",
-"That’s not facial hair, that’s a hair facial",
-"Why is it so dang bad to bang dad?",
 "Passive aggressive or aggressively passive?",
 "Beverly Cleary is cleverly beery",
 "Better a drip coffee than a drippy cough",
@@ -18,7 +16,6 @@ let spoonerisms = [
 "Post-crunk Crust Punk",
 "Popcorn cop porn",
 "Mitch’s eyelids itches my lids",
-"You're not some asshole, you're a wholesome ass",
 "Qualuudes > Lewd quails",
 "Better hard to get than get too hard",
 "Is this video game playing hard to get, or just getting hard to play?",
@@ -32,16 +29,22 @@ let spoonerisms = [
 "Jelly beans > belly jeans",
 "Farewell, Wellfare",
 "Would you rather have a margarita pizza, or a pizza margarita?",
-"Touchdown in douchetown",
 "Homeless shelter, or shelterless home?",
-"Coming of age, or aging of cum?",
 "O(n)? N(o)",
 "I can't see the view but I can view the sea",
 "I’m hardly easy, but I'm easily hard",
 "Keep on onning keep",
 "There are Mountain Dews, and Mountain Don'ts",
 "Shanwows and shamwhats",
-"I'm pickin down what you’re laying up"
+"I'm pickin down what you’re laying up",
+"I don't have fingerless gloves, but I do have gloveless fingers"
+// "That’s not facial hair, that’s a hair facial",
+// "Why is it so dang bad to bang dad?",
+// "Touchdown in douchetown",
+// "Coming of age, or aging of cum?",
+// "You're not some asshole, you're a wholesome ass",
+
+
 //"Piece of shit / Shit of peach / Sheesh a pit",
 
 //Drew burns = bruce dern

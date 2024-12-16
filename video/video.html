@@ -1,108 +1,99 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-	<title style="color: white">Ben's Website!!!</title>
-	<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
-	<style type="text/css">
-		body {
-			background-image: url(../gif/stars.gif);
-			font-family: "Lucida Console", monospace;
-			color: white;
-			margin: 0;
-			height: 100%;
-			text-align: center;
-		}
+<!DOCTYPE html><html lang='en'>
+<head><title style="color: white">Ben's Website!!!</title><link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
+<style type="text/css">
+body {
+	background-image: url(../gif/stars.gif); font-family: "Lucida Console", monospace; color: white;
+	margin: 0;
+	height: 100%;
+	text-align: center;
+}
 
-		#header:hover {
-			filter: drop-shadow(0 0 0.8rem rgb(0, 81, 255));
-		}
+#header:hover {
+	filter: drop-shadow(0 0 0.8rem rgb(0, 81, 255));
+}
 
-		#videoScreen {
-			height: 480px;
-			width: 854px;
-		}
+#videoScreen {
+	height: 480px;
+	width: 854px;
+}
 
-		h1 { text-shadow : 0 0 40px red; }
-		
-		.tab img { width: 30px; }
+h1 { text-shadow : 0 0 40px red; }
 
-		a:link, a:visited {
-			color: pink;
-			text-decoration: none;
-		}
-		#home {
-			:hover {  filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }
-		}
+.tab img { width: 30px; }
 
-		.button, a { cursor: url(../shared/cursor.png), auto; }
-	</style>
+a:link, a:visited {
+	color: pink;
+	text-decoration: none;
+}
+#home { :hover {  filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }} 
+
+.button, a { cursor: url(../shared/cursor.png), auto; }
+</style>
 </head>
-	
 <body>
-	<br>
-	<a href="../index.html?video" id="home"><img src="../gif/earth.gif"></a>
-	<br><br>
+<br>
+<a href="../index.html?video" id="home"><img src="../gif/earth.gif"></a>
+<br><br>
+<div>
 	<div>
-		<div>
-			<h2 id="videoTitle"></h2>
-			<br>
-			<!-- <iframe id=videoScreen src='https://www.youtube.com/embed/LaAjKX-p5hk'></iframe> -->
-			<video id="videoScreen" width=1280 height="720" controls>
-				<source id="videoSource" type="video/mp4">
-			</video> 
-			<br>
-		</div>
-		<img src="../gif/arrowl.gif" class=button id="videoLeft"/>
-		<img class=button id=videoRandom src="../gif/random.gif"/>
-		<img src="../gif/arrowr.gif" class=button id="videoRight"/>
+		<h2 id="videoTitle"></h2><br>
+		<!-- <iframe id=videoScreen src='https://www.youtube.com/embed/LaAjKX-p5hk'></iframe> -->
+		<video id="videoScreen" width=1280 height="720" controls>
+			<source id="videoSource" type="video/mp4">
+		</video> 
+		<br>
 	</div>
-	<script src="../shared/shared.js"></script>
-	<script>
-		// TODO: https://git-lfs.com/
-		// TODO: add 'thumbnails'
-		// TODO: Don't show titles on videos?
-		let videos = [
-			"ABBA Shreds!",	
-			"All Star But It's The Same As The Original And I Get A Copyright Strike",
-			"Dad Listen, Just Listen!",
-			"Don't Worry Be Happy",
-			"Honkin' Henry",
-			"Funny Fall",
-			"Homework",
-			"I Am a Robot",
-			"Intersections!",
-			"My First Blender Movie",
-			"Too Much Fun",
-			"Underwear (Official Trailer)",
-			"University of Washington",
-			"Untitled"
-			// California Fourths / California Girls Shepard Tone /
-		]
+	<img src="../gif/arrowl.gif" class=button id="videoLeft"/>
+	<img class=button id=videoRandom src="../gif/random.gif"/>
+	<img src="../gif/arrowr.gif" class=button id="videoRight"/>
+</div>
+<script src="../shared/shared.js"></script>
+<script>
+// TODO: https://git-lfs.com/
+// TODO: add 'thumbnails'
+// TODO: Don't show titles on videos?
+let videos = [
+	"ABBA Shreds!",	
+	"All Star But It's The Same As The Original And I Get A Copyright Strike",
+	"Dad Listen, Just Listen!",
+	"Don't Worry Be Happy",
+	"Honkin' Henry",
+	"Funny Fall",
+	"Homework",
+	"I Am a Robot",
+	"Intersections!",
+	"My First Blender Movie",
+	"Too Much Fun",
+	"Underwear (Official Trailer)",
+	"University of Washington",
+	"Untitled"
+	// California Fourths / California Girls Shepard Tone /
+]
 
-		let videoIndex = 0
-		shuffle(videos)
-		setVideo()
+let videoIndex = 0
+shuffle(videos)
+setVideo()
 
-		get('videoLeft').onclick = function() {
-			console.log(videoIndex)
-			videoIndex = decrement(videoIndex, videos.length - 1)
-			setVideo()
-		}
+get('videoLeft').onclick = function() {
+	console.log(videoIndex)
+	videoIndex = decrement(videoIndex, videos.length - 1)
+	setVideo()
+}
 
-		get('videoRight').onclick = function() {
-			videoIndex = increment(videoIndex, videos.length - 1)
-			setVideo()
-		}
+get('videoRight').onclick = function() {
+	videoIndex = increment(videoIndex, videos.length - 1)
+	setVideo()
+}
 
-		get('videoRandom').onclick = function() {
-			videoIndex = random(0, videos.length - 1)
-			setVideo()
-		}
+get('videoRandom').onclick = function() {
+	videoIndex = random(0, videos.length - 1)
+	setVideo()
+}
 
-		function setVideo() {
-			get('videoScreen').src = 'videos/' + videos[videoIndex] + ".mp4"
-			get('videoTitle').innerHTML = videos[videoIndex]
-		}
-	</script>
+function setVideo() {
+	get('videoScreen').src = 'videos/' + videos[videoIndex] + ".mp4"
+	get('videoTitle').innerHTML = videos[videoIndex]
+}
+</script>
 </body>
 </html>

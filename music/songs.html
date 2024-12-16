@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang='en'>
 <head>
 	<title>Ben's Website!!!</title>
 	<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
@@ -144,24 +143,20 @@ switch (window.location.search) {
 	case "?all-songs":
 		songs = allSongs
 		songs.sort()
-		albumCover = "Day Break.jpeg"
-		title = "All Songs"
+		albumCover = "Day Break.jpeg"; title = "All Songs"
 		break
 	case "?moss-rock":
 		songs = moss_rock
-		albumCover = "Moss Rock.png"
-		title = "Moss Rock"
+		albumCover = "Moss Rock.png"; title = "Moss Rock"
 		break
 	case "?space-jams":
 		songs = space_jam
-		albumCover = "Space Jams.jpeg"
-		title = "Space Jams"
+		albumCover = "Space Jams.jpeg"; title = "Space Jams"
 		break
 	case "?mashups": 
 		songFolder = "mashups/"
 		songs = mashups
-		albumCover = "Mashups.jpg"
-		title = "Mashups"
+		albumCover = "Mashups.jpg"; title = "Mashups"
 }
 
 let autoplayCheckbox = get("autoplay")

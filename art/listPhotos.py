@@ -2,7 +2,11 @@ import os
 
 # List names of photos in /photos into photos.js (or designated directory)
 
-name = "dead-end"
+print("This script lists files in directoy * into a js array in file *")
+input("Enter to continue...")
+
+
+name = "photos"
 
 photos = []
 for filename in os.listdir("/Users/bencelsi/LocalDrive/CODE•••••••••••••••••••••••••/github/bencelsi.github.io/art/" + name):

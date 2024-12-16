@@ -15,26 +15,28 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
 
 Strike right balance of organization, discovery, and shuffling
 -->
-
 <!DOCTYPE html>
-<html lang="en">
 <head><title>Ben's Website!!!</title><link rel="icon" type="image/x-icon" href="shared/ico/favicon.ico">
 <style type="text/css">
 body {
-	background-image: url(gif/stars.gif); color: white; font-family: "Lucida Console", monospace;
+	background-image: url(gifs/stars.gif); color: white; font-family: "Lucida Console", monospace;
 	margin: 0; height: 100%;
 	text-align: center;
 }
 
-#header  {
-	filter: drop-shadow(0 0 2rem rgb(255, 255, 255))
-}
-
+#header { filter: drop-shadow(0 0 2rem rgb(132, 0, 255)) }
+#header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
 
 a { /* Turns off game icos */
 	text-decoration: none;
 	cursor: url(shared/cursor.png), auto;
 	h2 { img { display: none; } }
+}
+
+summary {
+	color: pink; font-style: bold;
+	font-size: 25px;
+	cursor: url(shared/cursor.png), auto;
 }
 
 #tabMenu { display: inline-block; }
@@ -48,6 +50,13 @@ a { /* Turns off game icos */
 #gamesTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 200, 55)); }
 #writingTab.selected { filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
 #videoTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
+#gamesPage { a { color: lightgreen; :hover { color: green }} margin: auto; width: fit-content }
+#musicPage a { color: lavender; :hover { color: magenta; } }
+#writingPage a { color: lightyellow; :hover { color: yellow; } }
+#artPage a { color: pink; :hover { color: red; }
+	/* display: inline-block; margin: 30px; */ }
+#videoPage a { color: rgb(141, 204, 255); :hover { color: blue; }
+	display: inline-block; margin: 30px; }
 
 .selected img { filter: drop-shadow(0 0 .3rem rgb(255, 214, 64)) }
 
@@ -61,39 +70,26 @@ a { /* Turns off game icos */
 
 .page { display: none; }
 
-#gamesPage { a {color: lightgreen; :hover { color: green; }}
-	margin: auto; width: fit-content }
-#musicPage a { color: lavender; :hover { color: magenta; } }
-#writingPage a { color: lightyellow; :hover { color: yellow; } }
-#artPage a { color: pink; :hover { color: red; }
-	/* display: inline-block; margin: 30px; */ }
-#videoPage a { color: rgb(141, 204, 255); :hover { color: blue; }
-	display: inline-block; margin: 30px; }
-
 a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 255, 255)); }
 
 .local { display: none; }
 </style>
 </head>
 <!--------------------------------------------------------------------------->
-<body>
-<br>
+<body><br>
 <div id="header">
-	<img src='gif/letters/B1.gif'/>
-	<img src='gif/letters/E1.gif'/>
-	<img src='gif/letters/N1.gif'/>
-	<img src='gif/letters/apostrophe.gif'/>
-	<img src='gif/letters/S1.gif'/>
+	<img src='gifs/letters/B1.gif'/><img src='gifs/letters/E1.gif'/><img src='gifs/letters/N1.gif'/>
+	<img src='gifs/letters/apostrophe.gif'/><img src='gifs/letters/S1.gif'/>
 	<span><h3>W E B S I T E ! ! !</h3></span>
 </div>
 <br>
 <!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
 <div id="tabMenu">
-	<div class="tab" id="musicTab"><img src="gif/tabs/guitar.gif"/></div>
-	<div class="tab" id="artTab" ><img src="gif/tabs/pallette.gif"/></div>
-	<div class="tab" id="gamesTab"><img src="gif/tabs/computer.gif"/></div>
-	<div class="tab" id="writingTab"><img src="gif/tabs/book.gif"/></div>
-	<div class="tab" id="videoTab"><img src="gif/tabs/TV.gif"/></div>
+	<div class="tab" id="musicTab"><img src="gifs/tabs/guitar.gif"/></div>
+	<div class="tab" id="artTab" ><img src="gifs/tabs/pallette.gif"/></div>
+	<div class="tab" id="gamesTab"><img src="gifs/tabs/computer.gif"/></div>
+	<div class="tab" id="writingTab"><img src="gifs/tabs/book.gif"/></div>
+	<div class="tab" id="videoTab"><img src="gifs/tabs/TV.gif"/></div>
 </div>
 <br><br>
 <!------------------------------------------------>
@@ -122,7 +118,6 @@ a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 2
 	<a href="art/art.html?miscellaneous">
 		<h2>Miscellaneous</h2></a>
 </div>
-
 <!------------------------------------------------>
 <!-- G A M E S -->
 <!------------------------------------------------>
@@ -158,63 +153,74 @@ a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 2
 	<a href="file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/game-of-cards/game-of-cards.html" class="local">
 		<h2><img src="games/ico/game-of-cards.ico"> Game of Cards</h2>
 	</a>
-	<a href="https://bencelsi.github.io/automata">
-		<h2><img src="games/ico/automata.ico">
-			Automata
-		<img src="games/ico/automata.ico"></h2>
-	</a>
-	<a href="https://bencelsi.github.io/cirque-de-sabotage"> 
-		<h2><img src="games/ico/cirque-de-sabotage.ico">
-			Cirque de Sabotage
-		<img src="games/ico/cirque-de-sabotage.ico"></h2>
-	</a>
-	<a href="https://bencelsi.github.io/mxbbi">
-		<h2><img src="games/ico/mxbbi.ico">
-			MXBBI
-		<img src="games/ico/mxbbi.ico"></h2>
-	</a>
-	<a href="https://atmos.uw.edu/~dargan/EarthGamesUW/Drop.html">
-		<h2><img src="games/ico/drop.ico">
-			Drop
-		<img src="games/ico/drop.ico"></h2>
-	</a>
-	<a href="https://scratch.mit.edu/projects/1448075/fullscreen">
-		<h2><img src="games/ico/griven.ico">
-			Griven
-		<img src="games/ico/griven.ico"></h2>
-	</a>
-	<a href="https://scratch.mit.edu/projects/379323/fullscreen/">
-		<h2><img src="games/ico/grounded.ico">
+	<a href="https://bencelsi.github.io/automata"><h2><img src="games/ico/automata.ico">
+		Automata
+	<img src="games/ico/automata.ico"></h2></a>
+	<a href="https://bencelsi.github.io/cirque-de-sabotage"><h2><img src="games/ico/cirque-de-sabotage.ico">
+		Cirque de Sabotage
+	<img src="games/ico/cirque-de-sabotage.ico"></h2></a>
+	<a href="https://bencelsi.github.io/mxbbi"><h2><img src="games/ico/mxbbi.ico">
+		MXBBI
+	<img src="games/ico/mxbbi.ico"></h2></a>
+	<a href="https://atmos.uw.edu/~dargan/EarthGamesUW/Drop.html"><h2><img src="games/ico/drop.ico">
+		Drop
+	<img src="games/ico/drop.ico"></h2></a>
+	<a href="https://scratch.mit.edu/projects/1448075/fullscreen"><h2><img src="games/ico/griven.ico">
+		Griven
+	<img src="games/ico/griven.ico"></h2></a>
+	<a href="https://scratch.mit.edu/projects/379323/fullscreen/"><h2><img src="games/ico/grounded.ico">
 			Grounded
-		<img src="games/ico/grounded.ico"></h2>
-		<!-- TODO: Add songs to grounded radio? ABC - In every heart - Bobby Mcferrin?  -->
-	</a>
+	<img src="games/ico/grounded.ico"></h2></a>
+	<!-- TODO: Add songs to grounded radio? ABC - In every heart - Bobby Mcferrin?  -->
+
 </div>
 
 <!------------------------------------------------>
 <!-- W R I T I N G -->
 <!------------------------------------------------>
 <div id="writingPage" class="page">
-	<a href="writing/christian-bok.html" class="local"><h2>Christian Bök</h2></a>
-	<a href="writing/youre-little.html" class="local"><h2>You're Little</h2></a>
-	<a href="writing/great-apes.html"><h2>Great Apes</h2></a>
-	<a href="writing/planet-limericks.html"><h2>Planet Limericks</h2></a>
-	<a href="writing/writing.html?palindromes"><h2>Palindromes</h2></a>
-	<a href="writing/writing.html?alphabet-sayings"><h2>Alphabet Sayings</h2></a>
-	<a href="writing/writing.html?miscellaneous"><h2>Miscellaneous</h2></a>
+	<br>
+	<details class="local"><summary>College</summary>
+		<a href="writing/writings/college/christian-bok.html" class="local"><h2>Christian Bök</h2></a>
+		<a href="writing/writings/college/youre-little.html" class="local"><h2>You're Little</h2></a>
+		<a href="writing/writings/college/abba-cd.html"><h2>ABBA CD</h2></a>
+		<a href="writing/writings/college/raven.html"><h2>TheRaven.java</h2></a>
+	</details><br><br>
+	<details><summary>High School</summary>
+		<a href="writing/writings/high/great-apes.html"><h2>Great Apes</h2></a>
+		<a href="writing/writings/high/fruit-flies.html"><h2>Fruit Flies</h2></a>
+		<a href="writing/writings/high/babylon.html"><h2>By the Waters of Babylon: The Reawakening</h2></a>
+		<a href="writing/writings/high/mr-oates.html"><h2>Mr. Oates</h2></a>
+	</details><br><br>
+	<details><summary>Middle School</summary>
+		<a href="writing/writings/middle/Shakespearean-Friday.html"><h2>Shakespearean Friday</h2></a>
+		<a href="writing/writings/middle/Disilluminated-Poem.html"><h2>Disilluminated Poem</h2></a>
+		<a href="writing/writings/middle/Zirconium.html"><h2>Zirconium</h2></a>
+		<a href="writing/writings/middle/Ms-Knottethin.html"><h2>Ms. Knottethin</h2></a>
+		<a href="writing/writings/middle/how-to.html"><h2>How to Write a How-To Essay</h2></a>
+		<a href="writing/writings/middle/newport-field-trip-haikus.html"><h2>Newport Field Trip Haikus</h2></a>
+		<a href="writing/writings/middle/planet-limericks.html"><h2>Planet Limericks</h2></a>
+	</details><br><br>
+	<details><summary>Elementary School</summary>
+		<a href="writing/writings/elementary/flagellants.html"><h2>The Flagellants</h2></a>
+		<a href="writing/writings/elementary/bush.html"><h2>The Adventures of George W. Bush</h2></a>
+		<a href="writing/writings/elementary/john-adams-poem.html"><h2>John Adams Poem</h2></a>
+	</details><br><br>
+	<details><summary>Other</summary>
+		<a href="writing/.gallery.html?palindromes"><h2>Palindromes</h2></a>
+		<a href="writing/.gallery.html?alphabet-sayings"><h2>Alphabet Sayings</h2></a>
+		<a href="writing/.gallery.html?miscellaneous"><h2>Miscellaneous</h2></a>
+	</details>
 </div>
 
 <!------------------------------------------------>
 <!-- V I D E O -->
 <!------------------------------------------------>
 <div id="videoPage" class="page">
-	<a href="video/video.html">
-		<h2>Videos</h2>
-	</a>
+	<a href="video/video.html"><h2>Videos</h2></a>
 </div>
 <br><br>
 </body>
-
 
 <!-- misc. links -->
 <!-- 
@@ -230,7 +236,6 @@ http://mystarchive.com/rivenil/main.html
 https://lhohq.info/
 http://web.archive.org/web/20030219072854/http://timecube.com/
 -->
-
 
 <!------------------------------------------------>
 <!-- S C R I P T S -->
@@ -252,13 +257,11 @@ http://web.archive.org/web/20030219072854/http://timecube.com/
 		selectTab(window.location.search.substring(1, window.location.search.length))
 	}
 	
-	function selectTab(name) { playSound('shared/sound/click'); selected = name; refreshPage() }
+	for (const tab of ["music", "art", "games", "writing", "video"]) {
+		get(tab + "Tab").onclick = () => selectTab(tab)
+	}
 
-	get("musicTab").onclick = () => selectTab("music")
-	get("artTab").onclick = () => selectTab("art")
-	get("gamesTab").onclick = () => selectTab("games")
-	get("writingTab").onclick = () => selectTab("writing")
-	get("videoTab").onclick = () => selectTab("video")
+	function selectTab(name) { playSound('shared/sound/pop'); selected = name; refreshPage() }
 	
 	function refreshPage() {
 		for (let i = 0; i < tabs.length; i++) {

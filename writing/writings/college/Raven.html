@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head><title>TheRaven.java</title><link rel='icon' type='image/x-icon' href='../../../shared/ico/favicon.ico'>
+<style type="text/css">
+body { background-image:  url(../../../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
+    white-space: pre-wrap;
+    margin: auto;
+    text-shadow: blue;
+    width: 1000px;
+}
+</style>
+</head>
+
+<body>
+<h1>TheRaven.java</h1>
+public class TheRaven extends Poem {
+
+   Poet i = new Poet("Edgar Allen Poe");
+   Door chamberDoor = new Door();
+   Scanner forgottenLore = new Scanner(new File("many_a_quaint_and_curious_volume.txt"));
+
+   public static void main() {
+      onceUponAMidnightDreary();
+   }
+
+   private void onceUponAMidnightDreary() {
+
+      while (i.ponderedWeakAndWeary() && i.noddedNearlyNapping()) {
+         if (forgottenLore.hasNextLine()) forgottenLore.nextLine();
+         
+         if (chamberDoor.isGentlyRapping()) break
+      }
+
+      i.mutter("Tis some visitor,");
+      i.mutter("tapping at my chamber door-")
+      i.mutter("Only this and nothing more.")
+   }
+}
+
+</body>
+
+<!-- idea - make multithreaded visitor object, which knocks on the door after some time
+ 
+-->

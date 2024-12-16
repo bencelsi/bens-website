@@ -34,7 +34,7 @@ function playSound(name, volume = 1, format='.wav') {
 try {
     get("home").innerHTML = 
     // `<img src='../shared/bens.jpg' style='width: 125px'>`
-    `<img src='../gif/earth3.gif' >`
+    `<img src='../gifs/earth3.gif' >`
 // `<div>
 //     <img src='gif/letters/B1.gif'/>
 //     <img src='gif/letters/E1.gif'/>
@@ -43,16 +43,4 @@ try {
 //     <img src='gif/letters/S1.gif'/>
 //     <span><h3>W E B S I T E ! ! !</h3></span>
 // </div>`
-} catch(e) {}
-
-try {
-    get("header").innerHTML = 
-`<div>
-    <img src='../gif/letters/B1.gif'/>
-    <img src='../gif/letters/E1.gif'/>
-    <img src='../gif/letters/N1.gif'/>
-    <img src='../gif/letters/apostrophe.gif'/>
-    <img src='../gif/letters/S1.gif'/>
-    <span><h3>W E B S I T E ! ! !</h3></span>
-</div>`
 } catch(e) {}

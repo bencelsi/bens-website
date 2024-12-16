@@ -9,7 +9,7 @@ let oneLiners = [
 "Being illiterate is like seeing a paywall on everything",
 "What if kink shaming is my kink",
 "My pronouns are us/them",
-"There’s no I in cum, but there is cum in my eye",
+// "There’s no I in cum, but there is cum in my eye",
 "Quentin Tarantino means no",
 "Leann Rimes? No it doesn’t ",
 "Paul McCarney: Beatle alcohol syndrome?",
