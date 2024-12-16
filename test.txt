@@ -1,0 +1,4441 @@
+commit 0af19569a6738c292969baf9890f908585200fee
+Author: Ben Celsi <benjamin.d.celsi@gmail.com>
+Date:   Sun Dec 15 17:03:21 2024 -0800
+
+    add a bunch of writing & photos
+
+diff --git a/README.md b/README.md
+deleted file mode 100644
+index 8c24b77..0000000
+--- a/README.md
++++ /dev/null
+@@ -1,3 +0,0 @@
+-# bencelsi.github.io
+-
+-https://bencelsi.github.io/
+diff --git a/art/Screenshot 2024-04-07 at 8.54.27 AM.png b/art/Screenshot 2024-04-07 at 8.54.27 AM.png
+deleted file mode 100644
+index 0b5a473..0000000
+Binary files a/art/Screenshot 2024-04-07 at 8.54.27 AM.png and /dev/null differ
+diff --git a/art/art.html b/art/art.html
+index b01cd58..67c17b2 100644
+--- a/art/art.html
++++ b/art/art.html
+@@ -5,7 +5,7 @@
+ 	<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
+ 	<style type="text/css">
+ 		body {
+-			background-image: url(../gif/stars2.gif);
++			background-image: url(../gifs/stars2.gif);
+ 			color: white;
+ 			font-family: "Lucida Console", monospace;
+ 			margin: 0;
+@@ -36,14 +36,14 @@
+ 	
+ <body>
+ 	<br>
+-	<a href="../index.html?art" id="home"></a>
++	<a href="../index.html?art" id="home">hm</a>
+ 	<div>
+ 		<h1 style="color: purple;" id="title"><h1>
+ 		<div><img id="artScreen"/></div>
+ 		<div>
+-			<img src='../gif/arrowl.gif' class=button id="left"/>
+-			<img src="../gif/random.gif" class=button id="random"/>
+-			<img src='../gif/arrowr.gif' class=button id="right"/>
++			<img src='../gifs/arrowl.gif' class=button id="left"/>
++			<img src="../gifs/random.gif" class=button id="random"/>
++			<img src='../gifs/arrowr.gif' class=button id="right"/>
+ 		</div>
+ 		<!-- <div id="tabMenu">
+ 			<div class="tab">
+@@ -195,7 +195,7 @@
+ 		else if (window.location.search === "?photos") {
+ 			title = "Photos"
+ 			get("artScreen").style.width = "700px"
+-			images = photos } 
++			images = photos }
+ 		else if (window.location.search === "?uw-daily-illustrations") { title = "UW Daily Illustrations" }
+ 		else if (window.location.search === "?dead-end") { title = "Dead End Test Renders" }
+ 		else if (window.location.search === "?miscellaneous") { title = "Miscellaneous" }
+diff --git a/art/listPhotos.py b/art/listPhotos.py
+index 161872e..92f1796 100644
+--- a/art/listPhotos.py
++++ b/art/listPhotos.py
+@@ -2,7 +2,11 @@ import os
+ 
+ # List names of photos in /photos into photos.js (or designated directory)
+ 
+-name = "dead-end"
++print("This script lists files in directoy * into a js array in file *")
++input("Enter to continue...")
++
++
++name = "photos"
+ 
+ photos = []
+ for filename in os.listdir("/Users/bencelsi/LocalDrive/CODE•••••••••••••••••••••••••/github/bencelsi.github.io/art/" + name):
+diff --git a/art/photos.js b/art/photos.js
+index cea0f63..c5a4f5d 100644
+--- a/art/photos.js
++++ b/art/photos.js
+@@ -1,11 +1,15 @@
+ let photos = [
+ "1910.jpeg",
+ "1973.jpeg",
++"1stAve.jpeg",
+ "30million.jpeg",
++"420.jpeg",
+ "420lit.jpeg",
+ "54golf.jpeg",
+ "5star.jpeg",
+ "882O.jpeg",
++"NaN.jpeg",
++"abortion.jpeg",
+ "accountability.jpeg",
+ "akwer.jpeg",
+ "amazon.jpeg",
+@@ -20,16 +24,21 @@ let photos = [
+ "babyShower.jpeg",
+ "babyStore.jpeg",
+ "babyStroller.jpeg",
++"bajaBlast.jpeg",
+ "baldEagle.jpeg",
+ "balloons.jpeg",
++"bano-alt.jpeg",
++"bano.jpeg",
+ "be.jpeg",
+ "beCarefulOfYouHead.jpeg",
++"beGayDoCrime.jpeg",
+ "beMoreAutistic.jpeg",
+ "bePretty.jpeg",
+ "beach.jpeg",
+ "beefBend.jpeg",
+ "beehive.jpeg",
+ "ben.jpeg",
++"benjamind.jpeg",
+ "best.jpeg",
+ "bible.jpeg",
+ "bigDog.jpeg",
+@@ -40,7 +49,11 @@ let photos = [
+ "bodyWindow.jpeg",
+ "boomers.jpeg",
+ "boyButter.jpeg",
++"burnoutPrevention.jpeg",
+ "calciumOmg.jpeg",
++"car.jpeg",
++"carBranch.jpeg",
++"carHat.jpeg",
+ "carefullyBurn.jpeg",
+ "carts.jpeg",
+ "catEyes.jpeg",
+@@ -48,15 +61,20 @@ let photos = [
+ "catSign.jpeg",
+ "catWindow.jpeg",
+ "catWindow2.jpeg",
++"catWindow3.jpeg",
++"catWindowMarvel.jpeg",
+ "caution.jpeg",
+ "celsiBen.jpeg",
+ "cfu.jpeg",
+ "chairs.jpeg",
+ "children.jpeg",
+ "chinaError.jpeg",
++"chipsOnGround.jpeg",
+ "chocolateFactoryBear.jpeg",
+ "christmasHouse.jpeg",
+ "chubbyLilMermaid.jpeg",
++"cigarette-alt.jpeg",
++"cigaretteHand.jpeg",
+ "cleff.jpeg",
+ "clock.jpeg",
+ "closed.jpeg",
+@@ -66,8 +84,10 @@ let photos = [
+ "constructionAccident.jpeg",
+ "copCar.jpeg",
+ "corona.jpeg",
++"couchBurn.jpeg",
+ "cow.jpeg",
+ "criticallyAcclaimed.jpeg",
++"crookedWindow.jpeg",
+ "crosswalk.jpeg",
+ "crowBatman.jpeg",
+ "crows.jpeg",
+@@ -86,13 +106,19 @@ let photos = [
+ "dock.jpeg",
+ "dogEar.jpeg",
+ "dogPlant.jpeg",
++"dogStickerCar.jpeg",
++"dogs.jpeg",
+ "doll.jpeg",
+ "dontLive.jpeg",
+ "dontTrustJustAnyone.jpeg",
+ "doritos.jpeg",
+ "drHummus.jpeg",
++"drugsUrinal.jpeg",
++"duckGooseDuck.jpeg",
+ "dull.jpeg",
+ "dumpsterPhoto.jpeg",
++"durn-alt.jpeg",
++"durn.jpeg",
+ "earth.jpeg",
+ "eczema.jpeg",
+ "elvis.jpeg",
+@@ -108,6 +134,10 @@ let photos = [
+ "fish.jpeg",
+ "fisherman.jpeg",
+ "fiveDays.jpeg",
++"flag.jpeg",
++"footPlanter.jpeg",
++"foreignBank.jpeg",
++"forkDoor.jpeg",
+ "freeMayo.jpeg",
+ "fresh.jpeg",
+ "funCard.jpeg",
+@@ -115,6 +145,8 @@ let photos = [
+ "gaitronics.jpeg",
+ "gasMask.jpeg",
+ "geico.jpeg",
++"gender-alt.jpeg",
++"ghostbust.jpeg",
+ "goAway.jpeg",
+ "god.jpeg",
+ "godBless.jpeg",
+@@ -123,38 +155,47 @@ let photos = [
+ "gramma.jpeg",
+ "grammaBin.jpeg",
+ "grapes.jpeg",
++"graveTree.jpeg",
+ "greatRegularFlavor.jpeg",
+ "greatSalmon.jpeg",
++"greyWood.jpeg",
+ "grub.jpeg",
+ "gun.jpeg",
+ "hamOnWheat.jpeg",
++"hammerAndSickle.jpeg",
+ "handJob.jpeg",
+ "handSanitizer.jpeg",
+ "happySpring.jpeg",
+ "head.jpeg",
+ "hello.jpeg",
+ "hey.jpeg",
++"highHeel.jpeg",
+ "hm.jpeg",
+ "homeless.jpeg",
+ "horrifyin.jpeg",
+ "horse.jpeg",
+ "horseySauce.jpeg",
+ "hot.jpeg",
++"hummusVitality.jpeg",
+ "hunkyGuacamole Large.jpeg",
+ "iAmAGhost Large.jpeg",
+ "iDontKnow.jpeg",
+ "iDontNow.jpeg",
++"iFoundYourPhone.jpeg",
+ "id.jpeg",
+ "instagramMug.jpeg",
+ "internet.jpeg",
+ "intertubes.jpeg",
+ "isolationRoom.jpeg",
++"iveFallen.jpeg",
+ "jPopp.jpeg",
+ "jaundice.jpeg",
+ "jeans.jpeg",
+ "jeffEpstein.jpeg",
+ "jeffGoldblum.jpeg",
+ "justMarried.jpeg",
++"kek.jpeg",
++"kidsDance.jpeg",
+ "kittens.jpeg",
+ "kokane.jpeg",
+ "lRonHubbardWay.jpeg",
+@@ -163,16 +204,22 @@ let photos = [
+ "leaveRockHere.jpeg",
+ "legend.jpeg",
+ "leo.jpeg",
++"lifeBook.jpeg",
++"lightningMcQueen.jpeg",
+ "linux.jpeg",
++"loisLane.jpeg",
+ "lordOfTheDance.jpeg",
+ "lostKitten.jpeg",
+ "love.jpeg",
+ "loveFever.jpeg",
+ "macaroni.jpeg",
++"madameWeb.jpeg",
+ "manRepair.jpeg",
+ "maniac.jpeg",
+ "mannekin.jpeg",
++"mattressRoof.jpeg",
+ "meanWell.jpeg",
++"men.jpeg",
+ "menOof.jpeg",
+ "mice.jpeg",
+ "mickey.jpeg",
+@@ -181,13 +228,15 @@ let photos = [
+ "moisture.jpeg",
+ "mom.jpeg",
+ "moth.jpeg",
++"mrBill.jpeg",
+ "myBad.jpeg",
+ "myBurrito.jpeg",
+ "mysteryMachine.jpeg",
+ "nameDate.jpeg",
+ "nearDeath.jpeg",
+ "neighsHoarsely.jpeg",
+-"neverGiveUp.jpeg",
++"neverGiveUpBillboard.jpeg",
++"neverGiveUpOffice.jpeg",
+ "newMexico.jpeg",
+ "nightmare.jpeg",
+ "nlog.jpeg",
+@@ -195,34 +244,51 @@ let photos = [
+ "noNoNo.jpeg",
+ "noRules.jpeg",
+ "noSeJuega.jpeg",
++"noTable.jpeg",
++"noTennis.jpeg",
+ "noodle.jpeg",
+ "nothingOfValue.jpeg",
+ "observed.jpeg",
+ "okMall.jpeg",
+ "ooof.jpeg",
+ "openBooks.jpeg",
++"orangeJuiceAirport.jpeg",
++"outBus.jpeg",
+ "outlet.jpeg",
+ "outletFaces.jpeg",
+ "outrage.jpeg",
+ "packagedWithPride.jpeg",
+ "pain.jpeg",
++"paintSteps.jpeg",
+ "pavementJoint.jpeg",
+ "peeece.jpeg",
+ "peppers.jpeg",
+ "perms.jpeg",
++"phucDat.jpeg",
++"phuketThai.jpeg",
+ "pikachu.jpeg",
+ "pizza.jpeg",
+ "pizzaMaker.jpeg",
+ "plantBox.jpeg",
+ "plantCar.jpeg",
+ "plantTruck.jpeg",
++"plantWindow.jpeg",
++"plantWindowBig.jpeg",
++"playKitchen.jpeg",
+ "please.jpeg",
++"pleaseDucks.jpeg",
+ "pointNGo.jpeg",
++"pokemons.jpeg",
+ "poohAndMickey.jpeg",
+ "powerade.jpeg",
+ "prettyTired.jpeg",
+ "prime.jpeg",
++"projecting.jpeg",
+ "pumpkinShake.jpeg",
++"puzzlePieces.jpeg",
++"qrCode.jpeg",
++"questionMark.jpeg",
++"rabbitsRabbitsRabbits.jpeg",
+ "rainier.jpeg",
+ "ranch.jpeg",
+ "ravennaInteriors.jpeg",
+@@ -232,6 +298,7 @@ let photos = [
+ "refinedChineseTea.jpeg",
+ "restart.jpeg",
+ "rock.jpeg",
++"rooster.jpeg",
+ "roughRoad.jpeg",
+ "rudolph.jpeg",
+ "sad.jpeg",
+@@ -240,35 +307,55 @@ let photos = [
+ "sauce.jpeg",
+ "savage.jpeg",
+ "sayNoToDrugs.jpeg",
++"screenAd.jpeg",
+ "sealedAir.jpeg",
+ "selectOne.jpeg",
+ "sexyLifeSaladOn.jpeg",
++"sheetMusic.jpeg",
+ "sheldon.jpeg",
+ "shitCatan.jpeg",
++"shoeprint.jpeg",
+ "shoes.jpeg",
+ "shoulder.jpeg",
+ "skateboard.jpeg",
++"skateboardDrink.jpeg",
++"skibidi.jpeg",
+ "smile.jpeg",
++"smileyBoiler.jpeg",
+ "smileyBowl.jpeg",
+ "smirk.jpeg",
++"sometimes.jpeg",
+ "spaghetti.jpeg",
++"special.jpeg",
++"specialFeatures.jpeg",
+ "spicy.jpeg",
+ "spiderweb.jpeg",
++"spyCar.jpeg",
+ "squareDance.jpeg",
+ "squirrell.jpeg",
+ "stairs.jpeg",
+ "stillIRise.jpeg",
+ "stop.jpeg",
++"stopThat.jpeg",
+ "stopp.jpeg",
+ "stress.jpeg",
+ "studyingKnowledge.jpeg",
+ "subjectiveLevel.jpeg",
++"subwayTouchscreen.jpeg",
+ "succ.jpeg",
++"suprome.JPG",
+ "tacoBell.jpeg",
+ "taiwam.jpeg",
++"texasMan.jpeg",
++"thatDarnCat.jpeg",
++"thumbsUpGlove.jpeg",
+ "tires.jpeg",
+ "toiletGlow.jpeg",
++"toiletLeaves.jpeg",
+ "toilets.jpeg",
++"towers.jpeg",
++"trainNotFound.jpeg",
++"treeCaution.jpeg",
+ "treeSign.jpeg",
+ "trending.jpeg",
+ "tshirt.jpeg",
+@@ -286,17 +373,22 @@ let photos = [
+ "washingtonFederal.jpeg",
+ "watchOutForPinching.jpeg",
+ "weAre40.jpeg",
++"wedding.jpeg",
+ "wetCement.jpeg",
++"wetPuddy.jpg",
+ "whatIsThis.jpeg",
+ "whatYearWereYouBorn.jpeg",
+ "whatever.jpeg",
+ "whereAmI.jpeg",
++"whoGivesACrap.jpeg",
+ "wig.jpeg",
+ "window.jpeg",
++"wizard.jpeg",
+ "wow.jpeg",
+ "yo.jpeg",
+ "yoMama.jpeg",
+ "youAreMomGayLol.jpeg",
+ "youAreYourId.jpeg",
++"zebraMural.jpeg",
+ "zombies.jpeg",
+ "zza.jpeg"]
+\ No newline at end of file
+diff --git a/art/photos/0 Instagram alias b/art/photos/0 Instagram alias
+deleted file mode 100644
+index b91977c..0000000
+Binary files a/art/photos/0 Instagram alias and /dev/null differ
+diff --git a/art/photos/bePretty.jpeg b/art/photos/bePretty.jpeg
+deleted file mode 100644
+index c9cc965..0000000
+Binary files a/art/photos/bePretty.jpeg and /dev/null differ
+diff --git a/art/photos/drugsUrinal.jpeg b/art/photos/drugsUrinal.jpeg
+new file mode 100644
+index 0000000..43c8143
+Binary files /dev/null and b/art/photos/drugsUrinal.jpeg differ
+diff --git a/art/photos/miguels.jpeg b/art/photos/miguels.jpeg
+deleted file mode 100644
+index 571b4e8..0000000
+Binary files a/art/photos/miguels.jpeg and /dev/null differ
+diff --git a/art/photos/myBurrito.jpeg b/art/photos/myBurrito.jpeg
+deleted file mode 100644
+index bf0fb11..0000000
+Binary files a/art/photos/myBurrito.jpeg and /dev/null differ
+diff --git a/art/photos/neverGiveUp.jpeg b/art/photos/neverGiveUpBillboard.jpeg
+similarity index 100%
+rename from art/photos/neverGiveUp.jpeg
+rename to art/photos/neverGiveUpBillboard.jpeg
+diff --git a/art/photos/no.jpeg b/art/photos/noTennis.jpeg
+similarity index 100%
+rename from art/photos/no.jpeg
+rename to art/photos/noTennis.jpeg
+diff --git a/art/photos/stop.jpeg b/art/photos/stop.jpeg
+deleted file mode 100644
+index 269ef1c..0000000
+Binary files a/art/photos/stop.jpeg and /dev/null differ
+diff --git a/gif/letters/.DS_Store b/gif/letters/.DS_Store
+deleted file mode 100644
+index 5008ddf..0000000
+Binary files a/gif/letters/.DS_Store and /dev/null differ
+diff --git a/gif/arrowl.gif b/gifs/arrowl.gif
+similarity index 100%
+rename from gif/arrowl.gif
+rename to gifs/arrowl.gif
+diff --git a/gif/arrowr.gif b/gifs/arrowr.gif
+similarity index 100%
+rename from gif/arrowr.gif
+rename to gifs/arrowr.gif
+diff --git a/gif/back.gif b/gifs/back.gif
+similarity index 100%
+rename from gif/back.gif
+rename to gifs/back.gif
+diff --git a/gif/earth.gif b/gifs/earth.gif
+similarity index 100%
+rename from gif/earth.gif
+rename to gifs/earth.gif
+diff --git a/gif/earth3.gif b/gifs/earth3.gif
+similarity index 100%
+rename from gif/earth3.gif
+rename to gifs/earth3.gif
+diff --git a/gif/earth4.gif b/gifs/earth4.gif
+similarity index 100%
+rename from gif/earth4.gif
+rename to gifs/earth4.gif
+diff --git a/gif/eye.gif b/gifs/eye.gif
+similarity index 100%
+rename from gif/eye.gif
+rename to gifs/eye.gif
+diff --git a/gif/gifs-alt/PC_and_monitor.gif b/gifs/gifs-alt/PC_and_monitor.gif
+similarity index 100%
+rename from gif/gifs-alt/PC_and_monitor.gif
+rename to gifs/gifs-alt/PC_and_monitor.gif
+diff --git a/gif/gifs-alt/apre.gif b/gifs/gifs-alt/apre.gif
+similarity index 100%
+rename from gif/gifs-alt/apre.gif
+rename to gifs/gifs-alt/apre.gif
+diff --git a/gif/gifs-alt/bspace.gif b/gifs/gifs-alt/bspace.gif
+similarity index 100%
+rename from gif/gifs-alt/bspace.gif
+rename to gifs/gifs-alt/bspace.gif
+diff --git a/gif/gifs-alt/chimp.gif b/gifs/gifs-alt/chimp.gif
+similarity index 100%
+rename from gif/gifs-alt/chimp.gif
+rename to gifs/gifs-alt/chimp.gif
+diff --git a/gif/gifs-alt/clouds.gif b/gifs/gifs-alt/clouds.gif
+similarity index 100%
+rename from gif/gifs-alt/clouds.gif
+rename to gifs/gifs-alt/clouds.gif
+diff --git a/gif/gifs-alt/clouds2.gif b/gifs/gifs-alt/clouds2.gif
+similarity index 100%
+rename from gif/gifs-alt/clouds2.gif
+rename to gifs/gifs-alt/clouds2.gif
+diff --git a/gif/gifs-alt/code.gif b/gifs/gifs-alt/code.gif
+similarity index 100%
+rename from gif/gifs-alt/code.gif
+rename to gifs/gifs-alt/code.gif
+diff --git a/gif/gifs-alt/construction.gif b/gifs/gifs-alt/construction.gif
+similarity index 100%
+rename from gif/gifs-alt/construction.gif
+rename to gifs/gifs-alt/construction.gif
+diff --git a/gif/gifs-alt/contact.gif b/gifs/gifs-alt/contact.gif
+similarity index 100%
+rename from gif/gifs-alt/contact.gif
+rename to gifs/gifs-alt/contact.gif
+diff --git a/gif/gifs-alt/disco.gif b/gifs/gifs-alt/disco.gif
+similarity index 100%
+rename from gif/gifs-alt/disco.gif
+rename to gifs/gifs-alt/disco.gif
+diff --git a/gif/gifs-alt/divider.gif b/gifs/gifs-alt/divider.gif
+similarity index 100%
+rename from gif/gifs-alt/divider.gif
+rename to gifs/gifs-alt/divider.gif
+diff --git a/gif/gifs-alt/dolphinsclouds-water.gif b/gifs/gifs-alt/dolphinsclouds-water.gif
+similarity index 100%
+rename from gif/gifs-alt/dolphinsclouds-water.gif
+rename to gifs/gifs-alt/dolphinsclouds-water.gif
+diff --git a/gif/gifs-alt/fire.gif b/gifs/gifs-alt/fire.gif
+similarity index 100%
+rename from gif/gifs-alt/fire.gif
+rename to gifs/gifs-alt/fire.gif
+diff --git a/gif/gifs-alt/mail.gif b/gifs/gifs-alt/mail.gif
+similarity index 100%
+rename from gif/gifs-alt/mail.gif
+rename to gifs/gifs-alt/mail.gif
+diff --git a/gif/gifs-alt/money.gif b/gifs/gifs-alt/money.gif
+similarity index 100%
+rename from gif/gifs-alt/money.gif
+rename to gifs/gifs-alt/money.gif
+diff --git a/gif/gifs-alt/moneybag.gif b/gifs/gifs-alt/moneybag.gif
+similarity index 100%
+rename from gif/gifs-alt/moneybag.gif
+rename to gifs/gifs-alt/moneybag.gif
+diff --git a/gif/gifs-alt/moneymov.gif b/gifs/gifs-alt/moneymov.gif
+similarity index 100%
+rename from gif/gifs-alt/moneymov.gif
+rename to gifs/gifs-alt/moneymov.gif
+diff --git a/gif/gifs-alt/monitor.gif b/gifs/gifs-alt/monitor.gif
+similarity index 100%
+rename from gif/gifs-alt/monitor.gif
+rename to gifs/gifs-alt/monitor.gif
+diff --git a/gif/gifs-alt/monitor_heart.gif b/gifs/gifs-alt/monitor_heart.gif
+similarity index 100%
+rename from gif/gifs-alt/monitor_heart.gif
+rename to gifs/gifs-alt/monitor_heart.gif
+diff --git a/gif/gifs-alt/pencil_rolling_md_wht.gif b/gifs/gifs-alt/pencil_rolling_md_wht.gif
+similarity index 100%
+rename from gif/gifs-alt/pencil_rolling_md_wht.gif
+rename to gifs/gifs-alt/pencil_rolling_md_wht.gif
+diff --git a/gif/gifs-alt/phone2.gif b/gifs/gifs-alt/phone2.gif
+similarity index 100%
+rename from gif/gifs-alt/phone2.gif
+rename to gifs/gifs-alt/phone2.gif
+diff --git a/gif/gifs-alt/piano_ani.gif b/gifs/gifs-alt/piano_ani.gif
+similarity index 100%
+rename from gif/gifs-alt/piano_ani.gif
+rename to gifs/gifs-alt/piano_ani.gif
+diff --git a/gif/gifs-alt/skull.gif b/gifs/gifs-alt/skull.gif
+similarity index 100%
+rename from gif/gifs-alt/skull.gif
+rename to gifs/gifs-alt/skull.gif
+diff --git a/gif/gifs-alt/snow.gif b/gifs/gifs-alt/snow.gif
+similarity index 100%
+rename from gif/gifs-alt/snow.gif
+rename to gifs/gifs-alt/snow.gif
+diff --git a/gif/gifs-alt/stars2 copy.gif b/gifs/gifs-alt/stars2 copy.gif
+similarity index 100%
+rename from gif/gifs-alt/stars2 copy.gif
+rename to gifs/gifs-alt/stars2 copy.gif
+diff --git a/gif/gifs-alt/stars3.gif b/gifs/gifs-alt/stars3.gif
+similarity index 100%
+rename from gif/gifs-alt/stars3.gif
+rename to gifs/gifs-alt/stars3.gif
+diff --git a/gif/letters/B1.gif b/gifs/letters/B1.gif
+similarity index 100%
+rename from gif/letters/B1.gif
+rename to gifs/letters/B1.gif
+diff --git a/gif/letters/B2.gif b/gifs/letters/B2.gif
+similarity index 100%
+rename from gif/letters/B2.gif
+rename to gifs/letters/B2.gif
+diff --git a/gif/letters/B3.gif b/gifs/letters/B3.gif
+similarity index 100%
+rename from gif/letters/B3.gif
+rename to gifs/letters/B3.gif
+diff --git a/gif/letters/B4.gif b/gifs/letters/B4.gif
+similarity index 100%
+rename from gif/letters/B4.gif
+rename to gifs/letters/B4.gif
+diff --git a/gif/letters/B5.gif b/gifs/letters/B5.gif
+similarity index 100%
+rename from gif/letters/B5.gif
+rename to gifs/letters/B5.gif
+diff --git a/gif/letters/C.gif b/gifs/letters/C.gif
+similarity index 100%
+rename from gif/letters/C.gif
+rename to gifs/letters/C.gif
+diff --git a/gif/letters/C2.gif b/gifs/letters/C2.gif
+similarity index 100%
+rename from gif/letters/C2.gif
+rename to gifs/letters/C2.gif
+diff --git a/gif/letters/E1.gif b/gifs/letters/E1.gif
+similarity index 100%
+rename from gif/letters/E1.gif
+rename to gifs/letters/E1.gif
+diff --git a/gif/letters/E2.gif b/gifs/letters/E2.gif
+similarity index 100%
+rename from gif/letters/E2.gif
+rename to gifs/letters/E2.gif
+diff --git a/gif/letters/E3.gif b/gifs/letters/E3.gif
+similarity index 100%
+rename from gif/letters/E3.gif
+rename to gifs/letters/E3.gif
+diff --git a/gif/letters/E4.gif b/gifs/letters/E4.gif
+similarity index 100%
+rename from gif/letters/E4.gif
+rename to gifs/letters/E4.gif
+diff --git a/gif/letters/E5.gif b/gifs/letters/E5.gif
+similarity index 100%
+rename from gif/letters/E5.gif
+rename to gifs/letters/E5.gif
+diff --git a/gif/letters/N1.gif b/gifs/letters/N1.gif
+similarity index 100%
+rename from gif/letters/N1.gif
+rename to gifs/letters/N1.gif
+diff --git a/gif/letters/N2.gif b/gifs/letters/N2.gif
+similarity index 100%
+rename from gif/letters/N2.gif
+rename to gifs/letters/N2.gif
+diff --git a/gif/letters/N3.gif b/gifs/letters/N3.gif
+similarity index 100%
+rename from gif/letters/N3.gif
+rename to gifs/letters/N3.gif
+diff --git a/gif/letters/N4.gif b/gifs/letters/N4.gif
+similarity index 100%
+rename from gif/letters/N4.gif
+rename to gifs/letters/N4.gif
+diff --git a/gif/letters/N5.gif b/gifs/letters/N5.gif
+similarity index 100%
+rename from gif/letters/N5.gif
+rename to gifs/letters/N5.gif
+diff --git a/gif/letters/S1.gif b/gifs/letters/S1.gif
+similarity index 100%
+rename from gif/letters/S1.gif
+rename to gifs/letters/S1.gif
+diff --git a/gif/letters/S2.gif b/gifs/letters/S2.gif
+similarity index 100%
+rename from gif/letters/S2.gif
+rename to gifs/letters/S2.gif
+diff --git a/gif/letters/S3.gif b/gifs/letters/S3.gif
+similarity index 100%
+rename from gif/letters/S3.gif
+rename to gifs/letters/S3.gif
+diff --git a/gif/letters/S4.gif b/gifs/letters/S4.gif
+similarity index 100%
+rename from gif/letters/S4.gif
+rename to gifs/letters/S4.gif
+diff --git a/gif/letters/apostrophe.gif b/gifs/letters/apostrophe.gif
+similarity index 100%
+rename from gif/letters/apostrophe.gif
+rename to gifs/letters/apostrophe.gif
+diff --git a/gif/letters/l1.gif b/gifs/letters/l1.gif
+similarity index 100%
+rename from gif/letters/l1.gif
+rename to gifs/letters/l1.gif
+diff --git a/gif/letters/l2.gif b/gifs/letters/l2.gif
+similarity index 100%
+rename from gif/letters/l2.gif
+rename to gifs/letters/l2.gif
+diff --git a/gif/letters/l3.gif b/gifs/letters/l3.gif
+similarity index 100%
+rename from gif/letters/l3.gif
+rename to gifs/letters/l3.gif
+diff --git a/gif/question.gif b/gifs/question.gif
+similarity index 100%
+rename from gif/question.gif
+rename to gifs/question.gif
+diff --git a/gif/random.gif b/gifs/random.gif
+similarity index 100%
+rename from gif/random.gif
+rename to gifs/random.gif
+diff --git a/gif/roses.gif b/gifs/roses.gif
+similarity index 100%
+rename from gif/roses.gif
+rename to gifs/roses.gif
+diff --git a/gif/stars.gif b/gifs/stars.gif
+similarity index 100%
+rename from gif/stars.gif
+rename to gifs/stars.gif
+diff --git a/gif/stars2.gif b/gifs/stars2.gif
+similarity index 100%
+rename from gif/stars2.gif
+rename to gifs/stars2.gif
+diff --git a/gif/tabs/TV.gif b/gifs/tabs/TV.gif
+similarity index 100%
+rename from gif/tabs/TV.gif
+rename to gifs/tabs/TV.gif
+diff --git a/gif/tabs/book.gif b/gifs/tabs/book.gif
+similarity index 100%
+rename from gif/tabs/book.gif
+rename to gifs/tabs/book.gif
+diff --git a/gif/tabs/computer.gif b/gifs/tabs/computer.gif
+similarity index 100%
+rename from gif/tabs/computer.gif
+rename to gifs/tabs/computer.gif
+diff --git a/gif/tabs/guitar-original.gif b/gifs/tabs/guitar-original.gif
+similarity index 100%
+rename from gif/tabs/guitar-original.gif
+rename to gifs/tabs/guitar-original.gif
+diff --git a/gif/tabs/guitar.gif b/gifs/tabs/guitar.gif
+similarity index 100%
+rename from gif/tabs/guitar.gif
+rename to gifs/tabs/guitar.gif
+diff --git a/gif/tabs/guitar2.gif b/gifs/tabs/guitar2.gif
+similarity index 100%
+rename from gif/tabs/guitar2.gif
+rename to gifs/tabs/guitar2.gif
+diff --git a/gif/tabs/guitar3.gif b/gifs/tabs/guitar3.gif
+similarity index 100%
+rename from gif/tabs/guitar3.gif
+rename to gifs/tabs/guitar3.gif
+diff --git a/gif/tabs/joystick (alt).gif b/gifs/tabs/joystick (alt).gif
+similarity index 100%
+rename from gif/tabs/joystick (alt).gif
+rename to gifs/tabs/joystick (alt).gif
+diff --git a/gif/tabs/joystick.gif b/gifs/tabs/joystick.gif
+similarity index 100%
+rename from gif/tabs/joystick.gif
+rename to gifs/tabs/joystick.gif
+diff --git a/gif/tabs/palette-original.gif b/gifs/tabs/palette-original.gif
+similarity index 100%
+rename from gif/tabs/palette-original.gif
+rename to gifs/tabs/palette-original.gif
+diff --git a/gif/tabs/pallette.gif b/gifs/tabs/pallette.gif
+similarity index 100%
+rename from gif/tabs/pallette.gif
+rename to gifs/tabs/pallette.gif
+diff --git a/index.html b/index.html
+index 92fd62f..106549e 100644
+--- a/index.html
++++ b/index.html
+@@ -15,21 +15,17 @@ Once every tab is just pages of links, maybe incorporate them back into main pag
+ 
+ Strike right balance of organization, discovery, and shuffling
+ -->
+-
+ <!DOCTYPE html>
+-<html lang="en">
+ <head><title>Ben's Website!!!</title><link rel="icon" type="image/x-icon" href="shared/ico/favicon.ico">
+ <style type="text/css">
+ body {
+-	background-image: url(gif/stars.gif); color: white; font-family: "Lucida Console", monospace;
++	background-image: url(gifs/stars.gif); color: white; font-family: "Lucida Console", monospace;
+ 	margin: 0; height: 100%;
+ 	text-align: center;
+ }
+ 
+-#header  {
+-	filter: drop-shadow(0 0 2rem rgb(255, 255, 255))
+-}
+-
++#header { filter: drop-shadow(0 0 2rem rgb(132, 0, 255)) }
++#header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
+ 
+ a { /* Turns off game icos */
+ 	text-decoration: none;
+@@ -37,6 +33,12 @@ a { /* Turns off game icos */
+ 	h2 { img { display: none; } }
+ }
+ 
++summary {
++	color: pink; font-style: bold;
++	font-size: 25px;
++	cursor: url(shared/cursor.png), auto;
++}
++
+ #tabMenu { display: inline-block; }
+ #musicTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(200, 0, 255)); }
+ #artTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(255, 0, 0)); }
+@@ -48,6 +50,13 @@ a { /* Turns off game icos */
+ #gamesTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 200, 55)); }
+ #writingTab.selected { filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
+ #videoTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
++#gamesPage { a { color: lightgreen; :hover { color: green }} margin: auto; width: fit-content }
++#musicPage a { color: lavender; :hover { color: magenta; } }
++#writingPage a { color: lightyellow; :hover { color: yellow; } }
++#artPage a { color: pink; :hover { color: red; }
++	/* display: inline-block; margin: 30px; */ }
++#videoPage a { color: rgb(141, 204, 255); :hover { color: blue; }
++	display: inline-block; margin: 30px; }
+ 
+ .selected img { filter: drop-shadow(0 0 .3rem rgb(255, 214, 64)) }
+ 
+@@ -61,39 +70,26 @@ a { /* Turns off game icos */
+ 
+ .page { display: none; }
+ 
+-#gamesPage { a {color: lightgreen; :hover { color: green; }}
+-	margin: auto; width: fit-content }
+-#musicPage a { color: lavender; :hover { color: magenta; } }
+-#writingPage a { color: lightyellow; :hover { color: yellow; } }
+-#artPage a { color: pink; :hover { color: red; }
+-	/* display: inline-block; margin: 30px; */ }
+-#videoPage a { color: rgb(141, 204, 255); :hover { color: blue; }
+-	display: inline-block; margin: 30px; }
+-
+ a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 255, 255)); }
+ 
+ .local { display: none; }
+ </style>
+ </head>
+ <!--------------------------------------------------------------------------->
+-<body>
+-<br>
++<body><br>
+ <div id="header">
+-	<img src='gif/letters/B1.gif'/>
+-	<img src='gif/letters/E1.gif'/>
+-	<img src='gif/letters/N1.gif'/>
+-	<img src='gif/letters/apostrophe.gif'/>
+-	<img src='gif/letters/S1.gif'/>
++	<img src='gifs/letters/B1.gif'/><img src='gifs/letters/E1.gif'/><img src='gifs/letters/N1.gif'/>
++	<img src='gifs/letters/apostrophe.gif'/><img src='gifs/letters/S1.gif'/>
+ 	<span><h3>W E B S I T E ! ! !</h3></span>
+ </div>
+ <br>
+ <!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
+ <div id="tabMenu">
+-	<div class="tab" id="musicTab"><img src="gif/tabs/guitar.gif"/></div>
+-	<div class="tab" id="artTab" ><img src="gif/tabs/pallette.gif"/></div>
+-	<div class="tab" id="gamesTab"><img src="gif/tabs/computer.gif"/></div>
+-	<div class="tab" id="writingTab"><img src="gif/tabs/book.gif"/></div>
+-	<div class="tab" id="videoTab"><img src="gif/tabs/TV.gif"/></div>
++	<div class="tab" id="musicTab"><img src="gifs/tabs/guitar.gif"/></div>
++	<div class="tab" id="artTab" ><img src="gifs/tabs/pallette.gif"/></div>
++	<div class="tab" id="gamesTab"><img src="gifs/tabs/computer.gif"/></div>
++	<div class="tab" id="writingTab"><img src="gifs/tabs/book.gif"/></div>
++	<div class="tab" id="videoTab"><img src="gifs/tabs/TV.gif"/></div>
+ </div>
+ <br><br>
+ <!------------------------------------------------>
+@@ -122,7 +118,6 @@ a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 2
+ 	<a href="art/art.html?miscellaneous">
+ 		<h2>Miscellaneous</h2></a>
+ </div>
+-
+ <!------------------------------------------------>
+ <!-- G A M E S -->
+ <!------------------------------------------------>
+@@ -158,64 +153,75 @@ a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 2
+ 	<a href="file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/game-of-cards/game-of-cards.html" class="local">
+ 		<h2><img src="games/ico/game-of-cards.ico"> Game of Cards</h2>
+ 	</a>
+-	<a href="https://bencelsi.github.io/automata">
+-		<h2><img src="games/ico/automata.ico">
+-			Automata
+-		<img src="games/ico/automata.ico"></h2>
+-	</a>
+-	<a href="https://bencelsi.github.io/cirque-de-sabotage"> 
+-		<h2><img src="games/ico/cirque-de-sabotage.ico">
+-			Cirque de Sabotage
+-		<img src="games/ico/cirque-de-sabotage.ico"></h2>
+-	</a>
+-	<a href="https://bencelsi.github.io/mxbbi">
+-		<h2><img src="games/ico/mxbbi.ico">
+-			MXBBI
+-		<img src="games/ico/mxbbi.ico"></h2>
+-	</a>
+-	<a href="https://atmos.uw.edu/~dargan/EarthGamesUW/Drop.html">
+-		<h2><img src="games/ico/drop.ico">
+-			Drop
+-		<img src="games/ico/drop.ico"></h2>
+-	</a>
+-	<a href="https://scratch.mit.edu/projects/1448075/fullscreen">
+-		<h2><img src="games/ico/griven.ico">
+-			Griven
+-		<img src="games/ico/griven.ico"></h2>
+-	</a>
+-	<a href="https://scratch.mit.edu/projects/379323/fullscreen/">
+-		<h2><img src="games/ico/grounded.ico">
++	<a href="https://bencelsi.github.io/automata"><h2><img src="games/ico/automata.ico">
++		Automata
++	<img src="games/ico/automata.ico"></h2></a>
++	<a href="https://bencelsi.github.io/cirque-de-sabotage"><h2><img src="games/ico/cirque-de-sabotage.ico">
++		Cirque de Sabotage
++	<img src="games/ico/cirque-de-sabotage.ico"></h2></a>
++	<a href="https://bencelsi.github.io/mxbbi"><h2><img src="games/ico/mxbbi.ico">
++		MXBBI
++	<img src="games/ico/mxbbi.ico"></h2></a>
++	<a href="https://atmos.uw.edu/~dargan/EarthGamesUW/Drop.html"><h2><img src="games/ico/drop.ico">
++		Drop
++	<img src="games/ico/drop.ico"></h2></a>
++	<a href="https://scratch.mit.edu/projects/1448075/fullscreen"><h2><img src="games/ico/griven.ico">
++		Griven
++	<img src="games/ico/griven.ico"></h2></a>
++	<a href="https://scratch.mit.edu/projects/379323/fullscreen/"><h2><img src="games/ico/grounded.ico">
+ 			Grounded
+-		<img src="games/ico/grounded.ico"></h2>
+-		<!-- TODO: Add songs to grounded radio? ABC - In every heart - Bobby Mcferrin?  -->
+-	</a>
++	<img src="games/ico/grounded.ico"></h2></a>
++	<!-- TODO: Add songs to grounded radio? ABC - In every heart - Bobby Mcferrin?  -->
++
+ </div>
+ 
+ <!------------------------------------------------>
+ <!-- W R I T I N G -->
+ <!------------------------------------------------>
+ <div id="writingPage" class="page">
+-	<a href="writing/christian-bok.html" class="local"><h2>Christian Bök</h2></a>
+-	<a href="writing/youre-little.html" class="local"><h2>You're Little</h2></a>
+-	<a href="writing/great-apes.html"><h2>Great Apes</h2></a>
+-	<a href="writing/planet-limericks.html"><h2>Planet Limericks</h2></a>
+-	<a href="writing/writing.html?palindromes"><h2>Palindromes</h2></a>
+-	<a href="writing/writing.html?alphabet-sayings"><h2>Alphabet Sayings</h2></a>
+-	<a href="writing/writing.html?miscellaneous"><h2>Miscellaneous</h2></a>
++	<br>
++	<details class="local"><summary>College</summary>
++		<a href="writing/writings/college/christian-bok.html" class="local"><h2>Christian Bök</h2></a>
++		<a href="writing/writings/college/youre-little.html" class="local"><h2>You're Little</h2></a>
++		<a href="writing/writings/college/abba-cd.html"><h2>ABBA CD</h2></a>
++		<a href="writing/writings/college/raven.html"><h2>TheRaven.java</h2></a>
++	</details><br><br>
++	<details><summary>High School</summary>
++		<a href="writing/writings/high/great-apes.html"><h2>Great Apes</h2></a>
++		<a href="writing/writings/high/fruit-flies.html"><h2>Fruit Flies</h2></a>
++		<a href="writing/writings/high/babylon.html"><h2>By the Waters of Babylon: The Reawakening</h2></a>
++		<a href="writing/writings/high/mr-oates.html"><h2>Mr. Oates</h2></a>
++	</details><br><br>
++	<details><summary>Middle School</summary>
++		<a href="writing/writings/middle/Shakespearean-Friday.html"><h2>Shakespearean Friday</h2></a>
++		<a href="writing/writings/middle/Disilluminated-Poem.html"><h2>Disilluminated Poem</h2></a>
++		<a href="writing/writings/middle/Zirconium.html"><h2>Zirconium</h2></a>
++		<a href="writing/writings/middle/Ms-Knottethin.html"><h2>Ms. Knottethin</h2></a>
++		<a href="writing/writings/middle/how-to.html"><h2>How to Write a How-To Essay</h2></a>
++		<a href="writing/writings/middle/newport-field-trip-haikus.html"><h2>Newport Field Trip Haikus</h2></a>
++		<a href="writing/writings/middle/planet-limericks.html"><h2>Planet Limericks</h2></a>
++	</details><br><br>
++	<details><summary>Elementary School</summary>
++		<a href="writing/writings/elementary/flagellants.html"><h2>The Flagellants</h2></a>
++		<a href="writing/writings/elementary/bush.html"><h2>The Adventures of George W. Bush</h2></a>
++		<a href="writing/writings/elementary/john-adams-poem.html"><h2>John Adams Poem</h2></a>
++	</details><br><br>
++	<details><summary>Other</summary>
++		<a href="writing/.gallery.html?palindromes"><h2>Palindromes</h2></a>
++		<a href="writing/.gallery.html?alphabet-sayings"><h2>Alphabet Sayings</h2></a>
++		<a href="writing/.gallery.html?miscellaneous"><h2>Miscellaneous</h2></a>
++	</details>
+ </div>
+ 
+ <!------------------------------------------------>
+ <!-- V I D E O -->
+ <!------------------------------------------------>
+ <div id="videoPage" class="page">
+-	<a href="video/video.html">
+-		<h2>Videos</h2>
+-	</a>
++	<a href="video/video.html"><h2>Videos</h2></a>
+ </div>
+ <br><br>
+ </body>
+ 
+-
+ <!-- misc. links -->
+ <!-- 
+ https://yvettesbridalformal.p1r8.net/ 
+@@ -231,7 +237,6 @@ https://lhohq.info/
+ http://web.archive.org/web/20030219072854/http://timecube.com/
+ -->
+ 
+-
+ <!------------------------------------------------>
+ <!-- S C R I P T S -->
+ <!------------------------------------------------>
+@@ -252,13 +257,11 @@ http://web.archive.org/web/20030219072854/http://timecube.com/
+ 		selectTab(window.location.search.substring(1, window.location.search.length))
+ 	}
+ 	
+-	function selectTab(name) { playSound('shared/sound/click'); selected = name; refreshPage() }
++	for (const tab of ["music", "art", "games", "writing", "video"]) {
++		get(tab + "Tab").onclick = () => selectTab(tab)
++	}
+ 
+-	get("musicTab").onclick = () => selectTab("music")
+-	get("artTab").onclick = () => selectTab("art")
+-	get("gamesTab").onclick = () => selectTab("games")
+-	get("writingTab").onclick = () => selectTab("writing")
+-	get("videoTab").onclick = () => selectTab("video")
++	function selectTab(name) { playSound('shared/sound/pop'); selected = name; refreshPage() }
+ 	
+ 	function refreshPage() {
+ 		for (let i = 0; i < tabs.length; i++) {
+diff --git a/music/jams/100 Degrees (Instrumental).mp3 b/music/jams/100 Degrees (Instrumental).mp3
+new file mode 100644
+index 0000000..ac336b0
+Binary files /dev/null and b/music/jams/100 Degrees (Instrumental).mp3 differ
+diff --git a/music/jams/420 Loop.mp3 b/music/jams/420 Loop.mp3
+new file mode 100644
+index 0000000..eb3ae07
+Binary files /dev/null and b/music/jams/420 Loop.mp3 differ
+diff --git a/music/jams/Chill Loop.mp3 b/music/jams/Chill Loop.mp3
+new file mode 100644
+index 0000000..57ebd8d
+Binary files /dev/null and b/music/jams/Chill Loop.mp3 differ
+diff --git a/music/jams/Country.mp3 b/music/jams/Country.mp3
+new file mode 100644
+index 0000000..fc2bebd
+Binary files /dev/null and b/music/jams/Country.mp3 differ
+diff --git a/music/shortSongs/Joe Frank.wav b/music/jams/Joe Frank (edited).wav
+similarity index 100%
+rename from music/shortSongs/Joe Frank.wav
+rename to music/jams/Joe Frank (edited).wav
+diff --git a/music/jams/Nirvana Loop.mp3 b/music/jams/Nirvana Loop.mp3
+new file mode 100644
+index 0000000..15b970f
+Binary files /dev/null and b/music/jams/Nirvana Loop.mp3 differ
+diff --git a/music/jams/Roach.mp3 b/music/jams/Roach.mp3
+new file mode 100644
+index 0000000..7a13a9d
+Binary files /dev/null and b/music/jams/Roach.mp3 differ
+diff --git a/music/shortSongs/Space Jam.mp3 b/music/jams/Space Jam.mp3
+similarity index 100%
+rename from music/shortSongs/Space Jam.mp3
+rename to music/jams/Space Jam.mp3
+diff --git a/music/shortSongs/Surfin'.mp3 b/music/jams/Surfin'.mp3
+similarity index 100%
+rename from music/shortSongs/Surfin'.mp3
+rename to music/jams/Surfin'.mp3
+diff --git a/music/songs.html b/music/songs.html
+index ae935d8..4acfb95 100644
+--- a/music/songs.html
++++ b/music/songs.html
+@@ -1,5 +1,4 @@
+ <!DOCTYPE html>
+-<html lang='en'>
+ <head>
+ 	<title>Ben's Website!!!</title>
+ 	<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
+@@ -144,24 +143,20 @@ switch (window.location.search) {
+ 	case "?all-songs":
+ 		songs = allSongs
+ 		songs.sort()
+-		albumCover = "Day Break.jpeg"
+-		title = "All Songs"
++		albumCover = "Day Break.jpeg"; title = "All Songs"
+ 		break
+ 	case "?moss-rock":
+ 		songs = moss_rock
+-		albumCover = "Moss Rock.png"
+-		title = "Moss Rock"
++		albumCover = "Moss Rock.png"; title = "Moss Rock"
+ 		break
+ 	case "?space-jams":
+ 		songs = space_jam
+-		albumCover = "Space Jams.jpeg"
+-		title = "Space Jams"
++		albumCover = "Space Jams.jpeg"; title = "Space Jams"
+ 		break
+ 	case "?mashups": 
+ 		songFolder = "mashups/"
+ 		songs = mashups
+-		albumCover = "Mashups.jpg"
+-		title = "Mashups"
++		albumCover = "Mashups.jpg"; title = "Mashups"
+ }
+ 
+ let autoplayCheckbox = get("autoplay")
+diff --git a/shared/shared.js b/shared/shared.js
+index 3965bb9..54c307c 100644
+--- a/shared/shared.js
++++ b/shared/shared.js
+@@ -34,7 +34,7 @@ function playSound(name, volume = 1, format='.wav') {
+ try {
+     get("home").innerHTML = 
+     // `<img src='../shared/bens.jpg' style='width: 125px'>`
+-    `<img src='../gif/earth3.gif' >`
++    `<img src='../gifs/earth3.gif' >`
+ // `<div>
+ //     <img src='gif/letters/B1.gif'/>
+ //     <img src='gif/letters/E1.gif'/>
+@@ -44,15 +44,3 @@ try {
+ //     <span><h3>W E B S I T E ! ! !</h3></span>
+ // </div>`
+ } catch(e) {}
+-
+-try {
+-    get("header").innerHTML = 
+-`<div>
+-    <img src='../gif/letters/B1.gif'/>
+-    <img src='../gif/letters/E1.gif'/>
+-    <img src='../gif/letters/N1.gif'/>
+-    <img src='../gif/letters/apostrophe.gif'/>
+-    <img src='../gif/letters/S1.gif'/>
+-    <span><h3>W E B S I T E ! ! !</h3></span>
+-</div>`
+-} catch(e) {}
+\ No newline at end of file
+diff --git a/shared/sound/hit.wav b/shared/sound/hit.wav
+new file mode 100644
+index 0000000..93ecf5f
+Binary files /dev/null and b/shared/sound/hit.wav differ
+diff --git a/shared/sound/pop.wav b/shared/sound/pop.wav
+new file mode 100644
+index 0000000..f99c64e
+Binary files /dev/null and b/shared/sound/pop.wav differ
+diff --git a/video/video.html b/video/video.html
+index 055b161..d891299 100644
+--- a/video/video.html
++++ b/video/video.html
+@@ -1,108 +1,99 @@
+-<!DOCTYPE html>
+-<html lang='en'>
+-<head>
+-	<title style="color: white">Ben's Website!!!</title>
+-	<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
+-	<style type="text/css">
+-		body {
+-			background-image: url(../gif/stars.gif);
+-			font-family: "Lucida Console", monospace;
+-			color: white;
+-			margin: 0;
+-			height: 100%;
+-			text-align: center;
+-		}
++<!DOCTYPE html><html lang='en'>
++<head><title style="color: white">Ben's Website!!!</title><link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
++<style type="text/css">
++body {
++	background-image: url(../gif/stars.gif); font-family: "Lucida Console", monospace; color: white;
++	margin: 0;
++	height: 100%;
++	text-align: center;
++}
+ 
+-		#header:hover {
+-			filter: drop-shadow(0 0 0.8rem rgb(0, 81, 255));
+-		}
++#header:hover {
++	filter: drop-shadow(0 0 0.8rem rgb(0, 81, 255));
++}
+ 
+-		#videoScreen {
+-			height: 480px;
+-			width: 854px;
+-		}
++#videoScreen {
++	height: 480px;
++	width: 854px;
++}
+ 
+-		h1 { text-shadow : 0 0 40px red; }
+-		
+-		.tab img { width: 30px; }
++h1 { text-shadow : 0 0 40px red; }
+ 
+-		a:link, a:visited {
+-			color: pink;
+-			text-decoration: none;
+-		}
+-		#home {
+-			:hover {  filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }
+-		}
++.tab img { width: 30px; }
+ 
+-		.button, a { cursor: url(../shared/cursor.png), auto; }
+-	</style>
++a:link, a:visited {
++	color: pink;
++	text-decoration: none;
++}
++#home { :hover {  filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }} 
++
++.button, a { cursor: url(../shared/cursor.png), auto; }
++</style>
+ </head>
+-	
+ <body>
+-	<br>
+-	<a href="../index.html?video" id="home"><img src="../gif/earth.gif"></a>
+-	<br><br>
++<br>
++<a href="../index.html?video" id="home"><img src="../gif/earth.gif"></a>
++<br><br>
++<div>
+ 	<div>
+-		<div>
+-			<h2 id="videoTitle"></h2>
+-			<br>
+-			<!-- <iframe id=videoScreen src='https://www.youtube.com/embed/LaAjKX-p5hk'></iframe> -->
+-			<video id="videoScreen" width=1280 height="720" controls>
+-				<source id="videoSource" type="video/mp4">
+-			</video> 
+-			<br>
+-		</div>
+-		<img src="../gif/arrowl.gif" class=button id="videoLeft"/>
+-		<img class=button id=videoRandom src="../gif/random.gif"/>
+-		<img src="../gif/arrowr.gif" class=button id="videoRight"/>
++		<h2 id="videoTitle"></h2><br>
++		<!-- <iframe id=videoScreen src='https://www.youtube.com/embed/LaAjKX-p5hk'></iframe> -->
++		<video id="videoScreen" width=1280 height="720" controls>
++			<source id="videoSource" type="video/mp4">
++		</video> 
++		<br>
+ 	</div>
+-	<script src="../shared/shared.js"></script>
+-	<script>
+-		// TODO: https://git-lfs.com/
+-		// TODO: add 'thumbnails'
+-		// TODO: Don't show titles on videos?
+-		let videos = [
+-			"ABBA Shreds!",	
+-			"All Star But It's The Same As The Original And I Get A Copyright Strike",
+-			"Dad Listen, Just Listen!",
+-			"Don't Worry Be Happy",
+-			"Honkin' Henry",
+-			"Funny Fall",
+-			"Homework",
+-			"I Am a Robot",
+-			"Intersections!",
+-			"My First Blender Movie",
+-			"Too Much Fun",
+-			"Underwear (Official Trailer)",
+-			"University of Washington",
+-			"Untitled"
+-			// California Fourths / California Girls Shepard Tone /
+-		]
++	<img src="../gif/arrowl.gif" class=button id="videoLeft"/>
++	<img class=button id=videoRandom src="../gif/random.gif"/>
++	<img src="../gif/arrowr.gif" class=button id="videoRight"/>
++</div>
++<script src="../shared/shared.js"></script>
++<script>
++// TODO: https://git-lfs.com/
++// TODO: add 'thumbnails'
++// TODO: Don't show titles on videos?
++let videos = [
++	"ABBA Shreds!",	
++	"All Star But It's The Same As The Original And I Get A Copyright Strike",
++	"Dad Listen, Just Listen!",
++	"Don't Worry Be Happy",
++	"Honkin' Henry",
++	"Funny Fall",
++	"Homework",
++	"I Am a Robot",
++	"Intersections!",
++	"My First Blender Movie",
++	"Too Much Fun",
++	"Underwear (Official Trailer)",
++	"University of Washington",
++	"Untitled"
++	// California Fourths / California Girls Shepard Tone /
++]
+ 
+-		let videoIndex = 0
+-		shuffle(videos)
+-		setVideo()
++let videoIndex = 0
++shuffle(videos)
++setVideo()
+ 
+-		get('videoLeft').onclick = function() {
+-			console.log(videoIndex)
+-			videoIndex = decrement(videoIndex, videos.length - 1)
+-			setVideo()
+-		}
++get('videoLeft').onclick = function() {
++	console.log(videoIndex)
++	videoIndex = decrement(videoIndex, videos.length - 1)
++	setVideo()
++}
+ 
+-		get('videoRight').onclick = function() {
+-			videoIndex = increment(videoIndex, videos.length - 1)
+-			setVideo()
+-		}
++get('videoRight').onclick = function() {
++	videoIndex = increment(videoIndex, videos.length - 1)
++	setVideo()
++}
+ 
+-		get('videoRandom').onclick = function() {
+-			videoIndex = random(0, videos.length - 1)
+-			setVideo()
+-		}
++get('videoRandom').onclick = function() {
++	videoIndex = random(0, videos.length - 1)
++	setVideo()
++}
+ 
+-		function setVideo() {
+-			get('videoScreen').src = 'videos/' + videos[videoIndex] + ".mp4"
+-			get('videoTitle').innerHTML = videos[videoIndex]
+-		}
+-	</script>
++function setVideo() {
++	get('videoScreen').src = 'videos/' + videos[videoIndex] + ".mp4"
++	get('videoTitle').innerHTML = videos[videoIndex]
++}
++</script>
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/video/videos/Too Much Fun.mp4 b/video/videos/Too Much Fun.mp4
+deleted file mode 100644
+index 505e059..0000000
+--- a/video/videos/Too Much Fun.mp4	
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:1f2b540fcdf8f81c840d447bbb73f81636a3de78e087fd4294cebed09d861fa8
+-size 128308748
+diff --git a/writing/christian-bok-words.txt b/writing/.christian-bok-words.txt
+similarity index 100%
+rename from writing/christian-bok-words.txt
+rename to writing/.christian-bok-words.txt
+diff --git a/writing/.gallery.html b/writing/.gallery.html
+new file mode 100644
+index 0000000..21c8304
+--- /dev/null
++++ b/writing/.gallery.html
+@@ -0,0 +1,72 @@
++<!DOCTYPE html><html lang='en'>
++<head><title>Palindromes</title><link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
++<style type="text/css">
++body {
++    background-image:  url(../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
++    white-space: pre-wrap;
++    margin: auto;
++    text-align: center;
++    text-shadow: #000000 0 0 25px;
++    width: 700px;
++}
++
++.button {
++    cursor: url(../shared/cursor.png), auto;
++    :hover { filter: drop-shadow(0 0 1.0rem rgb(255, 255, 255)) }
++}
++
++#home { float: left; :hover {  filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }}
++</style>
++</head>
++<body>
++<a href="../index.html?writing" id="home"><img src="../gifs/earth.gif"></a>
++    <div>        
++        <h1 id="title"></h1>
++        <!-- <div style="display: flex; width: fit-content; margin: auto;"> -->
++        <div id="writing"></div>
++        <!-- </div> -->
++        <div style="display: flex; width: fit-content; margin: auto;">
++            <img src="../gifs/arrowl.gif" class="button" id="left" style="float: left; padding-right: 20px;"/>
++            <img class=button id="random" src='../gifs/random.gif'/>
++            <img src="../gifs/arrowr.gif" class="button" id="right" style="float: right; padding-left: 20px;"/>
++        </div>
++    </div>
++</body>
++<script src="../shared/shared.js"></script>
++<script src="js/palindromes.js"></script>
++<script src="js/alphabet-sayings.js"></script>
++<script src="js/jokes.js"></script>
++<script src="js/one-liners.js"></script>
++<script src="js/random-thoughts.js"></script>
++<script src="js/random-questions.js"></script>
++<script src="js/spoonerisms.js"></script>
++<script>
++let writings, title
++if (window.location.search === "?palindromes") { writings = palindromes; title = "Palindromes" }
++else if (window.location.search === "?spoonerisms") { writings = spoonerisms; title = "Spoonerisms" }
++else if (window.location.search === "?alphabet-sayings") { writings = alphabetSayings; title = "Alphabet Sayings" }
++else if (window.location.search === "?miscellaneous") { title = "Miscellaneous";
++    writings = oneLiners.concat(jokes).concat(randomThoughts).concat(randomQuestions).concat(spoonerisms)
++}
++
++let index = 0
++shuffle(writings)
++let writingDiv = get('writing')
++get("title").innerHTML = title
++
++get('left').onclick = () => {
++    playSound('../shared/click'); index = decrement(index, writings.length - 1); setWriting()
++}
++
++get('right').onclick = () => {
++    playSound('../shared/click'); index = increment(index, writings.length - 1); setWriting()
++}
++
++get('random').onclick = () => {
++    playSound('../shared/trill'); index = random(0, writings.length - 1); setWriting()
++}
++
++function setWriting() {  writingDiv.innerHTML = writings[index].replace("\n", "<br>") }
++
++setWriting()
++</script>
+\ No newline at end of file
+diff --git a/writing/flag.gif b/writing/flag.gif
+new file mode 100644
+index 0000000..34ac5e2
+Binary files /dev/null and b/writing/flag.gif differ
+diff --git a/writing/gifs/Bloodbar.gif b/writing/gifs/Bloodbar.gif
+new file mode 100644
+index 0000000..10904cf
+Binary files /dev/null and b/writing/gifs/Bloodbar.gif differ
+diff --git a/writing/gifs/animated-cd.gif b/writing/gifs/animated-cd.gif
+new file mode 100644
+index 0000000..2ec5204
+Binary files /dev/null and b/writing/gifs/animated-cd.gif differ
+diff --git a/writing/gif/baby.gif b/writing/gifs/baby.gif
+similarity index 100%
+rename from writing/gif/baby.gif
+rename to writing/gifs/baby.gif
+diff --git a/writing/gifs/basketball.gif b/writing/gifs/basketball.gif
+new file mode 100644
+index 0000000..d2bc420
+Binary files /dev/null and b/writing/gifs/basketball.gif differ
+diff --git a/writing/gifs/basketball_walking_lg_blk.gif b/writing/gifs/basketball_walking_lg_blk.gif
+new file mode 100644
+index 0000000..8f03996
+Binary files /dev/null and b/writing/gifs/basketball_walking_lg_blk.gif differ
+diff --git a/writing/gifs/blood.gif b/writing/gifs/blood.gif
+new file mode 100644
+index 0000000..c26bcc4
+Binary files /dev/null and b/writing/gifs/blood.gif differ
+diff --git a/writing/gif/book.gif b/writing/gifs/book.gif
+similarity index 100%
+rename from writing/gif/book.gif
+rename to writing/gifs/book.gif
+diff --git a/writing/gif/cross.gif b/writing/gifs/cross.gif
+similarity index 100%
+rename from writing/gif/cross.gif
+rename to writing/gifs/cross.gif
+diff --git a/writing/gifs/liberty.gif b/writing/gifs/liberty.gif
+new file mode 100644
+index 0000000..a149b57
+Binary files /dev/null and b/writing/gifs/liberty.gif differ
+diff --git a/writing/gifs/lightning.gif b/writing/gifs/lightning.gif
+new file mode 100644
+index 0000000..bec4a79
+Binary files /dev/null and b/writing/gifs/lightning.gif differ
+diff --git a/writing/gifs/mirror.gif b/writing/gifs/mirror.gif
+new file mode 100644
+index 0000000..b787a01
+Binary files /dev/null and b/writing/gifs/mirror.gif differ
+diff --git a/writing/gif/monkey.gif b/writing/gifs/monkey.gif
+similarity index 100%
+rename from writing/gif/monkey.gif
+rename to writing/gifs/monkey.gif
+diff --git a/writing/gifs/planets/Bloodbar.gif b/writing/gifs/planets/Bloodbar.gif
+new file mode 100644
+index 0000000..10904cf
+Binary files /dev/null and b/writing/gifs/planets/Bloodbar.gif differ
+diff --git a/writing/gifs/planets/CD.gif b/writing/gifs/planets/CD.gif
+new file mode 100644
+index 0000000..d7cd420
+Binary files /dev/null and b/writing/gifs/planets/CD.gif differ
+diff --git a/writing/gifs/planets/animated-cd.gif b/writing/gifs/planets/animated-cd.gif
+new file mode 100644
+index 0000000..2ec5204
+Binary files /dev/null and b/writing/gifs/planets/animated-cd.gif differ
+diff --git a/writing/gifs/planets/basketball.gif b/writing/gifs/planets/basketball.gif
+new file mode 100644
+index 0000000..d2bc420
+Binary files /dev/null and b/writing/gifs/planets/basketball.gif differ
+diff --git a/writing/gifs/planets/basketball_walking_lg_blk.gif b/writing/gifs/planets/basketball_walking_lg_blk.gif
+new file mode 100644
+index 0000000..8f03996
+Binary files /dev/null and b/writing/gifs/planets/basketball_walking_lg_blk.gif differ
+diff --git a/writing/gifs/planets/blood1.gif b/writing/gifs/planets/blood1.gif
+new file mode 100644
+index 0000000..c26bcc4
+Binary files /dev/null and b/writing/gifs/planets/blood1.gif differ
+diff --git a/writing/gif/planets/earth.gif b/writing/gifs/planets/earth.gif
+similarity index 100%
+rename from writing/gif/planets/earth.gif
+rename to writing/gifs/planets/earth.gif
+diff --git a/writing/gif/planets/earth2.gif b/writing/gifs/planets/earth2.gif
+similarity index 100%
+rename from writing/gif/planets/earth2.gif
+rename to writing/gifs/planets/earth2.gif
+diff --git a/writing/gif/planets/earth3.gif b/writing/gifs/planets/earth3.gif
+similarity index 100%
+rename from writing/gif/planets/earth3.gif
+rename to writing/gifs/planets/earth3.gif
+diff --git a/writing/gif/planets/earth4.gif b/writing/gifs/planets/earth4.gif
+similarity index 100%
+rename from writing/gif/planets/earth4.gif
+rename to writing/gifs/planets/earth4.gif
+diff --git a/writing/gif/planets/earth5.gif b/writing/gifs/planets/earth5.gif
+similarity index 100%
+rename from writing/gif/planets/earth5.gif
+rename to writing/gifs/planets/earth5.gif
+diff --git a/writing/gif/planets/jupiter.gif b/writing/gifs/planets/jupiter.gif
+similarity index 100%
+rename from writing/gif/planets/jupiter.gif
+rename to writing/gifs/planets/jupiter.gif
+diff --git a/writing/gif/planets/jupiter2.gif b/writing/gifs/planets/jupiter2.gif
+similarity index 100%
+rename from writing/gif/planets/jupiter2.gif
+rename to writing/gifs/planets/jupiter2.gif
+diff --git a/writing/gif/planets/mars.gif b/writing/gifs/planets/mars.gif
+similarity index 100%
+rename from writing/gif/planets/mars.gif
+rename to writing/gifs/planets/mars.gif
+diff --git a/writing/gif/planets/mercury.gif b/writing/gifs/planets/mercury.gif
+similarity index 100%
+rename from writing/gif/planets/mercury.gif
+rename to writing/gifs/planets/mercury.gif
+diff --git a/writing/gif/planets/mercury2.gif b/writing/gifs/planets/mercury2.gif
+similarity index 100%
+rename from writing/gif/planets/mercury2.gif
+rename to writing/gifs/planets/mercury2.gif
+diff --git a/writing/gif/planets/neptune.gif b/writing/gifs/planets/neptune.gif
+similarity index 100%
+rename from writing/gif/planets/neptune.gif
+rename to writing/gifs/planets/neptune.gif
+diff --git a/writing/gif/planets/pluto.gif b/writing/gifs/planets/pluto.gif
+similarity index 100%
+rename from writing/gif/planets/pluto.gif
+rename to writing/gifs/planets/pluto.gif
+diff --git a/writing/gif/planets/saturn.gif b/writing/gifs/planets/saturn.gif
+similarity index 100%
+rename from writing/gif/planets/saturn.gif
+rename to writing/gifs/planets/saturn.gif
+diff --git a/writing/gif/planets/saturn2.gif b/writing/gifs/planets/saturn2.gif
+similarity index 100%
+rename from writing/gif/planets/saturn2.gif
+rename to writing/gifs/planets/saturn2.gif
+diff --git a/writing/gif/planets/uranus.gif b/writing/gifs/planets/uranus.gif
+similarity index 100%
+rename from writing/gif/planets/uranus.gif
+rename to writing/gifs/planets/uranus.gif
+diff --git a/writing/gif/planets/uranus2.gif b/writing/gifs/planets/uranus2.gif
+similarity index 100%
+rename from writing/gif/planets/uranus2.gif
+rename to writing/gifs/planets/uranus2.gif
+diff --git a/writing/gif/planets/venus.gif b/writing/gifs/planets/venus.gif
+similarity index 100%
+rename from writing/gif/planets/venus.gif
+rename to writing/gifs/planets/venus.gif
+diff --git a/writing/gif/planets/venus2.gif b/writing/gifs/planets/venus2.gif
+similarity index 100%
+rename from writing/gif/planets/venus2.gif
+rename to writing/gifs/planets/venus2.gif
+diff --git a/writing/gif/wine.gif b/writing/gifs/wine.gif
+similarity index 100%
+rename from writing/gif/wine.gif
+rename to writing/gifs/wine.gif
+diff --git a/writing/gifs/zirconium.gif b/writing/gifs/zirconium.gif
+new file mode 100644
+index 0000000..7dbd402
+Binary files /dev/null and b/writing/gifs/zirconium.gif differ
+diff --git a/writing/js/one-liners.js b/writing/js/one-liners.js
+index 3a23c20..8f5597a 100644
+--- a/writing/js/one-liners.js
++++ b/writing/js/one-liners.js
+@@ -9,7 +9,7 @@ let oneLiners = [
+ "Being illiterate is like seeing a paywall on everything",
+ "What if kink shaming is my kink",
+ "My pronouns are us/them",
+-"There’s no I in cum, but there is cum in my eye",
++// "There’s no I in cum, but there is cum in my eye",
+ "Quentin Tarantino means no",
+ "Leann Rimes? No it doesn’t ",
+ "Paul McCarney: Beatle alcohol syndrome?",
+diff --git a/writing/js/spoonerisms.js b/writing/js/spoonerisms.js
+index 47eb8ea..7abbae8 100644
+--- a/writing/js/spoonerisms.js
++++ b/writing/js/spoonerisms.js
+@@ -1,14 +1,12 @@
+ let spoonerisms = [
+-"If enough people say a crazy phrase it becomes a phrasy craze",
++"If enough people say a crazy phrase, it becomes a phrasy craze",
+ "Better a turducken than a duckturdin",
+-"Don't kid your parents, but parent your kids",
++"Don't kid your parents, but do parent your kids",
+ "That’s the way the crumble cooks",
+ "It's good if something smells tasty, but not if it tastes smelly",
+ "Max and Mitch mix and match",
+ "In case of stairs use fire", //- maddi
+ "Spherical mirrors are miracle spheres",
+-"That’s not facial hair, that’s a hair facial",
+-"Why is it so dang bad to bang dad?",
+ "Passive aggressive or aggressively passive?",
+ "Beverly Cleary is cleverly beery",
+ "Better a drip coffee than a drippy cough",
+@@ -18,7 +16,6 @@ let spoonerisms = [
+ "Post-crunk Crust Punk",
+ "Popcorn cop porn",
+ "Mitch’s eyelids itches my lids",
+-"You're not some asshole, you're a wholesome ass",
+ "Qualuudes > Lewd quails",
+ "Better hard to get than get too hard",
+ "Is this video game playing hard to get, or just getting hard to play?",
+@@ -32,16 +29,22 @@ let spoonerisms = [
+ "Jelly beans > belly jeans",
+ "Farewell, Wellfare",
+ "Would you rather have a margarita pizza, or a pizza margarita?",
+-"Touchdown in douchetown",
+ "Homeless shelter, or shelterless home?",
+-"Coming of age, or aging of cum?",
+ "O(n)? N(o)",
+ "I can't see the view but I can view the sea",
+ "I’m hardly easy, but I'm easily hard",
+ "Keep on onning keep",
+ "There are Mountain Dews, and Mountain Don'ts",
+ "Shanwows and shamwhats",
+-"I'm pickin down what you’re laying up"
++"I'm pickin down what you’re laying up",
++"I don't have fingerless gloves, but I do have gloveless fingers"
++// "That’s not facial hair, that’s a hair facial",
++// "Why is it so dang bad to bang dad?",
++// "Touchdown in douchetown",
++// "Coming of age, or aging of cum?",
++// "You're not some asshole, you're a wholesome ass",
++
++
+ //"Piece of shit / Shit of peach / Sheesh a pit",
+ 
+ //Drew burns = bruce dern
+diff --git a/writing/newport-field-trip-haikus.html b/writing/newport-field-trip-haikus.html
+deleted file mode 100644
+index a7c72b5..0000000
+--- a/writing/newport-field-trip-haikus.html
++++ /dev/null
+@@ -1,38 +0,0 @@
+-<head>
+-    <title>Newport Field Trip Haikus</title>
+-    <link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
+-</head>
+-
+-<style type="text/css">
+-    body {
+-        white-space: pre-wrap;
+-        margin: auto; text-align: center;
+-        text-align: center;
+-        background-image:  url(../gif/stars2.gif);
+-        color: white;
+-        font-family: "Lucida Console", monospace;
+-        width: 1000px;
+-    }
+-</style>
+-<!-- 6th Grade -->
+-<br>
+-<h1 style="text-align: center;">Newport Trip Haikus</h1>
+-
+-<h3>Breakfast</h3>
+-Lots of cereal 
+-One small muffin per person 
+-"Fresh fruit" from Safeway 
+-<br>
+-
+-<h3>Lunch</h3>
+-Subway sandwiches 
+-But they're only 6 inches
+-I want a footlong
+-<br>
+-
+-<h3>Dinner</h3>
+-Corn syruppy food 
+-Glow in the dark Mac and Cheese 
+-It smells like old beer
+-
+-<br><br><br>
+\ No newline at end of file
+diff --git a/writing/old/Cheesy beatle's songs.rtf b/writing/old/Cheesy beatle's songs.rtf
+deleted file mode 100644
+index 2d9decc..0000000
+--- a/writing/old/Cheesy beatle's songs.rtf	
++++ /dev/null
+@@ -1,950 +0,0 @@
+-{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf480
+-{\fonttbl\f0\fnil\fcharset77 AmericanTypewriter;\f1\fnil\fcharset77 AmericanTypewriter-Bold;}
+-{\colortbl;\red255\green255\blue255;}
+-\margl1440\margr1440\vieww31500\viewh22580\viewkind0
+-\deftab160
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\pardirnatural
+-
+-\f0\fs18 \cf0 \
+-
+-\f1\b\fs100 Cheesy Beatles Songs...
+-\f0\b0\fs58 \
+-
+-\fs18 \
+-
+-\f1\b\fs30 B
+-\f0\b0 enjamin 
+-\f1\b D
+-\f0\b0 aniel 
+-\f1\b C
+-\f0\b0 elsi\
+-
+-\f1\b\fs26 \
+-
+-\fs66 Menu:
+-\fs40 \
+-\
+-Credits:
+-\f0\b0\fs42 \
+-
+-\fs40 \
+-
+-\fs22 Written by John Lennon\
+-Also written by Paul McCartney\
+-Note: George Harrison probably had a little input in writing\
+-Ringo Starr probably did to\
+-Rewritten by Ben Celsi\
+-\
+-
+-\fs18 \
+-
+-\f1\b\fs38 Table Of Contents:
+-\f0\b0\fs42 \
+-\
+-
+-\f1\b\fs26 A-Z Order      Song Titles\'ca \'ca      \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca \'ca "Real" Song Titles:
+-\f0\b0 \
+-0...................Menu..........................................................Table Of Contents, Credits, etc.\
+-1...................All You Need Is Cheese.........................All You Need Is Love\
+-2...................Can't Buy Me Cheese.............................Can't Buy Me Love\
+-3...................Cheese!......................................................Help!\
+-4...................Cheesemaker...........................................Paperback Writer\
+-5...................Elanor Cheesly........................................Elanor Rigby\
+-6...................Golden Cheese..........................................Golden Slumbers\
+-7...................I Am The CheeseMan.............................I Am The Walrus \'ca\
+-8...................I'm Happy To Eat Cheese With You...I'm Happy Just To Dance With You\
+-9...................Like Consumers Do................................Like Dreamers Do\
+-10................Lucy In The Skies Of Cheeseland........Lucy In The Sky With Diamonds\
+-11................Maxwell's Gorgonzola...........................Maxwell's Silver Hammer\
+-12................Non-Dairy Man........................................No-Where Man\
+-13................Revolution Cheese..................................Revolution 9\
+-13................Only A Cheesy Song................................Only A Northern Song\
+-14................Salt 'N Pepper's Mozzarella Band.......Sgt. Pepper's Lonely Hearts Club Band\
+-15................The Cheese On The Grill........................The Fool On The Hill\
+-16................Unless.........................................................Because\
+-17................Wensleydale Fields Forever..................Strawberry Fields Forever\
+-18................Yellow Chunk Of Cheese........................Yellow Submarine\
+-19................Yes It Is It's Cheese.................................Yes It Is\
+-
+-\f1\b \
+-1. ALL YOU NEED IS CHEESE\
+-
+-\f0\b0 (All You Need Is Love)\
+-\
+-Cheese,\
+-Cheese,\
+-Cheese.\
+-\
+-Cheese,\
+-Cheese,\
+-Cheese.\
+-\
+-Cheese,\
+-Cheese,\
+-Cheese.\
+-\
+-There's nothing you can do that can't be done,\
+-You simply can't eat Cheese and not have fun,\
+-Nothing you can say\
+-But you can learn how to play the game,\
+-\
+-It's easy.\
+-\
+-Nothing you can eat that can't be eaten,\
+-Ain't no kind of Cheese that can be beaten\
+-Nothing you can learn\
+-But you can learn how to be a Cheese,\
+-\
+-It's easy.\
+-\
+-All you need is Cheese,\
+-\
+-(Bam, badadadah,)\
+-\
+-All you need is Cheese,\
+-\
+-(Bam, badadadah,)\
+-\
+-All you need is Cheese,\
+-Cheese,\
+-Cheese is all ya' need.\'ca\
+-\
+-(Yeah.)\
+-\
+-Cheese,\
+-Cheese,\
+-Cheese.\
+-\
+-Cheese,\
+-Cheese,\
+-Cheese.\
+-\
+-Cheese,\
+-Cheese,\
+-Cheese.\
+-\
+-(Words fade into distance)\
+-\
+-
+-\f1\b 2. CAN'T BUY ME CHEESE\
+-
+-\f0\b0 (Can't Buy Me Love)\
+-\
+-Can't buy me Cheese, Cheese,\
+-Can't buy me Cheese,\
+-\
+-I don't want no diamond ring,\
+-It'll just make me feel bad,\
+-I don't want no precious pearls,\
+-They'll just make me really sad,\
+-\
+-'Cause I don't care to\
+-\
+-(Bam!)\
+-\
+-Much for money,\
+-'Cause money can't buy me Cheese.\
+-\
+-Don't give me nothin' more my friend,\
+-Hey, wait! I change my mind,\'ca\
+-I guess I'll take your dioamond rings,\
+-'Cause diamond rings are fine...\
+-\
+-I guess I care to\
+-\
+-(Bam!)\
+-\
+-Much for money,\
+-'Cause money CAN buy me Cheese.\
+-\
+-Can buy me Cheese, everybody tells me so\'ca\
+-Can buy me Cheese, yeah yeah yah yeah.\
+-Can buy me Cheese, Cheese,\
+-Can buy me Cheese,\
+-\
+-
+-\f1\b 3. CHEESE!\
+-
+-\f0\b0 (Help!)\
+-\
+-Cheese!\
+-I need a lot of\'ca\
+-Cheese!\'ca\
+-Not just any kind of\'ca\
+-Chee-e-e-eese,\
+-\
+-(Na-na-na-)\
+-\
+-When I was young I was content yet lacking Cheese, oh, yeah,\
+-Never needed any kind of Cheese to get my way,\
+-Now I find, I need the time, to get alotta Cheese, oh, yeah. \'ca\
+-If I don't, I'll sure EXPLODE, this just isn't my day!\'ca\
+-\
+-Help me get some Cheese before I dro-o-own,\
+-If I ever needed Cheese I'd need it no-o-ow,\
+-Help me get some cheese into my mo-o-outh,\
+-And I'd even eat it straight, fresh from the co-o-ow,\
+-Help!\'ca My little Cheese meter is do-o-own,\
+-I would even eat it when it's old and bro-o-own,\
+-I would gobble up all of the Cheese in to-o-own,\
+-If you have a bit of Cheese then give it NO-O-OW,\
+-ARE YOU DEAF, YOU DOLT!?\'ca I'M SPEAKING VERY LO-O-OUD!!\
+-I think I'll die before I get another ro-o-ound,\
+-At this pitiful attempt to make a so-o-ound,\
+-Yet, I find my feet are still there on the gro-o-ound,\
+-\
+-Oh, PLEASE!\
+-I need some Cheese,\
+-Some Cheese,\
+-Some CHEEEEEEEEEEESE!\'ca\
+-\
+-
+-\f1\b 4. CHEESEMAKER\
+-
+-\f0\b0 (Paperback Writer)\
+-\
+-I'm a Cheesemaker,\
+-\
+-(Maker, maker...)\
+-\
+-Dear chef or critic\
+-Will you try my ware,\
+-Took it years to age,\
+-So please take a share,\
+-\
+-Inspired by a sample at a fine cafe,\
+-And I need a job\
+-So I really wanna be a Cheesemaker,\'ca\
+-Be a Cheesemaker!\
+-\
+-Has a nutty flavor\'ca\
+-For a nutty lunch,\
+-\
+-(Nutty lunch!)\
+-\
+-And it's hint of whiskey\
+-Really packs a punch,\
+-\
+-Has the after tase of a spicy yam,\
+-And I'm havin' so much fun\
+-That I think I wanna be a Cheesemaker,\
+-Be a Cheesemaker!\
+-\
+-I'm a Cheesemaker,\
+-\
+-(Maker, maker...)\
+-\
+-I can add an overtone\
+-Or add a spice,\
+-I am in control\
+-So I'll make it nice,\
+-\
+-I can change the flavor\'ca\
+-If you want me to,\
+-I can change it round,\
+-So think I wanna be Cheesemaker,\'ca\
+-Be a Cheesemaker!\
+-\
+-I could partner up\
+-With some other guys,\
+-After copywriting\'ca\
+-We shall advertise,\
+-\
+-And my tasty Cheese\
+-Will be a super hit,\
+-But I need a break,\
+-But I still am gonna be a Cheesemaker,\
+-Be a Cheesemaker!\
+-\
+-I'm a Cheesemaker,\
+-\
+-(Maker, maker...)\
+-\
+-
+-\f1\b 5. ELANOR CHEESLY\
+-
+-\f0\b0 (Elanor Rigby)\
+-\
+-Ah,\'ca look at all the Cheesy people,\
+-\
+-(Vrom vrom vrum vrom vrum vrom vrum,)\
+-\
+-Ah,\'ca look at all the Cheesy people,\
+-\
+-(Vrom vrom vrum vrom vrum vrom vrum.)\
+-\
+-Elanor Cheesly,\
+-Wearin' a hat that was fashionable in '21,\
+-And NOT for fun!\
+-\
+-All the Cheesy people,\
+-Where DO they all come from?\'ca\
+-All the Cheesy people,\
+-Where DO they all belong?\
+-\
+-Father McCheezi,\'ca\
+-Wearin' a Peewee Herman suit and tie,\
+-Oh, he'll make me DIE,\
+-\
+-All the Cheesy people,\
+-Where DO they all come from?\'ca\
+-All the Cheesy people,\
+-Where DO they all belong?\
+-\
+-Elanor Cheesly,\'ca\
+-Watchin' a film with a budget of 23 bucks,\'ca\
+-It kinda sucks,\
+-\
+-All the Cheesy people,\
+-Where DO they all come from?\
+-All the Cheesy people,\
+-Where DO they all belong?\
+-\
+-Father McCheezi,\
+-Sang this song for to long and what do you know,\
+-It just goes to show,\
+-\
+-All the Cheesy people,\
+-Where DO they all come from?\'ca\
+-All the Cheesy people,\
+-Where DO they all belong?\
+-\
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab160\pardirnatural
+-
+-\f1\b \cf0 6. GOLDEN CHEESE\
+-
+-\f0\b0 (Golden Slumbers)\
+-
+-\f1\b \
+-
+-\f0\b0 Once there was Cheese\
+-Of wonderous power,\
+-Once there was a Cheese\
+-To end all Cheese!\
+-\
+-Sleep pretty darlin',\
+-Do not wail,\
+-And I will\
+-Tell this mystic tale...\
+-\
+-Many people came to see,\
+-This Cheese was better than a tree...\
+-\
+-Sleep pretty darlin',\
+-Do not wail,\
+-And I will\
+-Tell this mystic tale...\
+-\
+-Oh,\
+-I'm gettin' carried away,\
+-Not today,\
+-I'm sorry,\
+-\
+-(Bum.  Budduh bum bum )\
+-\
+-Oh,\
+-I'm gettin' tired my dear,\
+-And I fear\
+-It's late...\
+-\
+-Sleep pretty darlin',\
+-Do not wail,\
+-There is no time \
+-To tell the tale...\
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\pardirnatural
+-\cf0 \
+-
+-\f1\b 7. I AM THE CHEESEMAN\
+-
+-\f0\b0 (I Am The Walrus)\
+-\
+-I am Cheese\
+-As you are Cheese\
+-And I am Cheese\
+-And we are all together...\
+-\
+-See how they run\
+-Like Cheese in the sun\
+-See how time flies,\
+-\
+-I'm crying...\
+-\
+-Sitting on a cow\'ca\
+-Waiting for the car to come...\
+-\
+-I am the CheeseMan,\
+-\
+-(Whoo!)\
+-\
+-I am the CheeseMan,\
+-\
+-I am the CheeseMan!\
+-\
+-(Googoo ga ju, ga Googoo g' ju,)\
+-\
+-You are Cheese\
+-As I am Cheese\
+-And you are Cheese\
+-And we are all together...\
+-\
+-See how they fly\
+-Like a Wendslydale pie\
+-See how they run,\
+-\
+-I'm crying...\
+-\
+-He is the EggMan,\
+-He is the MilkMan,\
+-But I am the CheeseMan!\
+-\
+-(Googoo ga ju, ga Googoo g' ju!)\
+-\
+-
+-\f1\b I'M EATING THROUGH IT
+-\f0\b0 \
+-\
+-I'm eatin' through it...\
+-Where did it go?\
+-I thought I had it...\
+-What did  I know?\
+-\
+-I guess time flies\
+-When you're havin' fun...\
+-\
+-I've eaten through it,\
+-What have I done!?\
+-\
+-(Done-nunnah, D-done-done-nunnah)\
+-\
+-It's taste is normal,\
+-It's feel is to,\
+-It's look is formal,\
+-What do I do?\
+-\
+-The only difference is it's not there,\
+-I've eaten through it,\
+-\
+-What have I done?\
+-\
+-
+-\f1\b 8. I'M HAPPY TO EAT CHEESE WITH YOU\
+-
+-\f0\b0 (I'm Happy Just To Dance With You)\
+-\
+-Before this meal is through,\
+-I think I'll you love you too,\
+-I'm so glad when I eat Cheese with you.\
+-\
+-I don't wanna kiss or hold your hand,\
+-If it's funny,\
+-Try an' understand.\
+-\
+-There is really nothing else I'd rather do,\
+-'Cause I'm glad just to eat Cheese with you.\
+-\
+-I don't need to hug or hold you tight,\
+-'Cause I just wanna eat Cheese all night,\
+-In this world there's nothing I would rather do,\
+-Than sitting,\
+-Eatin' Cheese with you.\
+-\
+-To eat cheese with you,\
+-\
+-(A-a-ah,ah!)\
+-\
+-Before this meal is through,\
+-I think I'll you love you too,\
+-I'm so glad when I eat Cheese with you.\'ca\
+-\
+-
+-\f1\b 9. LIKE CONSUMERS DO\
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab160\pardirnatural
+-
+-\f0\b0 \cf0 (Like Dreamers Do)\
+-\
+-Dreams,\
+-I saw some Cheese in my dreams,\
+-And so it seems,\
+-That I will love it,\
+-\
+-That,\
+-That is the Cheese from my dreams,\
+-And so it seems,\
+-That I will love it,\
+-\
+-And I-yie-yie-yie-yie, waited for the flavor,\
+-Something I could savor,\
+-Like consumers do.\
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\pardirnatural
+-\cf0 \
+-I,\
+-Saw it way down at the store,\
+-And I was sure,\
+-That I would love it.\
+-\
+-I,\
+-Knew when I  first took a bite,\
+-Knew I was right,\
+-Knew I would love it,\
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab160\pardirnatural
+-\cf0 \
+-And I-yie-yie-yie-yie, waited for the flavor,\
+-Something I could savor,\
+-Like consumers do.\
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\pardirnatural
+-\cf0 \
+-\
+-
+-\f1\b 10. LUCY IN THE SKIES OF CHEESELAND\
+-
+-\f0\b0 (Lucy In The Sky With Diamonds)\
+-\
+-Lend me your ears\
+-And I'll tell you a story,\
+-Of when Cheese grew on trees,\
+-With yellowish skies...\
+-\
+-There once was a place,\
+-Where people,\
+-Ate Cheese cakes,\
+-And Cheese frosted flakes,\
+-And Wendslydale pies...\
+-\
+-Cheese-makers come\
+-And appear on the shore,\
+-Waiting for you to ferment,\
+-\
+-Just try to\'ca run\'ca till' they trip\
+-And fall into cement,\
+-\
+-(Bome, bome, bome,)\
+-\
+-Lucy in the skies,\
+-Of Cheeseland,\
+-Lucy in the skies,\
+-Of Cheeseland,\
+-Oh, ohhh...\
+-\
+-Let me continue,\
+-To tell you,\
+-The story,\'ca\
+-Of lands known as Cheeseland,\
+-And dubbed,\
+-"The Big Cheese"... \'ca \'ca\
+-\'ca \'ca\
+-Cows are quite sacred,\
+-In places,\'ca\
+-Like Cheeseland,\
+-And people are Cheesians\
+-Who speak Cheesese.\
+-\
+-Camembert flowers of yellow, and green(?)\
+-Towering over your head,\
+-\
+-Look for the girl\
+-With the Cheese in her mouth\'ca\
+-And she's gone...\
+-\
+-(Bome, bome, bome)\
+-\'ca\
+-Lucy in the skies,\
+-Of Cheeseland,\
+-Lucy in the skies,\
+-Of Cheeseland,\
+-Oh, ohhh...\
+-\
+-\
+-
+-\f1\b 11. MAXWELL'S GORGONZOLA\
+-
+-\f0\b0 (Maxwell's Silver Hammer)\
+-\
+-Joan was we-e-eird,\'ca\
+-As you might of fe-e-eared,\
+-She rarely left home,\
+-\
+-Late nights watching Gilligan's Isle,\
+-\
+-(Oh, o-o-oh...)\
+-\
+-Maxwell Edison, bit of nasty medicine,\'ca\
+-Called her on the phone.\
+-\
+-"Let's go see this wonderful picture:\
+-'Cheddar to the bone.'"\
+-\
+-But as she's getting ready to go,\
+-A knock comes on the door,\
+-\
+-And,\
+-P-U!\'ca Maxwell's Gorgonzola\'ca\
+-Got Joan right on the nose,\
+-P-U!\'ca Maxwell's Gorgonzola\'ca\
+-Makes sure that down she goes!\
+-\
+-Back in schoo-ool,\
+-He started to droo-ool,\
+-And then he started to snooze,\
+-\
+-But the teacher came along\'ca\
+-And said,\
+-"That's not in the rules!"\
+-\
+-Maxwell,\'ca\
+-He stayed after school\
+-Writing,\
+-"I won't be a Cheese,"\'ca\
+-\'ca\
+-But when the teacher isn't looking,\
+-Max gets off his knees...\
+-\
+-P-U! Maxwell's Gorgonzola\'ca\
+-Gets teacher on the nose,\
+-P-U!\'ca Maxwell's Gorgonzola\'ca\
+-Makes sure that down she goes!\
+-\
+-
+-\f1\b 12. NON-DAIRY MAN\
+-
+-\f0\b0 (No Where Man)\
+-\
+-He's a Non-Dairy man,\'ca\
+-Sitting in Non-Dairy Land,\
+-Isn't he a scary man, you think?\
+-\
+-(Na-na-nuh-no.)\
+-\
+-Don't look for him 'cause when he meeets ya'\
+-He'll put nothing on your pizza,\
+-Non-Dairy Man,\'ca\
+-You're a living Tower of Pisa.\
+-\
+-(Na-na-nuh-no.)\
+-\
+-Non-Dairy Man, please listen,\
+-You don't know what you're missin',\
+-\
+-Your wo-o-orld, is awfully bland.\
+-\
+-(Bom bom bom bom bam,)\
+-\
+-Non-Dairy Man's a funny cretin,\
+-Just eats what he wants to be eatin',\
+-Non-Dairy Man , can you eat me at all?\
+-(Na-na-nuh-no.)\
+-\
+-Non-Dairy Man,\
+-Please listen,\
+-You don't know,\
+-What you're missin',\
+-Your wo-o-orld, is awfully bland...\
+-\
+-(Bom bom bom bom bam,)\
+-\
+-
+-\f1\b 13. REVOLUTION CHEESE\
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab160\pardirnatural
+-
+-\f0\b0 \cf0 (Revolution 9)\
+-\
+-Number Cheese, number Cheese, number Cheese, number Cheese,\
+-\'b6\'c5\'f0\'ef\'f5\'f1\'ee\'c3\'8c\'b6zKJHVlyT\'fdcxbgxz >MLCGF\'fa\'a7k\'ef\'f0\'fa\'c6\'fa\'c6j\'c6kjgSz;.\'ac\'e3888t\'f6\'ac\'b4\'a58\'a5\'a5\'a5\'a5)r\'a4\'a4\'a6\'e0(*0\'a6\'ac\'eevXlzm\'c2\'f1lxl\'fc\'f1kcljZXlzLLLcLmlllvjk\'fb\'b6L\'f1\'f1\'f1\'ea\'fb\'c4\'8c\'8d\'bd\'c5\'b3\'b2\'f9\'b9\'bc\'b9\'a7\'8c\'cf\'bb\'aa\'a5\'b48\'a5\'bb\'bb\'cf\'b7\'aa\'aa\'fb\'aa\'aa\'aa\'aa\'aa\'aa\'a7\'8c\'c2\'fb\'fbzkmm\'b5\'b5\'b5\'b5\'b5\'fb\'c6kkkk\'fbbxjzbn\'fbsjkb\'fb\'f7\'c6\'8cskKK\'f7\'fbN\
+-Number Cheese, number Cheese, number Cheese, number Cheese.\
+-\
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\pardirnatural
+-
+-\f1\b \cf0 13. ONLY A CHEESY SONG\
+-
+-\f0\b0 (Only A Northern Song)\
+-\
+-If you're listening to this song\
+-You may think the bagpipe goes to long,\
+-But you're wrong,\
+-'Cause we wrote it like that.\
+-\
+-It doesn't really matter if the song's OK\
+-What the heck I say\
+-Or the tune I play\
+-Because:\
+-It is only a cheesy song.\
+-\
+-(Weird electric sounds)\
+-\
+-It doesn't really matter what clothes I wear\
+-If my name is Claire\
+-Or if my hair\
+-Is pink,\
+-As it's only a Cheesy song.\
+-\
+-(Weird electric sounds)\
+-\
+-If you're watching on TV,\
+-You may think my wig's\
+-To big on me,\
+-But it's not,\
+-If I wear it like that.\
+-\
+-It doethn't really matter if I thing with a lithp\
+-If I'm fried to a crisp\
+-Or if it rhymes\
+-At all,\
+-As it's only a Cheesy song.\
+-\
+-(Weird electric sounds)\
+-\
+-It doesn't really matter if my tongue is numb\
+-If I suck on my thumb \
+-If I act really dumb\
+-Or not,\
+-As it's only a Cheesy song.\
+-\
+-(Weird electric sounds)\
+-\
+-If you think the DJ's mad,\
+-If you think his final job's been had,\
+-you're correct,\
+-For there's nobody there.\
+-\
+-(Weird electric sounds)\
+-\
+-
+-\f1\b 14. SALT 'N PEPPER'S MOZZARELLA BAND\
+-
+-\f0\b0 (Sgt. Pepper's Lonely Hearts Club Band)\
+-\
+-"It was twenty years ago today,\
+-That Salt 'n Pepper taught the band to play,\
+-They've been goin' in and out of fashion,\
+-But we promise that they're always smashin'!\
+-So may I introduce to you,\
+-The act you've known for all these years,\
+-Salt 'n\'ca Pepper's Mozzarella Band!"\
+-\
+-We're Salt 'n\'ca Pepper's Mozzarella Band,\
+-We hope that you'll enjoy the show,\
+-We're Salt 'n\'ca Pepper's Mozzarella Band,\
+-Sit back\
+-And let the evening go!\
+-(Bombombombum,)\
+-\
+-Salt 'n Pepper's only,\
+-Salt 'n Pepper's only,\
+-Only living Mozzarella Band!\
+-\
+-It's wonderful to be here,\'ca\
+-You're certainly a thrill.\
+-You're such a lovely audience!\
+-We'd love to take you home with us\
+-We'd love to take you h-\
+-\
+-"I don't really wanna stop the show!\
+-But I thought that you might like to know,\
+-Mozzarella now is outta style,\
+-So we'll have to sit and wait a while!\
+-\
+-In the meantime we will have to do,\
+-With the one and only Chilly Beers!\
+-Sorry, Salt 'n' Pepper's Mozzarella Band!"\
+-\
+-
+-\f1\b 15. THE CHEESE ON THE GRILL\
+-
+-\f0\b0 (The Fool On The Hill)\
+-\
+-Day after day,\
+-Alone on the grill,\
+-The Cheese that's turnin' green\
+-Is keepin' perfectly still.\
+-\
+-But nobody wants to eat it,\
+-They can see it's about to rot,\
+-It never gives an answer,\
+-\
+-But the Cheese on the grill\'ca\
+-Sees the flame goin' down\
+-And the holes in its head\
+-Feel the grill spinnin' 'round\
+-\
+-Well, by the way,\
+-This horrible form,\
+-The Cheese with a thousand holes\'ca\
+-Is stinkin' up a storm,\
+-\
+-And it never gives an answer,\
+-'Cause it's just a piece of cheese.\
+-And nobody wants to eat it,\
+-\
+-But the Cheese on the grill\
+-Sees the flame goin' down\
+-And the holes in its head\
+-Feel the grill spinnin' 'round. \'ca\
+-\
+-
+-\f1\b 16. UNLESS\
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab160\pardirnatural
+-
+-\f0\b0 \cf0 (Because)\
+-\
+-Unless the Cheese is sharp\
+-It makes me mad.\
+-\
+-Unless,\
+-The Cheese,\
+-Is sha-a-arp,\
+-(A-a-a-a-a-a-a-a-a-a-a--ah)\
+-\
+-Cheese is old,\
+-Cheese is new.\
+-\
+-Cheese is all,\
+-Cheese is true.
+-\f1\b \
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\pardirnatural
+-\cf0 \
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab160\pardirnatural
+-
+-\f0\b0 \cf0 Unless the Cheese is fresh\
+-It makes me cry.
+-\f1\b \
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\pardirnatural
+-\cf0 \
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab160\pardirnatural
+-
+-\f0\b0 \cf0 Unless,\
+-The Cheese,\
+-Is fre-e-esh,\
+-(A-a-a-a-a-a-a-a-a-a-a--ah)\
+-\
+-Cheese is old,\
+-Cheese is new.\
+-\
+-(Guitar starts)\
+-\
+-Cheese is all,\
+-Cheese is true.
+-\f1\b \
+-\
+-
+-\f0\b0 Unless the Cheese is blue\
+-It makes me sad.\
+-\
+-Unless, \
+-The Cheese \
+-Is blu-u-ue\
+-(A-a-a-a-a-a-a-a-a-a-a--ah)
+-\f1\b \
+-
+-\f0\b0 \
+-Cheese is old,\
+-Cheese is new.\
+-\
+-Cheese is all,\
+-Cheese is true.
+-\f1\b \
+-\
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\pardirnatural
+-\cf0 17. WENSLEYDALE FIELDS FOREVER\
+-
+-\f0\b0 (Strawberry Fields Forever)\
+-\
+-Let me take you down,\
+-'Cause I'm going to...\
+-Wendsleydale Fields.\
+-\
+-Plenty to steal,\
+-\
+-Yet nothing to get hung about,\
+-Wensleydale Fields forever.\
+-\
+-Living's quite tricky with eyes closed,\
+-Misunderstanding what you see,\
+-\
+-It's getting hard to be someone;\
+-But it all works out,\
+-It doesn't matter much to me.\
+-\
+-Let me take you down,\
+-'Cause I'm going to...\
+-Wendslydale Fields.\
+-\
+-Plenty to steal,\
+-\
+-Yet nothing to get hung about,\
+-Wendsleydale Fields forever.\
+-\
+-Wendsleydale Fields forever.\
+-\
+-
+-\f1\b 18. YELLOW CHUNK OF CHEESE\
+-
+-\f0\b0 (Yellow Submarine)\
+-\
+-In the town, where I was found,\
+-Lives a man, who was a clown,\
+-And he had, the greatest house,\
+-(Ya da da da da da da da, da da da la da da da da da duh da,)\
+-\
+-He used to live in a yellow chunk of Cheese,\
+-A yellow chunk of Cheese,\'ca\
+-A yellow chunk of Cheese.\
+-Oh, really, I'm fine, I'll repeat it if you please,\
+-A
+-\f1\b  
+-\f0\b0 yellow chunk of Cheese,\'ca\
+-A yellow chunk of Cheese.\
+-(Yapt data, Yapt data, yac comineethen,)\
+-\
+-But the man, whose name was Kent,\
+-Oh he couldn't, pay the rent,\'ca\
+-So he left, and where he went,\
+-Was to Alaska, in a tent,\'ca\
+-(Ya da da da da da da da, da da da la da da da da da duh da,)\
+-\
+-He used to live in a yellow chunk of Cheese,\
+-A yellow chunk of Cheese,\'ca\
+-A yellow chunk of Cheese.\
+-Oh, really, I'm fine, I'll repeat it if you please,\
+-A yellow chunk of Cheese,\
+-A yellow chunk of Cheese.\
+-\
+-
+-\f1\b 19. YES IT IS IT'S CHEESE\
+-
+-\f0\b0 (Yes It Is!)\
+-\
+-If you eat Cheeese, tonight,\
+-Remember what I said tonight,\
+-\
+-For Cheese is the food my ex-girlfriend ate,\'ca\
+-On our date,\
+-It's true,\
+-(True!)\
+-Yes it is it's true,Yes it is...\
+-\
+-Now, I would be happy,\
+-With you by my side,\
+-But if you eat cheese,\'ca\
+-I'LL LOSE MY MIND,\
+-BLOW MY MIND!\
+-Yes I wil,\
+-Oh, yes I will, yeah,\
+-\
+-So, please don't eat cheeese, tonight,\
+-(Bom, bom,)\
+-\
+-Please don't eat cheeese, tonight,\
+-(Bom, bom,)\
+-\
+-For Cheese is the food my ex-girlfriend ate,\
+-On our date,\
+-It's true,\
+-(True!)\
+-Yes it is it's true,\
+-(True!)\
+-Yes it is...\
+-It's...\
+-True.\
+-\
+-
+-\f1\b THE END...\
+-}
+\ No newline at end of file
+diff --git a/writing/old/Disilluminated-Poem.html b/writing/old/Disilluminated-Poem.html
+deleted file mode 100644
+index 20a1a78..0000000
+--- a/writing/old/Disilluminated-Poem.html
++++ /dev/null
+@@ -1,33 +0,0 @@
+-<head>
+-    <title>Disilluminated Poem</title>
+-    <link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
+-</head>
+-
+-<style type="text/css">
+-    body {
+-        white-space: pre-wrap;
+-        margin: auto; text-align: center;
+-        text-align: left;
+-        background-image:  url(../gif/stars2.gif);
+-        color: white;
+-        font-family: "Lucida Console", monospace;
+-        width: 800px;
+-    }
+-</style>
+-
+-<!-- 7th or 8th grade -->
+-<h1 style="text-align: center;">
+-Disilluminated Poem
+-<img src="gif/cross.gif">
+-</h1>
+-<b style="font-size: 30;">T</b>he king will rule until he dies, he deserves all his riches and fame,
+-<b style="font-size: 30;">H</b>is right to rule was given by Christ, so we can kill to defend his name.
+-<b style="font-size: 30;">E</b>veryone works like mules, so the king can eat a feast,
+-
+-<b style="font-size: 30;">C</b>hrist still approves of his right to rule, just as long as he's paying the priests.
+-<b style="font-size: 30;">H</b>e could murder people all day long, slay civilians with his sword,
+-<b style="font-size: 30;">U</b>ndoubtedly, he's done no wrong, for it's all in the name of the Lord.
+-<b style="font-size: 30;">R</b>emember the church and all its done, it will never lead you astray,
+-<b style="font-size: 30;">C</b>hrist's word is the only one, and the church will tell you what he means to say.
+-<b style="font-size: 30;">H</b>oly days! The poem's almost over and I haven't used any vocabulary words! I hope I'm not excommunicated from class for this! Well, I'd like to thank Pope Gregory VII, Thomas Aquinas, and Henry IV for making this all possible. This poem was made at Winterhaven University, in Ms. Schumann's cathedral. I hope you've had a pilgrimage and a salvation of a good time!
+-<br><br><br>
+\ No newline at end of file
+diff --git a/writing/old/Dr. DaDoewizzgon/Dr DaDoewizzgon and the case of the Murder in the Garden.rtf b/writing/old/Dr. DaDoewizzgon/Dr DaDoewizzgon and the case of the Murder in the Garden.rtf
+deleted file mode 100644
+index a1893ef..0000000
+--- a/writing/old/Dr. DaDoewizzgon/Dr DaDoewizzgon and the case of the Murder in the Garden.rtf	
++++ /dev/null
+@@ -1,73 +0,0 @@
+-{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf410
+-{\fonttbl\f0\fnil\fcharset77 AmericanTypewriter-Bold;\f1\fnil\fcharset77 AmericanTypewriter;}
+-{\colortbl;\red255\green255\blue255;}
+-\margl1440\margr1440\vieww25100\viewh19520\viewkind0
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc\pardirnatural
+-
+-\f0\b\fs44 \cf0 Dr. DaDoewizzgon:
+-\f1\b0 \
+-
+-\fs32 And the Case of the Murder in the Garden\
+-
+-\f0\b\fs26 Evidence Collected by B. D. Celsi\
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+-
+-\f1\b0 \cf0   \
+-   It was a excruciatingly normal evening. Dr. DaDoewizzgon was sitting in his office.  He was wearing his detective jacket and his detective hat.  This was slightly uncomfortable, since it was the middle of August, but he can't be picky.  He has to wear the detective outfit or nobody takes him seriously.\
+-   Speaking of people not taking things, Business had been bad the last couple weeks.  So when the phone rang, Dr. DaDoewizzgon looked up from his copy of "Wickepidia Clown", and answered it.\
+-   "Doctuh!  (Sniff.) Dez binna muddah!"\
+-   This was very appealing.  Dr. DaDoewizzgon loved murders.\
+-   "That will be $1,000,"  he replied.\
+-   "What? I'm ya n-n-n-n-n-neighbor, Mrs. Rim!"\
+-   This was very appalling.  Dr. DaDoewizzgon hated neighbors.\
+-   "I only do quality business, lady."\
+-   "(Sniff.)"\
+-   "That sniff is an extra $50."\
+-   "Okay!  I'll p-p-pay!  (Sob.)"\
+-   Dr. DeDoewizzgon stroked his beard knowingly.\
+-   "I'll be right over, lady."\
+-   In 2 hours, Dr. DaDoewizzgon, who had stopped at a bar, knocked on the Rim's door.\
+-   "Doctuh!  (Sob.) I-"\
+-   "Shut up!  Every sob is an extra $100!"\
+-   "Doctuh... I-I-I-I-I, guess I'll (Sob) Show you duh muddah s-s-scene..."\
+-   Mrs. Rim led Dr. DaDoewizzgon through the house and into the backyard, which was only a cramped lawn surrounded by a concrete wall.  Something was missing.\
+-   "Where's the dead guy?"  He asked.  Mrs. Rim led Dr. DaDoewizzgon to a squashed dandelion in the middle of the lawn, and started to sob uncontrollably.\
+-   "Dis w-was my best (Sniff) dandelion e-e-e-EVER!  (Sob!) And s-s-s-somebody s-s-s-squashed it!\
+-   "WHAT?!  THIS ISN'T A MURDER!!  THIS IS A WEED!!"\
+-   "It is not!  Izza muddah!"\
+-   "It's a weed!"\
+-   "Muddah!"\
+-   "Weed!"\
+-   "Muddah!"\
+-   "Okay!  Whatever!  It's a 'muddah'!  I'll figure out who did it if you pay me..."  Dr. DaDoewizzgon tallied up the sniffs and sobs.  "...$1,550!"\
+-   "I-I-I-(Sniff-)"\
+-   "Make that $1,600!"\
+-   "Okay alredy!  (Sniff.)  I'll p-p-pay!  (Sob.)"\
+-   "Who else lves here?"\
+-   "M' husband Jim, m' son Tim, m' mom Kim, and m' cat slim."\
+-   "Round them up!  They are the suspects!"  Mrs. Rim hurried away.  It was clue finding time.  Dr. DaDoewizzgon noted that that time was 4:42 pm.  He also found a picture on the wall of a dandelion.  There was mud on the carpet, and grass on the floor.  There was a glass of milk on the table.  These clues might be helpful later in the story.  (Hint hint hint!)\
+-   Mrs. Rim came back into the room with a very old woman, a very grouchy man, a very little kid, and a very fat cat.\
+-   "Ahem!  I have reason to believe that one of you..."  Dr DaDoewizzgon paused mysteriously-  "Squashed Mrs. Rim's Best dandelion!"  An uproar abruptly arose.  "SILENCE!"  Said Dr. DaDoewizzgon.  "I do not tolerate abruptly arising uproars!  Those who help this abominable ruckus arise are under arrest!"  The abominably abrupt and arousing arising of this anti-uproar speech involving arrests made the abominable ruckus retire and reside remarkably abruptly.  "That's better!  said Dr. DaDoewizzgon.  "Now I will ask you a variety of questions.  Kim Rim!  What were you doing all day?\
+-   "I-I-I-I....room.  (Gasp.)  Eating... toast.  R-Room. In room.  (Gasp.)\
+-   "Stop gasping!  Every gasp is an extra $150.  Slim!  What were you doing all day?\
+-   Slim yawned.\
+-   "Stop yawning!  Every yawn is an extra $200!  Jim?  What about you?"\
+-   "This morning I went to the bar (grunt ) 'n then I cme home 'n took a nap."\
+-   "Stop grunting!  Every grunt is an extra $250!  Tim!  What were you doing all day?"\
+-   "Dis mowning I went to kindewgartn!  I go to Warry ewementewy schoow."\
+-   "Stop saying the W sound!  Every W sound is an extra $300!"\
+-   Dr. DaDoewizzgon went into deep think mode.\
+-   For 3 hours.  "Aha!"  He reasoned eventually.  I need beer to clear up my mind!"  Dr. DaDoewizzgon staggered into the bar.  While he's clearing up his mind, can you figure out what happened before he does and win $4,000?  \
+-\
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc\pardirnatural
+-
+-\f0\b\fs64 \cf0 WHO SQUASHED IT?\
+-\
+-\
+-\
+-\
+-\
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+-
+-\f1\b0\fs26 \cf0 ANSWER:\
+-At the beginning of the story we mention that it's the middle of August.  Yet Tim Rim states that he went to Ewementawy schoow that morning!  (The glass of milk and the picture ant stuff were just to throw you off.)}
+\ No newline at end of file
+diff --git a/writing/old/Dr. DaDoewizzgon/Dr. DaDoewizzgon and the Case of the Incredibly Normal Suicide.rtf b/writing/old/Dr. DaDoewizzgon/Dr. DaDoewizzgon and the Case of the Incredibly Normal Suicide.rtf
+deleted file mode 100644
+index 26b4886..0000000
+--- a/writing/old/Dr. DaDoewizzgon/Dr. DaDoewizzgon and the Case of the Incredibly Normal Suicide.rtf	
++++ /dev/null
+@@ -1,30 +0,0 @@
+-{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf410
+-{\fonttbl\f0\fnil\fcharset77 AmericanTypewriter-Bold;\f1\fnil\fcharset77 AmericanTypewriter;}
+-{\colortbl;\red255\green255\blue255;}
+-\margl1440\margr1440\vieww25100\viewh19520\viewkind0
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\f0\b\fs24 \cf0 3
+-\f1\b0    \
+-
+-\f0\b Dr. DaDoewizzgon
+-\f1\b0 \
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\fs34 \cf0 And the Case of the Suspected Suicide\
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\f0\b\fs24 \cf0 Evidence collected by B. D. Celsi\
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\f1\b0 \cf0 \
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+-\cf0    Dr. DaDoewizzgon was walking down the street when he saw his old arch rival, Robin Wallettes, the french crook who was famous for stealing wallets, as well as an asortment of other things.  Determined to get even, Dr. DaDoewizzgon pulled out his notebook and decided to do some spying.  He followed Wallettes down the street until Wallettes entered his house.  Dr. DaDoewizzgon ran around to the back of the house and attempted to look in the window.  But before he could even say "Peekaboo," there was a loud bang and a scream from upstairs.  Dr. DaDoewizzgon ran back to the front door and burst in.  He looked around, but didn't see anyone.  He started up the stairs.  All of sudden Robin Wallettes came walking dwn the stairs.  When he saw Dr.. DaDoewizzgon, he looked very surprised, and then sniffed.\
+-   "Vott in earth's fame are you doing here?  You are but a zeniveling detective!  And I 'aven't even called zee police yet!  Go avay!"  Robin Wallettes walked over to the phone and stated to call the police.\
+-   "Now, wait just one second!"  Said Dr. DaDoewizzgon, who wasn't going to let himself go this far in the story without saying anything, but it was to late.  Robin Wallettes was already talking on the phone.\
+-   "Yes!  It vozz my vife, Stolan Vallettes- Vallettes vith a W, she 'az keeled 'erself!  Yes, zere eez zee zuizide note, it eez v-"  Dr. DaDoewizzgon had had enough.  He snatched the phone from Wallettes.\
+-   "This is Dr. DaDoewizzgon.  I would like to remind you that Robin Wallettes has a criminal record and cannot be trusted.  You don't need to come over, I have everything under control.  I have Wallettes under my supervision right now, but he may be dangerous.  Goodbye."\
+-   Dr. DaDoewizzgon pulled out his Long Shot automatic and told Wallettes to put his hands up.  They walked upsairs.  When they got up\
+-  \
+-\
+-I- it- OW!!  May sorrow be isn't!!}
+\ No newline at end of file
+diff --git a/writing/old/GROUNDED SERIES.rtfd/TXT.rtf b/writing/old/GROUNDED SERIES.rtfd/TXT.rtf
+deleted file mode 100644
+index 439efc3..0000000
+--- a/writing/old/GROUNDED SERIES.rtfd/TXT.rtf	
++++ /dev/null
+@@ -1,95 +0,0 @@
+-{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf480
+-{\fonttbl\f0\fnil\fcharset77 AmericanTypewriter;\f1\fnil\fcharset77 Copperplate;\f2\fswiss\fcharset77 Helvetica;
+-\f3\fnil\fcharset77 AmericanTypewriter-Bold;\f4\fnil\fcharset77 Fortunaschwein;\f5\fnil\fcharset77 Techno;
+-\f6\fnil\fcharset77 IrwinAllen;\f7\fnil\fcharset77 AquilineTwo;\f8\fnil\fcharset77 JugendWF;
+-\f9\fnil\fcharset77 Betterben;}
+-{\colortbl;\red255\green255\blue255;}
+-\margl1440\margr1440\vieww31500\viewh22060\viewkind0
+-{\*\background {\shp{\*\shpinst\shpleft0\shptop0\shpright0\shpbottom0\shpfhdr0\shpbxmargin\shpbymargin\shpwr0\shpwrk0\shpfblwtxt1\shpz0\shplid1025{\sp{\sn shapeType}{\sv 1}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn fillColor}{\sv 0}}{\sp{\sn fFilled}{\sv 1}}{\sp{\sn lineWidth}{\sv 0}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn bWMode}{\sv 9}}{\sp{\sn fBackground}{\sv 1}}}}}
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\f0\fs200 \cf1 \
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\fs300 \cf1 GR
+-\fs200 OUNDED\
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\f1\fs50 \cf1 Your Goal:  GET OUT!!! \'aa
+-\f2\fs24 \
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\f0\fs200 \cf1 \
+-\
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\fs300 \cf1 GR
+-\fs200 OUNDED 
+-\f3\b\fs300 II
+-\f0\b0\fs200 :
+-\f4\fs300 \
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\f5\fs92 \cf1 H    O    T    E    L          G    R    I    V    E    N
+-\fs148 \
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\f1\fs50 \cf1 The Sequel to GRounded \'aa
+-\f0\fs200 \
+-\
+-\
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\fs300 \cf1 GR
+-\fs200 OUNDED 
+-\f3\b\fs300 III
+-\f0\b0\fs200 :\
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\f6\fs110 \cf1 T A C O    B E L L    S T Y L E
+-\fs300 \
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\f1\fs50 \cf1 The New Sequel to GRounded and GRiven \'aa
+-\f0\fs100 \
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\fs200 \cf1 \
+-\
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\fs300 \cf1 GR
+-\fs200 OUNDED 
+-\f3\b\fs300 IV
+-\f0\b0\fs200 :
+-\fs300 \
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\f7\fs128 \cf1 N e e d s    a    V a c a t i o n\
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\f1\fs50 \cf1 Every Game has a Cool Slogan... \'aa\
+-...This one has two. \'aa
+-\f0\fs100 \
+-\
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\fs200 \cf1 \
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\fs300 \cf1 GR
+-\fs200 OUNDED
+-\f3\b  
+-\fs288 V
+-\f0\b0\fs200 :
+-\fs300 \
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\f8\fs144 \cf1 E  N  D        O  F        R  O  O  M  S
+-\f9\fs200 \
+-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc\pardirnatural
+-
+-\f1\fs50 \cf1 Rooms Beyond GRounded \
+-\
+-\
+-}
+\ No newline at end of file
+diff --git a/writing/old/Princess Fred Jr..rtf b/writing/old/Princess Fred Jr..rtf
+deleted file mode 100644
+index dfda339..0000000
+--- a/writing/old/Princess Fred Jr..rtf	
++++ /dev/null
+@@ -1,85 +0,0 @@
+-{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf410
+-{\fonttbl\f0\fnil\fcharset77 Fortunaschwein;\f1\fnil\fcharset77 LucidaGrande-Bold;\f2\fnil\fcharset77 LucidaGrande;
+-}
+-{\colortbl;\red255\green255\blue255;\red0\green0\blue221;}
+-\margl1440\margr1440\vieww25100\viewh19520\viewkind0
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li200\qc\pardirnatural
+-
+-\f0\fs52 \cf0 Thy loverly
+-\f1\b (
+-\f0\b0 ?
+-\f1\b )
+-\f0\b0  tales of Princess Fred Jr.
+-\f1\b *
+-\f0\b0 \
+-Written by Benjamin Daniel Celsi
+-\fs34 \
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li200\ql\qnatural\pardirnatural
+-\cf0     \cf2    \cf0 Once upon a time, there was a lovely castle, and in it lived a lovely King, named King Fred, and a lovely Queen, named Queen Liz, and their lovely daughter, named Princess Fred Jr.  
+-\f2 (
+-\f0 She was named after the king, who had been hoping for a boy.
+-\f2 )
+-\f0   But  never the less, they led a lovely life.\
+-   One day, King Fred decided that it was time for Princess Fred Jr. to get married.  They searched all over the castle, but not a Prince could be found!\
+-   "Oh, what do we do?"  sobbed Queen Liz.\
+-   "This is indeed a problem,"  said King Fred.  "But I think I have a solution."\
+-   A nd so, the King and Queen had a son, who would marry Princess Fred Jr.  They named him Prince Fred Jr. the 
+-\f2 2
+-\f0 nd, and the preparations for the marriage were made!\
+-   "Oh, darling!"  said Queen Liz to King Fred, "What a wonderful idea you had!  Now we've saved the trouble of finding a lovely prince to marry our lovely daughter!  He's so like us, and he fits right into  the family!"\
+-   "Quite a lovely plan, if I say so myself!"  said King Fred.\
+-   "But Daddy," said Princess Fred Jr., "Isn't it illegal for me to marry my own brother?"\
+-   "By Gad, she's right!"  said King Fred, pulling out his BOOK OF RULES
+-\f2 *
+-\f0 .\
+-   "Oh, what do we do?"  sobbed Queen Liz.\
+-   "Don't worry, darling!  My word is law, remember?  It says right here!"  said King Fred, pointing to RULE 
+-\f2 #1
+-\f0 .  "And therefore, I change the rule!\
+-   "But Daddy!  Isn't he a bit young for me?  I'm 
+-\f2 25
+-\f0 , and he's a week old!  You can't get married until you're 
+-\f2 18
+-\f0 !"  said Princess Fred Jr.\
+-   "By Gad, she's right!"  said King Fred looking at the BOOK OF RULES
+-\f2 *
+-\f0 .\
+-   "Oh, what do we do?"  sobbed Queen Liz.\
+-   "Don't worry, darling!  My word is law, remember?  And therefore, I think I'll change that rule also!"  Said King Fred.\
+-   And so, the marriage happened anyway.\
+-   The Queen and King provided the ring, and Prince Fred Jr. the 
+-\f2 2
+-\f0 nd dressed up in his best outfit.  But as the ceremony began, another prince burst through the door.\
+-   "Oh, what do we do?"  sobbed Queen Liz.\
+-   "Beautiful princess, will you be my wife?"  Asked the prince, who was called Prince Guy.  Then, noticing Prince Fred Jr. the 
+-\f2 2
+-\f0 nd, he yelled to him, "You scoundrel!  How dare you put your hands on my future wife!  I challenge you to a sword fight!"  He pulled out his calendar book.  "...A week from Tuesday!"  he finished.\
+-   Sure enough, a week from Tuesday,  Prince Guy and Prince Fred Jr. the 
+-\f2 2
+-\f0 nd showed up at The Sword Fighting Stadium with swords, 
+-\f2 (
+-\f0 Although Prince Fred Jr. the 
+-\f2 2
+-\f0 nd only did it because the King and Queen had picked him up and put him there.
+-\f2 )\
+-
+-\f0    The King, Queen, and Princess, along with the rest of the kingdom, sat in the stands, hooting excitedly.\
+-   Prince Guy charged at Prince Fred Jr., who was screaming his disapproval.\
+-   The battle was short and sour.\
+-   Prince Guy tripped over a rock and stabbed himself in the neck.\
+-   And died.\
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+-\cf0      "Oh, what do we do?"  sobbed Queen Liz.\
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li200\ql\qnatural\pardirnatural
+-\cf0    Princess Fred Jr. married Prince Fred Jr. the 
+-\f2 2
+-\f0 nd, and they all lived miserably ever after.\
+-  \
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li200\qc\pardirnatural
+-
+-\fs70 \cf0 Thee End
+-\fs34 \
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li200\ql\qnatural\pardirnatural
+-
+-\f2 \cf0 *
+-\f0 All rights reserved.}
+\ No newline at end of file
+diff --git a/writing/old/gwb.rtfd/TXT.rtf b/writing/old/gwb.rtfd/TXT.rtf
+deleted file mode 100644
+index b852d43..0000000
+--- a/writing/old/gwb.rtfd/TXT.rtf
++++ /dev/null
+@@ -1,82 +0,0 @@
+-{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf410
+-{\fonttbl\f0\fnil\fcharset77 AmericanTypewriter-Bold;\f1\fnil\fcharset77 Zapfino;\f2\fnil\fcharset77 AmericanTypewriter;
+-}
+-{\colortbl;\red255\green255\blue255;}
+-\margl1440\margr1440\vieww31500\viewh22580\viewkind0
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc\pardirnatural
+-
+-\f0\b\fs82 \cf0 \
+-THE ADVENTURES OF
+-\fs98 \
+-
+-\fs172 George
+-\f1\b0\fs146 W.
+-\f0\b\fs172 Bush
+-\f2\b0\fs50 \
+-
+-\f0\b\fs54 \
+-\
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+-
+-\f2\b0\fs50 \cf0 \
+-   President George Bush was leaning back in his desk, thinking about Condi Rice when the phone rang.  His bodyguard Dick Cheney pointed his sniper at the phone and then slowly answered it.\
+-   "Hellooooo?" said Dick Cheney.\
+-   "Is the President there?" asked a mysterious voice.\
+-   "Yes he is, but you can't talk to him without official permission."\
+-   "Well, who are you?"\
+-   "I'm Vice President Dick Cheney."\
+-   "Listen, Dick:  I've kidnapped Laura Bush.  If you or Bush want to see her again, you'll get the President to leave one million dollars under the bench in Dewnut Park.  Got it?"\
+-   Cheney shot the phone.\
+-   "Who was it?" asked Bush absentmindedly.\
+-   "George, I'm afraid we're going to have to go undercover for a while," replied Cheney solemnly.  "Laura's been kidnapped."\
+-   After they changed into their bullet-proof jumpsuits and got their extra-special super snipers, they jumpedin their limo and sped noisily to the park.  Bush fished a billion dollar bill out of his pocket.  "Got change?" he asked, and Cheney gave it to him.   Then they placed it under the bench .  Then they sat on the bench, guns ready.\
+-   "This way, if one of 'em tries to take it, we'll shoot 'em down." said Cheney.\
+-   After about an hour, they began to grow bored.  Bush fell asleep.  Cheney started shooting birds, squirrels, and passersby for fun.\
+-   "Listen, Dick," said Bush, "Don't think I'm not gettin' a kick outta this, I am, but I got a hot date with Condi Rice and I should be goin' soon."\
+-   "You go ahead and do that," said Cheney.  "I'll guard the money."\
+-   Bush walked down Dewnut street, thinking about Condi Rice.  Once he had walked about five blocks, a man grabbed him, jerked the gun out of his hands, and pulled him violently into an empty alley.\
+-   "You fool," snarled the man, "Laura will die tonight."\
+-   "Hey," said Bush, "We put the money where you said to!"\
+-   "Maybe it would have been a little more convenient if you and Cheney hadn't been sitting on top of it with guns," said the mysterious man, who strangely resembled Ralph Nader.  "But it doesn't matter now.  I'm taking you to the boss."\
+-   "Who's the boss?" asked Bush stupidly, but the man didn't answer.\
+-   Soon they got to a dirty, wooden door.  The man pushed it and it slowly creaked open.\
+-   "Come in," said a familiar voice.\
+-   "Condi Rice!" gasped Bush stupidly, getting his first good look at "The Boss".\
+-   "That's right," said Rice evilly.  "It was me all along.  Let me show you my master scheme.  But first, I believe you have someone to meet..."\
+-   She gestured to a figure who was tied up and gagged in a chair.\
+-   "Laura!" gasped Bush stupidly.\
+-   "Mpph mpph MPPPH mpph!"  said Laura, which translated to:  "Never date women when you're already married, you idiot!"\
+-   "How nice," said Rice.  "Now I'll show you my plans of world domination."\
+-   Bush gasped.  "You'll never get away with this!"  he yelled.  "No one but me is evil enough to do something like that!"\
+-   "I'm plenty evil," said Rice defensively.  "Look, George.  See this button?" she gestured to a red button mounted on the wall.  "When I push this, the entire world blows up.  Isn't it genius?" she started to cackle.\
+-   "M-M Mpph Mpph Mpph?" said Laura, which translated to:  "Wouldn't you blow up to?"\
+-   "You're right...  But  don't worry.  I'll think of something to avoid that."\
+-   "Condi!  What has driven you to this... lowly state?"\
+-   "Who cares," she said.  "Tie him up!"  she ordered to the mysterious man.\
+-   Suddenly, the door was kicked open and in stepped Dick Cheney with his gun.\
+-   "Drop your weapons!"  he screamed.  "You two!  Over there!"  he gestured to the corner of the room.\
+-   "Cheney, if you don't drop that gun, I'll push this button and the whole world will explode!" snarled Rice.\
+-   "NOO!!!" screamed Bush.  He charged into Rice and the mysterious man, and they fell over.  Then Bush saw the button.  It was pointless if no one ever pressed it.  He didn't know why he was even considering it.\
+-   "Don't push the button, George!  If you push it, we'll all die!" screamed Rice.\
+-   "Don't push the button!"  screamed Cheney.\
+-   "Don't push the button!"  screamed the mysterious man.\
+-   "Mpph mpph m mpph-mpph!"  screamed Laura, which translated to "Don't push the button!"\
+-   Bush ran his finger over the button's surface.  He contemplated all the people who would die.\
+-   But temptation over came him.\
+-   He pushed the button.\
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc\pardirnatural
+-
+-\f0\b\fs186 \cf0 BOOM!!!
+-\f2\b0\fs50 \
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc\pardirnatural
+-
+-\fs132 \cf0 THE END
+-\fs254 \
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc\pardirnatural
+-
+-\fs50 \cf0 \
+-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+-\cf0 \
+-\
+-\
+-}
+\ No newline at end of file
+diff --git a/writing/writing.html b/writing/writing.html
+deleted file mode 100644
+index 29cb978..0000000
+--- a/writing/writing.html
++++ /dev/null
+@@ -1,90 +0,0 @@
+-<!DOCTYPE html>
+-<html lang='en'>
+-<head>
+-    <title>Palindromes</title>
+-    <link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
+-    <style type="text/css">
+-        body {
+-            background-image:  url(../gif/stars2.gif);
+-            color: white;
+-            font-family: "Lucida Console", monospace;
+-            white-space: pre-wrap;
+-            margin: auto;
+-            text-align: center;
+-            text-shadow: #000000 0 0 25px;
+-            width: 700px;
+-        }
+-
+-        .button {
+-            cursor: url(../shared/cursor.png), auto;
+-            :hover { filter: drop-shadow(0 0 1.0rem rgb(255, 255, 255)) }
+-        }
+-
+-        #home { 
+-			float: left; :hover {  filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }
+-		}
+-    </style>
+-</head>
+-<body>
+-<a href="../index.html?writing" id="home"><img src="../gif/earth.gif"></a>
+-    <div>        
+-        <h1 id="title"></h1>
+-        <!-- <div style="display: flex; width: fit-content; margin: auto;"> -->
+-        <div id="writing"></div>
+-        <!-- </div> -->
+-        <div style="display: flex; width: fit-content; margin: auto;">
+-            <img src="../gif/arrowl.gif" class="button" id="left" style="float: left; padding-right: 20px;"/>
+-            <img class=button id="random" src='../gif/random.gif'/>
+-            <img src="../gif/arrowr.gif" class="button" id="right" style="float: right; padding-left: 20px;"/>
+-        </div>
+-    </div>
+-</body>
+-<script src="../shared/shared.js"></script>
+-<script src="js/palindromes.js"></script>
+-<script src="js/alphabet-sayings.js"></script>
+-
+-<script src="js/jokes.js"></script>
+-<script src="js/one-liners.js"></script>
+-<script src="js/random-thoughts.js"></script>
+-<script src="js/random-questions.js"></script>
+-<script src="js/spoonerisms.js"></script>
+-<script>
+-    let writings, title
+-    if (window.location.search === "?palindromes") {
+-        writings = palindromes; title = "Palindromes"
+-    } else if (window.location.search === "?spoonerisms") {
+-        writings = spoonerisms; title = "Spoonerisms"
+-    } else if (window.location.search === "?alphabet-sayings") {
+-        writings = alphabetSayings; title = "Alphabet Sayings"
+-    } else if (window.location.search === "?miscellaneous") {
+-        title = "Miscellaneous"
+-        writings = oneLiners.concat(jokes).concat(randomThoughts).concat(randomQuestions).concat(spoonerisms)
+-    }
+-    
+-    let index = 0
+-    shuffle(writings)
+-    let writingDiv = get('writing')
+-    get("title").innerHTML = title
+-
+-    get('left').onclick = () => {
+-        playSound('../shared/click')
+-        index = decrement(index, writings.length - 1)
+-        setWriting()
+-    }
+-
+-    get('right').onclick = () => {
+-        playSound('../shared/click')
+-        index = increment(index, writings.length - 1)
+-        setWriting()
+-    }
+-
+-    get('random').onclick = () => {
+-        playSound('../shared/trill')
+-        index = random(0, writings.length - 1)
+-        setWriting()
+-    }
+-
+-    function setWriting() {  writingDiv.innerHTML = writings[index].replace("\n", "<br>") }
+-    
+-    setWriting()
+-</script>
+\ No newline at end of file
+diff --git a/writing/writings/college/ABBA-CD.html b/writing/writings/college/ABBA-CD.html
+new file mode 100644
+index 0000000..38669f6
+--- /dev/null
++++ b/writing/writings/college/ABBA-CD.html
+@@ -0,0 +1,39 @@
++<!DOCTYPE html>
++<head>
++    <title>ABBA CD</title>
++    <link rel='icon' type='image/x-icon' href='../../../shared/ico/favicon.ico'>
++    <style type="text/css">
++        body { 
++            background-image:  url(../../../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
++            white-space: pre-wrap;
++            margin: auto;
++            text-align: center;    
++            text-shadow: blue;
++            width: 1000px;
++        }
++    </style>
++</head>
++
++<body>
++<h1>ABBA CD</h1><img src="../../gifs/animated-cd.gif"></img>
++
++Agnetha, Benny, Anni-Frid and Bjorn:
++Attractive, savvy, chic, and nonchalant.
++A striking knack for music they did flaunt,
++And just like that, from Sweden, stars are born.
++
++And with their golden jumpsuits all adorned,
++They gave the roaring crowds all they could want.
++And yet their walk of fame was but a jaunt—
++They split four ways their money and their scorn.
++
++A cardboard box is curling in the sun.
++Inside, a shattered disk and broken case.
++
++Upon the disk, those ancient songs are spun,
++Once sung by demi-gods with style and grace.
++
++Their faces, once well-known, are known by none,
++And lie face-down in some forgotten place.
++</body>
++
+diff --git a/writing/christian-bok.html b/writing/writings/college/Christian-Bok.html
+similarity index 83%
+rename from writing/christian-bok.html
+rename to writing/writings/college/Christian-Bok.html
+index 276abbf..5f03e69 100644
+--- a/writing/christian-bok.html
++++ b/writing/writings/college/Christian-Bok.html
+@@ -2,7 +2,7 @@
+ <head><title>Christian Bök</title><link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
+ <style type="text/css">
+ body {
+-	background-image: url(../gif/stars2.gif); color: white; font-family: "Lucida Console", monospace;
++	background-image: url(../../../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
+ 	white-space: pre-wrap;
+ 	margin: auto;
+ 	text-align: left;
+@@ -15,10 +15,10 @@ body {
+ <!------------------------------------------------------------------------------------------------->
+ <script src="../shared/shared.js"></script>
+ <body>
+-<a href="../index.html?writing" id="home"><img src="../gif/earth.gif"></a>
+ <div style="text-align: center;">
+-<h1>Christian Bök:</h1><h2>A Critic’s Notations on his Book</h2><h3>(Written using only the letters in his name)</h3>
+-<img src="gif/book.gif">
++<h1>Christian Bök:</h1><h2>A Critic’s Notations on his Book</h2>
++<h3>(Written using only the letters in his name)</h3>
++<img src="../../gifs/book.gif">
+ </div>
+ <div>
+ <!-- It has crass connotations
+@@ -27,12 +27,19 @@ It's too assonant, it's not consonant, its chart its scansions are scant
+ It's a scant to scan its scansions
+ its assonant to consonant ratio is
+ too brisk, too strict, too... assonant.
++rich thin intonations 
+ arcana -->
+-	Christian Bök’s book is shit. To start it is a task, to scan it is a strain. Its narration is too scant, its consonants too inconsistant. it's as thin as hot air, as basic as A-B-C. In short, it stinks. Is it ironic? Satiric or sarcastic? No, its irritation is intrinsic. This book is a bionic horror, a robotic abstraction: Bok constricts his crass consonants into chaotic contortions. This book isn't so-so; it is so, so, <i>so</i> so-so. It has no citations, it ranks on no charts, it's not canon. A kibosh on it! This isn't a book, it’s a non-book, an anti-book. I snort at it.
++	Christian Bök’s book is shit. To start it is a task, to scan it is a strain. 
++	Its narration is thin, its connotations are , It's scansions too scant, it's consonants too... inconsonant, I contract
++	it abstractions, In short, it stinks.  
++
++	consonants too inconsistant. it's as thin as hot air, as basic as A-B-C. 
++	
++	Is it ironic, satiric, or sarcastic? No, its irritation is intrinsic. This book is a bionic horror, a robotic abstraction: Bok, that contrarian, insists on chaotic constraints that constricts his inconsinant consonants into crass contortions.  This book isn't so-so; it is so, so, <i>so</i> so-so. It has no citations, it ranks on no charts, it's not canon. A kibosh on it! This isn't a book, it’s a non-book, an anti-book. I snort at it.
+ <!-- crass contrarian -->
+-	That as it is, Bök can't not scratch his ink nib- it's an inborn kink, a sick itch to scratch, a narcotic habit as chronic as crack, tobacco or cannabis. Not that it’s a knack- oh no. Bök isn't an artist. Bök's no Titian, Cassatt, Corot, or Bosch. Shit, Bök's no Bob Ross. Bok's book is to art as a cat's hiss is to Sinatra's croons, or a sonorant Bach cantata- it's a stark contrast.
++	That as it is, Bök can't not scratch his ink nib- it's an inborn kink, a sick itch to scratch, a narcotic habit as chronic as crack, tobacco or cannabis. Not that it’s a knack- oh no. Bök isn't an artist. Bök's no Titian, Cassatt, Corot, or Bosch. Shit, Bök's no Bob Ross. Bok's book is to art as a cat's hiss is to Sinatra's croons, a rabbi's rich intonations/incantation, or a sonorant Bach cantata- it's a stark contrast.
+ 	<!-- or soak it in inkhorn -->
+-	Bök is a contrarian hack, a batshit con artist, an anarchist kook, a contratian schnook, a baboonish brat, a Torontonian hick. 
++	Bök is a hack, a batshit con artist, an anarchist kook, a contratian schnook, a baboonish brat, a Torontonian hick. 
+ 	
+ 	a tsi-tsi, and arrant irration.
+ 
+@@ -56,7 +63,7 @@ is that so?
+ -->
+ 	Hint, hint: Bök’s book is on track to tank. I insist it is, so bank on it. Bök’s book is akin to “Titanic”, soon to sink, or a stock in bitcoin, soon to crash. Bök’s short stint in books is soon to hit a rock! Ciao, Christian! Bonsoir! Ta-ta! Thanks a ton (not!)
+ 
+-	Oh. Oh no. Oh no, no, no. NOOOOO!!! Bök’s book- it’s a hit?! It can’t- it is. Bök’s book stocks book racks in book chains across nations: China, Haiti, Costa Rica... Arabic nations (Iran, Bahrain)... on to Antarctica! Cancun to Cairo, Nairobi to Osaka, it's hot shit. This book has kickbacks, too: it's a boon to Bok's bankbook, a boost to his cash stash, a coin in his coin sack: Bok has stacks on stacks. Hot to trot, Bök hobnobs hotshot critics, or chitchats to bookish brainiacs at “Christian Bök-a-Thons”. Ooh, it irks! In rotation as an orator, Bok snacks on choco-croissants or raisin bonbons in chic bistros, as snobbish hosts toast Scotch, Kirsch or chianti as a hoorah to his book. Hoorah! Bök’s stock soars. That kiss-ass! Bök is a rockstar, an icon. Bok is so rich, ABC casts Bok as a host on Shark Tank (this boots Barbara Corcoran). Tarantino casts Bok as costar to Chris Rock in a hit horror-action-noir. This hoists Bok into an iconic strata: Britain anoints Bök (not British) “Sir Bök” in a historic coronation! Bök as an aristocrat? Oh, I abhor this- I abhor it so!
++	Oh. Oh no. Oh no, no, no. NOOOOO!!! Bök’s book- it’s a hit?! It can’t- it is. Bök’s book stocks book racks in book chains across nations: China, Haiti, Costa Rica... Arabic nations (Iran, Bahrain)... on to Antarctica! Cancun to Cairo, Nairobi to Osaka, it's hot shit. This book has kickbacks, too: it's a boon to Bok's bankbook, a boost to his cash stash, a coin in his coin sack: Bok has stacks on stacks. Hot to trot, Bök hobnobs hotshot critics, or chitchats to bookish brainiacs at “Christian Bök-a-Thons”. Ooh, it irks! Bok is in hot rotation as an orator at rich rabbinic associations, Bok snacks on choco-croissants or raisin bonbons in chic bistros, as snobbish hosts toast Scotch, Kirsch or chianti as a hoorah to his book. Hoorah! Bök’s stock soars. That kiss-ass! Bök is a rockstar, an icon. Bok is so rich, ABC Shark Tank to cast Bok as a co-host on 'Shark Tank'; this boots Barbara Corcoran. Tarantino casts Bok as costar to Chris Rock in a hit horror-action-noir. This hoists Bok into an iconic strata: Britain anoints Bök (not British) “Sir Bök” in a historic coronation! Bök as an aristocrat? Oh, I abhor this- I abhor it so!
+ <!-- Aniston, Chris Rock -->
+ 	I soak in rancor. Bök, a traitor to his nation, has no honor. Bök's book is a rash on this nation’s ass, a tarnish on this Christian bastion. His book is an initiation in anarchist antics- it stirs racist associations in hicks, cranks, or kooks; it's an incitation to riot. Soon, Bök-ian cohorts ransack train stations, accost hobos, harass asian chicks, kick tots into trashcans. To cast Bok's book, that anachronistic caca in ink is an arrant sin. So, I chant it: Abstain! Ban, bar or banish it! Toss Bök's Book in a bin! Roast it on a stick! Crank it into thin carbon bits! Knit it into a satin boa! Stash it in a rabbit’s ass! Bark at it! Bonk a banana on it! (or a carrot.) Kick it into orbit! Boo it! Cast it into Tarnation! Shoot at it: rat-a-tat-tat! Cart it into a hot cocoa bath (so as to stain it)! Boot it back to Toronto! Boot Bök (a Torontonian) back to Toronto too!
+ <!-- Christ, Bok is a host on Shark Tank??? -->
+@@ -118,7 +125,9 @@ is that so?
+ 	No. It is not OK. Assassination is a boorish, narcissistic act- not an act to boast on. I ain’t a saint; I sank to act on a barbaric instinct. I shat on a sacrosanct contract, I took a torch to a tacit oath. I shirk to think it! So. No sass, snark, or schtick: assassination is a no-no, OK? Arson too. That's it. Ok. Thanks.
+ 
+ 
+-	<i>- Brian Shockit, Book Critic</i>
++<i>- Brian Shockit, Book Critic</i>
++
++
+ <!-- Ian Christbok -->
+ <!-- - Brian Schitko, Book Critic -->
+ <!-- Rick B i Ashton -->
+diff --git a/writing/writings/college/Raven.html b/writing/writings/college/Raven.html
+new file mode 100644
+index 0000000..764a06b
+--- /dev/null
++++ b/writing/writings/college/Raven.html
+@@ -0,0 +1,43 @@
++<!DOCTYPE html>
++<head><title>TheRaven.java</title><link rel='icon' type='image/x-icon' href='../../../shared/ico/favicon.ico'>
++<style type="text/css">
++body { background-image:  url(../../../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
++    white-space: pre-wrap;
++    margin: auto;
++    text-shadow: blue;
++    width: 1000px;
++}
++</style>
++</head>
++
++<body>
++<h1>TheRaven.java</h1>
++public class TheRaven extends Poem {
++
++   Poet i = new Poet("Edgar Allen Poe");
++   Door chamberDoor = new Door();
++   Scanner forgottenLore = new Scanner(new File("many_a_quaint_and_curious_volume.txt"));
++
++   public static void main() {
++      onceUponAMidnightDreary();
++   }
++
++   private void onceUponAMidnightDreary() {
++
++      while (i.ponderedWeakAndWeary() && i.noddedNearlyNapping()) {
++         if (forgottenLore.hasNextLine()) forgottenLore.nextLine();
++         
++         if (chamberDoor.isGentlyRapping()) break
++      }
++
++      i.mutter("Tis some visitor,");
++      i.mutter("tapping at my chamber door-")
++      i.mutter("Only this and nothing more.")
++   }
++}
++
++</body>
++
++<!-- idea - make multithreaded visitor object, which knocks on the door after some time
++ 
++-->
+\ No newline at end of file
+diff --git a/writing/youre-little.html b/writing/writings/college/Youre-Little.html
+similarity index 94%
+rename from writing/youre-little.html
+rename to writing/writings/college/Youre-Little.html
+index 8fc130f..fc59b78 100644
+--- a/writing/youre-little.html
++++ b/writing/writings/college/Youre-Little.html
+@@ -1,24 +1,18 @@
+-<!DOCTYPE html>
+-<html lang='en'>
+-<head>
+-    <link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
+-    <style type="text/css">
+-        body {
+-            background-image: url(../gif/stars2.gif);
+-            color: white;
+-            white-space: pre-wrap;
+-            margin: auto;
+-            text-align: center;
+-            font-family: "Lucida Console", monospace;
+-            width: 900px
+-        }
+-        h1, h3 { text-align: center }
+-    </style>
+-    <title>You're Little</title>
++<!DOCTYPE html><html lang='en'><title>You're Little</title>
++<head><link rel='icon' type='image/x-icon' href='../../../shared/ico/favicon.ico'>
++<style type="text/css">
++body {
++    background-image: url(../../../gifs/stars2.gif); color: white; white-space: pre-wrap;
++    margin: auto;
++    text-align: center;
++    font-family: "Lucida Console", monospace;
++    width: 900px
++}
++h1, h3 { text-align: center }
++</style> 
+ </head>
+ <body>
+-<h1>You're Little</h1>
+-<img src="../gif/baby.gif">
++<h1>You're Little</h1><img src="../../gifs/baby.gif">
+ <div>
+ <!-- INTRO -->
+ You’re little, too little for pimples or stubble.
+@@ -282,5 +276,6 @@ Bangalore, Appleton— even Chernobyl!
+ ‘Til then, I will wrestle with postnatal riddles.
+ You're little, my angel, my angel, you're little.
+ 
++<!-- Sigil -->
+ </div>
+ </body>
+\ No newline at end of file
+diff --git a/writing/writings/elementary/Bush.html b/writing/writings/elementary/Bush.html
+new file mode 100644
+index 0000000..ad9dc8d
+--- /dev/null
++++ b/writing/writings/elementary/Bush.html
+@@ -0,0 +1,65 @@
++<head>
++    <title>The Adventures of George W. Bush</title>
++    <link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
++    <style type="text/css">
++        body { 
++            background-image: url(../../../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
++            white-space: pre-wrap;
++            margin: auto;
++            width: 800px;
++        }
++        h1 { text-align: center }
++    </style>
++</head>
++<body>
++<h1>The Adventures of George W. Bush</h1>
++
++    President George Bush was leaning back in his desk, thinking about Condi Rice when the phone rang. His bodyguard Dick Cheney pointed his sniper at the phone and then slowly answered it.
++    "Hellooooo?" said Dick Cheney.
++    "Is the President there?" asked a mysterious voice.
++    "Yes he is, but you can't talk to him without official permission."
++    "Well, who are you?"
++    "I'm Vice President Dick Cheney."
++    "Listen, Dick: I've kidnapped Laura Bush. If you or Bush want to see her again, you'll get the President to leave one million dollars under the bench in Dewnut Park. Got it?"
++    Cheney shot the phone.
++    "Who was it?" asked Bush absentmindedly.
++    "George, I'm afraid we're going to have to go undercover for a while," replied Cheney solemnly. "Laura's been kidnapped."
++    After they changed into their bullet-proof jumpsuits and got their extra-special super snipers, they jumpedin their limo and sped noisily to the park. Bush fished a billion dollar bill out of his pocket. "Got change?" he asked, and Cheney gave it to him. Then they placed it under the bench. Then they sat on the bench, guns ready.
++    "This way, if one of 'em tries to take it, we'll shoot 'em down." said Cheney.
++    After about an hour, they began to grow bored. Bush fell asleep. Cheney started shooting birds, squirrels, and passersby for fun.
++    "Listen, Dick," said Bush, "Don't think I'm not gettin' a kick outta this, I am, but I got a hot date with Condi Rice and I should be goin' soon."
++    "You go ahead and do that," said Cheney. "I'll guard the money."
++    Bush walked down Dewnut street, thinking about Condi Rice. Once he had walked about five blocks, a man grabbed him, jerked the gun out of his hands, and pulled him violently into an empty alley.
++    "You fool," snarled the man, "Laura will die tonight."
++    "Hey," said Bush, "We put the money where you said to!"
++    "Maybe it would have been a little more convenient if you and Cheney hadn't been sitting on top of it with guns," said the mysterious man, who strangely resembled Ralph Nader. "But it doesn't matter now. I'm taking you to the boss."
++    "Who's the boss?" asked Bush stupidly, but the man didn't answer.
++    Soon they got to a dirty, wooden door. The man pushed it and it slowly creaked open.
++    "Come in," said a familiar voice.
++    "Condi Rice!" gasped Bush stupidly, getting his first good look at "The Boss".
++    "That's right," said Rice evilly. "It was me all along. Let me show you my master scheme. But first, I believe you have someone to meet..."
++    She gestured to a figure who was tied up and gagged in a chair.
++    "Laura!" gasped Bush stupidly.
++    "Mpph mpph MPPPH mpph!" said Laura, which translated to: "Never date women when you're already married, you idiot!"
++    "How nice," said Rice. "Now I'll show you my plans of world domination."
++    Bush gasped. "You'll never get away with this!" he yelled. "No one but me is evil enough to do something like that!"
++    "I'm plenty evil," said Rice defensively. "Look, George. See this button?" she gestured to a red button mounted on the wall. "When I push this, the entire world blows up. Isn't it genius?" she started to cackle.
++    "M-M Mpph Mpph Mpph?" said Laura, which translated to: "Wouldn't you blow up to?"
++    "You're right... But don't worry. I'll think of something to avoid that."
++    "Condi! What has driven you to this... lowly state?"
++    "Who cares," she said. "Tie him up!" she ordered to the mysterious man.
++    Suddenly, the door was kicked open and in stepped Dick Cheney with his gun.
++    "Drop your weapons!" he screamed. "You two! Over there!" he gestured to the corner of the room.
++    "Cheney, if you don't drop that gun, I'll push this button and the whole world will explode!" snarled Rice.
++    "NOO!!!" screamed Bush. He charged into Rice and the mysterious man, and they fell over. Then Bush saw the button. It was pointless if no one ever pressed it. He didn't know why he was even considering it.
++    "Don't push the button, George! If you push it, we'll all die!" screamed Rice.
++    "Don't push the button!" screamed Cheney.
++    "Don't push the button!" screamed the mysterious man.
++    "Mpph mpph m mpph-mpph!" screamed Laura, which translated to "Don't push the button!"
++    Bush ran his finger over the button's surface. He contemplated all the people who would die.
++    But temptation over came him.
++    He pushed the button.
++
++<H2>BOOM!!!</H2>
++<H3>THE END</H3> 
++</body>
+diff --git a/writing/writings/elementary/Flagellants.html b/writing/writings/elementary/Flagellants.html
+new file mode 100644
+index 0000000..2e15766
+--- /dev/null
++++ b/writing/writings/elementary/Flagellants.html
+@@ -0,0 +1,42 @@
++<!DOCTYPE html><html lang='en'>
++<head>
++    <title>The Flagellants</title>
++<link rel='icon' type='image/x-icon' href='../../../shared/ico/favicon.ico'>
++<style type="text/css">
++    body { 
++        background-image:  url(../../../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
++        white-space: pre-wrap;
++        margin: auto;
++        text-align: center;
++        width: 1000px;
++    }
++</style>
++</head>
++
++<body>
++<h1>The Flagellants</h1><img src="../../gifs/blood.gif" style="width: 40px;"></img>
++"Good grief!" said a Christian.
++"God sure hasn't blessed us-
++'Cause what could be worse
++Than yersinia pestis?*"
++"Dunno," said another.
++"But I'll tell ya this, brother:
++If he doesn't get happy,
++Our lives will be crappy."
++"You're right!" said the first.
++"Our lives will get worse!
++Let's whip ourselves 'til we go mad-
++THEN god will know we're not so bad!"
++"Good idea!" said the second.
++"He might even stop the plague, I reckon!"
++So lots of Christians (like Roman Catholics)
++Beat themselves 'til they were phychopatholics.
++They were the KKK of their day,
++Killing Jews along the way.
++So if you see people whippin' themselves in the pants,
++Look out 'cause they might be 
++THE FLAGELLANTS!
++
++
++*Yersinia pestis is a gram-negative facultative anaerobic bipolar-staining bacillus bacterium belonging to the family Enterobacteriaceae that caused the Black Plague.
++</body>
+\ No newline at end of file
+diff --git a/writing/john-adams-poem.html b/writing/writings/elementary/John-Adams-Poem.html
+similarity index 84%
+rename from writing/john-adams-poem.html
+rename to writing/writings/elementary/John-Adams-Poem.html
+index 86d892f..cc1d903 100644
+--- a/writing/john-adams-poem.html
++++ b/writing/writings/elementary/John-Adams-Poem.html
+@@ -1,18 +1,14 @@
+-<head>
+-    <title>John Adams Poem</title>
+-    <link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
++<head><title>John Adams Poem</title>
++<link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
+ </head>
+-
+ <style type="text/css">
+     body {
++        background-image:  url(../../../gifs/stars2.gif);
+         white-space: pre-wrap;
+-        margin: auto; text-align: center;
++        margin: auto;
+         text-align: center;
+-        background-image:  url(../gif/stars2.gif);
+         color: white;
+         font-family: "Lucida Console", monospace;
+-        text-shadow: blue;
+-        width: 1000px;
+     }
+ </style>
+ 
+diff --git a/writing/writings/high/Babylon.html b/writing/writings/high/Babylon.html
+new file mode 100644
+index 0000000..9caab00
+--- /dev/null
++++ b/writing/writings/high/Babylon.html
+@@ -0,0 +1,74 @@
++<head>
++<title>By the Waters of Babylon: The Reawakening</title>
++<link rel='icon' type='image/x-icon' href='../../../shared/ico/favicon.ico'>
++<style type="text/css">
++    body {
++        background-image:  url(../../../gifs/stars2.gif); 
++        color: white; font-family: "Lucida Console", monospace;
++        white-space: pre-wrap;
++        margin: auto;
++        text-shadow: blue;
++        width: 900px;
++    }
++    div { text-align: center }
++    
++</style>
++</head>
++<!-- English 3-4, 3rd Period, Ms. Berger 9-20-12 -->
++<body>
++<div><h1>By The Waters of Babylon: The Reawakening</h1><h3>(An unofficial sequel to Stephen Vincent Benét’s “By the Waters of Babylon”)</h3>
++    <img src="../../gifs/liberty.gif"></img>
++</div>
++    <i>We must build again.</i>
++
++    This is what I have said, but my people did not listen. They did not listen because they did not hear. They did not hear because I did not say it to them. I said it to myself, over and over. I knew it to be true.
++    I also said it to my father, but he too did not listen. He did not listen to anything I had to say about the Dead Places, not anymore. He did listen once, but then he became stubborn, like a great boulder. He told me to wait.
++    I had waited for too long since I returned. The seconds turned to minutes, the minutes to half-hours, and the half-hours to years. My impatience burned in me like a great sun. Time passed slowly, like a snail moving along the ground. Each moment lost filled me with regret.
++    Even among my own people I couldn’t be at ease. Whenever I looked into their faces, all I saw was their ignorance. Their ignorance was like the ignorance of a tree branch. Deep down, though, I knew it was not their ignorance that troubled me. It was my own.
++    I knew there was so much more to learn from the Dead Places! In the night- I was tortured by my dreams. I wondered about the magic of the ancient people and what had become of them. There was a craving for knowledge inside of me, like a tree inside of a forest.
++    
++    <i>We must build again.</i>
++
++    This is what I have said, over and over. But, as the ancient proverb of my people goes, “He talks the talk, and yet he does not walk the walk.”  I had talked the talk. Now it was my time to walk the walk.
++    I left my home late in the night, drawn by fate to the Dead Places. I had thought when this day came I would be accompanied by my father and my people. This made me sad as I walked into the moonlight.
++    The journey was long and hard. I walked on and on, through fields, forests, and streams, over mountains, under clouds. The hot blue sun beat down upon me. In the night I slept with the birds, with the deer, with the fishes. I felt the earth. I heard the voices of the ancient people, singing, calling.
++    But when I finally came to the great river, everything fell silent. I felt nothing- no fear, no wonder, no revelations. I walked down the dark dead streets, but everything seemed empty. I wanted to find the statue of ASHING; to see a familiar face in the old city. I couldn’t find my way. Everything was ashes. I felt sick. I had forgotten why I even returned, I had forgotten what I was looking for. I ran to the shores of the great river and cried. There were no answers for me.
++    
++    Then I saw her.
++
++    She was waist deep in the great river, off in the distant waters. She wore a beautiful long robe and a crown. I was drawn to her- I swam through the water, splashing and coughing, until I reached her. She towered above me. Her right arm was raised into the sky, and her left hand held a giant book of stone. On it was the word “JULY.”  Perhaps that was her name. I climbed into her arms and slept peacefully for the night.
++    I was reawakened the next morning by a piercing cry. Then I looked down, and to my surprise, there was a man in the water! He looked at me and shrieked again, this time making strange gurgling noises. I saw him more closely and gasped- his skin was gray, his eyes were pale, and his neck were flaps! I remembered, long ago, my grandfather John had told me stories of the gray men with pale eyes. I had never believed them to be true, nor, I thought, did he. Nevertheless, more and more of the creatures began appearing in the water. They were all of different sizes and colors; yet somehow they all looked the same to me. They spoke to me in their strange tongue, but I understood nothing. Suddenly silence fell as the wrinkliest creature floated to the front of the crowd, and to my surprise, opened his mouth and spoke to me.
++    “Hello, hello, hello,” he said in a wet, gurgling voice. Another creature began making furious clicks and gasps, as if translating for the crowd. “We have no violent feelings for you, human female.”
++    I was shocked this creature spoke my tongue, even if he spoke it poorly. “Who are you?” I asked.
++    He squinted his milky eyes, trying to find the right words. “Many sorries, my english language is not groovy,” he said finally. “We are people, the people men. Our homes live under this large fluid pool. We nutritionally enhance myself through the chowdowning upon three eyed squishes.”  He blinked, then shook his head, water flying out his nose. “No, no, no. Fishes, not squishes! Many apologies accepted.”
++    I was swimming in questions, I was unsure where to begin. “How long have you lived in this river?”  I asked.
++    “Very much long distance,” he said. “We is the continued loinfruit of our ancesterhood, who are, semthelves, survivors from the Great Burning.”
++    The Great Burning! I felt a surge of hope. Perhaps these creatures could tell me the secrets I had been waiting years to know!
++    “What is the Great Burning?  Is it the reason the city is empty and the people are dead?”
++    Liquid trickled out of the creature's cheek. “Indeed, señorita. Long time gone back, there was big fightings betwixt peoples. The gray men of underwaterland made wartimes with the humans of overwaterland, and versa vice. Soon we having Great Burning, causes a Great Barbecuing of everypeople! Horribubbly, terribubbly, nasty, nasty, nasty!”  The creature vomited into the water in disgust. 
++    Stunned, I sat back and looked out at the beautiful city. I felt sick as I thought of its many tragedies.
++    "Why," I asked, "why on Earth did they need to fight each other?"
++    "Ah, my child, my homeboy. Speak not of Earth."
++    I was confused. "Why should I not speak of Earth?  It is where we all live."
++    The man flushed a dark gray color. "Your tongue twists flippantly, amigo!" hissed the man. "Make your screechings, irregardless, thou shalt not call our land Earth!"
++    "What!" I cried. I was angry now. "You talk of nonsense, of course this land is Earth!"
++    
++    <i>"He speaks the truth, John."</i>
++    
++    I looked to the sky. Floating towards me was a tall figure. He seemed familiar to me.
++    "Hello, John. My name is George Washington."
++    I realized where I had seen him before. It was ASHING, the man with hair like a woman.
++    "You probably are very confused. Don't worry, I'm going to explain everything, in due time."
++    I hadn't even realized it, but as he had floated toward me, I had floated towards him. We were now floating together, above the clouds.
++    "I'm sorry, John, but this planet is not Earth."
++    The blue sun was shining brilliantly now. Earth. I had always been told that Earth was my home. I looked down at the green hills and trees and cried.
++    "You see, the real Earth is many millions of lightyears away. A long time ago, that Earth was the home of humanity. But then, a large alien corporation of crab people decided your planet was perfect for their newest business venture. They wanted to exterminate your species, but, under pressure from various crab people environmental organizations, they decided to move the entirety of Earth's ecosystem to the nearest planet that could sustain your life. The problem was, when they moved everything on the new planet, they didn't understand the importance of putting things where things went. You saw yourself, the Statue of Liberty wound up in the Hudson River. But even New York, in its ruined state, was not nearly as bad as the rest of the world. Ecosystems went completely out of whack. Countries were stacked on top of each other. Those who didn’t die within the first few weeks suffered massive delirium. But perhaps the worst part, as you've seen, was that the planet was already occupied. The home of these innocent native gray water creatures were practically erased by the arrival of the humans. Much to their annoyance, these humans still called the planet Earth out of homesickness. Wars over every conflict imaginable broke out and went on for centuries, until there were not enough people left to fight them. These people drifted off into small tribes, each developing their own mythologies on the origins of the societies in which they found themselves. It's all very regrettable, but it's clear that the only people who should really be held responsible for this whole messy affair are the crab people."
++    I felt the weight of the reality of the universe upon me; it was unbearable. The sun was changing colors, and it horrified me. Then came thunder. I was falling, and I saw everything around me as it was. There was a loud ringing in my ears. I felt a sharp jolt, and I opened my eyes. Lightness and darkness dissolved around me, and I heard a distant, familiar voice calling me.
++
++    <i>“Wake up, Billy!”</i>
++
++    I sat straight up in my bed, and turned off my alarm clock. “Holy cow!” I cried. “Mommy, I just had the most amazing dream!”
++
++
++    
++</body>
+\ No newline at end of file
+diff --git a/writing/writings/high/Da-Vinci-Code-Poem.html b/writing/writings/high/Da-Vinci-Code-Poem.html
+new file mode 100644
+index 0000000..39d3582
+--- /dev/null
++++ b/writing/writings/high/Da-Vinci-Code-Poem.html
+@@ -0,0 +1,100 @@
++<head>
++    <title>Da Vinci Code Poem</title>
++    <link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
++    <style type="text/css">
++        body {
++            background-image:  url(../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
++            white-space: pre-wrap;
++            margin: auto;
++            text-shadow: blue;
++            width: 1000px;
++        }
++    </style>
++</head>
++<body>
++<h1>Da Vinci Code Poem</h1>
++
++It's late one night in the Louvre Museum
++
++When the air is pierced by piercing scream.
++The curator, named Jacques Sauniére,
++Stares a strange man standing there:
++He's a shrewd looking dude who is also kinda mean
++With a bad attitude and an M-16.
++Everything is good until he shot him spline.
++Jacques is pretty screwed, and the dude fled the scene.
++Jacques is on the ground, blood leaking from his pores,
++So he looks around for something on the floor.
++There is nothing to be found but an old apple core.
++The situation is getting dire, when his eyes light up with fire...
++He tries to be clever, and for no reason whatsoever,
++His endeavor to confuzzle, he writes down a word puzzle.
++The next day he was found, laying dead on the ground.
++The police looked around, but all that they found
++Was a note on the ground.  The mysterious note
++Made no sense, and I quote:
++"O, draconian devil!  Oh, lame saint!"
++Unquote.
++But you'll never guess, the police had no cleverness.
++They knew that he wrote it, but they couldn't decode it.
++So they hire a symbologist, his name is Robert Langdon,
++And a professional cryptologist named Sophie Neveu.
++The message was confusing so they kinda left it hangin',
++They'd never seen something that random befo'.
++They're about to take up golf and go on a vacation
++When Robert Langdon has a revelation:
++"O, draconian devil!" and "Oh, lame saint!"
++The letters seem random, but really they ain't.
++When they are rearranged, there's a big change.
++He does it in a pinch, he has mad puzzle skillage,
++And it spells out "Leonardo da Vinci" and "The Mona Lisa."
++So he's feeling pretty good about his new discovery
++When a policeman walked up to him and says rather gruffly,
++"You're arrested for murdering Jacques Sauniére."
++Robert Langdon replies, "Get out of here!
++That's really lame, is this some kind of game?"
++The policeman said, "No man, you just got framed."
++So he is framed for a crime that he didn't commit
++Instead of whoever really did it.
++He feels he is at the end of wits,
++To sum it all up: he's in some pretty deep shizz.
++Well it sucks so bad he says "D'oh!"
++When for some strange reason we shall never know,
++Out of the shadows jumps Sophie Neveu!
++They jump in a smart car and away they go.
++So they drive all day, chased by the cops,
++Solving puzzles on the way, oh the fun it never stops.
++It's a puzzle trail, which was planted there
++By the old and frail Jacques Sauniére.
++But he wasn't alone, No, that we ain't buyin'...
++He's in a group which is known as the "Priory of Sion."
++They realize that these puzzles are more important than they thought,
++And there will be dire consequences if and when they're caught.
++The Priory of Sion has planted a trail
++To lead them directly to the holy grail!
++The grail contains a secret of biblical proportions
++More controversial than gay marriage or abortions!
++They need to know the entire story, and
++So they go to the home of a holy grail historian.
++Many essays he has written, he lives in Great Britain,
++Leigh Teabing is his name, the holy grail is his game.
++"The holy grail," he says, "is not a glowing golden cup.
++That rumor is a mess.  Some guy just made it up."
++He then tells them, no shizz, what the grail really is...
++"There's a very old secret, from the day of Jesus.
++Which if uncovered would spread like bad diseases.
++It's been the church's secret for thousands of years,
++But I've figured it all out.  All the evidence is here.
++I've said it once, and I'll say it again:
++Jesus had kids with Mary Magdalene!
++So the grail, according to this theory of mine,
++Is the woman who continued the Jesus bloodline.
++In Leonardo's panting, which is called 'The Last Supper'
++There should be the holy grail, Christ's symbolic golden cup.
++Although there's none, there is someone who's sitting next to him:
++And who is it?  You'll never guess:  It's Mary Magdalene."
++
++They then go on adventures with their new, and British friend.
++I'd tell you more but I don't really want to spoil the end.
++
++</body>
+\ No newline at end of file
+diff --git a/writing/writings/high/Disilluminated-Poem.html b/writing/writings/high/Disilluminated-Poem.html
+new file mode 100644
+index 0000000..f7a59f6
+--- /dev/null
++++ b/writing/writings/high/Disilluminated-Poem.html
+@@ -0,0 +1,27 @@
++<head><title>Disilluminated Poem</title>
++<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
++<style type="text/css">
++body { background-image:  url(../gifs/stars2.gif);  color: white; font-family: "Lucida Console", monospace;
++    white-space: pre-wrap; margin: auto; text-align: center; text-align: left; width: 900px;
++}
++.letter { font-size: 35 }
++</style>
++</head>
++
++<!-- 7th or 8th grade -->
++<h1 style="text-align: center;">
++Disilluminated Poem<br>
++<img src="gif/cross.gif">
++</h1>
++<b class="letter">T</b> he king will rule until he dies, he deserves all his riches and fame,
++<b class="letter">H</b> is right to rule was given by Christ, so we can kill to defend his name.
++<b class="letter">E</b> veryone works like mules, so the king can eat a feast,
++
++
++<b class="letter">C</b> hrist still approves of his right to rule, just as long as he's paying the priests.
++<b class="letter">H</b> e could murder people all day long, slay civilians with his sword,
++<b class="letter">U</b> ndoubtedly, he's done no wrong, for it's all in the name of the Lord.
++<b class="letter">R</b> emember the church and all its done, it will never lead you astray,
++<b class="letter">C</b> hrist's word is the only one, and the church will tell you what he means to say.
++<b class="letter">H</b> oly days! The poem's almost over and I haven't used any vocabulary words! I hope I'm not excommunicated from class for this! Well, I'd like to thank Pope Gregory VII, Thomas Aquinas, and Henry IV for making this all possible. This poem was made at Winterhaven University, in Ms. Schumann's cathedral. I hope you've had a pilgrimage and a salvation of a good time!
++<br><br><br>
+\ No newline at end of file
+diff --git a/writing/Fruit-Flies.html b/writing/writings/high/Fruit-Flies.html
+similarity index 97%
+rename from writing/Fruit-Flies.html
+rename to writing/writings/high/Fruit-Flies.html
+index 0fc79c5..035a016 100644
+--- a/writing/Fruit-Flies.html
++++ b/writing/writings/high/Fruit-Flies.html
+@@ -1,19 +1,16 @@
+ <head>
+-    <title>Fruit Flies</title>
+-    <link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
+-</head>
+-
++<title>Fruit Flies</title>
++<link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
+ <style type="text/css">
+     body {
++        background-image:  url(../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
+         white-space: pre-wrap;
+         margin: auto; 
+-        background-image:  url(../gif/stars2.gif);
+-        color: white;
+-        font-family: "Lucida Console", monospace;
+         text-shadow: blue;
+         width: 1000px;
+     }
+ </style>
++</head>
+ <!-- 3/5/2015 -->
+ <div style="text-align: center;">
+     <h1>Fruit Flies</h1>
+diff --git a/writing/great-apes.html b/writing/writings/high/Great-Apes.html
+similarity index 79%
+rename from writing/great-apes.html
+rename to writing/writings/high/Great-Apes.html
+index a951a4f..91bd439 100644
+--- a/writing/great-apes.html
++++ b/writing/writings/high/Great-Apes.html
+@@ -1,27 +1,20 @@
+ <!DOCTYPE html>
+-<head>
+-    <title>Great Apes</title>
+-    <link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
+-</head>
++<head><title>Great Apes</title>
++<link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
+ <style type="text/css">
+     body {
+-        background-image:  url(../gif/stars2.gif);
+-        color: white;
+-        font-family: "Lucida Console", monospace;
++        background-image:  url(../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
+         white-space: pre-wrap;
+         margin: auto; 
+         text-align: center;
+         width: 700px;
+     }
+-
+-    #home {
+-        :hover {  filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }
+-    }
++    #home { :hover {  filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }}
+ </style>
+-<br>
+-<a href="../index.html?writing" id="home"><img src="../shared/earth.gif"></a>
+-<h1>Great Apes</h1>
+-<img src="gif/monkey.gif">
++</head>
++<body><!-- <a href="../index.html?writing" id="home"><img src="../gifs/earth.gif"></a> -->
++<h1>Great Apes</h1><img src="gifs/monkey.gif">
++
+ <div>
+ Great apes ate grapes,
+ Grapes great apes ate.
+@@ -33,7 +26,6 @@ Lady apes ate eighty-eight grapes!
+ Eighty-eight grapes lady apes ate?
+ Taste of grapes great apes rate way-great!
+ 
+-
+ Grayness is a trait of great apes,
+ Shape of great apes are great gray shapes.
+ Grayest great apes are great gay apes,  
+@@ -78,4 +70,6 @@ Great apes bake the Nate-Gates-grapes crepes.
+ Great apes taste crepes... tasty, great crepes!
+ 
+ </div>
+-<br><br>
+\ No newline at end of file
++<br><br>
++
++</body>
+\ No newline at end of file
+diff --git a/writing/writings/high/Mr-Oates.html b/writing/writings/high/Mr-Oates.html
+new file mode 100644
+index 0000000..c230c9e
+--- /dev/null
++++ b/writing/writings/high/Mr-Oates.html
+@@ -0,0 +1,42 @@
++<head><title>Disilluminated Poem</title>
++<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
++<style type="text/css">
++    body { background-image: url(../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
++        white-space: pre-wrap; margin: auto; text-align: center; text-align: left; width: 900px;
++    }
++    h1, img { margin: auto;}
++</style>
++</head>
++<!-- Berger, English 3-4: Period III, 2 November 2012 -->
++<body>
++<div style="text-align: center;">
++    <h1>Mister Oates</h1>
++
++    <i>A long time ago, a young man went on a game show. The show was sponsored by a large oatmeal company known as Amish Oats, and although the man was chosen mainly because his last name was Oates, he miraculously went on to win the show’s top prize. He was awarded a lifetime supply of instant oatmeal, which was to be delivered to him once a month by the Amish Oats Oatmobile. He was overjoyed, but nobody realized the horrific consequences that would stem from that day.</i>
++    
++    <img src="gifs/lightning.gif">
++</div>
++
++    Bitter winds howl in the cold black night. Rain pours from the sky and runs down a dusty hill, creating a filthy mud slide, dampening the prickly grass. A gravel road climbs the hill to its crooked peak. Here there sits a gigantic, ramshackle mansion, rattled by wind and ravaged by time. Weeds grow inside its crumbling walls, spiders crawl under its broken floorboards, and everything is consumed by a horrifying blackness. Although he can barely be seen, at the heart of this dark mansion sits an old man, even more ancient and decrepit than the mansion itself. A flash of lightning briefly illuminates his wrinkled face. This man is Mister Oates.
++    Tonight Mister Oates can be found sitting alone in his dining room, eating oatmeal by candlelight. As he eats, he glances out the window. Where’s the Oatmobile? He grits his teeth in frustration. The Oatmobile is now three days late. It’s never been this late before, he realizes, panicked, oatmeal dribbling down his chin onto his black bathrobe. Although he’s very pudgy, his face is long and gaunt, and his crazy eyes glimmer in the darkness. Over the years, his repeated consumption of the bland breakfast food has deteriorated his mind, driving him to depression, isolation, and an intense hatred of all other foods.
++    He finishes his oatmeal, and there is a loud thunderclap.
++    “GET IN HERE, BOY!”
++    His voice is raspy and slurred, but sure enough, a sickly old dog, whose diet also consists entirely of oatmeal, scurries into the room.
++    “See this?” barks Mister Oates, picking up the empty bowl. “This is the last of the oatmeal!” He flings the bowl at his dog and begins pacing furiously, tugging at his white hair. Finally, he hobbles over to the front door and throws it open.
++    “I MADE A DEAL WITH YOU,” he howls into the wind, his face immediately stung by rain. “WHERE IS MY OATMEAL, YOU BASTARDS!”
++    He looks down the barren hill to the distant town below. Suddenly, a horrible thought crosses his mind. They must be trying to starve me! He feels a sinking in his stomach and a rising in his throat. They want me dead. He stumbles back into the mansion, tears in his eyes. Already he is craving oatmeal. The candle has been extinguished by the wind and everything is dark, but he can make out the shape of his dog sleeping on the ground. Although it is mostly skin and bones, he notices it has a very round stomach. His panic is replaced with maniacal desire. He pulls a kitchen knife out of his bathrobe pocket. I’ll get my oatmeal, he thinks, grinning to himself, even if I have to cut it out of you!
++    He lunges at his dog, pins it to the floor, and starts cutting into its stomach. It lets out a loud yelp and wriggles free. It runs off and starts climbing a spiral staircase, limping slightly.
++    “Come back, boy!” cries Mister Oates. He follows the terrified dog up the staircase into blackness, knife in hand. “I don’t bite,” he mutters under his breath as he stumbles after it, brushing away cobwebs, blind to all except the sound of whimpers and the smell of blood. His breath grows ragged, and his mouth waters at the thought of oatmeal as he climbs the darkened staircase ever higher.
++    Finally he bursts outside onto a rickety old balcony, over fifty feet above the ground. His dog is lying curled up in a bloody heap. Rain crashes down upon them both. He grabs the dog by its neck, about to cut it open, when he hears the familiar sound of gravel crunching in the distance. He looks down and sees a beige van driving up the hill. The Oatmobile. It pulls up to the mansion, and a young man steps out.
++    Mister Oates is purple in the face with rage. He tightens his grip on his dog, and then throws it down the staircase in frustration.
++    “AAAAARRRRRGGGGGHHHHH!” he screams down at the man.
++    The man looks around to find the source of the noise, then spots Mister Oates high up on the balcony. “Excuse me, are you Mister Oates?"
++    “YES I’M MISTER OATES, YOU DEGENERENT HELLSPAWN! MY OATMEAL IS THREE DAYS LATE!”
++    “I’m very sorry, sir, it won’t happen again.”
++    “Do you realize,” seethes Mister Oates, visibly shaking with hatred, “that I nearly killed my dog because of you?”
++    “I’m sorry, sir. Could you please speak up a little?”
++    “I WILL HAVE YOUR HEAD, BOY!” he screams as he leans over the balcony. He’s about to say something else, but the rickety balcony suddenly crumbles beneath him. He scrambles to grab onto something, but it is too late. He falls, kicking and screaming, towards the hard ground below, and smashes into it with surprising force. Chunks of his body fly off in all directions, his frail bones shatter, and his innards splatter everywhere. The mansion, as well as the poor delivery man, are now covered in bits of Mister Oates.
++    The delivery man stands in shock for a few seconds. A dog barks in the distance. “Gross,” he says finally, stumbling backwards, his face covered in the thick gunk. He wipes it off and is surprised to find that it is gray in color and mealy in consistency. Against his better judgement, he leans forward and licks some of it off his hand.
++    “Well I’ll be darned,” he cries. “It’s oatmeal!”
++    <br><br>
++</body>
+\ No newline at end of file
+diff --git a/writing/writings/middle/How-To.html b/writing/writings/middle/How-To.html
+new file mode 100644
+index 0000000..566a346
+--- /dev/null
++++ b/writing/writings/middle/How-To.html
+@@ -0,0 +1,24 @@
++<head>
++  <title>Fruit Flies</title>
++  <link rel='icon' type='image/x-icon' href='../../../shared/ico/favicon.ico'>
++  <style type="text/css">
++    body {
++      background-image: url(../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
++      white-space: pre-wrap;
++      margin: auto; 
++      text-shadow: blue;
++      width: 1000px;
++    }
++
++    h1 { text-align: center;}
++  </style>
++</head>
++<body>
++<h1>How to Write a How To Essay</h1>
++<img src="../../gifs/">
++    How do you start an expository essay? Often, you will want to start out by asking a question to involve your reader. The first paragraph is your introduction. It basically just gives the reader a generalization of what's going to happen over the course of the essay.
++    Next, you have to write three or more detailed paragraphs about your topic. Each of these should have at least five sentences: Your introduction sentence, three or more detailed sentences, and a concluding sentence. If you want to make your essay more confusing but get better grades, you can also use idioms. But make sure they are well-integrated into your essay. Don't just add an idiom randomly into your essay or you will look like a stick in the mud. Don't go overboard with idioms: They are just meant to be the icing on the cake, not the pie in the sky. In fact, if you turn a blind eye to overdoing idioms, you'll wind up up a blind alley, and you just might kick the bucket.
++    Also, if you would rather get good grades than a good essay, use words that start with the same letter to make them stand out. Now, consider this: Also use transition words.
++    Next, you need to write the third paragraph. But sometimes your topic isn't broad enough to fill another paragraph. In this case, you might want to stall. Stalling can be done in many ways: Randomness, redundancy, and redundancy. They all work, but if you want good grades, just list off a bunch of idioms and transition words.
++    Last but not least, now that you've learned about the first four paragraphs, you can learn about the last one- the conclusion. It's where you address different concepts that have appeared throughout the essay. It also includes the thesis... Hope you've learned a little more about the ancient and interesting art of the expository essay!
++</body>
+diff --git a/writing/josh-hauser.html b/writing/writings/middle/Josh-Hauser.html
+similarity index 93%
+rename from writing/josh-hauser.html
+rename to writing/writings/middle/Josh-Hauser.html
+index 3143fca..7a9ecfd 100644
+--- a/writing/josh-hauser.html
++++ b/writing/writings/middle/Josh-Hauser.html
+@@ -1,20 +1,17 @@
+ <head>
+-    <title>Fruit Flies</title>
+-    <link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
+-</head>
+-
++<title>Josh Hauser</title>
++<link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
+ <style type="text/css">
+     body {
++        background-image:  url(../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
+         white-space: pre-wrap;
+         margin: auto; text-align: center;
+         text-align: center;
+-        background-image:  url(../gif/stars2.gif);
+-        color: white;
+-        font-family: "Lucida Console", monospace;
+         text-shadow: blue;
+         width: 1000px;
+     }
+ </style>
++</head>
+ 
+ <!-- 7th or 8th grade -->
+ <br>
+diff --git a/writing/writings/middle/Ms-Knottethin.html b/writing/writings/middle/Ms-Knottethin.html
+new file mode 100644
+index 0000000..42816ad
+--- /dev/null
++++ b/writing/writings/middle/Ms-Knottethin.html
+@@ -0,0 +1,217 @@
++<head>
++    <title>By the Waters of Babylon: The Reawakening</title>
++    <link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
++    <style type="text/css">
++    body { 
++        background-image:  url(../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
++        white-space: pre-wrap;
++        margin: auto;
++        text-align: center;
++        text-shadow: blue;
++        width: 1000px;
++    }
++    h1 { text-align: center;}
++    </style>
++</head>
++<body>
++<h1>Ms. Knottethin</h1>
++
++In a land faraway, in a school known as Watson,
++There was an old teacher whose name was Ms. Knottethin.
++Ms. Knottethin was drunk on tyrannical power,
++She’d glower sourly down every day, every hour.
++She banned lunch, ‘cause she said there were too many calories,
++And then she complained ‘bout her very small salary.
++We thought she was mean because of her dog Malorie
++Who she accidentally shot in an old shooting gallery.
++
++
++She gave us all homework, more than we could bare.
++But then she didn’t grade it, she just didn’t care.
++If you want to get in trouble, ask her ‘bout her hair.
++We dare you.  There hardly is anything there.
++She said she had cancer, but that was a lie.
++Although that would be cool, because then she would die.
++We knew she rubbed ointment into her bald scalp
++Because every morning it smelled of sea kelp.
++Ms. Knottethin’s a soul-sucking, child-eating leech
++How did she acquire a license to teach?
++
++
++One morning, Ms. Knottethin walked into the class,
++All of us recoiled, disgusted, aghast.
++Afraid that our next word may well be our last,
++We shut up up our mouths, and we shut ‘em up fast.
++Ms. Knottethin had quite a sour look on her face,
++Like she just had been sprayed with cat urine and mace.
++Then she said, her expression turning even scarier,
++“Shut your fat pie-holes and sit on your derriere!
++Alrighty.  Now listen up closely you fools,
++I have to announce some of our new class rules.
++For budget cut reasons, we’re quite low on dough.
++And as a result, some things just must go.”
++(We knew that she was lying about the new cuts,
++But said nothing, for fear she would rip out our guts.
++She probably kept all the cash for herself,
++And spent it on hair products, like Kream of Kelp.)
++“Pay attention!” she snapped, “And sit in your seat!
++As I was just saying, some ends do not meet.
++One example is that we’ve lost funding for recess.”
++<i>What the heck?</i> we all thought, our hearts torn to pieces.
++
++
++“The good news is that instead of having fun,
++There are many more things that need to be done.”
++<i>How could this be worse?</i> we thought, right as she said,
++“We’ll be learning American history instead!
++So although there’s no money for running or playing,
++We still will have fun.  Now as I was saying,
++We’re quite low on money, so I am applying
++Some new sort of... taxes.  Now Jimmy, stop crying!
++It’s really quite simple, I think you’ll agree.
++Just, whenever you do certain things, you’ll pay me!
++For instance, whenever you sharpen a pencil,
++Or use the hole puncher, or borrow a stencil,
++Raise your hand, use my paper or run in the halls
++Use the bathroom, use duck tape or lean on the walls,
++Depending upon the offense you commit,
++You will owe either one or two dollars.  Got it?
++Good!  I think that makes sense.  After all, it’s my stuff.”
++<i>How stupid!</i> we thought. This has gone far enough.
++Her logical basis is quite a disgrace.
++The stuff is paid for by taxes in the first place!
++It’s not hers to tax, and her case isn’t helped
++By the fact that she’s keeping the cash for herself.
++Then we heard her say something that should be a crime,
++“Hey kids! It’s American history time!”
++
++
++The movie we’ll see’s called 1776,
++We’ll watch it five times to make sure that it sticks.
++Your notes should be no less than ten pages long,
++And if pages are missing, you’ll be marked as wrong.
++I won’t actually read them, there’s too many pages,
++But I mean who can blame me, considering my wages.
++And I almost forgot, for the paper, you’ll pay
++Me ten dollars each at the end of the day.”
++The movie began while we sat in the classroom
++And she shuffled off and locked herself in the bathroom.
++We think that she smokes, behind that locked door,
++As cigarette butts always litter the floor.
++None of us knew just what else she did there,
++Probably more sad attempts at regrowing her hair.
++
++
++The history class was really a joke.
++It was just an excuse for Ms. Knottethin to smoke.
++While we sat their and suffered, and scribbled away,
++She was having a carefree and average day.
++Since Ms. Knottethin was teacher, nothing had been learned.
++The boredom had gotten so painful it burned.
++We’d put up with her now for just over two years,
++And this new history class just affirmed all our fears.
++These new changes she’d made were the very last straw.
++No recess? More taxes? She’s breaking the law.
++After school we assembled to discuss the matter.
++“We must rebel!” rose a cry from the chatter.
++“No!” rose another. “That would just be wrong!”
++“So what do we care?” cried a boy who’s named Tom.
++“We’ve had to put up with Ms. Knottethin too long.”
++“Yeah!” came a reply from the large grumbling throng.
++“We must take a stand. These taxes are wrong!
++We will form a rebellion, together we’re strong!”
++
++
++“I don’t like it!” said Tim. “This causes me fright!
++Ms. Knottethin is teacher. She has to be right!”
++“Even teachers have problems,” Tom said with a frown.
++“And we’re one of hers, so now she’s going down!”
++“But we’ll get in big trouble,” another exclaimed.
++“When she’s through with us, we may well end up maimed.”
++“What are you, British?” he said. “Go drink some tea!”
++“But why must we be rash? We can ask her nicely!”
++“You very well know that won’t work,” Tom then said.
++“You can feel free to ask her. You will end up dead.
++As for us, we’ll do something that really might work.
++And if you don’t like it, then beat it, you jerk.
++I have an idea that will make her pay,
++And show her what we must go through every day...”
++
++
++The very next morning, the class showed up early.
++Ms. Knottethin sat at her desk looking pissed off and surly.
++“What are you doing here?!?” she exclaimed when they entered.
++She looked somewhat tired and slightly off-center.
++“We just wanted to you show this thing in my palm,”
++Said a visibly scared but determined young Tom.
++He then smothered her face with a chloroform-cloth.
++Ms. Knottethin went out like a light, the old sloth.
++
++
++When Ms. Knottethin awoke, all the children were there,
++Then she found she was gagged and duck-taped to a chair.
++“MMF! MMF!” said Ms. Knottethin, and Tom said, “Okay,
++Let’s see what our dear teacher has got to say.”
++Tom then ripped the duck tape off of her hairy lips,
++Which caused quite a loud, painful, and heart-wrenching RIP!
++“YOU DUMB LITTLE RATS!” Ms. Knottethin then hollered.
++“YOU’RE USING MY DUCK TAPE! YOU OWE ME TWO DOLLARS!”
++“Okay shut her back up, let’s get on with our plot.
++Ms. Knottethin, for you things ain’t looking so hot.”
++“I do not approve of their actions,” said Tim.
++But honestly nobody cared about him.
++“We’ve been thinking it’s time you got what you deserved,
++For being so mean. It just gets on our nerves.
++
++
++And we have decided upon a solution:
++There’s a marathon on the American Revolution.
++It’s plays all day long on the History Channel,
++Documentaries all about history’s annals.
++With your head taped in place, you cannot look away.
++Now, you’ll get to watch boring history shows the whole day!
++And you’ll finally know what you made us go through,
++When you make us do all of the things that we do.
++While we could have been learning or playing or making,
++We’ve been sitting in here, our backs bent and heads aching.
++You’ve taken our lives, Ms. Knottethin, it’s true.
++Years we’ll never get back, and it’s all ‘cause of you.
++Six hours a day, times two hundred a year,
++Times two years that you’ve wasted, Ms. Knottethin. Oh dear.
++Oh, I almost forgot, times thirty of us.
++If you’d taught us some math, I’d know how much that was.
++But I still think I know, it’s a gosh-awful lot.
++So if you think that we’re being unfair, well, we’re not.”
++
++
++So the whole class then left to go play in the sun,
++While Ms. Knottethin suffered, they all could have fun.
++Even from outside they all heard cries and moans,
++The screams were so loud that they rattled their bones
++But all the commotion was still a-okay
++Because all of the children felt happy and gay.
++There would be no more days of sitting in class,
++They could all say goodbye to being harassed.
++When they came in they saw two white lumps on the floor.
++“I don’t think Ms. Knottethin will see anymore.”
++“Maybe we shouldn't have taped her eyes open so tight,
++I think they dried up and that isn’t quite right.
++Besides, I think she’s passed out from exhaustion.”
++So they packaged her up and mailed her to Boston!
++And that was the end of the old unfit gentry
++That one fateful day at Watson, Elementary.
++
++
++•••••••••••••••
++
++
++The moral of the tale is, I think there’s no doubt:
++If you don’t like your teacher, feel free to act out.
++If whatever you say is ignored or is silenced,
++When your words just don’t work, then you’ll have to use violence.
++Remember that actions speak louder words,
++And the world’s always full of more King George the Third’s.
++
++
++
++</body>
+\ No newline at end of file
+diff --git a/writing/writings/middle/Newport-Field-Trip-Haikus.html b/writing/writings/middle/Newport-Field-Trip-Haikus.html
+new file mode 100644
+index 0000000..6677475
+--- /dev/null
++++ b/writing/writings/middle/Newport-Field-Trip-Haikus.html
+@@ -0,0 +1,35 @@
++<head><title>Newport Field Trip Haikus</title><link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
++
++<style type="text/css">
++body { background-image:  url(../../../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
++    white-space: pre-wrap;
++    margin: auto;
++    text-align: center;
++    width: 1000px;
++}
++</style>
++</head>
++
++
++<!-- 6th Grade -->
++<br>
++<h1 style="text-align: center;">Newport Trip Haikus</h1>
++
++<h3>Breakfast</h3>
++Lots of cereal 
++One small muffin per person 
++"Fresh fruit" from Safeway 
++<br>
++
++<h3>Lunch</h3>
++Subway sandwiches 
++But they're only 6 inches
++I want a footlong
++<br>
++
++<h3>Dinner</h3>
++Corn syruppy food 
++Glow in the dark Mac and Cheese 
++It smells like old beer
++
++<br><br><br>
+\ No newline at end of file
+diff --git a/writing/planet-limericks.html b/writing/writings/middle/Planet-Limericks.html
+similarity index 69%
+rename from writing/planet-limericks.html
+rename to writing/writings/middle/Planet-Limericks.html
+index a320b98..54bc1fa 100644
+--- a/writing/planet-limericks.html
++++ b/writing/writings/middle/Planet-Limericks.html
+@@ -1,27 +1,22 @@
+ <!DOCTYPE html>
+-<html lang='en'>
+ <head>
+     <title>Planet Limericks</title>
+-    <link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
++    <link rel='icon' type='image/x-icon' href='../../../shared/ico/favicon.ico'>
++    <style type="text/css">
++        body { background-image:  url(../../../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
++            white-space: pre-wrap;
++            margin: auto;
++            text-align: center;    
++            text-shadow: blue;
++            width: 1000px;
++        }
++    </style>
+ </head>
+ 
+-<style type="text/css">
+-    body {
+-        white-space: pre-wrap;
+-        margin: auto; text-align: center;
+-        text-align: center;
+-        background-image:  url(../gif/stars2.gif);
+-        color: white;
+-        font-family: "Lucida Console", monospace;
+-        text-shadow: blue;
+-        width: 1000px;
+-    }
+-</style>
+-
+ <!-- 3/5/2015 -->
+ <br>
+ <h1 style="text-align: center;">Planet Limericks</h1>
+-<img src="gif/planets/mercury2.gif">
++<img src="../../gifs/planets/mercury2.gif">
+ <b>Mercury</b><br>
+ There once was a planet called Mercury,
+ Which orbits the Sun rather jerkily.
+@@ -30,7 +25,7 @@ And aliens its got
+ So to go there we'll need good security.
+ <br>
+ 
+-<img src="gif/planets/venus2.gif">
++<img src="../../gifs/planets/venus2.gif">
+ <b>Venus</b><br>
+ There once was a planet called Venus,
+ But nothing rhymes with Venus.
+@@ -39,7 +34,7 @@ To think of a rhyme,
+ Maybe a word like -----?
+ <br>
+ 
+-<img src="gif/planets/earth3.gif">
++<img src="../../gifs/planets/earth3.gif">
+ <b>Earth</b><br>
+ There once was a planet called Earth,
+ Who’s screwed everything up since its birth.
+@@ -48,7 +43,7 @@ In a nuclear war
+ I guess that is all we are worth.
+ <br>
+ 
+-<img src="gif/planets/mars.gif">
++<img src="../../gifs/planets/mars.gif">
+ <b>Mars</b><br>
+ There once was a planet called Mars,
+ With a view of the stars. If our cars
+@@ -57,7 +52,7 @@ We can colonize there!
+ ...An alternative planet to ours.
+ <br>
+ 
+-<img src="gif/planets/jupiter.gif">
++<img src="../../gifs/planets/jupiter.gif">
+ <b>Jupiter</b><br>
+ "There once was a planet called Jupiter,
+ Where boys go to get much more stupider."
+@@ -66,7 +61,7 @@ All over the world
+ But whatever you do, don't you hit her.
+ <br>
+ 
+-<img src="gif/planets/saturn.gif">
++<img src="../../gifs/planets/saturn.gif">
+ <b>Saturn</b><br>
+ There once was a planet called Saturn,
+ Which has a cool hexagon pattern.
+@@ -75,7 +70,7 @@ I would question what for.
+ Because trust me, you wouldn't want that burn.
+ <br>
+ 
+-<img src="gif/planets/uranus.gif">
++<img src="../../gifs/planets/uranus.gif">
+ <b>Uranus</b><br>
+ There once was a planet called Uranus,
+ Which is blue with a slight hint of grayness.
+@@ -84,7 +79,7 @@ And it's full of hot gas,
+ So Uranus is thought of as heinous.
+ <br>
+ 
+-<img src="gif/planets/neptune.gif">
++<img src="../../gifs/planets/neptune.gif">
+ <b>Neptune</b><br>
+ There once was a planet called Neptune,
+ Which must orbit the sun, glow, and schlep moons.
+@@ -93,7 +88,7 @@ Making weather a beast.
+ So its climate may be out of step soon.
+ <br>
+ 
+-<img src="gif/planets/pluto.gif">
++<img src="../../gifs/planets/pluto.gif">
+ <b>Pluto</b><br>
+ There once was a "planet" called Pluto,
+ Which wasn't a planet but just followed suit-O.
+diff --git a/writing/shakespearean-friday.html b/writing/writings/middle/Shakespearean-Friday.html
+similarity index 92%
+rename from writing/shakespearean-friday.html
+rename to writing/writings/middle/Shakespearean-Friday.html
+index 9724001..f979b53 100644
+--- a/writing/shakespearean-friday.html
++++ b/writing/writings/middle/Shakespearean-Friday.html
+@@ -1,22 +1,16 @@
+ <!DOCTYPE html>
+-<html lang='en'>
+-<head>
+-    <title>Shakespearean Friday</title>
+-    <link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
+-</head>
+-
++<head><title>Shakespearean Friday</title>
++<link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'>
+ <style type="text/css">
+-    body {
+-        white-space: pre-wrap;
+-        margin: auto; text-align: center;
+-        text-align: left;
+-        background-image:  url(../gif/stars2.gif);
+-        color: white;
+-        font-family: "Lucida Console", monospace;
+-        text-shadow: blue;
+-        width: 1000px;
+-    }
++body { background-image:  url(../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
++   white-space: pre-wrap;
++   margin: auto; text-align: center;
++   text-align: left;
++   text-shadow: blue;
++   width: 1000px;
++}
+ </style>
++</head>
+ 
+ <!-- Ben Celsi LA-LM 8BC 4-28-11 -->
+ <br>
+diff --git a/writing/writings/middle/Zirconium.html b/writing/writings/middle/Zirconium.html
+new file mode 100644
+index 0000000..f6e9600
+--- /dev/null
++++ b/writing/writings/middle/Zirconium.html
+@@ -0,0 +1,32 @@
++<!DOCTYPE html><html lang='en'>
++<head><title>Zirconium</title><link rel='icon' type='image/x-icon' href='../shared/ico/favicon.ico'></head>
++<style type="text/css">
++body { background-image:  url(../gifs/stars2.gif); color: white; font-family: "Lucida Console", monospace;
++    white-space: pre-wrap;
++    margin: auto;
++    text-align: center;    
++    text-shadow: blue;
++    width: 1000px;
++}
++</style>
++<body>
++<h1>Zirconium</h1><img src="gifs/zirconium.gif">
++
++Zirconium, zirconium
++I don't know what to say to you
++You're an element with forty protons
++You're also kind of shiny, too
++You just sit there on the table
++Stuck between two others just like you
++Waiting dully, doing nothing
++Sad and lonely, tinted blue
++The periods, the rows and columns
++Group you in with all the others
++Nothing separates you from
++Your equally conformist brothers
++Slight differences, but none that matter
++Just a silver shiny rock
++Strange how little people care
++About a universal building block.
++</body>
++
