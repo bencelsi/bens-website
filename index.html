@@ -24,8 +24,9 @@ body {
 	text-align: center;
 }
 
-#header { filter: drop-shadow(0 0 2rem rgb(132, 0, 255)) }
+#header { filter: drop-shadow(0 0 2rem rgb(132, 0, 255));cursor: url(shared/cursor.png), auto; }
 #header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
+.website img { height: 30px; margin-top: 5px;}
 
 a { /* Turns off game icos */
 	text-decoration: none;
@@ -40,6 +41,7 @@ summary {
 }
 
 #tabMenu { display: inline-block; }
+
 #musicTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(200, 0, 255)); }
 #artTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(255, 0, 0)); }
 #gamesTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(0, 200, 55)); }
@@ -54,6 +56,7 @@ summary {
 #musicPage a { color: lavender; :hover { color: magenta; } }
 #writingPage a { color: lightyellow; :hover { color: yellow; } }
 #artPage a { color: pink; :hover { color: red; }
+
 	/* display: inline-block; margin: 30px; */ }
 #videoPage a { color: rgb(141, 204, 255); :hover { color: blue; }
 	display: inline-block; margin: 30px; }
@@ -79,8 +82,10 @@ a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 2
 <body><br>
 <div id="header">
 	<img src='gifs/letters/B1.gif'/><img src='gifs/letters/E1.gif'/><img src='gifs/letters/N1.gif'/>
-	<img src='gifs/letters/apostrophe2.gif'/><img src='gifs/letters/S1.gif'/>
-	<span><h3>W E B S I T E ! ! !</h3></span>
+	<img src='gifs/letters/apostrophe2.gif'/><img src='gifs/letters/S1.gif'/><br>
+	<div class="website">
+		<img src=gifs/letters/gold-w.gif><img src=gifs/letters/gold-e.gif><img src=gifs/letters/gold-b.gif><img src=gifs/letters/gold-s.gif><img src=gifs/letters/gold-i.gif><img src=gifs/letters/gold-t.gif><img src=gifs/letters/gold-e.gif> <img src=gifs/letters/exclamation2.gif style="height: 35px;">
+	</div>
 </div>
 <br>
 <!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
@@ -194,7 +199,7 @@ a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 2
 	</details><br><br>
 	<details><summary>Middle School</summary>
 		<a href="writing/writings/middle/Shakespearean-Friday.html"><h2>Shakespearean Friday</h2></a>
-		<a href="writing/writings/middle/Disilluminated-Poem.html"><h2>Disilluminated Poem</h2></a>
+		<a href="writing/writings/middle/The-Church.html"><h2>The Church</h2></a>
 		<a href="writing/writings/middle/Zirconium.html"><h2>Zirconium</h2></a>
 		<a href="writing/writings/middle/Ms-Knottethin.html"><h2>Ms. Knottethin</h2></a>
 		<a href="writing/writings/middle/how-to.html"><h2>How to Write a How-To Essay</h2></a>
@@ -246,6 +251,13 @@ http://web.archive.org/web/20030219072854/http://timecube.com/
 	let selected = "none"
 	let tabs = getAll("tab")
 	let pages = getAll("page")
+
+	get('header').onclick = () => {
+		console.log('hmmm')
+		playSound('shared/sound/dream', 1, '.mp3')
+		selected = null;
+		refreshPage()
+	}
 
 	if (isLocal) {
 		let locals = getAll("local")
