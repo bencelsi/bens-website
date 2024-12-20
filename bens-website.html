@@ -1,0 +1,312 @@
+<!--
+    ____            _          _       __     __         _ __     
+   / __ )___  ____ ( )_____   | |     / /__  / /_  _____(_) /____ 
+  / __  / _ \/ __ \|// ___/   | | /| / / _ \/ __ \/ ___/ / __/ _ \
+ / /_/ /  __/ / / / (__  )    | |/ |/ /  __/ /_/ (__  ) / /_/  __/
+/_____/\___/_/ /_/ /____/     |__/|__/\___/_.___/____/_/\__/\___/ 
+                                                                  
+(ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
+
+TODOS:
+Make header letters changeable when clicked
+custom domain?
+non-index homepage
+Standardize/tidy cursor and sound
+Once every tab is just pages of links, maybe incorporate them back into main page
+
+Strike right balance of organization, discovery, and shuffling
+-->
+
+<!DOCTYPE html>
+<head>
+	<title>Ben's Website!</title>
+	<link rel="icon" type="image/x-icon" href="shared/ico/favicon.ico">
+
+<style type="text/css">
+body {
+	background-image: url(gifs/stars.gif); color: white; font-family: "Lucida Console", monospace;
+	margin: 0; height: 100%;
+	text-align: center;
+}
+
+#header { filter: drop-shadow(0 0 2rem rgb(132, 0, 255));cursor: url(shared/cursor.png), auto; }
+#header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
+.website img { height: 30px; margin-top: 5px;}
+
+a { /* Turns off game icos */
+	text-decoration: none;
+	cursor: url(shared/cursor.png), auto;
+	h2 { img { display: none; } }
+}
+
+summary {
+	color: pink; font-style: bold;
+	font-size: 25px;
+	cursor: url(shared/cursor.png), auto;
+}
+
+#tabMenu { display: inline-block; }
+
+#musicTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(200, 0, 255)); }
+#artTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(255, 0, 0)); }
+#gamesTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(0, 200, 55)); }
+#writingTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(255, 210, 0)); }
+#videoTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(0, 130, 255)); }
+#musicTab.selected { filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
+#artTab.selected { filter: drop-shadow(0 0 1.5rem rgb(255, 0, 0)); }
+#gamesTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 200, 55)); }
+#writingTab.selected { filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
+#videoTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
+#gamesPage { a { color: lightgreen; :hover { color: green }} margin: auto; width: fit-content }
+#musicPage a { color: lavender; :hover { color: magenta; } }
+#writingPage a { color: lightyellow; :hover { color: yellow; } }
+#artPage a { color: pink; :hover { color: red; }
+
+	/* display: inline-block; margin: 30px; */ }
+#videoPage a { color: rgb(141, 204, 255); :hover { color: blue; }
+	display: inline-block; margin: 30px; }
+
+.selected img { filter: drop-shadow(0 0 .3rem rgb(255, 214, 64)) }
+
+.tab {
+	/* box-shadow: 0px 0px 50px #fff; */
+	display: inline-block;
+	margin-right: 60px;
+	margin-left: 60px;
+	cursor: url(shared/cursor.png), auto;
+}
+
+.page { display: none; }
+
+a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 255, 255)); }
+
+.local { display: none; }
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+</style>
+</head>
+<!--------------------------------------------------------------------------->
+<body><br>
+<div id="header">
+	<img src='gifs/letters/B1.gif'/><img src='gifs/letters/E1.gif'/><img src='gifs/letters/N1.gif'/>
+	<img src='gifs/letters/apostrophe2.gif'/><img src='gifs/letters/S1.gif'/><br>
+	<div class="website">
+		<img src=gifs/letters/gold-w.gif><img src=gifs/letters/gold-e.gif><img src=gifs/letters/gold-b.gif><img src=gifs/letters/gold-s.gif><img src=gifs/letters/gold-i.gif><img src=gifs/letters/gold-t.gif><img src=gifs/letters/gold-e.gif> <img src=gifs/letters/exclamation2.gif style="height: 35px;">
+	</div>
+</div>
+<br>
+<!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
+<div id="tabMenu">
+	<div class="tab" id="musicTab"><img src="gifs/tabs/guitar.gif"/></div>
+	<div class="tab" id="artTab" ><img src="gifs/tabs/pallette.gif"/></div>
+	<div class="tab" id="gamesTab"><img src="gifs/tabs/computer.gif"/></div>
+	<div class="tab" id="writingTab"><img src="gifs/tabs/book.gif"/></div>
+	<div class="tab" id="videoTab"><img src="gifs/tabs/TV.gif"/></div>
+</div>
+<br><br>
+<!------------------------------------------------>
+<!-- M U S I C -->
+<!------------------------------------------------>
+<div id="musicPage" class="page">
+	<a href="music/songs.html?mashups"><h2>Mashups</h2></a>
+	<a href="music/albums.html" class="local"><h2>Albums</h2></a>
+	<details class="local"><summary>Chords</summary>
+		<a href="music/chords/woke-up.html">Woke Up</a><br>
+		<a href="music/chords/play-the-game.html">Play the Game</a>
+	</details>
+	<!-- <a href="music/albums.html"><h2>Music Videos</h2></a>
+	<a href="music/albums.html"><h2>Chords</h2></a> -->
+</div>
+<!------------------------------------------------>
+<!-- A R T -->
+<!------------------------------------------------>
+<div id="artPage" class="page">
+	<a href="art/art.html?paintings"> 
+		<h2>Paintings</h2></a>
+	<a href="art/art.html?drawings">
+		<h2>Drawings</h2></a>
+	<a href="art/art.html?photos">
+		<h2>Photos</h2></a>
+	<a href="art/art.html?uw-daily-illustrations">
+		<h2>UW Daily Illustrations</h2></a>
+	<a href="art/art.html?dead-end">
+		<h2>Dead End Test Renders</h2></a>
+	<a href="art/art.html?miscellaneous">
+		<h2>Miscellaneous</h2></a>
+</div>
+<!------------------------------------------------>
+<!-- G A M E S -->
+<!------------------------------------------------>
+<div id="gamesPage" class="page">
+	<a href="https://bencelsi.github.io/point-and-clicks"> 
+		<h2><img src="games/ico/chord-wheel.ico">
+			Point & Clicks
+		<img src="games/ico/chord-wheel.ico"></h2>
+	</a>
+	<a href="https://bencelsi.github.io/chord-wheel"> 
+		<h2><img src="games/ico/chord-wheel.ico">
+			Chord Wheel
+		<img src="games/ico/chord-wheel.ico"></h2>
+	</a>
+	<a href="https://bencelsi.github.io/tetriven">
+		<h2><img src="games/ico/tetriven2.ico">
+			Tetriven
+		<img src="games/ico/tetriven2.ico"></h2>
+	</a>
+	<a href="https://bencelsi.github.io/catan-o-rama">
+		<h2><img src="games/ico/catanorama.ico">
+			Catan-o-Rama!
+		<img src="games/ico/catanorama.ico"></h2>
+	</a>
+	<a href="https://bencelsi.github.io/nabanagrams"> 
+		<h2><img src="games/ico/nabanagrams.ico"> 
+			Nabanagrams
+		<img src="games/ico/nabanagrams.ico"></h2>
+	</a>
+	<a href="file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/soviet-monopoly/soviet-monopoly.html" class="local">
+		<h2><img src="games/ico/soviet-monopoly.ico"> Soviet Monopoly</h2>
+	</a>
+	<a href="file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/game-of-cards/game-of-cards.html" class="local">
+		<h2><img src="games/ico/game-of-cards.ico"> Game of Cards</h2>
+	</a>
+	<a href="https://bencelsi.github.io/automata"><h2><img src="games/ico/automata.ico">
+		Automata
+	<img src="games/ico/automata.ico"></h2></a>
+	<a href="https://bencelsi.github.io/cirque-de-sabotage"><h2><img src="games/ico/cirque-de-sabotage.ico">
+		Cirque de Sabotage
+	<img src="games/ico/cirque-de-sabotage.ico"></h2></a>
+	<a href="https://bencelsi.github.io/mxbbi"><h2><img src="games/ico/mxbbi.ico">
+		MXBBI
+	<img src="games/ico/mxbbi.ico"></h2></a>
+	<a href="https://atmos.uw.edu/~dargan/EarthGamesUW/Drop.html"><h2><img src="games/ico/drop.ico">
+		Drop
+	<img src="games/ico/drop.ico"></h2></a>
+	<a href="https://scratch.mit.edu/projects/1448075/fullscreen"><h2><img src="games/ico/griven.ico">
+		Griven
+	<img src="games/ico/griven.ico"></h2></a>
+	<a href="https://scratch.mit.edu/projects/379323/fullscreen/"><h2><img src="games/ico/grounded.ico">
+			Grounded
+	<img src="games/ico/grounded.ico"></h2></a>
+	<!-- TODO: Add songs to grounded radio? ABC - In every heart - Bobby Mcferrin?  -->
+
+</div>
+
+<!------------------------------------------------>
+<!-- W R I T I N G -->
+<!------------------------------------------------>
+<div id="writingPage" class="page">
+	<br>
+	<details><summary>College</summary>
+		<a href="writing/writings/college/Christian-Bok.html" class="local"><h2>Christian Bök</h2></a>
+		<a href="writing/writings/college/Youre-Little.html" class="local"><h2>You're Little</h2></a>
+		<a href="writing/writings/college/ABBA-CD.html"><h2>ABBA CD</h2></a>
+		<a href="writing/writings/college/Raven.html"><h2>TheRaven.java</h2></a>
+	</details><br><br>
+	<details><summary>High School</summary>
+		<a href="writing/writings/high/Great-Apes.html"><h2>Great Apes</h2></a>
+		<a href="writing/writings/high/Fruit-Flies.html"><h2>Fruit Flies</h2></a>
+		<a href="writing/writings/high/Babylon.html"><h2>By the Waters of Babylon: The Reawakening</h2></a>
+		<a href="writing/writings/high/Mr-Oates.html"><h2>Mr. Oates</h2></a>
+	</details><br><br>
+	<details><summary>Middle School</summary>
+		<a href="writing/writings/middle/Shakespearean-Friday.html"><h2>Shakespearean Friday</h2></a>
+		<a href="writing/writings/middle/The-Church.html"><h2>The Church</h2></a>
+		<a href="writing/writings/middle/Zirconium.html"><h2>Zirconium</h2></a>
+		<a href="writing/writings/middle/Ms-Knottethin.html"><h2>Ms. Knottethin</h2></a>
+		<a href="writing/writings/middle/how-to.html"><h2>How to Write a How-To Essay</h2></a>
+		<a href="writing/writings/middle/newport-field-trip-haikus.html"><h2>Newport Field Trip Haikus</h2></a>
+		<a href="writing/writings/middle/planet-limericks.html"><h2>Planet Limericks</h2></a>
+	</details><br><br>
+	<details><summary>Elementary School</summary>
+		<a href="writing/writings/elementary/Flagellants.html"><h2>The Flagellants</h2></a>
+		<a href="writing/writings/elementary/Bush.html"><h2>The Adventures of George W. Bush</h2></a>
+		<a href="writing/writings/elementary/John-Adams-poem.html"><h2>John Adams Poem</h2></a>
+	</details><br><br>
+	<details><summary>Other</summary>
+		<a href="writing/.gallery.html?palindromes"><h2>Palindromes</h2></a>
+		<a href="writing/.gallery.html?alphabet-sayings"><h2>Alphabet Sayings</h2></a>
+		<a href="writing/.gallery.html?miscellaneous"><h2>Miscellaneous</h2></a>
+	</details>
+</div>
+
+<!------------------------------------------------>
+<!-- V I D E O -->
+<!------------------------------------------------>
+<div id="videoPage" class="page">
+	<a href="video/video.html"><h2>Videos</h2></a>
+</div>
+<br><br>
+</body>
+
+<!-- misc. links -->
+<!-- 
+https://yvettesbridalformal.p1r8.net/ 
+https://www.peteranswers.com/
+https://radio.garden/visit/caleta-olivia/0oALAXD6
+http://www.windows93.net/
+https://www.cameronsworld.net/
+https://gifcities.org/
+https://jacklance.github.io/
+https://petittube.com/
+http://mystarchive.com/rivenil/main.html
+https://lhohq.info/
+http://web.archive.org/web/20030219072854/http://timecube.com/
+-->
+
+<!------------------------------------------------>
+<!-- S C R I P T S -->
+<!------------------------------------------------>
+<script src="shared/shared.js"></script>
+<script>
+	const testDiv = get("test")
+	let selected = "none"
+	let tabs = getAll("tab")
+	let pages = getAll("page")
+
+	get('header').onclick = () => {
+		playSound('shared/sound/dream', 1, '.mp3')
+		selected = null; refreshPage()
+	}
+
+	var anchors = document.getElementsByTagName('summary');
+	for(var i = 0; i < anchors.length; i++) {
+		var anchor = anchors[i];
+		anchor.onclick = function() { playSound('shared/sound/click') }
+	}
+
+	if (isLocal) {
+		let locals = getAll("local")
+		for (i = 0; i < locals.length; i++) { locals[i].style.display = "block" }
+	}
+
+	if (window.location.search.startsWith("?music") || window.location.search.startsWith("?art") ||
+		window.location.search.startsWith("?games") || window.location.search.startsWith("?writing")) {
+		selectTab(window.location.search.substring(1, window.location.search.length))
+	}
+	
+	for (const tab of ["music", "art", "games", "writing", "video"]) {
+		get(tab + "Tab").onclick = () => selectTab(tab)
+	}
+
+	function selectTab(name) { playSound('shared/sound/pop'); selected = name; refreshPage() }
+	
+	function refreshPage() {
+		for (let i = 0; i < tabs.length; i++) {
+			let tab = tabs[i]
+			if (tab.id === selected + "Tab") { tab.classList.add("selected") }
+			else { tab.classList.remove("selected") }
+			let page = pages[i]
+			if (page.id === selected + "Page") { page.style.display = "inline-block" } 
+			else { page.style.display = "none" }
+		}
+	}
+</script>
+</html>

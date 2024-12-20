@@ -1,0 +1,21 @@
+/* todo; share css */
+body {
+    background-image: url(../../gifs/stars2.gif);
+    color: white;
+    font-family: "Lucida Console", monospace;
+    white-space: pre-wrap;
+    margin: auto;
+    text-align: left;
+}
+h1 {
+    text-align: center;
+}
+.section { font-style: bold; color: red; display: none; }
+.chords { color: plum; line-height: 2 }
+
+#song {
+    display: block; 
+    text-align: left; 
+    width: fit-content; 
+    margin: auto;
+}

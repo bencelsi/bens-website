@@ -1,0 +1,14 @@
+body {
+    background-image: url(../../../gifs/stars2.gif); 
+    color: white; 
+    font-family: "Lucida Console", monospace;
+    white-space: pre-wrap;
+    margin: auto;
+    text-align: center;
+    width: 1000px;
+    line-height: 1.5;
+}
+
+h1, h2, h3 { text-align: center;}
+
+img { text-align: center; }
