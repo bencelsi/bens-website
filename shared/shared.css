@@ -1,0 +1,9 @@
+body {
+	background-image: url(../gifs/stars.gif); 
+    color: white; 
+    font-family: "Lucida Console", monospace;
+	text-align: center;
+	font-size: 15px;
+}
+
+a { color: pink; font-style: normal;}
