@@ -178,9 +178,11 @@
 			],
 			"miscellaneous": [
 				"BusinessSpooner.jpeg",
+				"Gary.jpg",
 				"OffallyGood!.jpeg",
 				"SovietMonopoly.jpeg",
 				"TheActualBeachBoys.jpeg",
+				"ThiccSpaghetti.jpg",
 				"TrainParking.jpeg",
 				"WolfOfWallStreetVHS.jpeg"
 			]
@@ -204,19 +206,19 @@
 		let index = 0
 		shuffle(images)
 		get("left").onclick = () => {
-			playSound('../shared/click', .5)
+			playSound('../../shared/sound/click', .5)
 			index = decrement(index, images.length - 1)
 			setImage()
 		}
 
 		get("right").onclick = () => {
-			playSound('../shared/click', .5)
+			playSound('../../shared/sound/click', .5)
 			index = increment(index, images.length - 1)
 			setImage()
-		}
+		}	
 
 		get("random").onclick = () => {
-			playSound('shared/trill', .5)
+			playSound('../../shared/sound/trill', .5)
 			index = random(0, images.length - 1)
 			setImage()
 		}

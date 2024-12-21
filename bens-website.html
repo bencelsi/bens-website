@@ -10,23 +10,19 @@
 TODOS:
 Make header letters changeable when clicked
 custom domain?
-non-index homepage
-Standardize/tidy cursor and sound
-Once every tab is just pages of links, maybe incorporate them back into main page
-
-Strike right balance of organization, discovery, and shuffling
+non-index homepage (blocked)
+make summaries non-selectable
 -->
-
 <!DOCTYPE html>
 <head>
-	<title>Ben's Website!</title>
-	<link rel="icon" type="image/x-icon" href="shared/ico/favicon.ico">
-
+<title>Ben's Website!</title>
+<link rel="icon" type="image/x-icon" href="shared/ico/favicon.ico">
 <style type="text/css">
 body {
 	background-image: url(gifs/stars.gif); color: white; font-family: "Lucida Console", monospace;
 	margin: 0; height: 100%;
 	text-align: center;
+	font-size: 14px;
 }
 
 #header { filter: drop-shadow(0 0 2rem rgb(132, 0, 255));cursor: url(shared/cursor.png), auto; }
@@ -52,12 +48,14 @@ summary {
 #gamesTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(0, 200, 55)); }
 #writingTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(255, 210, 0)); }
 #videoTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(0, 130, 255)); }
+
 #musicTab.selected { filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
 #artTab.selected { filter: drop-shadow(0 0 1.5rem rgb(255, 0, 0)); }
 #gamesTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 200, 55)); }
 #writingTab.selected { filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
 #videoTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
-#gamesPage { a { color: lightgreen; :hover { color: green }} margin: auto; width: fit-content }
+
+#gamesPage a { color: lightgreen; :hover { color: green }}
 #musicPage a { color: lavender; :hover { color: magenta; } }
 #writingPage a { color: lightyellow; :hover { color: yellow; } }
 #artPage a { color: pink; :hover { color: red; }
@@ -69,10 +67,8 @@ summary {
 .selected img { filter: drop-shadow(0 0 .3rem rgb(255, 214, 64)) }
 
 .tab {
-	/* box-shadow: 0px 0px 50px #fff; */
 	display: inline-block;
-	margin-right: 60px;
-	margin-left: 60px;
+	margin-left: 60px; margin-right: 60px;
 	cursor: url(shared/cursor.png), auto;
 }
 
@@ -119,8 +115,8 @@ a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 2
 	<a href="music/songs.html?mashups"><h2>Mashups</h2></a>
 	<a href="music/albums.html" class="local"><h2>Albums</h2></a>
 	<details class="local"><summary>Chords</summary>
-		<a href="music/chords/woke-up.html">Woke Up</a><br>
-		<a href="music/chords/play-the-game.html">Play the Game</a>
+		<a href="music/chords/woke-up.html"><h2>Woke Up</h2></a><br>
+		<a href="music/chords/play-the-game.html"><h2>Play the Game</h2></a>
 	</details>
 	<!-- <a href="music/albums.html"><h2>Music Videos</h2></a>
 	<a href="music/albums.html"><h2>Chords</h2></a> -->
@@ -221,9 +217,10 @@ a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 2
 		<a href="writing/writings/middle/The-Church.html"><h2>The Church</h2></a>
 		<a href="writing/writings/middle/Zirconium.html"><h2>Zirconium</h2></a>
 		<a href="writing/writings/middle/Ms-Knottethin.html"><h2>Ms. Knottethin</h2></a>
-		<a href="writing/writings/middle/how-to.html"><h2>How to Write a How-To Essay</h2></a>
-		<a href="writing/writings/middle/newport-field-trip-haikus.html"><h2>Newport Field Trip Haikus</h2></a>
-		<a href="writing/writings/middle/planet-limericks.html"><h2>Planet Limericks</h2></a>
+		<a href="writing/writings/middle/How-To.html"><h2>How to Write a How-To Essay</h2></a>
+		<a href="writing/writings/middle/Newport-Field-Trip-Haikus.html"><h2>Newport Field Trip Haikus</h2></a>
+		<a href="writing/writings/middle/Planet-Limericks.html"><h2>Planet Limericks</h2></a>
+		<a href="writing/writings/middle/Da-Vinci-Code-Poem.html"><h2>Da Vinci Code Poem</h2></a>
 	</details><br><br>
 	<details><summary>Elementary School</summary>
 		<a href="writing/writings/elementary/Flagellants.html"><h2>The Flagellants</h2></a>
@@ -259,6 +256,7 @@ https://petittube.com/
 http://mystarchive.com/rivenil/main.html
 https://lhohq.info/
 http://web.archive.org/web/20030219072854/http://timecube.com/
+https://something.com/
 -->
 
 <!------------------------------------------------>
