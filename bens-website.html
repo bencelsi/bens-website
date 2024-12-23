@@ -15,79 +15,78 @@ make summaries non-selectable
 -->
 <!DOCTYPE html>
 <head>
-<title>Ben's Website!</title>
-<link rel="icon" type="image/x-icon" href="shared/ico/favicon.ico">
-<style type="text/css">
-body {
-	background-image: url(gifs/stars.gif); color: white; font-family: "Lucida Console", monospace;
-	margin: 0; height: 100%;
-	text-align: center;
-	font-size: 14px;
-}
+	<title>Ben's Website!</title>
+	<link rel="icon" type="image/x-icon" href="shared/ico/favicon.ico">
+	<style type="text/css">
+		body {
+			background-image: url(gifs/stars.gif); color: white; font-family: "Lucida Console", monospace;
+			margin: 0; height: 100%;
+			text-align: center;
+			font-size: 14px;
+		}
 
-#header { filter: drop-shadow(0 0 2rem rgb(132, 0, 255));cursor: url(shared/cursor.png), auto; }
-#header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
-.website img { height: 30px; margin-top: 5px;}
+		#header { filter: drop-shadow(0 0 2rem rgb(132, 0, 255));cursor: url(shared/cursor.png), auto; }
+		#header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
+		.website img { height: 30px; margin-top: 5px;}
 
-a { /* Turns off game icos */
-	text-decoration: none;
-	cursor: url(shared/cursor.png), auto;
-	h2 { img { display: none; } }
-}
+		a { /* Turns off game icos */
+			text-decoration: none;
+			cursor: url(shared/cursor.png), auto;
+			h2 { img { display: none; } }
+		}
 
-summary {
-	color: pink; font-style: bold;
-	font-size: 25px;
-	cursor: url(shared/cursor.png), auto;
-}
+		summary {
+			color: pink; font-style: bold;
+			font-size: 25px;
+			cursor: url(shared/cursor.png), auto;
+		}
 
-#tabMenu { display: inline-block; }
+		#tabMenu { display: inline-block; }
 
-#musicTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(200, 0, 255)); }
-#artTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(255, 0, 0)); }
-#gamesTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(0, 200, 55)); }
-#writingTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(255, 210, 0)); }
-#videoTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(0, 130, 255)); }
+		#musicTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(200, 0, 255)); }
+		#artTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(255, 0, 0)); }
+		#gamesTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(0, 200, 55)); }
+		#writingTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(255, 210, 0)); }
+		#videoTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(0, 130, 255)); }
 
-#musicTab.selected { filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
-#artTab.selected { filter: drop-shadow(0 0 1.5rem rgb(255, 0, 0)); }
-#gamesTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 200, 55)); }
-#writingTab.selected { filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
-#videoTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
+		#musicTab.selected { filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
+		#artTab.selected { filter: drop-shadow(0 0 1.5rem rgb(255, 0, 0)); }
+		#gamesTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 200, 55)); }
+		#writingTab.selected { filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
+		#videoTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
 
-#gamesPage a { color: lightgreen; :hover { color: green }}
-#musicPage a { color: lavender; :hover { color: magenta; } }
-#writingPage a { color: lightyellow; :hover { color: yellow; } }
-#artPage a { color: pink; :hover { color: red; }
+		#gamesPage a { color: lightgreen; :hover { color: green }}
+		#musicPage a { color: lavender; :hover { color: magenta; } }
+		#writingPage a { color: lightyellow; :hover { color: yellow; } }
+		#artPage a { color: pink; :hover { color: red; }
 
-	/* display: inline-block; margin: 30px; */ }
-#videoPage a { color: rgb(141, 204, 255); :hover { color: blue; }
-	display: inline-block; margin: 30px; }
+			/* display: inline-block; margin: 30px; */ }
+		#videoPage a { color: rgb(141, 204, 255); :hover { color: blue; }
+			display: inline-block; margin: 30px; }
 
-.selected img { filter: drop-shadow(0 0 .3rem rgb(255, 214, 64)) }
+		.selected img { filter: drop-shadow(0 0 .3rem rgb(255, 214, 64)) }
 
-.tab {
-	display: inline-block;
-	margin-left: 60px; margin-right: 60px;
-	cursor: url(shared/cursor.png), auto;
-}
+		.tab {
+			display: inline-block;
+			margin-left: 60px; margin-right: 60px;
+			cursor: url(shared/cursor.png), auto;
+		}
 
-.page { display: none; }
+		.page { display: none; }
 
-a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 255, 255)); }
+		a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 255, 255)); }
 
-.local { display: none; }
+		.local { display: none; }
 
-.unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-</style>
+		.unselectable {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+	</style>
 </head>
 <!--------------------------------------------------------------------------->
 <body><br>
