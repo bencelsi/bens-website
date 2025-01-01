@@ -6,7 +6,7 @@ let jokes = [
 "Whats the difference between a letter and a punishment?\n\nA capital letter starts a sentence, capital punishment ends a sentence",
 
 "What is it called when a shark sarcastically ejaculates?\n\nSharkgasm",
-"Whats in a ghost’s halloween candy?\n\nHigh spooktose corn syrup",
+"What's in a ghost’s halloween candy?\n\nHigh spooktose corn syrup",
 "What do you get when you cross Notorious B.I.G., Redman, and Snoop Dogg?\n\nClifford",
 "What does a racist chicken do?\n\nHe klux", // (alternative answer: be a cock)
 "What do you get when you cross a piano, a motorcycle and a llama?\n\nA llamaha",

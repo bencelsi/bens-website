@@ -41,16 +41,13 @@ let oneLiners = [
 "This has got to be either the best hamburger or the worst souffle I've ever had",
 "Real men don’t subscribe to gender roles",
 "Bill Nerson the science person",
-"You put the IRL in girl",
+"She puts the IRL in girl",
 "Whose dick do I gotta suck to suck a dick around here?",
 "God makes plans, man laughs",
 "No capital pains, no capital gains",
 "We are in agreeance that ‘agreeance’ is not a word",
 "It’s not just amazing, it’s the mazing!",
-//"Now that's an ass I could get behind",
 "Jackson 5 more like Jackson 4",
-
-//"Rim Job? more like grim job",
 "I can cry on demand:\n“ON DEMAND!\”",
 "It was so hot out, I went to a sauna to cool down",
 "I never repeat myself. I NEVER repeat myself.",
@@ -61,4 +58,7 @@ let oneLiners = [
 "No, YOU goslavia",
 "If it's any constellation... the big dipper",
 "It's not my fault, it's San Andreas fault"
+
+//"Rim Job? more like grim job",
+//"Now that's an ass I could get behind",
 ]

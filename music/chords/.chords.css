@@ -5,13 +5,15 @@ body {
     font-family: "Lucida Console", monospace;
     white-space: pre-wrap;
     margin: auto;
-    text-align: left;
 }
-h1 {
+
+h1, h2, h3 {
     text-align: center;
 }
+
 .section { font-style: bold; color: red; display: none; }
-.chords { color: plum; line-height: 2 }
+
+.chords { color: magenta; line-height: 2 }
 
 #song {
     display: block; 

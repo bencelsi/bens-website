@@ -23,7 +23,7 @@ let randomThoughts = [
 "Movies can be so bad they’re good, but restaurants can’t",
 "In the 70s, the Bee Gees went through reverse puberty",
 "Why are they called waiters when I'm the one who’s been waiting 45 minutes for my damn spaghetti",
-
+"Galaxy Quest and A Bug's Life are the same movie",
 "I don’t have a Doctor of Philosophy, but I do have a Doctor Phil-osophy",
 "Nightmare Before Christmas is a cautionary tale about cultural appropriation",
 "Life is like chess: you’re at a disadvantage if you’re black",

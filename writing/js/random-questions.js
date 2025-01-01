@@ -9,7 +9,7 @@ let randomQuestions = [
 "If you have a genius idea for a wreath, do you say urethra?",
 "Do starfish have 5 armpits, or 1 armpit?",
 "Is it considered ghosting if they died?",
-"When will.i.am dies, does he become become will.i.was?",
+"When will.i.am dies, will he become become will.i.was?",
 "What do Earth Wind and Fire have against water?",
 "Haddock: tintin’s foil?",
 "Gal Gadot’s husband: Guy Gadot?",
