@@ -1,38 +1,39 @@
-<!DOCTYPE html><html lang='en'>
-<head><title style="color: white">Ben's Website!!!</title><link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
-<style type="text/css">
-body {
-	background-image: url(../gifs/stars.gif); font-family: "Lucida Console", monospace; color: white;
-	margin: 0;
-	height: 100%;
-	text-align: center;
-}
+<!DOCTYPE html>
+<head>
+	<title style="color: white">Ben's Website!!!</title>
+	<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
+	<style type="text/css">
+		body {
+			background-image: url(../gifs/stars.gif); font-family: "Lucida Console", monospace; color: white;
+			margin: 0;
+			height: 100%;
+			text-align: center;
+		}
 
-#header:hover {
-	filter: drop-shadow(0 0 0.8rem rgb(0, 81, 255));
-}
+		#header:hover {
+			filter: drop-shadow(0 0 0.8rem rgb(0, 81, 255));
+		}
 
-#videoScreen {
-	height: 480px;
-	width: 854px;
-}
+		#videoScreen {
+			height: 480px;
+			width: 854px;
+		}
 
-h1 { text-shadow : 0 0 40px red; }
+		h1 { text-shadow : 0 0 40px red; }
 
-.tab img { width: 30px; }
+		.tab img { width: 30px; }
 
-a:link, a:visited {
-	color: pink;
-	text-decoration: none;
-}
-#home { :hover {  filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }} 
+		a:link, a:visited {
+			color: pink;
+			text-decoration: none;
+		}
+		#home { :hover {  filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }} 
 
-.button, a { cursor: url(../shared/cursor.png), auto; }
-</style>
+		.button, a { cursor: url(../shared/cursor.png), auto; }
+	</style>
 </head>
 <body>
-<br>
-<a href="../index.html?video" id="home"><img src="../gifs/earth.gif"></a>
+<!-- <a href="../index.html?video" id="home"><img src="../gifs/earth.gif"></a> -->
 <br><br>
 <div>
 	<div>
@@ -75,7 +76,6 @@ shuffle(videos)
 setVideo()
 
 get('videoLeft').onclick = function() {
-	console.log(videoIndex)
 	videoIndex = decrement(videoIndex, videos.length - 1)
 	setVideo()
 }
@@ -94,6 +94,6 @@ function setVideo() {
 	get('videoScreen').src = 'videos/' + videos[videoIndex] + ".mp4"
 	get('videoTitle').innerHTML = videos[videoIndex]
 }
+
 </script>
 </body>
-</html>

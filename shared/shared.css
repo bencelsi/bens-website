@@ -1,5 +1,5 @@
 body {
-	background-image: url(../gifs/stars.gif); 
+	background-image: url(../gif/stars.gif); 
     color: white; 
     font-family: "Lucida Console", monospace;
 	text-align: center;
@@ -7,3 +7,5 @@ body {
 }
 
 a { color: pink; font-style: normal;}
+
+.button, a { cursor: url(cursor.png), auto; }
