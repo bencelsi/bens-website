@@ -9,3 +9,7 @@ body {
 a { color: pink; font-style: normal;}
 
 .button, a { cursor: url(cursor.png), auto; }
+
+#writingPage { details {
+	color: yellow;
+}}
