@@ -8,13 +8,16 @@
 (ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
 
 TODOS:
+Make sections center on selected tab?
 Make header letters changeable when clicked
 custom domain?
 make summaries non-selectable
+Square Thumbnails for games/artwork, show many at once?
+
 -->
 <!DOCTYPE html>
 <head>
-	<title>Ben's Website!</title>
+	<title>Ben's Website!!!</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<style type="text/css">
 		body {
@@ -97,6 +100,7 @@ make summaries non-selectable
 	</div>
 </div>
 <br>
+
 <!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
 <div id="tabMenu">
 	<div class="tab" id="musicTab"><img src="gif/tabs/guitar.gif"/></div>
@@ -287,10 +291,10 @@ https://something.com/
 <script src="shared/shared.js"></script>
 <script>
 	const testDiv = get("test")
+	const tabs = getAll("tab")
+	const pages = getAll("page")
 	let selected = "none"
-	let tabs = getAll("tab")
-	let pages = getAll("page")
-
+	
 	get('header').onclick = () => {
 		playSound('shared/sound/dream', 1, '.mp3')
 		selected = null; refreshPage()
