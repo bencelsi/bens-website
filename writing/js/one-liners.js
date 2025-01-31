@@ -14,7 +14,7 @@ let oneLiners = [
 "Leann Rimes? No it doesn’t ",
 "Paul McCarney: Beatle alcohol syndrome?",
 "Object permanence more like object impermanence",
-"Stockholm syndrome more stuck home syndrome",
+"Stockholm syndrome more like stuck home syndrome",
 "Las Vegas? More like Loss Vegas",
 "Happy hour? More like sad hour",
 "Le miz? More like is lame",

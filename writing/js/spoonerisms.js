@@ -32,7 +32,7 @@ let spoonerisms = [
 "Homeless shelter, or shelterless home?",
 "O(n)? N(o)",
 "I can't see the view but I can view the sea",
-"I’m hardly easy, but I'm easily hard",
+"I’m hardly easy, but easily hard",
 "Keep on onning keep",
 "There are Mountain Dews, and Mountain Don'ts",
 "Shanwows and shamwhats",

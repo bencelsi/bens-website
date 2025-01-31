@@ -3,7 +3,7 @@ let jokes = [
 "What’s Tommy Wiseau’s favorite desert?\n\nTirimipartlisu",
 "What would you call a religion based on Judge Judy’s catchphrases?\n\nJudy-ism",
 "What do you call a sexist masseuse?\n\nA massageonist",
-"Whats the difference between a letter and a punishment?\n\nA capital letter starts a sentence, capital punishment ends a sentence",
+"Whats the difference between a letter and a punishment?\n\nA capital letter starts a sentence, a capital punishment ends a sentence",
 
 "What is it called when a shark sarcastically ejaculates?\n\nSharkgasm",
 "What's in a ghost’s halloween candy?\n\nHigh spooktose corn syrup",

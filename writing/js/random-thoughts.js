@@ -26,7 +26,7 @@ let randomThoughts = [
 "Galaxy Quest and A Bug's Life are the same movie",
 "I don’t have a Doctor of Philosophy, but I do have a Doctor Phil-osophy",
 "Nightmare Before Christmas is a cautionary tale about cultural appropriation",
-"Life is like chess: you’re at a disadvantage if you’re black",
+"Life is like chess: being black is a disadvantage",
 "Everything a chef ever creates turns to shit.",
 "Anyone shorter than me who criticizes my posture is a hypocrite",
 
