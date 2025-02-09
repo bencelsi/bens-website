@@ -18,12 +18,23 @@ const CENTER_BOX = document.getElementById("centerBox")
 const CHORDS = document.getElementsByClassName("chords")
 const LYRICS = document.getElementsByClassName("lyrics")
 
-CENTER_BOX.onclick = () => { SONG.style.textAlign = CENTER_BOX.checked ? 'center' : 'left' }
 
-CHORD_BOX.onclick = () => {
+function setCentered() {
+    SONG.style.textAlign = CENTER_BOX.checked ? 'center' : 'left' 
+}
+setCentered()
+CENTER_BOX.onclick = setCentered
+
+
+function setChords() {
     for (i = 0; i < CHORDS.length; i++) CHORDS[i].style.visibility = CHORD_BOX.checked ? 'visible' : 'hidden'
 }
+setChords()
+CHORD_BOX.onclick = setChords
 
-LYRIC_BOX.onclick = () => {
+
+function setLyrics() {
     for (i = 0; i < LYRICS.length; i++) LYRICS[i].style.visibility = LYRIC_BOX.checked ? 'visible' : 'hidden'
 }
+setLyrics()
+LYRIC_BOX.onclick = setLyrics
