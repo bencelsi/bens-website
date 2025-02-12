@@ -8,11 +8,10 @@
 (ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
 
 TODOS:
-Make sections center on selected tab?
+Square Thumbnails for games/artwork, show many at once?
 Make header letters changeable when clicked
 custom domain?
 make summaries non-selectable
-Square Thumbnails for games/artwork, show many at once?
 -->
 
 <!DOCTYPE html>
@@ -45,26 +44,23 @@ Square Thumbnails for games/artwork, show many at once?
 
 		#tabMenu { display: inline-block; }
 
-		#musicTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(200, 0, 255)); }
-		#artTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(255, 0, 0)); }
-		#gamesTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(0, 200, 55)); }
-		#writingTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(255, 210, 0)); }
-		#videoTab:not(.selected):hover { filter: drop-shadow(0 0 1rem rgb(0, 130, 255)); }
+		#musicTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(200, 0, 255)); }
+		#artTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(255, 0, 0)); }
+		#gamesTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(0, 200, 55)); }
+		#writingTab:not(.selected):hover 	{ filter: drop-shadow(0 0 1rem rgb(255, 210, 0)); }
+		#videoTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(0, 130, 255)); }
 
-		#musicTab.selected { filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
-		#artTab.selected { filter: drop-shadow(0 0 1.5rem rgb(255, 0, 0)); }
-		#gamesTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 200, 55)); }
-		#writingTab.selected { filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
-		#videoTab.selected { filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
+		#musicTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
+		#artTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(255, 0, 0)); }
+		#gamesTab.selected		{ filter: drop-shadow(0 0 1.5rem rgb(0, 200, 55)); }
+		#writingTab.selected 	{ filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
+		#videoTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
 
-		#gamesPage a { color: lightgreen; :hover { color: green }}
-		#musicPage a { color: lavender; :hover { color: magenta; } }
-		#writingPage a { color: lightyellow; :hover { color: yellow; } }
-		#artPage a { color: pink; :hover { color: red; }
-
-			/* display: inline-block; margin: 30px; */ }
-		#videoPage a { color: rgb(141, 204, 255); :hover { color: blue; }
-			display: inline-block; margin: 30px; }
+		#gamesPage a 	{ color: lightgreen; 	:hover { color: green }}
+		#musicPage a 	{ color: lavender; 	:hover { color: magenta }}
+		#writingPage a 	{ color: lightyellow; 	:hover { color: yellow }}
+		#artPage a 		{ color: pink; 		:hover { color: red }}
+		#videoPage a 	{ color: lightskyblue; :hover { color: blue }}
 
 		.selected img { filter: drop-shadow(0 0 .3rem rgb(255, 214, 64)) }
 
@@ -203,10 +199,8 @@ Square Thumbnails for games/artwork, show many at once?
 		Griven
 	<img src='games/ico/griven.ico'></h2></a>
 	<a href='https://scratch.mit.edu/projects/379323/fullscreen/'><h2><img src='games/ico/grounded.ico'>
-			Grounded
+		Grounded
 	<img src='games/ico/grounded.ico'></h2></a>
-	<!-- TODO: Add songs to grounded radio? ABC - In every heart - Bobby Mcferrin?  -->
-
 </div>
 
 <!------------------------------------------------>
@@ -261,7 +255,11 @@ Square Thumbnails for games/artwork, show many at once?
 <!-- V I D E O -->
 <!------------------------------------------------>
 <div id='videoPage' class='page'>
-	<a href='video/video.html'><h2>Videos</h2></a>
+	<a href='video/video.html?set=all'><h2>All Videos</h2></a><br>
+	<a href='video/video.html?set=musicVideos'><h2>Music Videos</h2></a><br>
+	<a href='video/video.html?set=liveAction'><h2>Live Action</h2></a><br>
+	<a href='video/video.html?set=all'><h2>Animation</h2></a><br>
+	<a href='video/video.html?set=miscellaneous'><h2>Miscellaneous</h2></a><br>
 </div>
 <br><br>
 </body>
@@ -290,43 +288,36 @@ https://something.com/
 	const testDiv = get('test')
 	const tabs = getAll('tab')
 	const pages = getAll('page')
-	let selected = 'none'
+	let tab = null
 	
-	get('header').onclick = () => {
-		playSound('shared/sound/dream', 1, '.mp3')
-		selected = null; refreshPage()
-	}
+	get('header').onclick = () => { playSound('shared/sound/dream', 1, '.mp3'); tab = null; refreshPage() }
 
 	var anchors = document.getElementsByTagName('summary');
-	for(var i = 0; i < anchors.length; i++) {
+	for (var i = 0; i < anchors.length; i++) {
 		var anchor = anchors[i];
-		anchor.onclick = function() { playSound('shared/sound/click') }
+		anchor.onclick = () => { playSound('shared/sound/click') }
 	}
 
 	if (isLocal) {
 		let locals = getAll('local')
-		for (i = 0; i < locals.length; i++) { locals[i].style.display = 'block' }
+		for (i = 0; i < locals.length; i++) locals[i].style.display = 'block'
 	}
 
-	if (window.location.search.startsWith('?music') || window.location.search.startsWith('?art') ||
-		window.location.search.startsWith('?games') || window.location.search.startsWith('?writing')) {
-		selectTab(window.location.search.substring(1, window.location.search.length))
-	}
-	
+	const CURRENT_TAB = new URLSearchParams(window.location.search).get('tab');
 	for (const tab of ['music', 'art', 'games', 'writing', 'video']) {
+		if (tab == CURRENT_TAB) selectTab(CURRENT_TAB)
 		get(tab + 'Tab').onclick = () => selectTab(tab)
 	}
 
-	function selectTab(name) { playSound('shared/sound/pop'); selected = name; refreshPage() }
+	function selectTab(name) { playSound('shared/sound/pop'); tab = name; refreshPage() }
 	
 	function refreshPage() {
 		for (let i = 0; i < tabs.length; i++) {
-			let tab = tabs[i]
-			if (tab.id === selected + 'Tab') { tab.classList.add('selected') }
-			else { tab.classList.remove('selected') }
+			let tabDiv = tabs[i]
+			if (tabDiv.id == tab + 'Tab') tabDiv.classList.add('selected')
+			else tabDiv.classList.remove('selected')
 			let page = pages[i]
-			if (page.id === selected + 'Page') { page.style.display = 'inline-block' } 
-			else { page.style.display = 'none' }
+			page.style.display = (page.id == tab + 'Page') ? 'inline-block' : 'none'
 		}
 	}
 </script>

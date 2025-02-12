@@ -1149,7 +1149,7 @@ honchos
 honk
 honks
 honor
-honoraria
+honoraria*
 honors
 hooch...............
 hook...............

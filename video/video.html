@@ -37,7 +37,7 @@
 	<div>
 		<h2 id='title'></h2><br>
 		<iframe id=youtubeScreen width=1280 height='720'></iframe>
-		<video id='hostedScreen' width=1280 height='720' controls><source type='video/mp4'></video>
+		<!-- <video id='hostedScreen' width=1280 height='720' controls><source type='video/mp4'></video> -->
 		<br>
 	</div>
 	<img class='button' src='../gif/arrowl.gif' id='left'/>
@@ -47,63 +47,73 @@
 <script src='../shared/shared.js'></script>
 <script>
 // TODO: host everything with https://git-lfs.com/
-// TODO: add 'thumbnails'
+// TODO: host everything, add 'thumbnails'
 
-const EMBED_URL = 'https://youtube.com/embed/'
-const VIDEO_SCREEN = get('hostedScreen')
-const YOUTUBE_SCREEN = get('youtubeScreen')
-const LEFT_BUTTON = get('left')
-const RIGHT_BUTTON = get('right')
-const RANDOM_BUTTON = get('random')
-const TITLE = get('title')
+const EMBED_URL = 		'https://youtube.com/embed/'
+//const VIDEO_SCREEN = 	get('hostedScreen')
+const YOUTUBE_SCREEN = 	get('youtubeScreen')
+const LEFT_BUTTON = 	get('left')
+const RIGHT_BUTTON =	get('right')
+const RANDOM_BUTTON = 	get('random')
+const TITLE = 			get('title')
 
-let videos = [
-	["ABBA Shreds!",													'abba_shreds'				],
-	["Adam Driver.mp4",													'adam_driver'				],
-	["All Star But It's The Same As The Original And I Get A Copyright Strike", 
-																		'all_star'					],
-	["Apple Jack the Ripper: Adventures of a Cereal Killer (2010)", 	EMBED_URL + 'LrtA9gXYt4c'	],
-	["The Ballad of Luigi", 											EMBED_URL + '-yIAxvgeHmE'	],
-	["The Banana Man", 													EMBED_URL + 'mfjrTnjbyJs'	],
-	["Casiopea Forever",	 											EMBED_URL + '7_Iday6w0kI'	],
-	["Cat Reacts to Cats (2019) Trailer", 								EMBED_URL + 'W-ofqDuES7U'	],
-	["Champagne Music",													EMBED_URL + 'GTqxsACeoPQ'	],
-	["Dad Listen, Just Listen!", 										'dad_listen'				],
+
+const ALL_VIDEOS = {
+'musicVideos': [
+	// Music videos
+	["ABBA Shreds!",															EMBED_URL + 'Bne3uCHS-Bw'	],
+	["The Ballad of Luigi", 													EMBED_URL + '-yIAxvgeHmE'	],
+	["Casiopea Forever",	 													EMBED_URL + '7_Iday6w0kI'	],
+	["Dream A Little Dream Of God",												EMBED_URL + 'emlw9bLSbcA'	],
+	["Drew's Blues: A Rock Operetta",											EMBED_URL + 'NzcUOxN2IuM'	],
+	["Everything Right is Wrong Again",											EMBED_URL + 'Wcy7xzgBQis'	],
+	["Fun, Fun, Fun, Fun, Fun, Fun, Fun", 										EMBED_URL + 'AurwJd0zw0I'	],
+	["Let's Go Ahead And Get Started 2", 										EMBED_URL + 'mJm6nD0hW88'	],
+	["I Wish They All Could Be California", 									EMBED_URL + 'aqviXXbtiUg'	],
+	["i yam what i yam",														EMBED_URL + 'Tdb0E7uegyc'	],
+	["Snakehips",																EMBED_URL + '5qnW6m7BPpI'	]],
+'liveAction': [
+	["Apple Jack the Ripper: Adventures of a Cereal Killer (2010)", 			EMBED_URL + 'LrtA9gXYt4c'	],
+	["The Banana Man", 															EMBED_URL + 'mfjrTnjbyJs'	],
+	["One Second A Day (2019)", 												EMBED_URL + 'LaAjKX-p5hk'	],
+	["Video Lab Detritus", 														EMBED_URL + 'dtdh8s74GI4'	],
+	["Intersections!",															EMBED_URL + 'eIqaIGZZzLg' 	],
+	["Let's Go Ahead And Get Started", 											EMBED_URL + 'Es_YxQToays'	]],
+'animation': [
+	// (add trolls)
+	["The Do(ugh)nut Man",														EMBED_URL + 'ilyPGt6T9T0'	],
+	["Funny Fall (2003)",														EMBED_URL + '_ZfYnbAmSSs'	],
+	["When Robots Fight",														EMBED_URL + '1oGFcKeI83A' 	],
+	["His Biggest Mistake",														EMBED_URL + 'h3vyj5yZEmc'	],
+	["I Am a Robot", 															EMBED_URL + '0o0ZN87-Yj4'	],
+	["University of Washington of Thrones",										EMBED_URL + 'tEFIzkKNBFs'	]],
+'miscellaneous': [
+	["Adam Driver.mp4",															EMBED_URL + '1l3XTtqRtTg'	],
+	["All Star But It's The Same As The Original And I Get A Copyright Strike",	EMBED_URL + 'XbtYqpFkQJo'	],
+	["Cat Reacts to Cats (2019) Trailer", 										EMBED_URL + 'W-ofqDuES7U'	],
+	["Champagne Music",															EMBED_URL + 'GTqxsACeoPQ'	],
+	["Dad Listen, Just Listen!", 												EMBED_URL + 'NGe5ujisd28'	],
 	["dancing queen but you're hiding in the bathroom during a school dance, but you're in a basement at 3am", 
-																		EMBED_URL + 'vCiM8z9-_iE'	],
-	["Don't Worry Be Happy",											EMBED_URL + 'yOaCePPiB9Y'	],
-	["The Do(ugh)nut Man",												EMBED_URL + 'ilyPGt6T9T0'	],
-	["Dream A Little Dream Of God",										EMBED_URL + 'emlw9bLSbcA'	],
-	["Drew's Blues: A Rock Operetta",									EMBED_URL + 'NzcUOxN2IuM'	],
-	["Elton John's Parenting Advice",									EMBED_URL + 'CILBYRHcpvA'	],
-	["Everything Right is Wrong Again",									EMBED_URL + 'Wcy7xzgBQis'	],
-	["Fun, Fun, Fun, Fun, Fun, Fun, Fun", 								EMBED_URL + 'AurwJd0zw0I'	],
-	["Funny Fall (2003)",												'funny_fall'				],
-	["His Biggest Mistake",												EMBED_URL + 'h3vyj5yZEmc'	],
-	["Homework", 														'math_homework'				],
-	["Honkin' Henry", 													'honkin_henry'				],
-	["I Am a Robot", 													'robot'						],
-	["I Wish They All Could Be California", 							EMBED_URL + 'aqviXXbtiUg'	],
-	["I Blue Myself",													EMBED_URL + 'SDCCdpReEuQ'	],
-	["i yam what i yam",												EMBED_URL + 'Tdb0E7uegyc'	],
-	//["Ideas",															EMBED_URL + 'YAtNl3pbYsg']
-	["Intersections!,													'intersections"				],
-	["Let's Go Ahead And Get Started", 									EMBED_URL + 'Es_YxQToays'	],
-	["Let's Go Ahead And Get Started 2", 								EMBED_URL + 'mJm6nD0hW88'	],
-	["How to Play Guitar",												EMBED_URL + 'awdspLT8f04'	],
-	["Number Nine", 													EMBED_URL + 'IGXMVuIvInw'	],
-	["One Second A Day (2019)", 										EMBED_URL + 'LaAjKX-p5hk'	],
-	["Pulp Fiction 1949",												EMBED_URL + 'ksxs5drHgTA'	],
-	["Pumpkin Bill",													EMBED_URL + '5rfJa15sZbY'	],
-	["My First Blender Movie",											EMBED_URL + '7uRKkHHZo5Y'	],
-	["Snakehips",														EMBED_URL + '5qnW6m7BPpI'	],
-	["Underwear",														'underwear'					],
-	
-	["University of Washington of Thrones",								EMBED_URL + 'tEFIzkKNBFs'	],
-	["Video Lab Detritus", 												EMBED_URL + 'dtdh8s74GI4'	],
-	["When Robots Fight",												EMBED_URL + '1oGFcKeI83A'	],
-	["You Didn't Have To Cut Me Ball", 									EMBED_URL + 'uQye8X1TvXI'	]
-]
+																				EMBED_URL + 'vCiM8z9-_iE'	],
+	["Blue Myself",																EMBED_URL + 'SDCCdpReEuQ'	],
+	["Don't Worry Be Happy",													EMBED_URL + 'yOaCePPiB9Y'	],
+	["Elton John's Parenting Advice",											EMBED_URL + 'CILBYRHcpvA'	],
+	["Homework", 																EMBED_URL + '5i2D7F1fmx0' 	],
+	["Honkin' Henry", 															EMBED_URL + 'D5ehn9a_iLY'	],
+	["How to Play Guitar",														EMBED_URL + 'awdspLT8f04'	],
+	["Ideas",																	EMBED_URL + 'YAtNl3pbYsg'	],
+	["My First Blender Movie",													EMBED_URL + '7uRKkHHZo5Y'	],
+	["Number Nine", 															EMBED_URL + 'IGXMVuIvInw'	],
+	["Pulp Fiction 1949",														EMBED_URL + 'ksxs5drHgTA'	],
+	["Pumpkin Bill?",															EMBED_URL + '5rfJa15sZbY'	],
+	["Underwear",																EMBED_URL + 'f7_Jbbqq0RY'	],
+	["You Didn't Have To Cut Me Ball", 											EMBED_URL + 'uQye8X1TvXI'	]]
+}
+
+let videos = ALL_VIDEOS[new URLSearchParams(window.location.search).get('set')]
+if (videos == null) {
+	videos = [ALL_VIDEOS['liveAction'], ALL_VIDEOS['musicVideos'], ALL_VIDEOS['animation'], ALL_VIDEOS['miscellaneous']].flat()
+}
 
 LEFT_BUTTON.onclick = () => { console.log('hm'); index = decrement(index, videos.length - 1); setVideo() }
 RIGHT_BUTTON.onclick = () => { index = increment(index, videos.length - 1); setVideo() }
@@ -112,16 +122,9 @@ RANDOM_BUTTON.onclick = () => { index = random(0, videos.length - 1); setVideo()
 let index = 0; shuffle(videos); setVideo()
 
 function setVideo() {
-	let isYouTube = videos[index][1].startsWith(EMBED_URL)
-	switchScreen(isYouTube)
 	TITLE.innerHTML = videos[index][0]
-	if (isYouTube) YOUTUBE_SCREEN.src = videos[index][1]
-	else VIDEO_SCREEN.src = 'videos/' + videos[index][1] + '.mp4'
-}
-
-function switchScreen(isYouTube) {
-	VIDEO_SCREEN.style.display = isYouTube ? 'none' : 'inline'
-	YOUTUBE_SCREEN.style.display = isYouTube ? 'inline' : 'none'
+	YOUTUBE_SCREEN.src = videos[index][1]
+	//VIDEO_SCREEN.src = 'videos/' + videos[index][1] + '.mp4'
 }
 
 </script>
