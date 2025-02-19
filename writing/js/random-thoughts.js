@@ -29,11 +29,7 @@ let randomThoughts = [
 "Life is like chess: being black is a disadvantage",
 "Everything a chef ever creates turns to shit.",
 "Anyone shorter than me who criticizes my posture is a hypocrite",
-
-//"Porn stars should get their name tattoo so everyone can google them easily",
-//"Chat GPT is a virtue signaller",
-//"Plaid pantry logo isn't plaid, and olive garden's logos isn't olives",
-//"A door is to a doorway as a donut hole is to a donut",
+"Monsters Inc. is a corparation",
 "Any bar can become a rooftop bar if you go on the roof",
 "Never shop for food while hungry, never shop for clothes while naked",
 "Law school should be called 'School of Law'",
@@ -41,4 +37,8 @@ let randomThoughts = [
 "Smokey needs a shirt and Pooh needs pants",
 "Would Ryan Gosling be as famous if he was named Ryan Duckling",
 "Is Finding Nemo a fish out of water story?"
+//"Porn stars should get their name tattoo so everyone can google them easily",
+//"Chat GPT is a virtue signaller",
+//"Plaid pantry logo isn't plaid, and olive garden's logos isn't olives",
+//"A door is to a doorway as a donut hole is to a donut",
 ]

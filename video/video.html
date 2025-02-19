@@ -5,19 +5,18 @@
 	<style type='text/css'>
 		body {
 			background-image: url(../gif/stars.gif); font-family: 'Lucida Console', monospace; color: white;
-			margin: 0;
-			height: 100%;
-			text-align: center;
-		}
-
-		#header:hover { filter: drop-shadow(0 0 0.8rem rgb(0, 81, 255)); }
-
-		#videoScreen {
-			height: 480px;
-			width: 854px;
+			margin: 0; height: 100%; text-align: center;
 		}
 
 		h1 { text-shadow : 0 0 40px red; }
+
+		iframe { border: 40px solid black; filter: drop-shadow(0 0 5rem rgb(78, 78, 78)) }
+
+		#header:hover { filter: drop-shadow(0 0 0.8rem rgb(0, 81, 255)); }
+
+		#home { :hover {  filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }}
+
+		/* #videoScreen { height: 480px; width: 854px; } */
 
 		.tab img { width: 30px; }
 
@@ -25,8 +24,6 @@
 			color: pink;
 			text-decoration: none;
 		}
-
-		#home { :hover {  filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }} 
 
 		.button, a { cursor: url(../shared/cursor.png), auto; }
 	</style>
@@ -40,9 +37,11 @@
 		<!-- <video id='hostedScreen' width=1280 height='720' controls><source type='video/mp4'></video> -->
 		<br>
 	</div>
+	<br>
 	<img class='button' src='../gif/arrowl.gif' id='left'/>
 	<img class='button' src='../gif/random.gif' id='random'/>
 	<img class='button' src='../gif/arrowr.gif' id='right'/>
+	<br><br>
 </div>
 <script src='../shared/shared.js'></script>
 <script>
@@ -56,7 +55,6 @@ const LEFT_BUTTON = 	get('left')
 const RIGHT_BUTTON =	get('right')
 const RANDOM_BUTTON = 	get('random')
 const TITLE = 			get('title')
-
 
 const ALL_VIDEOS = {
 'musicVideos': [
@@ -115,7 +113,7 @@ if (videos == null) {
 	videos = [ALL_VIDEOS['liveAction'], ALL_VIDEOS['musicVideos'], ALL_VIDEOS['animation'], ALL_VIDEOS['miscellaneous']].flat()
 }
 
-LEFT_BUTTON.onclick = () => { console.log('hm'); index = decrement(index, videos.length - 1); setVideo() }
+LEFT_BUTTON.onclick = () => { index = decrement(index, videos.length - 1); setVideo() }
 RIGHT_BUTTON.onclick = () => { index = increment(index, videos.length - 1); setVideo() }
 RANDOM_BUTTON.onclick = () => { index = random(0, videos.length - 1); setVideo() }
 

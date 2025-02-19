@@ -1,40 +1,69 @@
-const SONG = document.getElementById("song")
+const SECTION = 'section'; const CHORDS = 'chords'; const LYRICS = 'lyrics'
 
-let text = SONG.innerHTML.split("\n")
-let result = ""
+const BUTTONS = document.getElementById('buttons')
+if (BUTTONS != null) {
+    BUTTONS.innerHTML = 
+    `<div id='buttons' >
+        Sections <input type="checkbox" id="sectionBox" checked>
+        Lyrics <input type="checkbox" id="lyricBox" checked>
+        Chords <input type="checkbox" id="chordBox" checked>
+        Centered <input type="checkbox" id="centerBox">
+    </div>`
+}
+
+const SONG = document.getElementById('song')
+
+let text = SONG.innerHTML.split('\n')
+let result = ''
+// TODO- automatically center with whitespace
+// when we see a chord line -
+// add whitespace to the shorter line
+
 for (let i = 0; i < text.length; i++) {
-    console.log(i)
     let line = text[i]
-    if (line.endsWith("``")) { result += "<span class='section'>" + line.substring(0, line.length - 2) + "</span>" } 
-    else if (line.endsWith("`")) { result += "<span class='chords'>" + line.substring(0, line.length - 1) + "</span>" }
-    else { result += "<span class='lyrics'>" + line + "</span>" }
-    result += "\n"
+    if (lineType(line) == SECTION) { result += "<span class='section'>" + line.substring(0, line.length - 2) + '</span>' } 
+    else if (lineType(line) == CHORDS) { 
+        line = line.substring(0, line.length - 1)
+        let nextLine = text[i + 1]
+        if (nextLine != null && lineType(nextLine) == LYRICS) {
+            if (line.length < nextLine.length) { 
+                line += (' '.repeat(nextLine.length - line.length))
+            } else {
+                text[i + 1] += (' '.repeat(line.length - nextLine.length))
+            }
+        }
+        result += "<span class='chords'>" + line + '</span>'
+    }
+    else { result += "<span class='lyrics'>" + line + '</span>' }
+    result += '\n'
 }
 SONG.innerHTML = result
 
-const CHORD_BOX = document.getElementById("chordBox")
-const LYRIC_BOX = document.getElementById("lyricBox")
-const CENTER_BOX = document.getElementById("centerBox")
-const CHORDS = document.getElementsByClassName("chords")
-const LYRICS = document.getElementsByClassName("lyrics")
-
-
-function setCentered() {
-    SONG.style.textAlign = CENTER_BOX.checked ? 'center' : 'left' 
+function lineType(line) {
+    if (line.endsWith('``')) return SECTION
+    if (line.endsWith('`')) return CHORDS
+    return LYRICS
 }
-setCentered()
-CENTER_BOX.onclick = setCentered
+const CENTER_BOX = document.getElementById('centerBox')
 
-
-function setChords() {
-    for (i = 0; i < CHORDS.length; i++) CHORDS[i].style.visibility = CHORD_BOX.checked ? 'visible' : 'hidden'
+if (CENTER_BOX != null) {
+    function setCentered() { SONG.style.textAlign = CENTER_BOX.checked ? 'center' : 'left'; }
+    setCentered()
+    CENTER_BOX.onclick = setCentered
 }
-setChords()
-CHORD_BOX.onclick = setChords
 
+setup('section', 'sectionBox')
+setup('chords', 'chordBox')
+setup('lyrics', 'lyricBox')
 
-function setLyrics() {
-    for (i = 0; i < LYRICS.length; i++) LYRICS[i].style.visibility = LYRIC_BOX.checked ? 'visible' : 'hidden'
+function setup(name, boxName) {
+    let elements = document.getElementsByClassName(name)    
+    let box = document.getElementById(boxName)
+    if (box == null || elements == null) return
+    let refresh = () => {
+        for (i = 0; i < elements.length; i++) {
+            elements[i].style.display = box.checked ? 'inline-block' : 'none'
+        }
+    }
+    box.onclick = refresh; refresh()
 }
-setLyrics()
-LYRIC_BOX.onclick = setLyrics

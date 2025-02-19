@@ -2,7 +2,7 @@
 body {
     background-image: url(../../gif/stars2.gif);
     color: white;
-    font-family: "Lucida Console", monospace;
+    font-family: "Lucida Console", monospace; font-size: 12pt;
     white-space: pre-wrap;
     margin: auto;
 }
@@ -11,9 +11,13 @@ h1, h2, h3 {
     text-align: center;
 }
 
-.section { font-style: bold; color: red; display: none; }
+.section { font-style: bold; color: red; font-size: 14pt; }
 
 .chords { color: magenta; line-height: 2 }
+
+#buttons { 
+    text-align: center; display: flex; width: fit-content; margin: auto; color: gray
+}
 
 #song {
     display: block; 
