@@ -3,12 +3,12 @@ const SECTION = 'section'; const CHORDS = 'chords'; const LYRICS = 'lyrics'
 const BUTTONS = document.getElementById('buttons')
 if (BUTTONS != null) {
     BUTTONS.innerHTML = 
-    `<div id='buttons' >
-        Sections <input type="checkbox" id="sectionBox" checked>
-        Lyrics <input type="checkbox" id="lyricBox" checked>
-        Chords <input type="checkbox" id="chordBox" checked>
-        Centered <input type="checkbox" id="centerBox">
-    </div>`
+`<div id='buttons'>
+Sections <input type="checkbox" id="sectionBox" checked>
+    Lyrics <input type="checkbox" id="lyricBox" checked>
+    Chords <input type="checkbox" id="chordBox" checked>
+    Centered <input type="checkbox" id="centerBox">
+</div>`
 }
 
 const SONG = document.getElementById('song')
@@ -25,12 +25,10 @@ for (let i = 0; i < text.length; i++) {
     else if (lineType(line) == CHORDS) { 
         line = line.substring(0, line.length - 1)
         let nextLine = text[i + 1]
-        if (nextLine != null && lineType(nextLine) == LYRICS) {
-            if (line.length < nextLine.length) { 
-                line += (' '.repeat(nextLine.length - line.length))
-            } else {
-                text[i + 1] += (' '.repeat(line.length - nextLine.length))
-            }
+        if (lineType(nextLine) == LYRICS) {
+            let diff = ' '.repeat(Math.abs(line.length - nextLine.length))
+            if (line.length < nextLine.length) line += diff
+            else text[i + 1] += diff
         }
         result += "<span class='chords'>" + line + '</span>'
     }
@@ -40,6 +38,7 @@ for (let i = 0; i < text.length; i++) {
 SONG.innerHTML = result
 
 function lineType(line) {
+    if (line == null) return null
     if (line.endsWith('``')) return SECTION
     if (line.endsWith('`')) return CHORDS
     return LYRICS
