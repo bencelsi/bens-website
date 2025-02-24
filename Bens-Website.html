@@ -113,6 +113,7 @@ Make Videos listed on sight, but still viewable as a gallery
 <div id='musicPage' class='page'>
 	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'><h2>The Ballad of Luigi</h2></a>
 	<a href='music/songs.html?mashups'><h2>Mashups</h2></a>
+	<a href='music/songs.html?miscellaneous'><h2>Miscellaneous</h2></a>
 	<a href='music/albums.html' class='local'><h2>Albums</h2></a>
 	<details><summary>Accompaniments</summary>
 		<a href='https://www.youtube.com/watch?v=7wnEuywiGb4'><h2>The Summer Dragons</h2></a>
@@ -291,7 +292,7 @@ https://something.com/
 	const pages = getAll('page')
 	let tab = null
 	
-	get('header').onclick = () => { playSound('shared/sound/dream', 1, '.mp3'); tab = null; refreshPage() }
+	get('header').onclick = () => { playSound('shared/sound/dream', 1, '.mp3'); setTab(null) }
 
 	var anchors = document.getElementsByTagName('summary');
 	for (var i = 0; i < anchors.length; i++) {
@@ -306,11 +307,17 @@ https://something.com/
 
 	const CURRENT_TAB = new URLSearchParams(window.location.search).get('tab');
 	for (const tab of ['music', 'art', 'games', 'writing', 'video']) {
-		if (tab == CURRENT_TAB) selectTab(CURRENT_TAB)
-		get(tab + 'Tab').onclick = () => selectTab(tab)
+		if (tab == CURRENT_TAB) setTab(CURRENT_TAB)
+		get(tab + 'Tab').onclick = () => setTab(tab)
 	}
 
-	function selectTab(name) { playSound('shared/sound/pop'); tab = name; refreshPage() }
+	function setTab(newTab) { 
+		console.lo
+		if (newTab != null ) playSound('shared/sound/pop'); 
+		setMusic(newTab == null ? null : songTabs[newTab])
+		tab = newTab; 
+		refreshPage() 
+	}
 	
 	function refreshPage() {
 		for (let i = 0; i < tabs.length; i++) {
@@ -321,5 +328,25 @@ https://something.com/
 			page.style.display = (page.id == tab + 'Page') ? 'inline-block' : 'none'
 		}
 	}
+	
+	let songTabs = {
+		'music' : 		'Loooop',
+		'art' : 		'420 Loop',
+		'games' : 		'Template',
+		'writing' : 	'Chill Loop',
+		'video' : 		'Country Tuff'
+	}
+
+	let music = new Audio(); music.loop = true; 
+	const MUSIC_PATH = 'music/jams/'
+	function setMusic(song) {
+		if (song == null) { 
+			music.pause() 
+		} else {
+			music.setAttribute('src', MUSIC_PATH + song + (song.includes('.') ? '' : '.mp3')); 
+			music.play() 
+		}
+	}
+
 </script>
 </html>

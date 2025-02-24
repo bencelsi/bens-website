@@ -62,8 +62,10 @@ let randomQuestions = [
 "How many nuns could a nunchuck chuck if a nunchuck could chuck nuns?\nNone",
 "Do Eskimos use refrigerators to keep their food warm?"
 
+//"Son of the mask walked so Jack Jack attack could run"
 //"During the plagues of Egypt, did God commit abortions?",
 //"Is white slavery cultural appropriation?",
+//"Would a donkeys pronouns be he/haw",
 
 //VISUAL
 //"Alternate way to make a bagel sandwich: cut sideways, along different access",
