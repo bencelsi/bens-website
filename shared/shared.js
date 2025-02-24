@@ -1,11 +1,13 @@
-let isLocal = location.hostname === "" ? true : false
-if (isLocal) {
-    document.title = "." + document.title
-}
+let isLocal = location.hostname == ""
+if (isLocal) document.title = "." + document.title
 
 function get(id) { return document.getElementById(id) }
 
-function getAll(clazz) { return document.getElementsByClassName(clazz) }
+function getAll(name) { 
+    let byClass = document.getElementsByClassName(name)
+    if (byClass != []) return byClass
+    return document.getElementsByTagName(name)
+}
 
 function random(min, max) { return (min + (Math.floor(Math.random() * (max + 1 - min)))) }
 
@@ -22,11 +24,11 @@ function shuffle(array) {
     }
 }
 
-let audio = new Audio();
-function playSound(name, volume = 1, format='.wav') { 
+let sounds = new Audio();
+function playSound(name, volume = 1, audio = sounds) { 
     console.log(name)
     audio.volume = volume
-    let src = name + format
+    let src = name + (name.includes('.') ? '' : '.wav')
     if (audio.src != src) { audio.src = src }
     audio.play();
 }

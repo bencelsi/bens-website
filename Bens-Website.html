@@ -8,11 +8,18 @@
 (ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
 
 TODOS:
-Square Thumbnails for games/artwork, show many at once?
+Add miscellaneous album for loops
+Add music to Nabanagrams, Catanorama, Automata, Cirque, Drop, Point and clicks?
+Add repo for Drop
+
+Square Thumbnails for games/artwork, show many at once? Or at least collapsibles
 Make header letters changeable when clicked
 custom domain?
 make summaries non-selectable
 Make Videos listed on sight, but still viewable as a gallery
+When click a tab 2nd time, close all collapsibles
+Consistent 'back's
+Ideally, placeable html...  
 -->
 
 <!DOCTYPE html>
@@ -38,32 +45,34 @@ Make Videos listed on sight, but still viewable as a gallery
 		}
 
 		summary {
-			color: pink; font-style: bold;
 			font-size: 25px;
 			cursor: url(shared/cursor.png), auto;
 		}
 
 		#tabMenu { display: inline-block; }
-
-		#musicTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(200, 0, 255)); }
-		#artTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(255, 0, 0)); }
+		
+		#artTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(200, 0, 255)); }
+		#musicTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(255, 0, 0)); }
 		#gamesTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(0, 200, 55)); }
 		#writingTab:not(.selected):hover 	{ filter: drop-shadow(0 0 1rem rgb(255, 210, 0)); }
 		#videoTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(0, 130, 255)); }
-
-		#musicTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
-		#artTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(255, 0, 0)); }
+		
+		#musicTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(255, 0, 0)); }
+		#artTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
 		#gamesTab.selected		{ filter: drop-shadow(0 0 1.5rem rgb(0, 200, 55)); }
 		#writingTab.selected 	{ filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
 		#videoTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
 
+		#musicPage a 	{ color: pink; 		:hover { color: red }}
+		#artPage a 		{ color: plum; 	:hover { color: magenta }}
 		#gamesPage a 	{ color: lightgreen; 	:hover { color: green }}
-		#musicPage a 	{ color: lavender; 	:hover { color: magenta }}
 		#writingPage a 	{ color: lightyellow; 	:hover { color: yellow }}
-		#artPage a 		{ color: pink; 		:hover { color: red }}
 		#videoPage a 	{ color: lightskyblue; :hover { color: blue }}
 
-		.selected img { filter: drop-shadow(0 0 .3rem rgb(255, 214, 64)) }
+		#writingPage { summary { color: yellow; font-style: bold; }}
+		#musicPage { summary { color: red; font-style: bold; }}
+
+		.selected img { filter: drop-shadow(0 0 .25rem rgb(255, 214, 64)) }
 
 		.tab {
 			display: inline-block;
@@ -115,15 +124,6 @@ Make Videos listed on sight, but still viewable as a gallery
 	<a href='music/songs.html?mashups'><h2>Mashups</h2></a>
 	<a href='music/songs.html?miscellaneous'><h2>Miscellaneous</h2></a>
 	<a href='music/albums.html' class='local'><h2>Albums</h2></a>
-	<details><summary>Accompaniments</summary>
-		<a href='https://www.youtube.com/watch?v=7wnEuywiGb4'><h2>The Summer Dragons</h2></a>
-		<a href='https://www.youtube.com/watch?v=DRHOmGiXeqs'><h2>The Blue Gecko</h2></a>
-		<a href='https://www.youtube.com/watch?v=7s0P97t_Xbg'><h2>Frog Chase</h2></a>
-		<a href='https://www.youtube.com/watch?v=in3JswOAFDw'><h2>Bingo's Fantastic Journey</h2></a>
-		<a href='https://www.youtube.com/watch?v=A312PsGlMTk'><h2>A Brief History of Galvanism</h2></a>
-		<a href='https://www.youtube.com/watch?v=tm5si5WQUqY'><h2>Kelso's Choices</h2></a>
-		<a href='https://www.youtube.com/watch?v=8m9JRKYb5Ho'><h2>Maloy's Jewelry Workshop Commercial</h2></a>
-	</details><br><br>
 	<details><summary>Chords & Lyrics</summary>
 		<a href='music/chords/songs/luigi.html'><h2>The Ballad of Luigi</h2></a>
 		<a href='music/chords/songs/drews-blues.html'><h2>Drew's Blues: A Rock Operettta</h2></a>
@@ -135,7 +135,17 @@ Make Videos listed on sight, but still viewable as a gallery
 			<a href='music/chords/songs/woke-up.html'><h2>Woke Up</h2></a>
 			<a href='music/chords/songs/hello-now.html'><h2>Hello Now</h2></a>
 		</div>
-	</details>
+	</details><br>
+	<details><summary>Accompaniments for Rebeccas's Animations</summary>
+		<a href='https://www.youtube.com/watch?v=7wnEuywiGb4'><h2>The Summer Dragons</h2></a>
+		<a href='https://www.youtube.com/watch?v=DRHOmGiXeqs'><h2>The Blue Gecko</h2></a>
+		<a href='https://www.youtube.com/watch?v=7s0P97t_Xbg'><h2>Frog Chase</h2></a>
+		<a href='https://www.youtube.com/watch?v=in3JswOAFDw'><h2>Bingo's Fantastic Journey</h2></a>
+		<a href='https://www.youtube.com/watch?v=A312PsGlMTk'><h2>A Brief History of Galvanism</h2></a>
+		<a href='https://www.youtube.com/watch?v=tm5si5WQUqY'><h2>Kelso's Choices</h2></a>
+		<a href='https://www.youtube.com/watch?v=8m9JRKYb5Ho'><h2>Maloy's Jewelry Workshop Commercial</h2></a>
+	</details><br><br>
+	
 	<!-- <a href='music/albums.html'><h2>Music Videos</h2></a>
 	<a href='music/albums.html'><h2>Chords</h2></a> -->
 </div>
@@ -287,22 +297,32 @@ https://something.com/
 <!------------------------------------------------>
 <script src='shared/shared.js'></script>
 <script>
-	const testDiv = get('test')
-	const tabs = getAll('tab')
-	const pages = getAll('page')
-	let tab = null
-	
-	get('header').onclick = () => { playSound('shared/sound/dream', 1, '.mp3'); setTab(null) }
+	const TABS = getAll('tab')
+	const PAGES = getAll('page')
+	const LOCALS = getAll('local')
+	const music = new Audio(); music.loop = true;
+	const voice = new Audio();
 
-	var anchors = document.getElementsByTagName('summary');
-	for (var i = 0; i < anchors.length; i++) {
-		var anchor = anchors[i];
-		anchor.onclick = () => { playSound('shared/sound/click') }
+	const songTabs = {
+		'music' : 		['420 Loop',			.5],
+		'art' : 		['Chill Loop',			.5],
+		'games' : 		['Roach',				.5],
+		'writing' : 	['Loooop',				.5],
+		'video' : 		['Country Tuff',		.5],
 	}
 
+	let tab = null
+	
+	get('header').onclick = () => { 
+		playSound('shared/sound/dream.mp3', .8)
+		playSound('shared/sound/tabs/bens2.mp3', 1, voice)
+		setTab(null)
+	}
+
+	for (let summary of getAll('summary')) summary.onclick = () => { playSound('shared/sound/click') }
+
 	if (isLocal) {
-		let locals = getAll('local')
-		for (i = 0; i < locals.length; i++) locals[i].style.display = 'block'
+		for (i = 0; i < LOCALS.length; i++) LOCALS[i].style.display = 'block'
 	}
 
 	const CURRENT_TAB = new URLSearchParams(window.location.search).get('tab');
@@ -311,39 +331,32 @@ https://something.com/
 		get(tab + 'Tab').onclick = () => setTab(tab)
 	}
 
-	function setTab(newTab) { 
-		console.lo
-		if (newTab != null ) playSound('shared/sound/pop'); 
-		setMusic(newTab == null ? null : songTabs[newTab])
+	function setTab(newTab) {
+		if (newTab != null ) { 
+			playSound('shared/sound/tabs/' + newTab + '3.mp3', 1, voice)
+			playSound('shared/sound/pop', .7)
+		}
+		setMusic(newTab == null ? null : songTabs[newTab][0])
 		tab = newTab; 
 		refreshPage() 
 	}
 	
 	function refreshPage() {
-		for (let i = 0; i < tabs.length; i++) {
-			let tabDiv = tabs[i]
+		for (let i = 0; i < 5; i++) {
+			let tabDiv = TABS[i]
 			if (tabDiv.id == tab + 'Tab') tabDiv.classList.add('selected')
 			else tabDiv.classList.remove('selected')
-			let page = pages[i]
+			let page = PAGES[i]
 			page.style.display = (page.id == tab + 'Page') ? 'inline-block' : 'none'
 		}
 	}
 	
-	let songTabs = {
-		'music' : 		'420 Loop',
-		'art' : 		'Chill Loop',
-		'games' : 		'Template',
-		'writing' : 	'Loooop',
-		'video' : 		'Country Tuff'
-	}
-
-	let music = new Audio(); music.loop = true; 
-	const MUSIC_PATH = 'music/jams/'
-	function setMusic(song) {
+	function setMusic(song, volume = .2) {
 		if (song == null) { 
 			music.pause() 
 		} else {
-			music.setAttribute('src', MUSIC_PATH + song + (song.includes('.') ? '' : '.mp3')); 
+			music.src = 'music/jams/' + song + (song.includes('.') ? '' : '.mp3') 
+			music.volume = volume
 			music.play() 
 		}
 	}
