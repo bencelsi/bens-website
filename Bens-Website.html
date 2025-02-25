@@ -8,10 +8,13 @@
 (ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
 
 TODOS:
-Add miscellaneous album for loops
-Add music to Nabanagrams, Catanorama, Automata, Cirque, Drop, Point and clicks?
-Add repo for Drop
-
+Embed other pages via iframe!! paintings, games etc...
+Add miscellaneous album for loops, old piano tracks?, Podcast music, Eno EP?
+Create contact page, misc page?
+Add music to Drop, Point and clicks?
+Create simple sound js file - use across projects
+Capitalize repo names?
+lowercase-ify htmls
 Square Thumbnails for games/artwork, show many at once? Or at least collapsibles
 Make header letters changeable when clicked
 custom domain?
@@ -20,6 +23,7 @@ Make Videos listed on sight, but still viewable as a gallery
 When click a tab 2nd time, close all collapsibles
 Consistent 'back's
 Ideally, placeable html...  
+Idea... when you go to other pages, music continues, but hi-passed
 -->
 
 <!DOCTYPE html>
@@ -94,6 +98,9 @@ Ideally, placeable html...
 			-ms-user-select: none;
 			user-select: none;
 		}
+		iframe {
+			width: 1000px; height: 1000px;
+		}
 	</style>
 </head>
 <!--------------------------------------------------------------------------->
@@ -109,41 +116,41 @@ Ideally, placeable html...
 
 <!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
 <div id='tabMenu'>
-	<div class='tab' id='musicTab'><img src='gif/tabs/guitar.gif'/></div>
-	<div class='tab' id='artTab' ><img src='gif/tabs/pallette.gif'/></div>
-	<div class='tab' id='gamesTab'><img src='gif/tabs/computer.gif'/></div>
-	<div class='tab' id='writingTab'><img src='gif/tabs/book.gif'/></div>
-	<div class='tab' id='videoTab'><img src='gif/tabs/TV.gif'/></div>
+	<div class='tab' id='musicTab'>		<img src='gif/tabs/guitar.gif'/></div>
+	<div class='tab' id='artTab'>		<img src='gif/tabs/pallette.gif'/></div>
+	<div class='tab' id='gamesTab'>		<img src='gif/tabs/computer.gif'/></div>
+	<div class='tab' id='writingTab'>	<img src='gif/tabs/book.gif'/></div>
+	<div class='tab' id='videoTab'>		<img src='gif/tabs/TV.gif'/></div>
 </div>
 <br><br>
 <!------------------------------------------------>
 <!-- M U S I C -->
 <!------------------------------------------------>
 <div id='musicPage' class='page'>
-	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'><h2>The Ballad of Luigi</h2></a>
-	<a href='music/songs.html?mashups'><h2>Mashups</h2></a>
-	<a href='music/songs.html?miscellaneous'><h2>Miscellaneous</h2></a>
-	<a href='music/albums.html' class='local'><h2>Albums</h2></a>
+	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'>		<h2>The Ballad of Luigi</h2></a>
+	<a href='music/songs.html?mashups'>							<h2>Mashups</h2></a>
+	<a href='music/songs.html?miscellaneous'>					<h2>Miscellaneous</h2></a>
+	<a href='music/albums.html' class='local'>					<h2>Albums</h2></a>
 	<details><summary>Chords & Lyrics</summary>
-		<a href='music/chords/songs/luigi.html'><h2>The Ballad of Luigi</h2></a>
-		<a href='music/chords/songs/drews-blues.html'><h2>Drew's Blues: A Rock Operettta</h2></a>
+		<a href='music/chords/songs/luigi.html'>				<h2>The Ballad of Luigi</h2></a>
+		<a href='music/chords/songs/drews-blues.html'>			<h2>Drew's Blues: A Rock Operettta</h2></a>
 		<div class='local'>
-			<a href='music/chords/songs/cats.html'><h2>Cats</h2></a>
-			<a href='music/chords/songs/golden-gate.html'><h2>Golden Gate</h2></a>
-			<a href='music/chords/songs/one-love.html'><h2>One Love</h2></a>
-			<a href='music/chords/songs/play-the-game.html'><h2>Play the Game</h2></a>
-			<a href='music/chords/songs/woke-up.html'><h2>Woke Up</h2></a>
-			<a href='music/chords/songs/hello-now.html'><h2>Hello Now</h2></a>
+			<a href='music/chords/songs/cats.html'>				<h2>Cats</h2></a>
+			<a href='music/chords/songs/golden-gate.html'>		<h2>Golden Gate</h2></a>
+			<a href='music/chords/songs/one-love.html'>			<h2>One Love</h2></a>
+			<a href='music/chords/songs/play-the-game.html'>	<h2>Play the Game</h2></a>
+			<a href='music/chords/songs/woke-up.html'>			<h2>Woke Up</h2></a>
+			<a href='music/chords/songs/hello-now.html'>		<h2>Hello Now</h2></a>
 		</div>
 	</details><br>
 	<details><summary>Accompaniments for Rebeccas's Animations</summary>
-		<a href='https://www.youtube.com/watch?v=7wnEuywiGb4'><h2>The Summer Dragons</h2></a>
-		<a href='https://www.youtube.com/watch?v=DRHOmGiXeqs'><h2>The Blue Gecko</h2></a>
-		<a href='https://www.youtube.com/watch?v=7s0P97t_Xbg'><h2>Frog Chase</h2></a>
-		<a href='https://www.youtube.com/watch?v=in3JswOAFDw'><h2>Bingo's Fantastic Journey</h2></a>
-		<a href='https://www.youtube.com/watch?v=A312PsGlMTk'><h2>A Brief History of Galvanism</h2></a>
-		<a href='https://www.youtube.com/watch?v=tm5si5WQUqY'><h2>Kelso's Choices</h2></a>
-		<a href='https://www.youtube.com/watch?v=8m9JRKYb5Ho'><h2>Maloy's Jewelry Workshop Commercial</h2></a>
+		<a href='https://www.youtube.com/watch?v=7wnEuywiGb4'>	<h2>The Summer Dragons</h2></a>
+		<a href='https://www.youtube.com/watch?v=DRHOmGiXeqs'>	<h2>The Blue Gecko</h2></a>
+		<a href='https://www.youtube.com/watch?v=7s0P97t_Xbg'>	<h2>Frog Chase</h2></a>
+		<a href='https://www.youtube.com/watch?v=in3JswOAFDw'>	<h2>Bingo's Fantastic Journey</h2></a>
+		<a href='https://www.youtube.com/watch?v=A312PsGlMTk'>	<h2>A Brief History of Galvanism</h2></a>
+		<a href='https://www.youtube.com/watch?v=tm5si5WQUqY'>	<h2>Kelso's Choices</h2></a>
+		<a href='https://www.youtube.com/watch?v=8m9JRKYb5Ho'>	<h2>Maloy's Jewelry Workshop Commercial</h2></a>
 	</details><br><br>
 	
 	<!-- <a href='music/albums.html'><h2>Music Videos</h2></a>
@@ -153,66 +160,51 @@ Ideally, placeable html...
 <!-- A R T -->
 <!------------------------------------------------>
 <div id='artPage' class='page'>
-	<a href='art/art.html?paintings'><h2>Paintings</h2></a>
-	<a href='art/art.html?drawings'><h2>Drawings</h2></a>
-	<a href='art/art.html?photos'><h2>Photos</h2></a>
-	<a href='art/art.html?uw-daily-illustrations'><h2>UW Daily Illustrations</h2></a>
-	<a href='art/art.html?dead-end'><h2>Dead End Test Renders</h2></a>
-	<a href='art/art.html?miscellaneous'><h2>Miscellaneous</h2></a>
+	<a href='art/art.html?paintings'>				<h2>Paintings</h2></a>
+	<a href='art/art.html?drawings'>				<h2>Drawings</h2></a>
+	<a href='art/art.html?photos'>					<h2>Photos</h2></a>
+	<a href='art/art.html?uw-daily-illustrations'>	<h2>UW Daily Illustrations</h2></a>
+	<a href='art/art.html?dead-end'>				<h2>Dead End Test Renders</h2></a>
+	<a href='art/art.html?miscellaneous'>			<h2>Miscellaneous</h2></a>
 </div>
 <!------------------------------------------------>
 <!-- G A M E S -->
 <!------------------------------------------------>
 <div id='gamesPage' class='page'>
-	<a href='https://bencelsi.github.io/chord-wheel'> 
-		<h2><img src='games/ico/chord-wheel.ico'>
-			Chord Wheel
-		<img src='games/ico/chord-wheel.ico'></h2>
-	</a>
-	<a href='https://bencelsi.github.io/point-and-clicks'> 
-		<h2><img src='games/ico/chord-wheel.ico'>
-			Point & Clicks
-		<img src='games/ico/chord-wheel.ico'></h2>
-	</a>
-	<a href='https://bencelsi.github.io/tetriven'>
-		<h2><img src='games/ico/tetriven2.ico'>
-			Tetriven
-		<img src='games/ico/tetriven2.ico'></h2>
-	</a>
-	<a href='https://bencelsi.github.io/catan-o-rama'>
-		<h2><img src='games/ico/catanorama.ico'>
-			Catan-o-Rama!
-		<img src='games/ico/catanorama.ico'></h2>
-	</a>
-	<a href='https://bencelsi.github.io/nabanagrams'> 
-		<h2><img src='games/ico/nabanagrams.ico'> 
-			Nabanagrams
-		<img src='games/ico/nabanagrams.ico'></h2>
-	</a>
+	<!-- <iframe src="file:///music/songs.html"></iframe>  -->
+	<img src='games/ico/chord-wheel.ico'>
+	<img src='games/ico/cirque-de-sabotage.ico'>
+	<img src='games/ico/tetriven2.ico'>
+	<img src='games/ico/catanorama.ico'>
+	<img src='games/ico/nabanagrams.ico'>
+	<img src='games/ico/soviet-monopoly.ico'>
+	<img src='games/ico/automata.ico'>
+	<img src='games/ico/mxbbi.ico'>
+	<img src='games/ico/grounded.ico'>
+	<img src='games/ico/drop.ico'>
+	<img src='games/ico/mxbbi.ico'>
+	<img src='games/ico/griven.ico'>
+	<img src='games/ico/grounded.ico'>
+	<img src='games/ico/game-of-cards.ico'>
+
+	<a href='https://bencelsi.github.io/chord-wheel'>				<h2>Chord Wheel</h2></a>
+	<a href='https://bencelsi.github.io/point-and-clicks'>			<h2>Point & Clicks</h2></a>
+	<a href='https://bencelsi.github.io/tetriven'>					<h2>Tetriven</h2></a>
+	<a href='https://bencelsi.github.io/catan-o-rama'>				<h2>Catan-o-Rama!</h2></a>
+	<a href='https://bencelsi.github.io/nabanagrams'> 				<h2>Nabanagrams</h2></a>
+	<a href='https://bencelsi.github.io/automata'>					<h2>Automata</h2></a>
+	<a href='https://bencelsi.github.io/cirque-de-sabotage'>		<h2>Cirque de Sabotage</h2></a>
+	<a href='https://bencelsi.github.io/mxbbi'>						<h2>MXBBI</h2></a>
+	<a href='https://bencelsi.github.io/drop'>						<h2>Drop</h2></a>
+	<a href='https://scratch.mit.edu/projects/1448075/fullscreen'>	<h2>Griven</h2></a>
+	<a href='https://scratch.mit.edu/projects/379323/fullscreen/'>	<h2>Grounded</h2></a>
+	<!-- Local: -->
 	<a href='file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/soviet-monopoly/soviet-monopoly.html' class='local'>
-		<h2><img src='games/ico/soviet-monopoly.ico'> Soviet Monopoly</h2>
+		<h2>Soviet Monopoly</h2>
 	</a>
 	<a href='file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/game-of-cards/game-of-cards.html' class='local'>
-		<h2><img src='games/ico/game-of-cards.ico'> Game of Cards</h2>
+		<h2>Game of Cards</h2>
 	</a>
-	<a href='https://bencelsi.github.io/automata'><h2><img src='games/ico/automata.ico'>
-		Automata
-	<img src='games/ico/automata.ico'></h2></a>
-	<a href='https://bencelsi.github.io/cirque-de-sabotage'><h2><img src='games/ico/cirque-de-sabotage.ico'>
-		Cirque de Sabotage
-	<img src='games/ico/cirque-de-sabotage.ico'></h2></a>
-	<a href='https://bencelsi.github.io/mxbbi'><h2><img src='games/ico/mxbbi.ico'>
-		MXBBI
-	<img src='games/ico/mxbbi.ico'></h2></a>
-	<a href='https://atmos.uw.edu/~dargan/EarthGamesUW/Drop.html'><h2><img src='games/ico/drop.ico'>
-		Drop
-	<img src='games/ico/drop.ico'></h2></a>
-	<a href='https://scratch.mit.edu/projects/1448075/fullscreen'><h2><img src='games/ico/griven.ico'>
-		Griven
-	<img src='games/ico/griven.ico'></h2></a>
-	<a href='https://scratch.mit.edu/projects/379323/fullscreen/'><h2><img src='games/ico/grounded.ico'>
-		Grounded
-	<img src='games/ico/grounded.ico'></h2></a>
 </div>
 
 <!------------------------------------------------>
@@ -222,44 +214,44 @@ Ideally, placeable html...
 	<br>
 	<details><summary>College</summary>
 		<a href='writing/writings/college/Christian-Bok.html' class='local'><h2>Christian Bök</h2></a>
-		<a href='writing/writings/college/Youre-Little.html' class='local'><h2>You're Little</h2></a>
-		<a href='writing/writings/college/ABBA-CD.html'><h2>ABBA CD</h2></a>
-		<a href='writing/writings/college/Raven.html'><h2>TheRaven.java</h2></a>
-		<a href='writing/writings/college/Nature.html'><h2>Nature Forging a Baby</h2></a>
+		<a href='writing/writings/college/Youre-Little.html' class='local'>	<h2>You're Little</h2></a>
+		<a href='writing/writings/college/ABBA-CD.html'>					<h2>ABBA CD</h2></a>
+		<a href='writing/writings/college/Raven.html'>						<h2>TheRaven.java</h2></a>
+		<a href='writing/writings/college/Nature.html'>						<h2>Nature Forging a Baby</h2></a>
 	</details><br><br>
 	<details><summary>High School</summary>
-		<a href='writing/writings/high/Great-Apes.html'><h2>Great Apes</h2></a>
-		<a href='writing/writings/high/Ough.html'><h2>Ough</h2></a>
-		<a href='writing/writings/high/I-Am-From-Poem.html'><h2>I Am Dumb Poem</h2></a>
-		<a	 href='writing/writings/high/Fruit-Flies.html'><h2>Fruit Flies</h2></a>
-		<a href='writing/writings/high/Babylon.html'><h2>By the Waters of Babylon: The Reawakening</h2></a>
-		<a href='writing/writings/high/Mr-Oates.html'><h2>Mr. Oates</h2></a>
+		<a href='writing/writings/high/Great-Apes.html'>					<h2>Great Apes</h2></a>
+		<a href='writing/writings/high/Ough.html'>							<h2>Ough</h2></a>
+		<a href='writing/writings/high/I-Am-From-Poem.html'>				<h2>I Am Dumb Poem</h2></a>
+		<a href='writing/writings/high/Fruit-Flies.html'>					<h2>Fruit Flies</h2></a>
+		<a href='writing/writings/high/Babylon.html'>						<h2>By the Waters of Babylon: The Reawakening</h2></a>
+		<a href='writing/writings/high/Mr-Oates.html'>						<h2>Mr. Oates</h2></a>
 	</details><br><br>
 	<details><summary>Middle School</summary>
-		<a href='writing/writings/middle/Shakespearean-Friday.html'><h2>Shakespearean Friday</h2></a>
-		<a href='writing/writings/middle/Ms-Knottethin.html'><h2>Ms. Knottethin</h2></a>
-		<a href='writing/writings/middle/The-Church.html'><h2>The Church</h2></a>
-		<a href='writing/writings/middle/Zirconium.html'><h2>Zirconium</h2></a>
-		<a href='writing/writings/middle/Ode-to-Oden.html'><h2>Ode to Oden</h2></a>
-		<a href='writing/writings/middle/Josh-Hauser.html'><h2>Josh Hauser</h2></a>
-		<a href='writing/writings/middle/Life-of-Bob.html'><h2>Life of Bob</h2></a>
-		<a href='writing/writings/middle/How-To.html'><h2>How to Write a How-To Essay</h2></a>
-		<a href='writing/writings/middle/Lewis-Carroll.html'><h2>The 'Lewis Carroll Poem' Poem</h2></a>
-		<a href='writing/writings/middle/Mystery-Object-Poem.html'><h2>Mystery Object Poem</h2></a>
-		<a href='writing/writings/middle/Newport-Field-Trip-Haikus.html'><h2>Newport Field Trip Haikus</h2></a>
-		<a href='writing/writings/middle/Planet-Limericks.html'><h2>Planet Limericks</h2></a>
-		<a href='writing/writings/middle/Da-Vinci-Code-Poem.html'><h2>Da Vinci Code Poem</h2></a>
+		<a href='writing/writings/middle/Shakespearean-Friday.html'>		<h2>Shakespearean Friday</h2></a>
+		<a href='writing/writings/middle/Ms-Knottethin.html'>				<h2>Ms. Knottethin</h2></a>
+		<a href='writing/writings/middle/The-Church.html'>					<h2>The Church</h2></a>
+		<a href='writing/writings/middle/Zirconium.html'>					<h2>Zirconium</h2></a>
+		<a href='writing/writings/middle/Ode-to-Oden.html'>					<h2>Ode to Oden</h2></a>
+		<a href='writing/writings/middle/Josh-Hauser.html'>					<h2>Josh Hauser</h2></a>
+		<a href='writing/writings/middle/Life-of-Bob.html'>					<h2>Life of Bob</h2></a>
+		<a href='writing/writings/middle/How-To.html'>						<h2>How to Write a How-To Essay</h2></a>
+		<a href='writing/writings/middle/Lewis-Carroll.html'>				<h2>The 'Lewis Carroll Poem' Poem</h2></a>
+		<a href='writing/writings/middle/Mystery-Object-Poem.html'>			<h2>Mystery Object Poem</h2></a>
+		<a href='writing/writings/middle/Newport-Field-Trip-Haikus.html'>	<h2>Newport Field Trip Haikus</h2></a>
+		<a href='writing/writings/middle/Planet-Limericks.html'>			<h2>Planet Limericks</h2></a>
+		<a href='writing/writings/middle/Da-Vinci-Code-Poem.html'>			<h2>Da Vinci Code Poem</h2></a>
 	</details><br><br>
 	<details><summary>Elementary School</summary>
-		<a href='writing/writings/elementary/Flagellants.html'><h2>The Flagellants</h2></a>
-		<a href='writing/writings/elementary/Bush.html'><h2>The Adventures of George W. Bush</h2></a>
-		<a href='writing/writings/elementary/John-Adams-poem.html'><h2>John Adams Poem</h2></a>
-		<a href='writing/writings/elementary/Princess-Fred-Jr.html'><h2>Princess Fred Jr.</h2></a>
+		<a href='writing/writings/elementary/Flagellants.html'>				<h2>The Flagellants</h2></a>
+		<a href='writing/writings/elementary/Bush.html'>					<h2>The Adventures of George W. Bush</h2></a>
+		<a href='writing/writings/elementary/John-Adams-poem.html'>			<h2>John Adams Poem</h2></a>
+		<a href='writing/writings/elementary/Princess-Fred-Jr.html'>		<h2>Princess Fred Jr.</h2></a>
 	</details><br><br>
 	<details><summary>Other</summary>
-		<a href='writing/gallery.html?palindromes'><h2>Palindromes</h2></a>
-		<a href='writing/gallery.html?alphabet-sayings'><h2>Alphabet Sayings</h2></a>
-		<a href='writing/gallery.html?miscellaneous'><h2>Miscellaneous</h2></a>
+		<a href='writing/gallery.html?palindromes'>							<h2>Palindromes</h2></a>
+		<a href='writing/gallery.html?alphabet-sayings'>					<h2>Alphabet Sayings</h2></a>
+		<a href='writing/gallery.html?miscellaneous'>						<h2>Miscellaneous</h2></a>
 	</details>
 </div>
 
@@ -267,11 +259,11 @@ Ideally, placeable html...
 <!-- V I D E O -->
 <!------------------------------------------------>
 <div id='videoPage' class='page'>
-	<a href='video/video.html?set=all'><h2>All Videos</h2></a><br>
-	<a href='video/video.html?set=musicVideos'><h2>Music Videos</h2></a><br>
-	<a href='video/video.html?set=liveAction'><h2>Live Action</h2></a><br>
-	<a href='video/video.html?set=all'><h2>Animation</h2></a><br>
-	<a href='video/video.html?set=miscellaneous'><h2>Miscellaneous</h2></a><br>
+	<a href='video/video.html?set=all'>				<h2>All Videos</h2></a><br>
+	<a href='video/video.html?set=musicVideos'>		<h2>Music Videos</h2></a><br>
+	<a href='video/video.html?set=liveAction'>		<h2>Live Action</h2></a><br>
+	<a href='video/video.html?set=all'>				<h2>Animation</h2></a><br>
+	<a href='video/video.html?set=miscellaneous'><	h2>Miscellaneous</h2></a><br>
 </div>
 <br><br>
 </body>
@@ -307,23 +299,21 @@ https://something.com/
 		'music' : 		['420 Loop',			.5],
 		'art' : 		['Chill Loop',			.5],
 		'games' : 		['Roach',				.5],
-		'writing' : 	['Loooop',				.5],
+		'writing' : 	['Spaghettiloop',		.5],
 		'video' : 		['Country Tuff',		.5],
 	}
 
 	let tab = null
 	
 	get('header').onclick = () => { 
-		playSound('shared/sound/dream.mp3', .8)
+		playSound('shared/sound/dream.mp3', .5)
 		playSound('shared/sound/tabs/bens2.mp3', 1, voice)
 		setTab(null)
 	}
 
 	for (let summary of getAll('summary')) summary.onclick = () => { playSound('shared/sound/click') }
 
-	if (isLocal) {
-		for (i = 0; i < LOCALS.length; i++) LOCALS[i].style.display = 'block'
-	}
+	if (isLocal) { for (i = 0; i < LOCALS.length; i++) LOCALS[i].style.display = 'block' }
 
 	const CURRENT_TAB = new URLSearchParams(window.location.search).get('tab');
 	for (const tab of ['music', 'art', 'games', 'writing', 'video']) {
@@ -332,13 +322,15 @@ https://something.com/
 	}
 
 	function setTab(newTab) {
-		if (newTab != null ) { 
-			playSound('shared/sound/tabs/' + newTab + '3.mp3', 1, voice)
+		if (newTab != null ) {
+			playSound('shared/sound/tabs/' + newTab + (tab == newTab ? '-x' : '4') +'.mp3', 1, voice)
 			playSound('shared/sound/pop', .7)
 		}
 		setMusic(newTab == null ? null : songTabs[newTab][0])
+		music.volume = songTabs[newTab][1]
 		tab = newTab; 
 		refreshPage() 
+
 	}
 	
 	function refreshPage() {
@@ -361,5 +353,8 @@ https://something.com/
 		}
 	}
 
+	// var msg = new SpeechSynthesisUtterance();
+	// 	msg.text = "Hello World";
+	// 	window.speechSynthesis.speak(msg);
 </script>
 </html>
