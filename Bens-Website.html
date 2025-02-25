@@ -172,7 +172,7 @@ Idea... when you go to other pages, music continues, but hi-passed
 <!------------------------------------------------>
 <div id='gamesPage' class='page'>
 	<!-- <iframe src="file:///music/songs.html"></iframe>  -->
-	<img src='games/ico/chord-wheel.ico'>
+	<!-- <img src='games/ico/chord-wheel.ico'>
 	<img src='games/ico/cirque-de-sabotage.ico'>
 	<img src='games/ico/tetriven2.ico'>
 	<img src='games/ico/catanorama.ico'>
@@ -185,7 +185,7 @@ Idea... when you go to other pages, music continues, but hi-passed
 	<img src='games/ico/mxbbi.ico'>
 	<img src='games/ico/griven.ico'>
 	<img src='games/ico/grounded.ico'>
-	<img src='games/ico/game-of-cards.ico'>
+	<img src='games/ico/game-of-cards.ico'> -->
 
 	<a href='https://bencelsi.github.io/chord-wheel'>				<h2>Chord Wheel</h2></a>
 	<a href='https://bencelsi.github.io/point-and-clicks'>			<h2>Point & Clicks</h2></a>
@@ -263,7 +263,7 @@ Idea... when you go to other pages, music continues, but hi-passed
 	<a href='video/video.html?set=musicVideos'>		<h2>Music Videos</h2></a><br>
 	<a href='video/video.html?set=liveAction'>		<h2>Live Action</h2></a><br>
 	<a href='video/video.html?set=all'>				<h2>Animation</h2></a><br>
-	<a href='video/video.html?set=miscellaneous'><	h2>Miscellaneous</h2></a><br>
+	<a href='video/video.html?set=miscellaneous'>	<h2>Miscellaneous</h2></a><br>
 </div>
 <br><br>
 </body>
@@ -321,16 +321,24 @@ https://something.com/
 		get(tab + 'Tab').onclick = () => setTab(tab)
 	}
 
+	let secret = false
 	function setTab(newTab) {
 		if (newTab != null ) {
-			playSound('shared/sound/tabs/' + newTab + (tab == newTab ? '-x' : '4') +'.mp3', 1, voice)
+			if (newTab == tab && newTab == 'games') { //secret game - iframe within iframe?
+				playSound('shared/sound/tabs/' + (secret ? 'secret' : 'games-x') +'.mp3', 1, voice)
+				secret = !secret
+			} else {
+				secret = false
+				playSound('shared/sound/tabs/' + newTab + (tab == newTab ? '-x' : '4') +'.mp3', 1, voice)
+			}
 			playSound('shared/sound/pop', .7)
+		} else {
+			secret = false
 		}
 		setMusic(newTab == null ? null : songTabs[newTab][0])
 		music.volume = songTabs[newTab][1]
 		tab = newTab; 
 		refreshPage() 
-
 	}
 	
 	function refreshPage() {
