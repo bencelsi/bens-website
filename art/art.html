@@ -20,138 +20,32 @@
 		</div>
 	</div>
 	<script src="../shared/shared.js"></script>
-	<script src="photos.js"></script>
+	<script src="dead-end/list.js"></script>
+	<script src="drawings/list.js"></script>
+	<script src="life-of-pika/list.js"></script>
+	<script src="miscellaneous/list.js"></script>
+	<script src="paintings/list.js"></script>
+	<script src="photos/list.js"></script>
+	<script src="uw-daily/list.js"></script>
 	<script>
-		let allImages = {
-			"paintings": [
-				"BottleAndGoblet.jpg",
-				"Chantarelle.jpg",
-				"Pomegranate.JPG",
-				"McKinley.JPG",
-				"Renaissance.JPG",
-				"SelfPortrait.jpg",
-				"SkullPainting.JPG",
-				"TurkeyVulture.png",
-				"WineAndOnion.jpg"
-			],
-			"drawings": [
-				"Artichoke.JPG",
-				"CherryTree.jpg",
-				"LivingRoom.JPG",
-				"Parents.JPG",
-				"Popcorn.JPG",
-				"Sanjay.JPG",
-				"Skull.JPG",
-				"Sunflowers.JPG"
-			],
-			"uw-daily-illustrations": [
-				"420.jpg",
-				"Hillary.jpg",
-				"Stars.jpg",
-				"aderall.jpg",
-				"aggression.jpg",
-				"apartment.jpg",
-				"bezos.jpg",
-				"big data.jpg",
-				"bikini.jpg",
-				"bird and bee.jpg",
-				"bob hasegawa.JPG",
-				"breathe.jpg",
-				"bring them to heel.jpg",
-				"budget.jpg",
-				"cary moon.jpg",
-				"cat.jpg",
-				"chronic pain.jpg",
-				"class.jpg",
-				"coddled.jpg",
-				"condon.jpg",
-				"cross.jpg",
-				"crowded uw.jpg",
-				"dragon.jpg",
-				"dropout.jpg",
-				"eating disorder.JPG",
-				"education.jpg",
-				"election feelings.jpg",
-				"environment.jpg",
-				"excel.jpg",
-				"feminist ad color 2.jpg",
-				"fish.jpg",
-				"frats.jpg",
-				"ghosts.jpg",
-				"good place.jpg",
-				"hanging.jpg",
-				"ice.jpg",
-				"jenny durkin.JPG",
-				"jessyn farrell.jpg",
-				"lawmaker.jpg",
-				"leaves.jpg",
-				"mimimum wage color.jpg",
-				"monkey.JPG",
-				"obamaKim.JPG",
-				"online activism.jpg",
-				"oxxxford.jpg",
-				"palace.jpg",
-				"pregnancy.jpg",
-				"primate.jpg",
-				"pumpkin.jpg",
-				"ratings.jpg",
-				"restroom.jpg",
-				"sex ed.jpg",
-				"shoes.JPG",
-				"social media.jpg",
-				"stem.jpg",
-				"stuff.JPG",
-				"summer.jpg",
-				"tech love bw.jpg",
-				"tech vs nature.jpg",
-				"thoughts.jpg",
-				"to the bone.jpg",
-				"trump.jpg",
-				"trumpers.jpg",
-				"vegetables.jpg",
-				"vets.jpg",
-				"women in stem 2.jpg"
-			],
-			"dead-end": [
-				"Dark Room 2.PNG",
-				"Dead End 3.png",
-				"Front Yard 2.png",
-				"Kitchen 7.PNG",
-				"Living Room 4.PNG",
-				"Living Room Plant 1.PNG",
-				"Overhead.PNG",
-				"Rabbit.PNG",
-				"Screen Shot 2013-12-30 at 12.29.37 PM.png",
-				"Screen Shot 2014-01-07 at 6.43.06 PM.png",
-				"Screen Shot 2014-06-23 at 6.35.27 PM.png",
-				"Screen Shot 2014-07-02 at 2.48.27 PM.png",
-				"Screen Shot 2014-08-08 at 9.22.40 AM.png",
-				"Shed.png",
-				"Street 1.png",
-				"Yard 5.PNG",
-				"graveyard1.JPG",
-				"sidepath3.png"
-			],
-			"miscellaneous": [
-				"BusinessSpooner.jpeg",
-				"Gary.jpg",
-				"OffallyGood!.jpeg",
-				"SovietMonopoly.jpeg",
-				"Teapots.png",
-				"TheActualBeachBoys.jpeg",
-				"ThiccSpaghetti.jpg",
-				"TrainParking.jpeg",
-				"WolfOfWallStreetVHS.jpeg"
-			]
+		let config = {
+			//dir				// title					// list				cycle	shuffle
+			'dead-end': 		['Dead End Test Renders', 	deadEndList, 		true, 	true],
+			'drawings': 		['Drawings', 				drawingsList,		true,	true],
+			'miscellaneous': 	['Miscellaneous', 			miscellaneousList,	true,	true],
+			'life-of-pika':		['Life of Pika',			lifeOfPikaList,		false,	false],
+			'paintings': 		['Paintings', 				paintingsList,		true, 	true],
+			'uw-daily':			['UW Daily Illustrations',	uwDailyList,			true,	true],
+			
 		}
 
 		let images, folder, title
 
 		folder = window.location.search.slice(1)
-		images = allImages[folder]
-		if (window.location.search === "?paintings") { title = "Paintings" }
-		else if (window.location.search === "?drawings") { title = "Drawings" } 
-		else if (window.location.search === "?photos") {
+		console.log(folder)
+		title = config[folder][0]
+		images = config[folder][1]
+		if (window.location.search === "?photos") {
 			title = "Photos"
 			get("artScreen").style.width = "700px"
 			images = photos }
@@ -161,23 +55,20 @@
 
 		get("title").innerHTML = title
 		let index = 0
-		shuffle(images)
+		if (config[folder][2]) shuffle(images)
 		get("left").onclick = () => {
-			playSound('../../shared/sound/click', .5)
-			index = decrement(index, images.length - 1)
-			setImage()
+			playSound('../shared/sound/click.wav', .5)
+			index = decrement(index, images.length - 1); setImage()
 		}
 
 		get("right").onclick = () => {
-			playSound('../../shared/sound/click', .5)
-			index = increment(index, images.length - 1)
-			setImage()
+			playSound('../shared/sound/click.wav', .5)
+			index = increment(index, images.length - 1); setImage()
 		}	
 
 		get("random").onclick = () => {
-			playSound('../../shared/sound/trill', .5)
-			index = random(0, images.length - 1)
-			setImage()
+			playSound('../shared/sound/trill.wav', .5)
+			index = random(0, images.length - 1); setImage()
 		}
 
 		function setImage() { get('artScreen').src = folder + "/" + images[index] }

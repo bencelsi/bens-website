@@ -11,19 +11,20 @@ TODOS:
 Embed other pages via iframe!! paintings, games etc...
 Add miscellaneous album for loops, old piano tracks?, Podcast music, Eno EP?
 Create contact page, misc page?
-Add music to Drop, Point and clicks?
-Create simple sound js file - use across projects
-Capitalize repo names?
-lowercase-ify htmls
+Add music to Drop, Point and clicks?r
+Create simple sound js 'library' - use across projects
+Capitalize repo names? lowercase-ify htmls
 Square Thumbnails for games/artwork, show many at once? Or at least collapsibles
 Make header letters changeable when clicked
 custom domain?
+make private?
 make summaries non-selectable
 Make Videos listed on sight, but still viewable as a gallery
 When click a tab 2nd time, close all collapsibles
-Consistent 'back's
+Consistent back buttons
 Ideally, placeable html...  
 Idea... when you go to other pages, music continues, but hi-passed
+Add Life of Pika art 
 -->
 
 <!DOCTYPE html>
@@ -128,9 +129,11 @@ Idea... when you go to other pages, music continues, but hi-passed
 <!------------------------------------------------>
 <div id='musicPage' class='page'>
 	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'>		<h2>The Ballad of Luigi</h2></a>
+	<a href='https://www.youtube.com/watch?v=NzcUOxN2IuM'>		<h2>Drew's Blues: A Rock Operettta</h2></a>
 	<a href='music/songs.html?mashups'>							<h2>Mashups</h2></a>
 	<a href='music/songs.html?miscellaneous'>					<h2>Miscellaneous</h2></a>
 	<a href='music/albums.html' class='local'>					<h2>Albums</h2></a>
+	<br><br>
 	<details><summary>Chords & Lyrics</summary>
 		<a href='music/chords/songs/luigi.html'>				<h2>The Ballad of Luigi</h2></a>
 		<a href='music/chords/songs/drews-blues.html'>			<h2>Drew's Blues: A Rock Operettta</h2></a>
@@ -142,8 +145,8 @@ Idea... when you go to other pages, music continues, but hi-passed
 			<a href='music/chords/songs/woke-up.html'>			<h2>Woke Up</h2></a>
 			<a href='music/chords/songs/hello-now.html'>		<h2>Hello Now</h2></a>
 		</div>
-	</details><br>
-	<details><summary>Accompaniments for Rebeccas's Animations</summary>
+	</details><br><br>
+	<details><summary>Music for Rebeccas's Animations</summary>
 		<a href='https://www.youtube.com/watch?v=7wnEuywiGb4'>	<h2>The Summer Dragons</h2></a>
 		<a href='https://www.youtube.com/watch?v=DRHOmGiXeqs'>	<h2>The Blue Gecko</h2></a>
 		<a href='https://www.youtube.com/watch?v=7s0P97t_Xbg'>	<h2>Frog Chase</h2></a>
@@ -164,6 +167,7 @@ Idea... when you go to other pages, music continues, but hi-passed
 	<a href='art/art.html?drawings'>				<h2>Drawings</h2></a>
 	<a href='art/art.html?photos'>					<h2>Photos</h2></a>
 	<a href='art/art.html?uw-daily-illustrations'>	<h2>UW Daily Illustrations</h2></a>
+	<a href='art/art.html?life-of-pika'>			<h2>Life of Pika</h2></a>
 	<a href='art/art.html?dead-end'>				<h2>Dead End Test Renders</h2></a>
 	<a href='art/art.html?miscellaneous'>			<h2>Miscellaneous</h2></a>
 </div>
@@ -188,11 +192,11 @@ Idea... when you go to other pages, music continues, but hi-passed
 	<img src='games/ico/game-of-cards.ico'> -->
 
 	<a href='https://bencelsi.github.io/chord-wheel'>				<h2>Chord Wheel</h2></a>
-	<a href='https://bencelsi.github.io/point-and-clicks'>			<h2>Point & Clicks</h2></a>
+	<a href='https://bencelsi.github.io/nabanagrams'> 				<h2>Nabanagrams</h2></a>
 	<a href='https://bencelsi.github.io/tetriven'>					<h2>Tetriven</h2></a>
 	<a href='https://bencelsi.github.io/catan-o-rama'>				<h2>Catan-o-Rama!</h2></a>
-	<a href='https://bencelsi.github.io/nabanagrams'> 				<h2>Nabanagrams</h2></a>
 	<a href='https://bencelsi.github.io/automata'>					<h2>Automata</h2></a>
+	<a href='https://bencelsi.github.io/point-and-clicks'>			<h2>Point & Clicks</h2></a>
 	<a href='https://bencelsi.github.io/cirque-de-sabotage'>		<h2>Cirque de Sabotage</h2></a>
 	<a href='https://bencelsi.github.io/mxbbi'>						<h2>MXBBI</h2></a>
 	<a href='https://bencelsi.github.io/drop'>						<h2>Drop</h2></a>
@@ -268,33 +272,23 @@ Idea... when you go to other pages, music continues, but hi-passed
 <br><br>
 </body>
 
-<!-- misc. links -->
-<!-- 
-https://yvettesbridalformal.p1r8.net/ 
-https://www.peteranswers.com/
-https://radio.garden/visit/caleta-olivia/0oALAXD6
-http://www.windows93.net/
-https://www.cameronsworld.net/
-https://gifcities.org/
-https://jacklance.github.io/
-https://petittube.com/
-http://mystarchive.com/rivenil/main.html
-https://lhohq.info/
-http://web.archive.org/web/20030219072854/http://timecube.com/
-https://something.com/
--->
-
 <!------------------------------------------------>
 <!-- S C R I P T S -->
 <!------------------------------------------------>
 <script src='shared/shared.js'></script>
 <script>
-	const TABS = getAll('tab')
-	const PAGES = getAll('page')
 	const LOCALS = getAll('local')
+
+	if (isLocal) { 
+		for (let local of LOCALS) local.style.display = 'block' 
+		
+		// make links to local?
+		for (link of getAll('a')) {
+
+		}
+	}
 	const music = new Audio(); music.loop = true;
 	const voice = new Audio();
-
 	const songTabs = {
 		'music' : 		['420 Loop',			.5],
 		'art' : 		['Chill Loop',			.5],
@@ -304,6 +298,49 @@ https://something.com/
 	}
 
 	let tab = null
+
+
+	if (isLocal) { for (let local of LOCALS) local.style.display = 'block' }
+	
+	for (let summary of getAll('summary')) summary.onclick = () => { playSound('shared/sound/click') }
+
+
+	const paramTab = new URLSearchParams(window.location.search).get('tab');
+	for (const tab of ['music', 'art', 'games', 'writing', 'video']) {
+		if (tab == paramTab) setTab(paramTab)
+		get(tab + 'Tab').onclick = () => setTab(tab)
+	}
+
+	let secret = false
+	function setTab(newTab) {
+		if (newTab != tab) {
+			if (newTab != null) {
+				get(newTab + 'Tab').classList.add('selected')
+				get(newTab + 'Page').style.display = 'inline-block'
+			}
+			if (tab != null) {
+				get(tab + 'Tab').classList.remove('selected')
+				get(tab + 'Page').style.display = 'none'
+			}
+		}
+		setMusic(newTab == null ? null : songTabs[newTab][0])
+
+		if (newTab == null ) {
+			secret = false
+		} else {
+			if (newTab == tab && newTab == 'games') { //secret game - iframe within iframe?
+				playSound('shared/sound/tabs/' + (secret ? 'secret' : 'games-x') + '.mp3', 1, voice)
+				secret = !secret
+			} else {
+				secret = false
+				playSound('shared/sound/tabs/' + newTab + (tab == newTab ? '-x' : '4') + '.mp3', 1, voice)
+			}
+			playSound('shared/sound/pop', .7)
+			music.volume = songTabs[newTab][1]
+		}
+		tab = newTab;
+	}
+	
 	
 	get('header').onclick = () => { 
 		playSound('shared/sound/dream.mp3', .5)
@@ -311,50 +348,10 @@ https://something.com/
 		setTab(null)
 	}
 
-	for (let summary of getAll('summary')) summary.onclick = () => { playSound('shared/sound/click') }
 
-	if (isLocal) { for (i = 0; i < LOCALS.length; i++) LOCALS[i].style.display = 'block' }
-
-	const CURRENT_TAB = new URLSearchParams(window.location.search).get('tab');
-	for (const tab of ['music', 'art', 'games', 'writing', 'video']) {
-		if (tab == CURRENT_TAB) setTab(CURRENT_TAB)
-		get(tab + 'Tab').onclick = () => setTab(tab)
-	}
-
-	let secret = false
-	function setTab(newTab) {
-		if (newTab != null ) {
-			if (newTab == tab && newTab == 'games') { //secret game - iframe within iframe?
-				playSound('shared/sound/tabs/' + (secret ? 'secret' : 'games-x') +'.mp3', 1, voice)
-				secret = !secret
-			} else {
-				secret = false
-				playSound('shared/sound/tabs/' + newTab + (tab == newTab ? '-x' : '4') +'.mp3', 1, voice)
-			}
-			playSound('shared/sound/pop', .7)
-		} else {
-			secret = false
-		}
-		setMusic(newTab == null ? null : songTabs[newTab][0])
-		music.volume = songTabs[newTab][1]
-		tab = newTab; 
-		refreshPage() 
-	}
-	
-	function refreshPage() {
-		for (let i = 0; i < 5; i++) {
-			let tabDiv = TABS[i]
-			if (tabDiv.id == tab + 'Tab') tabDiv.classList.add('selected')
-			else tabDiv.classList.remove('selected')
-			let page = PAGES[i]
-			page.style.display = (page.id == tab + 'Page') ? 'inline-block' : 'none'
-		}
-	}
-	
 	function setMusic(song, volume = .2) {
-		if (song == null) { 
-			music.pause() 
-		} else {
+		if (song == null) music.pause() 
+		else {
 			music.src = 'music/jams/' + song + (song.includes('.') ? '' : '.mp3') 
 			music.volume = volume
 			music.play() 
