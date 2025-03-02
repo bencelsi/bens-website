@@ -10,13 +10,8 @@
 			width: 500px;
 		}
 
-		#header:hover {
-			filter: drop-shadow(0 0 0.8rem rgb(255, 0, 0));
-		}
-
 		audio {
-			height: 30px;
-			width: 250px;
+			height: 30px; width: 250px;
 		}
 
 		h1 { text-shadow: 0 0 40px red; }
@@ -76,9 +71,16 @@
 	<div>
 	<br><br>
 
-<script src="all-songs.js"></script>
 <script src="../shared/shared.js"></script>
-<script> 
+
+<script src="../songs/0-list.js"></script>
+<script src="albums/miscellaneous/0-list.js"></script>
+<script src="albums/griven/0-list.js"></script>
+<script src="albums/mashups/0-list.js"></script>
+<script src="albums/old-piano/0-list.js"></script>
+
+<script>
+// TODO: dynamically add script based on query param
 
 let topSongs = [
 	"Cats",
@@ -125,67 +127,27 @@ let space_jam = [
 	"Dark Sky",
 ]
 
-let mashups = [
-	"Disco",
-	"One Impala",
-	"Don't Bring Me Diamonds",
-	"Mountains at Last",
-	"I Wish They All Could Be California",
-	"I-IV-V",
-	"Dream a Little Dream of God"
-]
-
-let miscellaneous = [
-	"Loooop",
-	"420 Loop",
-	"100 Degrees",
-	"Country Tuff",
-	"Chill Loop",
-	"Country Loop",
-	"Jordan"
-]
-
-let songs = []
-let albumCover = ""
-let title = ""
-let songFolder = "songs/"
-let extension =".mp3"
-switch (window.location.search) {
-	case "?all-songs":
-		songs = allSongs
-		songs.sort()
-		albumCover = "Day Break.jpeg"; title = "All Songs"
-		break
-	case "?moss-rock":
-		songs = moss_rock
-		albumCover = "Moss Rock.png"; title = "Moss Rock"
-		break
-	case "?space-jams":
-		songs = space_jam
-		albumCover = "Space Jams.jpeg"; title = "Space Jams"
-		break
-	case "?mashups": 
-		songFolder = "mashups/"
-		songs = mashups
-		albumCover = "Mashups.jpg"; title = "Mashups"
+let config = {
+					//title				//list				//numbered	//cover
+	'miscellaneous':['Miscellaneous',	miscellaneousList,	false,		'Space Jams.jpeg'	],
+	'mashups':		['Mashups',			mashupsList,		true,		'Mashups.jpg'		],
+	'griven': 		['Griven Music', 	grivenList,			true, 		'griven.png'		],
+	//'old-piano':	['Old Piano Songs',	oldPianoList,		false,		null				]
 }
 
-let autoplayCheckbox = get("autoplay")
-let shuffleCheckbox = get("shuffle")
+let q = new URLSearchParams(window.location.search).get('q')
+let [title, songs, numbered, albumCover] = config[q]
 
-autoplayCheckbox.onclick = function() {
-	if (autoplayCheckbox.checked && shuffleCheckbox) {
-		shuffleCheckbox.checked = false
-	}
-}
+let songFolder = "albums/" + q + "/"
+let extension = ".mp3"
 
-shuffleCheckbox.onclick = function() {
-	if (autoplayCheckbox.checked && shuffleCheckbox) {
-		autoplayCheckbox.checked = false
-	}
-}
+const autoplayBox = get("autoplay"); const shuffleBox = get("shuffle")
+autoplayBox.onclick = () => { if (autoplayBox.checked && shuffleBox.checked) shuffleBox.checked = false }
+shuffleBox.onclick = () => { if (autoplayBox.checked && shuffleBox.checked) autoplayBox.checked = false }
 
-get("albumCover").src = "albumCovers/" + albumCover
+
+if (albumCover == null) get("albumCover").style.display = 'none'
+else get("albumCover").src = "albumCovers/" + albumCover
 get("title").innerHTML = title
 
 //	let songsDiv = get("songs")
@@ -198,28 +160,24 @@ for (let i = 0; i < songs.length; i++) {
 	songNumber.innerHTML = i + 1 + "."
 	
 	let songTitle = document.createElement("td")
-	songTitle.innerHTML = songs[i]
-	
+	songTitle.innerHTML = removeExtension(songs[i])
 
 	let songAudioTd = document.createElement("td")
 	let songAudio = document.createElement("audio")
-	songAudio.src = songFolder + songs[i] + extension
+	songAudio.src = songFolder + songs[i]
+	console.log(songFolder + songs[i])
 	songAudio.controls = true
 
-	songAudio.addEventListener("play", function() {
-		stopAudios(i)
-	})
+	songAudio.addEventListener("play", () => { stopAudios(i) })
 
-	songAudio.addEventListener("ended", function() {
+	songAudio.addEventListener("ended", () => {
 		songAudios[i].currentTime = 0
-		if (shuffleCheckbox.checked) {
+		if (shuffleBox.checked) {
 			let randomIndex = i
-			while (randomIndex == i) {
-				randomIndex = random(0, songAudios.length - 1)
-			}
+			while (randomIndex == i) randomIndex = random(0, songAudios.length - 1)
 			songAudios[randomIndex].currentTime = 0
 			songAudios[randomIndex].play()
-		} else if (autoplayCheckbox.checked && i < songAudios.length - 1) {
+		} else if (autoplayBox.checked && i < songAudios.length - 1) {
 			songAudios[i + 1].currentTime = 0
 			songAudios[i + 1].play()
 		}
@@ -229,7 +187,7 @@ for (let i = 0; i < songs.length; i++) {
 	songAudioTd.appendChild(songAudio)
 	
 	let row = document.createElement("tr")
-	row.appendChild(songNumber)
+	if (!numbered) row.appendChild(songNumber)
 	row.appendChild(songTitle)
 	row.appendChild(songAudioTd)
 	songDiv.appendChild(row)
@@ -239,11 +197,11 @@ for (let i = 0; i < songs.length; i++) {
 
 function stopAudios(toSkip) {
 	for (let i = 0; i < songAudios.length; i++) {
-		if (i != toSkip) {
-			songAudios[i].pause()
-		}
+		if (i != toSkip) songAudios[i].pause()
 	}
 }
+
+function removeExtension(str) { return str.split('.').slice(0, -1).join('.') }
 
 </script>
 </body>

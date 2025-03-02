@@ -9,23 +9,24 @@
 
 TODOS:
 Embed other pages via iframe!! paintings, games etc...
-Add miscellaneous album for loops, old piano tracks?, Podcast music, Eno EP?
-Create contact page, misc page?
-Add music to Drop, Point and clicks?r
-Create simple sound js 'library' - use across projects
-Capitalize repo names? lowercase-ify htmls
-Square Thumbnails for games/artwork, show many at once? Or at least collapsibles
-Make header letters changeable when clicked
-custom domain?
-make private?
+Add miscellaneous album for Eno EP?
+Link to local games when local
+Create contact page, misc link page?
 make summaries non-selectable
+Maybe make filesystem script in Java (not python)
+Consistent back buttons
+Create simple sound js 'library' for sound, shared stuff, etc - use across projects
+Capitalize repo names & lowercase-ify htmls?
+Square Thumbnails for games/artwork, show many at once? Or at least collapsibles
+Make private
+custom domain? na...
 Make Videos listed on sight, but still viewable as a gallery
 When click a tab 2nd time, close all collapsibles
-Consistent back buttons
-Ideally, placeable html...  
 Idea... when you go to other pages, music continues, but hi-passed
-Add Life of Pika art 
+Make header letters changeable when clicked
+Add music to Drop, Point and clicks?
 -->
+
 
 <!DOCTYPE html>
 <head>
@@ -39,7 +40,7 @@ Add Life of Pika art
 			font-size: 14px;
 		}
 
-		#header { filter: drop-shadow(0 0 2rem rgb(132, 0, 255));cursor: url(shared/cursor.png), auto; }
+		#header { filter: drop-shadow(0 0 2rem rgb(132, 0, 255)); cursor: url(shared/cursor.png), auto; }
 		#header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
 		.website img { height: 30px; margin-top: 5px;}
 
@@ -130,8 +131,12 @@ Add Life of Pika art
 <div id='musicPage' class='page'>
 	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'>		<h2>The Ballad of Luigi</h2></a>
 	<a href='https://www.youtube.com/watch?v=NzcUOxN2IuM'>		<h2>Drew's Blues: A Rock Operettta</h2></a>
-	<a href='music/songs.html?mashups'>							<h2>Mashups</h2></a>
-	<a href='music/songs.html?miscellaneous'>					<h2>Miscellaneous</h2></a>
+
+	<a href='music/songs.html?q=miscellaneous'>					<h2>Miscellaneous</h2></a>
+	<a href='music/songs.html?q=mashups'>						<h2>Mashups</h2></a>
+	<!-- <a href='music/songs.html?q=old-piano'>						<h2>Music for Podcasts</h2></a> -->
+	<a href='music/songs.html?q=griven'>						<h2>Griven Music</h2></a>
+	<!-- <a href='music/songs.html?q=old-piano'>						<h2>Old Piano Songs</h2></a> -->
 	<a href='music/albums.html' class='local'>					<h2>Albums</h2></a>
 	<br><br>
 	<details><summary>Chords & Lyrics</summary>
@@ -166,7 +171,7 @@ Add Life of Pika art
 	<a href='art/art.html?paintings'>				<h2>Paintings</h2></a>
 	<a href='art/art.html?drawings'>				<h2>Drawings</h2></a>
 	<a href='art/art.html?photos'>					<h2>Photos</h2></a>
-	<a href='art/art.html?uw-daily-illustrations'>	<h2>UW Daily Illustrations</h2></a>
+	<a href='art/art.html?uw-daily'>				<h2>UW Daily Illustrations</h2></a>
 	<a href='art/art.html?life-of-pika'>			<h2>Life of Pika</h2></a>
 	<a href='art/art.html?dead-end'>				<h2>Dead End Test Renders</h2></a>
 	<a href='art/art.html?miscellaneous'>			<h2>Miscellaneous</h2></a>
@@ -263,11 +268,11 @@ Add Life of Pika art
 <!-- V I D E O -->
 <!------------------------------------------------>
 <div id='videoPage' class='page'>
-	<a href='video/video.html?set=all'>				<h2>All Videos</h2></a><br>
-	<a href='video/video.html?set=musicVideos'>		<h2>Music Videos</h2></a><br>
-	<a href='video/video.html?set=liveAction'>		<h2>Live Action</h2></a><br>
-	<a href='video/video.html?set=all'>				<h2>Animation</h2></a><br>
-	<a href='video/video.html?set=miscellaneous'>	<h2>Miscellaneous</h2></a><br>
+	<a href='video/video.html?q=all'>				<h2>All Videos</h2></a><br>
+	<a href='video/video.html?q=musicVideos'>		<h2>Music Videos</h2></a><br>
+	<a href='video/video.html?q=liveAction'>		<h2>Live Action</h2></a><br>
+	<a href='video/video.html?q=all'>				<h2>Animation</h2></a><br>
+	<a href='video/video.html?q=miscellaneous'>		<h2>Miscellaneous</h2></a><br>
 </div>
 <br><br>
 </body>
@@ -299,11 +304,9 @@ Add Life of Pika art
 
 	let tab = null
 
-
 	if (isLocal) { for (let local of LOCALS) local.style.display = 'block' }
 	
 	for (let summary of getAll('summary')) summary.onclick = () => { playSound('shared/sound/click') }
-
 
 	const paramTab = new URLSearchParams(window.location.search).get('tab');
 	for (const tab of ['music', 'art', 'games', 'writing', 'video']) {
@@ -352,7 +355,7 @@ Add Life of Pika art
 	function setMusic(song, volume = .2) {
 		if (song == null) music.pause() 
 		else {
-			music.src = 'music/jams/' + song + (song.includes('.') ? '' : '.mp3') 
+			music.src = 'music/albums/miscellaneous/' + song + (song.includes('.') ? '' : '.mp3') 
 			music.volume = volume
 			music.play() 
 		}
