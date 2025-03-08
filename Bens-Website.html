@@ -268,13 +268,15 @@ Add music to Drop, Point and clicks?
 	const WEB_PATH = "https://bencelsi.github.io/"
 	const LOCALS = getAll('local')
 	
-	for (link of getAll('a')) {
-		if (link.parentElement != null && link.parentElement.id == 'gamesPage') {
-			if (isLocal) { link.href = link.href.replace('/bencelsi.github.io', '') + '/index.html' } 
-		}
-	}
+	
 	if (isLocal) { 
+		// show local links
 		for (let local of LOCALS) local.style.display = 'block' 
+		for (link of getAll('a')) {
+			if (link.parentElement != null && link.parentElement.id == 'gamesPage') {
+				link.href = link.href.replace('/bencelsi.github.io', '') + '/index.html'
+			}
+		}
 	}
 
 	const music = new Audio(); music.loop = true;
