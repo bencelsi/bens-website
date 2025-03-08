@@ -165,9 +165,6 @@ Add music to Drop, Point and clicks?
 		<a href='https://www.youtube.com/watch?v=tm5si5WQUqY'>	<h2>Kelso's Choices</h2></a>
 		<a href='https://www.youtube.com/watch?v=8m9JRKYb5Ho'>	<h2>Maloy's Jewelry Workshop Commercial</h2></a>
 	</details><br><br>
-	
-	<!-- <a href='music/albums.html'><h2>Music Videos</h2></a>
-	<a href='music/albums.html'><h2>Chords</h2></a> -->
 </div>
 <!------------------------------------------------>
 <!-- A R T -->
@@ -274,7 +271,6 @@ Add music to Drop, Point and clicks?
 	for (link of getAll('a')) {
 		if (link.parentElement != null && link.parentElement.id == 'gamesPage') {
 			if (isLocal) { link.href = link.href.replace('/bencelsi.github.io', '') + '/index.html' } 
-			else { link.href = WEB_PATH + link.href }
 		}
 	}
 	if (isLocal) { 
@@ -305,13 +301,9 @@ Add music to Drop, Point and clicks?
 
 	let secret = false
 	function setTab(newTab) {
-		console.log(get(newTab + 'Tab'))
-		//get(newTab + 'Tab')
 		if (newTab != tab) {
 			if (newTab != null) {
 				get(newTab + 'Tab').classList.add('selected')
-				console.log(newTab + 'Page')
-				console.log(get(newTab + 'Page'))
 				get(newTab + 'Page').style.display = 'inline-block'
 			}
 			if (tab != null) {
@@ -336,13 +328,11 @@ Add music to Drop, Point and clicks?
 		tab = newTab;
 	}
 	
-	
 	get('header').onclick = () => { 
 		playSound('shared/sound/dream.mp3', .5)
 		playSound('shared/sound/tabs/bens2.mp3', 1, voice)
 		setTab(null)
 	}
-
 
 	function setMusic(song, volume = .2) {
 		if (song == null) music.pause() 
