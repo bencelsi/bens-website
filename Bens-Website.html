@@ -185,19 +185,19 @@ Add music to Drop, Point and clicks?
 <!-- G A M E S -->
 <!------------------------------------------------>
 <div id='gamesPage' class='page'>
-	<a href='tetriven'>					<h2>Tetriven</h2></a>
-	<a href='nabanagrams'> 				<h2>Nabanagrams</h2></a>
-	<a href='chord-wheel'>				<h2>Chord Wheel</h2></a>
-	<a href='automata'>					<h2>Automata</h2></a> 
-	<a href='point-and-clicks'>			<h2>Point & Clicks</h2></a>
-	<a href='catan-o-rama'>				<h2>Catan-o-Rama!</h2></a>
-	<a href='cirque-de-sabotage'>		<h2>Cirque de Sabotage</h2></a>
+	<a href='tetriven'>												<h2>Tetriven</h2></a>
+	<a href='nabanagrams'> 											<h2>Nabanagrams</h2></a>
+	<a href='chord-wheel'>											<h2>Chord Wheel</h2></a>
+	<a href='automata'>												<h2>Automata</h2></a> 
+	<a href='point-and-clicks'>										<h2>Point & Clicks</h2></a>
+	<a href='catan-o-rama'>											<h2>Catan-o-Rama!</h2></a>
+	<a href='cirque-de-sabotage'>									<h2>Cirque de Sabotage</h2></a>
 	<a href='mxbbi'>												<h2>MXBBI</h2></a>
 	<a href='drop'>													<h2>Drop</h2></a>
 	<a href='https://scratch.mit.edu/projects/1448075/fullscreen'>	<h2>Griven</h2></a>
 	<a href='https://scratch.mit.edu/projects/379323/fullscreen/'>	<h2>Grounded</h2></a>
-	<a href='soviet-monopoly' 		class='local'> 					<h2>Soviet Monopoly</h2></a>
-	<a href='game-of-cards' 		class='local'> 					<h2>Game of Cards</h2></a>
+	<a href='soviet-monopoly' 	class='local'> 						<h2>Soviet Monopoly</h2></a>
+	<a href='game-of-cards' 	class='local'> 						<h2>Game of Cards</h2></a>
 </div>
 
 <!------------------------------------------------>
@@ -267,20 +267,18 @@ Add music to Drop, Point and clicks?
 <!------------------------------------------------>
 <script src='shared/shared.js'></script>
 <script>
-	const LOCAL_PATH = "wa/"
 	const WEB_PATH = "https://bencelsi.github.io/"
 	const LOCALS = getAll('local')
-
 	
 	// make links to local?
 	for (link of getAll('a')) {
-		if (isLocal) { link.href = link.href.replace('/bencelsi.github.io', '') + '/index.html' } 
-		else { link.href = WEB_PATH + link.href }
+		if (link.parentElement.id = 'gamesPage') {
+			if (isLocal) { link.href = link.href.replace('/bencelsi.github.io', '') + '/index.html' } 
+			else { link.href = WEB_PATH + link.href }
+		}
 	}
-	if (isLocal) {
-		for (let local of LOCALS) local.style.display = 'block' 
-	}
-	console.log(getAll('a'))
+	if (isLocal) { for (let local of LOCALS) local.style.display = 'block' }
+
 	
 	const music = new Audio(); music.loop = true;
 	const voice = new Audio();
@@ -306,6 +304,7 @@ Add music to Drop, Point and clicks?
 
 	let secret = false
 	function setTab(newTab) {
+		console.log(newTab)
 		if (newTab != tab) {
 			if (newTab != null) {
 				get(newTab + 'Tab').classList.add('selected')
@@ -318,9 +317,8 @@ Add music to Drop, Point and clicks?
 		}
 		setMusic(newTab == null ? null : songTabs[newTab][0])
 
-		if (newTab == null ) {
-			secret = false
-		} else {
+		if (newTab == null ) { secret = false } 
+		else {
 			if (newTab == tab && newTab == 'games') { //secret game - iframe within iframe?
 				playSound('shared/sound/tabs/' + (secret ? 'secret' : 'games-x') + '.mp3', 1, voice)
 				secret = !secret
