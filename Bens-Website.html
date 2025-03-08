@@ -144,6 +144,7 @@ Add music to Drop, Point and clicks?
 	<a href='music/songs.html?q=old-piano'>						<h2>Old Piano Songs</h2></a>
 	<a href='music/albums.html' class='local'>					<h2>Albums</h2></a>
 	<br><br>
+	
 	<details><summary>Chords & Lyrics</summary>
 		<a href='music/chords/songs/luigi.html'>				<h2>The Ballad of Luigi</h2></a>
 		<a href='music/chords/songs/drews-blues.html'>			<h2>Drew's Blues: A Rock Operettta</h2></a>
@@ -181,6 +182,7 @@ Add music to Drop, Point and clicks?
 	<a href='art/art.html?dead-end'>				<h2>Dead End Test Renders</h2></a>
 	<a href='art/art.html?miscellaneous'>			<h2>Miscellaneous</h2></a>
 </div>
+
 <!------------------------------------------------>
 <!-- G A M E S -->
 <!------------------------------------------------>
@@ -272,14 +274,15 @@ Add music to Drop, Point and clicks?
 	
 	// make links to local?
 	for (link of getAll('a')) {
-		if (link.parentElement.id = 'gamesPage') {
+		if (link.parentElement != null && link.parentElement.id == 'gamesPage') {
 			if (isLocal) { link.href = link.href.replace('/bencelsi.github.io', '') + '/index.html' } 
 			else { link.href = WEB_PATH + link.href }
 		}
 	}
-	if (isLocal) { for (let local of LOCALS) local.style.display = 'block' }
+	if (isLocal) { 
+		//for (let local of LOCALS) local.style.display = 'block' 
+	}
 
-	
 	const music = new Audio(); music.loop = true;
 	const voice = new Audio();
 	const songTabs = {
@@ -304,10 +307,13 @@ Add music to Drop, Point and clicks?
 
 	let secret = false
 	function setTab(newTab) {
-		console.log(newTab)
+		console.log(get(newTab + 'Tab'))
+		//get(newTab + 'Tab')
 		if (newTab != tab) {
 			if (newTab != null) {
 				get(newTab + 'Tab').classList.add('selected')
+				console.log(newTab + 'Page')
+				console.log(get(newTab + 'Page'))
 				get(newTab + 'Page').style.display = 'inline-block'
 			}
 			if (tab != null) {
