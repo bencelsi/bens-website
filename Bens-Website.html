@@ -10,7 +10,6 @@
 TODOS:
 
 BUGFIXES
-Link to local games when local
 make summaries non-selectable
 
 FEATURES/CONTENT TO ADD
@@ -272,7 +271,6 @@ Add music to Drop, Point and clicks?
 	const WEB_PATH = "https://bencelsi.github.io/"
 	const LOCALS = getAll('local')
 	
-	// make links to local?
 	for (link of getAll('a')) {
 		if (link.parentElement != null && link.parentElement.id == 'gamesPage') {
 			if (isLocal) { link.href = link.href.replace('/bencelsi.github.io', '') + '/index.html' } 
@@ -280,7 +278,7 @@ Add music to Drop, Point and clicks?
 		}
 	}
 	if (isLocal) { 
-		//for (let local of LOCALS) local.style.display = 'block' 
+		for (let local of LOCALS) local.style.display = 'block' 
 	}
 
 	const music = new Audio(); music.loop = true;
