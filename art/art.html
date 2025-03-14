@@ -19,60 +19,56 @@
 			<img src='../gif/arrowr.gif' class=button id="right"/>
 		</div>
 	</div>
-	<script src="../shared/shared.js"></script>
-	<script src="dead-end/list.js"></script>
-	<script src="drawings/list.js"></script>
-	<script src="life-of-pika/list.js"></script>
-	<script src="miscellaneous/list.js"></script>
-	<script src="paintings/list.js"></script>
-	<script src="photos/list.js"></script>
-	<script src="uw-daily/list.js"></script>
-	<script>
-		let config = {
-			//dir				// title					// list				cycle	shuffle
-			'dead-end': 		['Dead End Test Renders', 	deadEndList, 		true, 	true],
-			'drawings': 		['Drawings', 				drawingsList,		true,	true],
-			'miscellaneous': 	['Miscellaneous', 			miscellaneousList,	true,	true],
-			'life-of-pika':		['Life of Pika',			lifeOfPikaList,		false,	false],
-			'paintings': 		['Paintings', 				paintingsList,		true, 	true],
-			'uw-daily':			['UW Daily Illustrations',	uwDailyList,			true,	true],
-			
-		}
+<script src="../shared/shared.js"></script>
+<script src="dead-end/list.js"></script>
+<script src="drawings/list.js"></script>
+<script src="life-of-pika/list.js"></script>
+<script src="miscellaneous/list.js"></script>
+<script src="paintings/list.js"></script>
+<script src="photos/list.js"></script>
+<script src="uw-daily/list.js"></script>
+<script>
+	const CLICK = '../shared/sound/click.wav'
+	let config = {
+		//dir				// title					// list				cycle	shuffle
+		'dead-end': 		['Dead End Test Renders', 	deadEndList, 		true, 	true],
+		'drawings': 		['Drawings', 				drawingsList,		true,	true],
+		'miscellaneous': 	['Miscellaneous', 			miscellaneousList,	true,	true],
+		'life-of-pika':		['Life of Pika',			lifeOfPikaList,		false,	false],
+		'paintings': 		['Paintings', 				paintingsList,		true, 	true],
+		'uw-daily':			['UW Daily Illustrations',	uwDailyList,		true,	true],
+	}
 
-		let images, folder, title
+	let images, q, title
+	
+	q = new URLSearchParams(window.location.search).get('q')
+	console.log(q)
+	title = config[q][0]
+	images = config[q][1]
+	if (q === "photos") {
+		title = "Photos"
+		get("artScreen").style.width = "700px"
+		images = photos
+	}
 
-		folder = window.location.search.slice(1)
-		console.log(folder)
-		title = config[folder][0]
-		images = config[folder][1]
-		if (window.location.search === "?photos") {
-			title = "Photos"
-			get("artScreen").style.width = "700px"
-			images = photos }
-		else if (window.location.search === "?uw-daily-illustrations") { title = "UW Daily Illustrations" }
-		else if (window.location.search === "?dead-end") { title = "Dead End Test Renders" }
-		else if (window.location.search === "?miscellaneous") { title = "Miscellaneous" }
+	get("title").innerHTML = title
+	let index = 0
+	if (config[q][2]) shuffle(images)
+	
+	get("left").onclick = () => {
+		playSound(CLICK, .5); index = decrement(index, images.length - 1); setImage()
+	}
 
-		get("title").innerHTML = title
-		let index = 0
-		if (config[folder][2]) shuffle(images)
-		get("left").onclick = () => {
-			playSound('../shared/sound/click.wav', .5)
-			index = decrement(index, images.length - 1); setImage()
-		}
+	get("right").onclick = () => {
+		playSound(CLICK, .5); index = increment(index, images.length - 1); setImage()
+	}	
 
-		get("right").onclick = () => {
-			playSound('../shared/sound/click.wav', .5)
-			index = increment(index, images.length - 1); setImage()
-		}	
+	get("random").onclick = () => {
+		playSound(CLICK, .5); index = random(0, images.length - 1); setImage()
+	}
 
-		get("random").onclick = () => {
-			playSound('../shared/sound/trill.wav', .5)
-			index = random(0, images.length - 1); setImage()
-		}
-
-		function setImage() { get('artScreen').src = folder + "/" + images[index] }
-		
-		setImage()
-	</script>
+	function setImage() { get('artScreen').src = q + "/" + images[index] }
+	
+	setImage()
+</script>
 </body>

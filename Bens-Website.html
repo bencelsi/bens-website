@@ -8,6 +8,9 @@
 (ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
 
 TODOS:
+Play a brief clicky sound on a link hover
+Compress website loops to be more 90s
+Add Fun Fun Fun Fun Fun Fun Fun
 
 BUGFIXES
 make summaries non-selectable
@@ -22,7 +25,6 @@ Create simple sound js 'library' for sound, shared stuff, etc - use across proje
 Capitalize repo names & lowercase-ify htmls?
 Square Thumbnails for games/artwork, show many at once? Or at least collapsibles
 Make private
-
 
 custom domain? na...
 Make Videos listed on sight, but still viewable as a gallery
@@ -46,10 +48,18 @@ Add music to Drop, Point and clicks?
 		}
 
 		#header { filter: drop-shadow(0 0 2rem rgb(132, 0, 255)); cursor: url(shared/cursor.png), auto; }
+
 		#header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
+
 		.website img { height: 30px; margin-top: 5px;}
 
-		a { /* Turns off game icos */
+		h2 	{ 
+			color: lightgray;
+			cursor: url(shared/cursor.png), auto;
+		}
+		h2:hover { color: white }
+		
+		a {
 			text-decoration: none;
 			cursor: url(shared/cursor.png), auto;
 			h2 { img { display: none; } }
@@ -74,15 +84,6 @@ Add music to Drop, Point and clicks?
 		#writingTab.selected 	{ filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
 		#videoTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
 
-		#musicPage a 	{ color: pink; 		:hover { color: red }}
-		#artPage a 		{ color: plum; 	:hover { color: magenta }}
-		#gamesPage a 	{ color: lightgreen; 	:hover { color: green }}
-		#writingPage a 	{ color: lightyellow; 	:hover { color: yellow }}
-		#videoPage a 	{ color: lightskyblue; :hover { color: blue }}
-
-		#writingPage { summary { color: yellow; font-style: bold; }}
-		#musicPage { summary { color: red; font-style: bold; }}
-
 		.selected img { filter: drop-shadow(0 0 .25rem rgb(255, 214, 64)) }
 
 		.tab {
@@ -93,7 +94,11 @@ Add music to Drop, Point and clicks?
 
 		.page { display: none; }
 
-		a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem rgb(255, 255, 255)); }
+
+		summary { color: yellow; font-style: bold; 
+			filter: drop-shadow(0 0 1rem blue) }
+
+		a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem white); }
 
 		.local { display: none; }
 
@@ -105,9 +110,19 @@ Add music to Drop, Point and clicks?
 			-ms-user-select: none;
 			user-select: none;
 		}
-		iframe {
-			width: 1000px; height: 1000px;
+
+		#iframeDiv {
+			margin: auto;
 		}
+
+		iframe {
+			border: solid black 20px;
+			width: 1300px; height: 1000px;
+			display: none;
+			margin: auto;
+			filter: drop-shadow(0 0 4rem rgb(34, 34, 34));
+		}
+
 	</style>
 </head>
 <!--------------------------------------------------------------------------->
@@ -143,7 +158,6 @@ Add music to Drop, Point and clicks?
 	<a href='music/songs.html?q=old-piano'>						<h2>Old Piano Songs</h2></a>
 	<a href='music/albums.html' class='local'>					<h2>Albums</h2></a>
 	<br><br>
-	
 	<details><summary>Chords & Lyrics</summary>
 		<a href='music/chords/songs/luigi.html'>				<h2>The Ballad of Luigi</h2></a>
 		<a href='music/chords/songs/drews-blues.html'>			<h2>Drew's Blues: A Rock Operettta</h2></a>
@@ -164,38 +178,38 @@ Add music to Drop, Point and clicks?
 		<a href='https://www.youtube.com/watch?v=A312PsGlMTk'>	<h2>A Brief History of Galvanism</h2></a>
 		<a href='https://www.youtube.com/watch?v=tm5si5WQUqY'>	<h2>Kelso's Choices</h2></a>
 		<a href='https://www.youtube.com/watch?v=8m9JRKYb5Ho'>	<h2>Maloy's Jewelry Workshop Commercial</h2></a>
-	</details><br><br>
+	</details><br>
 </div>
 <!------------------------------------------------>
 <!-- A R T -->
 <!------------------------------------------------>
 <div id='artPage' class='page'>
-	<a href='art/art.html?paintings'>				<h2>Paintings</h2></a>
-	<a href='art/art.html?drawings'>				<h2>Drawings</h2></a>
-	<a href='art/art.html?photos'>					<h2>Photos</h2></a>
-	<a href='art/art.html?uw-daily'>				<h2>UW Daily Illustrations</h2></a>
-	<a href='art/art.html?life-of-pika'>			<h2>Life of Pika</h2></a>
-	<a href='art/art.html?dead-end'>				<h2>Dead End Test Renders</h2></a>
-	<a href='art/art.html?miscellaneous'>			<h2>Miscellaneous</h2></a>
+	<h2 id="paintings">			Paintings				</h2>
+	<h2 id="drawings">			Drawings				</h2>
+	<h2 id="photos">			Photos					</h2>
+	<h2 id="uw-daily">			UW Daily Illustrations	</h2>
+	<h2 id="life-of-pika">		Life of Pika			</h2>
+	<h2 id="dead-end">			Dead End Test Renders	</h2>
+	<h2 id="miscellaneous">		Miscellaneous			</h2>
 </div>
 
 <!------------------------------------------------>
 <!-- G A M E S -->
 <!------------------------------------------------>
 <div id='gamesPage' class='page'>
-	<a href='tetriven'>												<h2>Tetriven</h2></a>
-	<a href='nabanagrams'> 											<h2>Nabanagrams</h2></a>
-	<a href='chord-wheel'>											<h2>Chord Wheel</h2></a>
-	<a href='automata'>												<h2>Automata</h2></a> 
-	<a href='point-and-clicks'>										<h2>Point & Clicks</h2></a>
-	<a href='catan-o-rama'>											<h2>Catan-o-Rama!</h2></a>
-	<a href='cirque-de-sabotage'>									<h2>Cirque de Sabotage</h2></a>
-	<a href='mxbbi'>												<h2>MXBBI</h2></a>
-	<a href='drop'>													<h2>Drop</h2></a>
-	<a href='https://scratch.mit.edu/projects/1448075/fullscreen'>	<h2>Griven</h2></a>
-	<a href='https://scratch.mit.edu/projects/379323/fullscreen/'>	<h2>Grounded</h2></a>
-	<a href='soviet-monopoly' 	class='local'> 						<h2>Soviet Monopoly</h2></a>
-	<a href='game-of-cards' 	class='local'> 						<h2>Game of Cards</h2></a>
+	<h2 id="tetriven">												Tetriven				</h2>
+	<h2 id="nabanagrams">											Nabanagrams				</h2>
+	<h2 id="chord-wheel">											Chord Wheel				</h2>
+	<h2 id="automata">												Automata				</h2>
+	<h2 id="point-and-click">										Point & Clicks			</h2>
+	<h2 id="catan-o-rama">											Catan-o-Rama!			</h2>
+	<a href='cirque-de-sabotage'>									<h2>Cirque de Sabotage	</h2></a>
+	<a href='mxbbi'>												<h2>MXBBI				</h2></a>
+	<a href='drop'>													<h2>Drop				</h2></a>
+	<a href='https://scratch.mit.edu/projects/1448075/fullscreen'>	<h2>Griven				</h2></a>
+	<a href='https://scratch.mit.edu/projects/379323/fullscreen/'>	<h2>Grounded			</h2></a>
+	<a href='soviet-monopoly' 	class='local'> 						<h2>Soviet Monopoly		</h2></a>
+	<a href='game-of-cards' 	class='local'> 						<h2>Game of Cards		</h2></a>
 </div>
 
 <!------------------------------------------------>
@@ -203,63 +217,77 @@ Add music to Drop, Point and clicks?
 <!------------------------------------------------>
 <div id='writingPage' class='page'>
 	<br>
+	<details><summary>Miscellaneous</summary>
+		<h2 link='writings/Either.html'>								Either					</h2>
+		<h2 link='gallery.html?q=palindromes'>							Palindromes				</h2>
+		<h2 link='gallery.html?q=alphabet-sayings'>						Alphabet Sayings		</h2>
+		<h2 link='gallery.html?q=miscellaneous'>						Miscellaneous			</h2>
+	</details><br><br>
 	<details><summary>College</summary>
-		<a href='writing/writings/college/Christian-Bok.html' class='local'><h2>Christian Bök</h2></a>
-		<a href='writing/writings/college/Youre-Little.html' class='local'>	<h2>You're Little</h2></a>
-		<a href='writing/writings/college/ABBA-CD.html'>					<h2>ABBA CD</h2></a>
-		<a href='writing/writings/college/Raven.html'>						<h2>TheRaven.java</h2></a>
-		<a href='writing/writings/college/Nature.html'>						<h2>Nature Forging a Baby</h2></a>
+		<h2 link='writings/college/Christian-Bok.html' class='local'>	Christian Bök			</h2>
+		<h2 link='writings/college/Youre-Little.html' class='local'>	You're Little			</h2>
+		<h2 link='writings/college/ABBA-CD.html'>						ABBA CD					</h2>
+		<h2 link='writings/college/Raven.html'>							TheRaven.java			</h2>
+		<h2 link='writings/college/Nature.html'>						Nature Forging a Baby	</h2>
 	</details><br><br>
 	<details><summary>High School</summary>
-		<a href='writing/writings/high/Great-Apes.html'>					<h2>Great Apes</h2></a>
-		<a href='writing/writings/high/Ough.html'>							<h2>Ough</h2></a>
-		<a href='writing/writings/high/I-Am-From-Poem.html'>				<h2>I Am Dumb Poem</h2></a>
-		<a href='writing/writings/high/Fruit-Flies.html'>					<h2>Fruit Flies</h2></a>
-		<a href='writing/writings/high/Babylon.html'>						<h2>By the Waters of Babylon: The Reawakening</h2></a>
-		<a href='writing/writings/high/Mr-Oates.html'>						<h2>Mr. Oates</h2></a>
+		<h2 link='writings/high/Great-Apes.html'>					Great Apes</h2>
+		<h2 link='writings/high/Ough.html'>							Ough</h2>
+		<h2 link='writings/high/I-Am-From-Poem.html'>				I Am Dumb Poem</h2>
+		<h2 link='writings/high/Fruit-Flies.html'>					Fruit Flies</h2>
+		<h2 link='writings/high/Babylon.html'>						By the Waters of Babylon: The Reawakening</h2>
+		<h2 link='writings/high/Mr-Oates.html'>						Mr. Oates</h2>
 	</details><br><br>
 	<details><summary>Middle School</summary>
-		<a href='writing/writings/middle/Shakespearean-Friday.html'>		<h2>Shakespearean Friday</h2></a>
-		<a href='writing/writings/middle/Ms-Knottethin.html'>				<h2>Ms. Knottethin</h2></a>
-		<a href='writing/writings/middle/The-Church.html'>					<h2>The Church</h2></a>
-		<a href='writing/writings/middle/Zirconium.html'>					<h2>Zirconium</h2></a>
-		<a href='writing/writings/middle/Ode-to-Oden.html'>					<h2>Ode to Oden</h2></a>
-		<a href='writing/writings/middle/Josh-Hauser.html'>					<h2>Josh Hauser</h2></a>
-		<a href='writing/writings/middle/Life-of-Bob.html'>					<h2>Life of Bob</h2></a>
-		<a href='writing/writings/middle/How-To.html'>						<h2>How to Write a How-To Essay</h2></a>
-		<a href='writing/writings/middle/Lewis-Carroll.html'>				<h2>The 'Lewis Carroll Poem' Poem</h2></a>
-		<a href='writing/writings/middle/Mystery-Object-Poem.html'>			<h2>Mystery Object Poem</h2></a>
-		<a href='writing/writings/middle/Newport-Field-Trip-Haikus.html'>	<h2>Newport Field Trip Haikus</h2></a>
-		<a href='writing/writings/middle/Planet-Limericks.html'>			<h2>Planet Limericks</h2></a>
-		<a href='writing/writings/middle/Da-Vinci-Code-Poem.html'>			<h2>Da Vinci Code Poem</h2></a>
+		<h2 link='writings/middle/Shakespearean-Friday.html'>		Shakespearean Friday</h2>
+		<h2 link='writings/middle/Ms-Knottethin.html'>				Ms. Knottethin</h2>
+		<h2 link='writings/middle/The-Church.html'>					The Church</h2>
+		<h2 link='writings/middle/Zirconium.html'>					Zirconium</h2>
+		<h2 link='writings/middle/Ode-to-Oden.html'>				Ode to Oden</h2>
+		<!-- <h2 link='writings/middle/Josh-Hauser.html'>			Josh Hauser</h2> -->
+		<h2 link='writings/middle/Life-of-Bob.html'>				Life of Bob</h2>
+		<h2 link='writings/middle/How-To.html'>						How to Write a How-To Essay</h2>
+		<h2 link='writings/middle/Lewis-Carroll.html'>				The 'Lewis Carroll Poem' Poem</h2>
+		<h2 link='writings/middle/Mystery-Object-Poem.html'>		Mystery Object Poem</h2>
+		<h2 link='writings/middle/Newport-Field-Trip-Haikus.html'>	Newport Field Trip Haikus</h2>
+		<h2 link='writings/middle/Planet-Limericks.html'>			Planet Limericks</h2>
+		<h2 link='writings/middle/Da-Vinci-Code-Poem.html'>			Da Vinci Code Poem</h2>
 	</details><br><br>
 	<details><summary>Elementary School</summary>
-		<a href='writing/writings/elementary/Flagellants.html'>				<h2>The Flagellants</h2></a>
-		<a href='writing/writings/elementary/Bush.html'>					<h2>The Adventures of George W. Bush</h2></a>
-		<a href='writing/writings/elementary/John-Adams-poem.html'>			<h2>John Adams Poem</h2></a>
-		<a href='writing/writings/elementary/Princess-Fred-Jr.html'>		<h2>Princess Fred Jr.</h2></a>
+		<h2 link='writings/elementary/Flagellants.html'>			The Flagellants</h2>
+		<h2 link='writings/elementary/Bush.html'>					The Adventures of George W. Bush</h2>
+		<h2 link='writings/elementary/John-Adams-poem.html'>		John Adams Poem</h2>
+		<h2 link='writings/elementary/Princess-Fred-Jr.html'>		Princess Fred Jr.</h2>
+		<!-- Wickepedia Clown -->
+		<!-- Dr. Dadoewizgone -->
 	</details><br><br>
-	<details><summary>Miscellaneous</summary>
-		<a href='writing/writings/Either.html'>								<h2>Either</h2></a>
-		<a href='writing/gallery.html?palindromes'>							<h2>Palindromes</h2></a>
-		<a href='writing/gallery.html?alphabet-sayings'>					<h2>Alphabet Sayings</h2></a>
-		<a href='writing/gallery.html?miscellaneous'>						<h2>Miscellaneous</h2></a>
-	</details>
 </div>
 
 <!------------------------------------------------>
 <!-- V I D E O -->
 <!------------------------------------------------>
 <div id='videoPage' class='page'>
-	<a href='video/video.html?q=all'>				<h2>All Videos</h2></a><br>
-	<a href='video/video.html?q=musicVideos'>		<h2>Music Videos</h2></a><br>
-	<a href='video/video.html?q=liveAction'>		<h2>Live Action</h2></a><br>
-	<a href='video/video.html?q=all'>				<h2>Animation</h2></a><br>
-	<a href='video/video.html?q=miscellaneous'>		<h2>Miscellaneous</h2></a><br>
+	<h2 link='video.html?q=all'>				All Videos</h2><br>
+	<h2 link='video.html?q=musicVideos'>		Music Videos</h2><br>
+	<h2 link='video.html?q=liveAction'>			Live Action</h2><br>
+	<h2 link='video.html?q=all'>				Animation</h2><br>
+	<h2 link='video.html?q=miscellaneous'>		Miscellaneous</h2><br>
 </div>
 <br><br>
-</body>
 
+<!------------------------------------------------>
+<!-- I F R A M E-->
+<!------------------------------------------------>
+
+<div id="iframeDiv">
+	<iframe id="iframe" src=''></iframe> 
+</div>
+<br><br>
+<img src="gif/footer.gif">
+<br><br><br>
+</body>	
+
+<!-- iframe per tab? -->
 <!------------------------------------------------>
 <!-- S C R I P T S -->
 <!------------------------------------------------>
@@ -267,10 +295,49 @@ Add music to Drop, Point and clicks?
 <script>
 	const WEB_PATH = "https://bencelsi.github.io/"
 	const LOCALS = getAll('local')
+	const IFRAME = get('iframe')
+
+	for (let el of get('gamesPage').getElementsByTagName('h2')) {
+		el.onclick = () => { openIframe(WEB_PATH + el.id) }
+	}
+	for (let el of get('artPage').getElementsByTagName('h2')) {
+		if (el.id != undefined) el.onclick = () => { openIframe('art/art.html?q=' + el.id) }
+	}
+	for (let el of get('writingPage').getElementsByTagName('h2')) {
+		let link = el.getAttribute('link')
+		if (link != undefined) {
+			console.log(link)
+			el.onclick = () => { openIframe('writing/' + link) }
+		}
+	}
+	for (let el of get('videoPage').getElementsByTagName('h2')) {
+		let link = el.getAttribute('link')
+		if (link != undefined) {
+			console.log(link)
+			el.onclick = () => { openIframe('video/' + link) }
+		}
+	}
 	
-	
-	if (isLocal) { 
-		// show local links
+
+	function openIframe(src) {
+		window.scrollTo(0, document.body.scrollHeight);
+		IFRAME.src = src
+		console.log(src)
+		IFRAME.style.display = 'inline-block'
+		//IFRAME.style.width  = IFRAME.contentWindow.document.body.scrollWidth;
+    	//IFRAME.style.height = IFRAME.contentWindow.document.body.scrollHeight;
+		setMusic(null)
+		hidePage(tab)
+		//setTab(null)
+	}
+
+	function closeIframe() {	
+		IFRAME.style.display = 'none'
+		IFRAME.src = null
+	}
+
+
+	if (isLocal) {  // show local links
 		for (let local of LOCALS) local.style.display = 'block' 
 		for (link of getAll('a')) {
 			if (link.parentElement != null && link.parentElement.id == 'gamesPage') {
@@ -295,24 +362,24 @@ Add music to Drop, Point and clicks?
 	
 	for (let summary of getAll('summary')) summary.onclick = () => { playSound('shared/sound/click') }
 
-	const paramTab = new URLSearchParams(window.location.search).get('tab');
+	const tabParam = new URLSearchParams(window.location.search).get('tab');
 	for (const tab of ['music', 'art', 'games', 'writing', 'video']) {
-		if (tab == paramTab) setTab(paramTab)
-		get(tab + 'Tab').onclick = () => setTab(tab)
+		if (tab == tabParam) setTab(tabParam)
+		get(tab + 'Tab').onclick = () => { setTab(tab) }
 	}
 
 	let secret = false
 	function setTab(newTab) {
+		closeIframe()
+		if (newTab != null) get(newTab + 'Page').style.display = 'inline-block'
 		if (newTab != tab) {
-			if (newTab != null) {
-				get(newTab + 'Tab').classList.add('selected')
-				get(newTab + 'Page').style.display = 'inline-block'
-			}
+			if (newTab != null) get(newTab + 'Tab').classList.add('selected')
 			if (tab != null) {
 				get(tab + 'Tab').classList.remove('selected')
 				get(tab + 'Page').style.display = 'none'
 			}
 		}
+
 		setMusic(newTab == null ? null : songTabs[newTab][0])
 
 		if (newTab == null ) { secret = false } 
@@ -329,6 +396,10 @@ Add music to Drop, Point and clicks?
 		}
 		tab = newTab;
 	}
+
+	function hidePage(name) {
+		get(name + 'Page').style.display = 'none'
+	}
 	
 	get('header').onclick = () => { 
 		playSound('shared/sound/dream.mp3', .5)
@@ -344,6 +415,7 @@ Add music to Drop, Point and clicks?
 			music.play() 
 		}
 	}
+	
 
 	// var msg = new SpeechSynthesisUtterance();
 	// 	msg.text = "Hello World";

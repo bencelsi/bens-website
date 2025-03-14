@@ -32,11 +32,15 @@
 <script src="js/random-questions.js"></script>
 <script src="js/spoonerisms.js"></script>
 <script>
+
+console.log('gallery.html')
 let writings, title
-if (window.location.search === "?palindromes") { writings = palindromes; title = "Palindromes" }
-else if (window.location.search === "?spoonerisms") { writings = spoonerisms; title = "Spoonerisms" }
-else if (window.location.search === "?alphabet-sayings") { writings = alphabetSayings; title = "Alphabet Sayings" }
-else if (window.location.search === "?miscellaneous") { title = "Miscellaneous";
+
+let q = new URLSearchParams(window.location.search).get('q')
+if (q == "palindromes") { writings = palindromes; title = "Palindromes" }
+else if (q == "spoonerisms") { writings = spoonerisms; title = "Spoonerisms" }
+else if (q == "alphabet-sayings") { writings = alphabetSayings; title = "Alphabet Sayings" }
+else if (q == "miscellaneous") { title = "Miscellaneous";
     writings = oneLiners.concat(jokes).concat(randomThoughts).concat(randomQuestions).concat(spoonerisms)
 }
 

@@ -6,7 +6,6 @@ function get(id) { return document.getElementById(id) }
 function getAll(name) { 
     let byClass = document.getElementsByClassName(name)
     if (byClass.length != 0) return byClass
-    console.log('hm')
     return document.getElementsByTagName(name)
 }
 
