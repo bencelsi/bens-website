@@ -8,5 +8,7 @@ let paintingsList = [
 "SkullPainting.JPG",
 "Taft.JPG",
 "TheodoreRoosevelt.JPG",
-"TurkeyVulture.png",
+// "TurkeyVulture.png",
+// "Mango"
+// "Winston"
 "WineAndOnion.jpg"]

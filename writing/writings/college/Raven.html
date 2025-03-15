@@ -23,12 +23,10 @@ public class TheRaven extends Poem {
    }
 
    private void onceUponAMidnightDreary() {
-
       while (i.ponderedWeakAndWeary() && i.noddedNearlyNapping()) {
          if (forgottenLore.hasNextLine()) {
             forgottenLore.nextLine();
          }
-
          if (chamberDoor.isGentlyRapping()) {
             break
          }
@@ -41,12 +39,23 @@ public class TheRaven extends Poem {
 
 public class Poet {
 
-   Poet(String name) {
+   public String name
+
+   public Poet(String name) {
       this.name = name
    }
-
 }
 
+public class Door {
+
+   public Door() {
+
+   }
+
+   public boolean isGentlyRapping() {
+      return true
+   }
+}
 
 
 

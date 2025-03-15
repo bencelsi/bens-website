@@ -8,18 +8,25 @@
 (ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
 
 TODOS:
-Play a brief clicky sound on a link hover
+Play a brief clicky sound on a link hover, tab hover, summaries etc
 Compress website loops to be more 90s
 Add Fun Fun Fun Fun Fun Fun Fun
+Fix music videos
+Left/right arrow usable for left/right nav?
+Ctrl or cmd click - link takes you to new tab
+Mute music button
 
 BUGFIXES
 make summaries non-selectable
+Music - make lyrics & chords in parens by song
 
 FEATURES/CONTENT TO ADD
-Embed other pages via iframe!! paintings, games etc... Consistent back buttons
+Add back buttons to iframe?
+Scroll to bottom on iframe?
 Add miscellaneous album for Eno EP?
 Create contact page, misc link page?
 
+OTHER 
 Maybe make filesystem script in Java (not python)
 Create simple sound js 'library' for sound, shared stuff, etc - use across projects
 Capitalize repo names & lowercase-ify htmls?
@@ -151,23 +158,23 @@ Add music to Drop, Point and clicks?
 <div id='musicPage' class='page'>
 	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'>		<h2>The Ballad of Luigi</h2></a>
 	<a href='https://www.youtube.com/watch?v=NzcUOxN2IuM'>		<h2>Drew's Blues: A Rock Operettta</h2></a>
-	<a href='music/songs.html?q=miscellaneous'>					<h2>Miscellaneous</h2></a>
-	<a href='music/songs.html?q=mashups'>						<h2>Mashups</h2></a>
-	<a href='music/songs.html?q=podcasts'>						<h2>Music for Podcasts</h2></a>
-	<a href='music/songs.html?q=griven'>						<h2>Griven Music</h2></a>
-	<a href='music/songs.html?q=old-piano'>						<h2>Old Piano Songs</h2></a>
-	<a href='music/albums.html' class='local'>					<h2>Albums</h2></a>
+	<h2 link='songs.html?q=miscellaneous'>					Miscellaneous					</h2>
+	<h2 link='songs.html?q=mashups'>						Mashups							</h2>
+	<h2 link='songs.html?q=podcasts'>						Music for Podcasts				</h2>
+	<h2 link='songs.html?q=griven'>							Griven Music					</h2>
+	<h2 link='songs.html?q=old-piano'>						Old Piano Songs					</h2>
+	<h2 link='albums.html' class='local'>					Albums							</h2>
 	<br><br>
 	<details><summary>Chords & Lyrics</summary>
-		<a href='music/chords/songs/luigi.html'>				<h2>The Ballad of Luigi</h2></a>
-		<a href='music/chords/songs/drews-blues.html'>			<h2>Drew's Blues: A Rock Operettta</h2></a>
+		<h2 link='chords/songs/luigi.html'>					The Ballad of Luigi				</h2>
+		<h2 link='chords/songs/drews-blues.html'>			Drew's Blues: A Rock Operettta	</h2>
 		<div class='local'>
-			<a href='music/chords/songs/cats.html'>				<h2>Cats</h2></a>
-			<a href='music/chords/songs/golden-gate.html'>		<h2>Golden Gate</h2></a>
-			<a href='music/chords/songs/one-love.html'>			<h2>One Love</h2></a>
-			<a href='music/chords/songs/play-the-game.html'>	<h2>Play the Game</h2></a>
-			<a href='music/chords/songs/woke-up.html'>			<h2>Woke Up</h2></a>
-			<a href='music/chords/songs/hello-now.html'>		<h2>Hello Now</h2></a>
+			<h2 link='chords/songs/cats.html'>				Cats							</h2>
+			<h2 link='chords/songs/golden-gate.html'>		Golden Gate						</h2>
+			<h2 link='chords/songs/one-love.html'>			One Love						</h2>
+			<h2 link='chords/songs/play-the-game.html'>		Play the Game					</h2>
+			<h2 link='chords/songs/woke-up.html'>			Woke Up							</h2>
+			<h2 link='chords/songs/hello-now.html'>			Hello Now						</h2>
 		</div>
 	</details><br><br>
 	<details><summary>Music for Rebeccas's Animations</summary>
@@ -184,25 +191,25 @@ Add music to Drop, Point and clicks?
 <!-- A R T -->
 <!------------------------------------------------>
 <div id='artPage' class='page'>
-	<h2 id="paintings">			Paintings				</h2>
-	<h2 id="drawings">			Drawings				</h2>
-	<h2 id="photos">			Photos					</h2>
-	<h2 id="uw-daily">			UW Daily Illustrations	</h2>
-	<h2 id="life-of-pika">		Life of Pika			</h2>
-	<h2 id="dead-end">			Dead End Test Renders	</h2>
-	<h2 id="miscellaneous">		Miscellaneous			</h2>
+	<h2 link="paintings">			Paintings				</h2>
+	<h2 link="drawings">			Drawings				</h2>
+	<h2 link="photos">				Photos					</h2>
+	<h2 link="uw-daily">			UW Daily Illustrations	</h2>
+	<h2 link="life-of-pika">		Life of Pika			</h2>
+	<h2 link="dead-end">			Dead End Test Renders	</h2>
+	<h2 link="miscellaneous">		Miscellaneous			</h2>
 </div>
 
 <!------------------------------------------------>
 <!-- G A M E S -->
 <!------------------------------------------------>
 <div id='gamesPage' class='page'>
-	<h2 id="tetriven">												Tetriven				</h2>
-	<h2 id="nabanagrams">											Nabanagrams				</h2>
-	<h2 id="chord-wheel">											Chord Wheel				</h2>
-	<h2 id="automata">												Automata				</h2>
-	<h2 id="point-and-click">										Point & Clicks			</h2>
-	<h2 id="catan-o-rama">											Catan-o-Rama!			</h2>
+	<h2 link="tetriven">											Tetriven				</h2>
+	<h2 link="nabanagrams">											Nabanagrams				</h2>
+	<h2 link="chord-wheel">											Chord Wheel				</h2>
+	<h2 link="automata">											Automata				</h2>
+	<h2 link="point-and-click">										Point & Clicks			</h2>
+	<h2 link="catan-o-rama">										Catan-o-Rama!			</h2>
 	<a href='cirque-de-sabotage'>									<h2>Cirque de Sabotage	</h2></a>
 	<a href='mxbbi'>												<h2>MXBBI				</h2></a>
 	<a href='drop'>													<h2>Drop				</h2></a>
@@ -297,27 +304,23 @@ Add music to Drop, Point and clicks?
 	const LOCALS = getAll('local')
 	const IFRAME = get('iframe')
 
-	for (let el of get('gamesPage').getElementsByTagName('h2')) {
-		el.onclick = () => { openIframe(WEB_PATH + el.id) }
+	let tabs = {
+		'musicPage': 'music/',
+		'artPage': 'art/art.html?q=',
+		'gamesPage': WEB_PATH,
+		'writingPage': 'writing/',
+		'videoPage': 'video/',
 	}
-	for (let el of get('artPage').getElementsByTagName('h2')) {
-		if (el.id != undefined) el.onclick = () => { openIframe('art/art.html?q=' + el.id) }
-	}
-	for (let el of get('writingPage').getElementsByTagName('h2')) {
-		let link = el.getAttribute('link')
-		if (link != undefined) {
-			console.log(link)
-			el.onclick = () => { openIframe('writing/' + link) }
+
+	for (let tab of Object.entries(tabs)) {
+		for (let el of get(tab[0]).getElementsByTagName('h2')) {
+			let link = el.getAttribute('link')
+			if (link != undefined) el.onclick = (e) => {
+				if (e.metaKey) window.open(tab[1] + link, '_blank').focus();
+				else openIframe(tab[1] + link) 
+			}
 		}
 	}
-	for (let el of get('videoPage').getElementsByTagName('h2')) {
-		let link = el.getAttribute('link')
-		if (link != undefined) {
-			console.log(link)
-			el.onclick = () => { openIframe('video/' + link) }
-		}
-	}
-	
 
 	function openIframe(src) {
 		window.scrollTo(0, document.body.scrollHeight);
@@ -333,7 +336,7 @@ Add music to Drop, Point and clicks?
 
 	function closeIframe() {	
 		IFRAME.style.display = 'none'
-		IFRAME.src = null
+		IFRAME.src = 'about:blank'
 	}
 
 
