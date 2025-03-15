@@ -8,13 +8,13 @@
 (ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
 
 TODOS:
-Play a brief clicky sound on a link hover, tab hover, summaries etc
 Compress website loops to be more 90s
 Add Fun Fun Fun Fun Fun Fun Fun
 Fix music videos
 Left/right arrow usable for left/right nav?
 Ctrl or cmd click - link takes you to new tab
 Mute music button
+Add are you sure you want to quit when exiting iframe
 
 BUGFIXES
 make summaries non-selectable
@@ -41,7 +41,6 @@ Make header letters changeable when clicked
 Add music to Drop, Point and clicks?
 -->
 
-
 <!DOCTYPE html>
 <head>
 	<title>Ben's Website!!!</title>
@@ -60,10 +59,11 @@ Add music to Drop, Point and clicks?
 
 		.website img { height: 30px; margin-top: 5px;}
 
-		h2 	{ 
+		h2 	{
 			color: lightgray;
 			cursor: url(shared/cursor.png), auto;
 		}
+
 		h2:hover { color: white }
 		
 		a {
@@ -101,7 +101,6 @@ Add music to Drop, Point and clicks?
 
 		.page { display: none; }
 
-
 		summary { color: yellow; font-style: bold; 
 			filter: drop-shadow(0 0 1rem blue) }
 
@@ -118,9 +117,7 @@ Add music to Drop, Point and clicks?
 			user-select: none;
 		}
 
-		#iframeDiv {
-			margin: auto;
-		}
+		#iframeDiv { margin: auto }
 
 		iframe {
 			border: solid black 20px;
@@ -175,6 +172,8 @@ Add music to Drop, Point and clicks?
 			<h2 link='chords/songs/play-the-game.html'>		Play the Game					</h2>
 			<h2 link='chords/songs/woke-up.html'>			Woke Up							</h2>
 			<h2 link='chords/songs/hello-now.html'>			Hello Now						</h2>
+			<h2 link='chords/songs/walk-along.html'>		Walk Along						</h2>
+			<h2 link='chords/songs/love-conquers-all.html'>	Love Conquers All				</h2>
 		</div>
 	</details><br><br>
 	<details><summary>Music for Rebeccas's Animations</summary>
@@ -319,13 +318,15 @@ Add music to Drop, Point and clicks?
 				if (e.metaKey) window.open(tab[1] + link, '_blank').focus();
 				else openIframe(tab[1] + link) 
 			}
+			el.onmouseover = () => { playSound('shared/sound/click', .1) }
 		}
 	}
 
 	function openIframe(src) {
+		playSound('shared/sound/hit', .5)
 		window.scrollTo(0, document.body.scrollHeight);
 		IFRAME.src = src
-		console.log(src)
+		IFRAME.muted=false;
 		IFRAME.style.display = 'inline-block'
 		//IFRAME.style.width  = IFRAME.contentWindow.document.body.scrollWidth;
     	//IFRAME.style.height = IFRAME.contentWindow.document.body.scrollHeight;
@@ -337,6 +338,8 @@ Add music to Drop, Point and clicks?
 	function closeIframe() {	
 		IFRAME.style.display = 'none'
 		IFRAME.src = 'about:blank'
+		IFRAME.muted=true;
+		console.log('hm')
 	}
 
 
@@ -363,7 +366,7 @@ Add music to Drop, Point and clicks?
 
 	if (isLocal) { for (let local of LOCALS) local.style.display = 'block' }
 	
-	for (let summary of getAll('summary')) summary.onclick = () => { playSound('shared/sound/click') }
+	for (let summary of getAll('summary')) summary.onclick = () => { playSound('shared/sound/click2') }
 
 	const tabParam = new URLSearchParams(window.location.search).get('tab');
 	for (const tab of ['music', 'art', 'games', 'writing', 'video']) {
@@ -373,6 +376,7 @@ Add music to Drop, Point and clicks?
 
 	let secret = false
 	function setTab(newTab) {
+		console.log('wha')
 		closeIframe()
 		if (newTab != null) get(newTab + 'Page').style.display = 'inline-block'
 		if (newTab != tab) {
