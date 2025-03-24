@@ -2,7 +2,7 @@ import os
 from re import sub
 # List names of files in a dir into filenames.js
 #
-print("This will lists files in directoy X into a js array in X/files.js")
+print("This will lists files in directoy X into a js array in X/0-list.js")
 dir = input("Enter a dir name continue...")
 #todo - automatically do on all dirs
 
@@ -20,10 +20,10 @@ for filename in os.listdir("/Users/bencelsi/LocalDrive/CODE•••••••
 
 photos.sort()
 
-if os.path.exists(dir + "/files.js"):
-    os.remove(dir + "/files.js")
+if os.path.exists(dir + "/0-list.js"):
+    os.remove(dir + "/0-list.js")
 
-f = open(dir + "/files.js", "a")
+f = open(dir + "/0-list.js", "a")
 f.write("let " + toCamelCase(dir) + "List = [\n")
 for photo in photos[:-1]:
     f.write("\"" + photo + "\",\n")

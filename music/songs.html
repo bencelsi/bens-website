@@ -8,11 +8,10 @@
 			margin: auto;
 			text-align: center;
 			width: 500px;
+			background-image: url(../gif/stars2.gif);
 		}
 
-		audio {
-			height: 30px; width: 250px;
-		}
+		audio { height: 30px; width: 250px }
 
 		h1 { text-shadow: 0 0 40px red; }
 
@@ -24,11 +23,8 @@
 
 		.row { display: table; }
 		
-		.button { cursor: url(../shared/cursor.png), auto; }
-
 		.albumCover {
-			width: 400px; 
-			height: 400px; 
+			width: 400px; height: 400px; 
 			filter: drop-shadow(0 0 4.5rem rgb(0, 79, 136));
 		}
 
@@ -79,62 +75,19 @@
 <script src="albums/mashups/0-list.js"></script>
 <script src="albums/old-piano/0-list.js"></script>
 <script src="albums/podcasts/0-list.js"></script>
-
+<script src="albums/songs/0-list.js"></script>
 <script>
 // TODO: dynamically add script based on query param
 
-let topSongs = [
-	"Cats",
-	"Woke Up",
-	"Happened By Now",
-	"Play the Game",
-	"One Love",
-	"Feel Like a Fraud"
-]
-
-let moss_rock = [
-	"Cats",
-	"Woke Up",
-	"Play the Game",
-	"Leo",
-	"Round and Around",
-	
-	"Going Electric!",
-	"Don't Get Me Down",
-	"Joe Frank",
-
-	"Spaghetti",
-	"Ill Go",
-	"Take You With Me",
-	"Breakfast on the Shore",
-	"Happened By Now",
-
-	"Miss You When You Go",
-	"Coming to a Close",
-	"Free",
-	"Feel Like a Fraud",
-
-	"Daisy",
-	"Golden Gate"
-]
-
-let space_jam = [
-	"Like a Star",
-	"Miyazaki Movies",
-	"Terrestrial Beauty",
-	"Joanie",
-	"Joe Frank",
-	"Tightrope",
-	"Dark Sky",
-]
 
 let config = {
 					//title					//list				//numbered	//cover
-	'miscellaneous':['Miscellaneous',		miscellaneousList,	false,		'Space Jams.jpeg'	],
+	'miscellaneous':['Miscellaneous',		miscellaneousList,	false,		'Teapots.png'		],
 	'mashups':		['Mashups',				mashupsList,		true,		'Mashups.jpg'		],
 	'griven': 		['Griven Music', 		grivenList,			true, 		'griven.png'		],
-	'podcasts':		['Music for Podcasts',	podcastsList,		false,		null				],
-	'old-piano':	['Old Piano Songs',		oldPianoList,		false,		'piano.png'			]
+	'podcasts':		['Music for Podcasts',	podcastsList,		false,		'breathe.jpg'		],
+	'old-piano':	['Old Piano Songs',		oldPianoList,		false,		'piano.png'			],
+	'songs':		['Songs',				songsList,			true,		'Moss Rock.png'		]
 }
 
 let q = new URLSearchParams(window.location.search).get('q')
@@ -144,8 +97,8 @@ let songFolder = "albums/" + q + "/"
 let extension = ".mp3"
 
 const autoplayBox = get("autoplay"); const shuffleBox = get("shuffle")
-autoplayBox.onclick = () => { if (autoplayBox.checked && shuffleBox.checked) shuffleBox.checked = false }
-shuffleBox.onclick = () => { if (autoplayBox.checked && shuffleBox.checked) autoplayBox.checked = false }
+autoplayBox.onclick = () => { if (!autoplayBox.checked) shuffleBox.checked = false }
+shuffleBox.onclick = () => { if (shuffleBox.checked) autoplayBox.checked = true }
 
 
 if (albumCover == null) get("albumCover").style.display = 'none'
@@ -173,7 +126,7 @@ for (let i = 0; i < songs.length; i++) {
 	songAudio.addEventListener("play", () => { stopAudios(i) })
 
 	songAudio.addEventListener("ended", () => {
-		songAudios[i].currentTime = 0
+		//songAudios[i].currentTime = 0
 		if (shuffleBox.checked) {
 			let randomIndex = i
 			while (randomIndex == i) randomIndex = random(0, songAudios.length - 1)
@@ -202,6 +155,48 @@ function stopAudios(toSkip) {
 		if (i != toSkip) songAudios[i].pause()
 	}
 }
+
+
+let topSongs = [
+	"Cats",
+	"Woke Up",
+	"Happened By Now",
+	"Play the Game",
+	"One Love",
+	"Feel Like a Fraud"
+]
+
+let moss_rock = [
+	"Cats",
+	"Woke Up",
+	"Play the Game",
+	"Leo",
+	"Round and Around",
+	"Going Electric!",
+	"Don't Get Me Down",
+	"Joe Frank",
+	"Spaghetti",
+	"Ill Go",
+	"Take You With Me",
+	"Breakfast on the Shore",
+	"Happened By Now",
+	"Miss You When You Go",
+	"Coming to a Close",
+	"Free",
+	"Feel Like a Fraud",
+	"Daisy",
+	"Golden Gate"
+]
+
+let space_jam = [
+	"Like a Star",
+	"Miyazaki Movies",
+	"Terrestrial Beauty",
+	"Joanie",
+	"Joe Frank",
+	"Tightrope",
+	"Dark Sky",
+]
 
 function removeExtension(str) { return str.split('.').slice(0, -1).join('.') }
 

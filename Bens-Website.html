@@ -9,7 +9,7 @@
 
 TODOS:
 Compress website loops to be more 90s
-Add Fun Fun Fun Fun Fun Fun Fun
+Add Fun Fun Fun Fun Fun Fun Fun to mashups
 Fix music videos
 Left/right arrow usable for left/right nav?
 Ctrl or cmd click - link takes you to new tab
@@ -33,6 +33,7 @@ Capitalize repo names & lowercase-ify htmls?
 Square Thumbnails for games/artwork, show many at once? Or at least collapsibles
 Make private
 
+LO PRI
 custom domain? na...
 Make Videos listed on sight, but still viewable as a gallery
 When click a tab 2nd time, close all collapsibles
@@ -64,7 +65,10 @@ Add music to Drop, Point and clicks?
 			cursor: url(shared/cursor.png), auto;
 		}
 
-		h2:hover { color: white }
+		h2:hover { 
+			color: white;
+			filter: drop-shadow(0 0 1.5rem rgb(255, 255, 255));
+		 }
 		
 		a {
 			text-decoration: none;
@@ -120,11 +124,13 @@ Add music to Drop, Point and clicks?
 		#iframeDiv { margin: auto }
 
 		iframe {
+			/* width: 100%; height: 100%; */
 			border: solid black 20px;
+			/* border: none; */
 			width: 1300px; height: 1000px;
 			display: none;
 			margin: auto;
-			filter: drop-shadow(0 0 4rem rgb(34, 34, 34));
+			filter: drop-shadow(0 0 4rem rgb(40, 38, 99));
 		}
 
 	</style>
@@ -153,14 +159,15 @@ Add music to Drop, Point and clicks?
 <!-- M U S I C -->
 <!------------------------------------------------>
 <div id='musicPage' class='page'>
-	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'>		<h2>The Ballad of Luigi</h2></a>
-	<a href='https://www.youtube.com/watch?v=NzcUOxN2IuM'>		<h2>Drew's Blues: A Rock Operettta</h2></a>
-	<h2 link='songs.html?q=miscellaneous'>					Miscellaneous					</h2>
-	<h2 link='songs.html?q=mashups'>						Mashups							</h2>
-	<h2 link='songs.html?q=podcasts'>						Music for Podcasts				</h2>
-	<h2 link='songs.html?q=griven'>							Griven Music					</h2>
-	<h2 link='songs.html?q=old-piano'>						Old Piano Songs					</h2>
-	<h2 link='albums.html' class='local'>					Albums							</h2>
+	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'>	<h2>The Ballad of Luigi				</h2></a>
+	<h2 link='songs.html?q=miscellaneous'>					Miscellaneous						</h2>
+	<h2 link='songs.html?q=mashups'>						Mashups								</h2>
+	<h2 link='songs.html?q=podcasts'>						Music for Podcasts					</h2>
+	<a href='https://www.youtube.com/watch?v=NzcUOxN2IuM'>	<h2>Drew's Blues: A Rock Operettta	</h2></a>
+	<h2 link='songs.html?q=griven'>							Griven Music						</h2>
+	<h2 link='songs.html?q=old-piano'>						Old Piano Songs						</h2>
+	<h2 link='songs.html?q=songs' class='local'>			Songs								</h2>
+	<h2 link='albums.html' class='local'>					Albums								</h2>
 	<br><br>
 	<details><summary>Chords & Lyrics</summary>
 		<h2 link='chords/songs/luigi.html'>					The Ballad of Luigi				</h2>
@@ -187,6 +194,7 @@ Add music to Drop, Point and clicks?
 		<a href='https://www.youtube.com/watch?v=8m9JRKYb5Ho'>	<h2>Maloy's Jewelry Workshop Commercial</h2></a>
 	</details><br>
 </div>
+
 <!------------------------------------------------>
 <!-- A R T -->
 <!------------------------------------------------>
@@ -319,7 +327,7 @@ Add music to Drop, Point and clicks?
 				if (e.metaKey) window.open(tab[1] + link, '_blank').focus();
 				else openIframe(tab[1] + link) 
 			}
-			el.onmouseover = () => { playSound('shared/sound/click', .1) }
+			el.onmouseover = () => { playSound('shared/sound/click', .2) }
 		}
 	}
 
@@ -329,9 +337,13 @@ Add music to Drop, Point and clicks?
 		IFRAME.src = src
 		IFRAME.muted=false;
 		IFRAME.style.display = 'inline-block'
-		//IFRAME.style.width  = IFRAME.contentWindow.document.body.scrollWidth;
-    	//IFRAME.style.height = IFRAME.contentWindow.document.body.scrollHeight;
+
+		console.log(IFRAME.contentWindow.document.body.scrollWidth)
+		console.log(IFRAME.contentWindow.document.body.scrollHeight)
+		IFRAME.style.width  = IFRAME.contentWindow.document.body.scrollWidth + 'px';
+    	IFRAME.style.height = IFRAME.contentWindow.document.body.scrollHeight +'px';
 		setMusic(null)
+		//setTab(null)
 		hidePage(tab)
 		//setTab(null)
 	}
