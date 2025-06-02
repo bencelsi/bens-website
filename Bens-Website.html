@@ -341,8 +341,8 @@ Add music to Drop, Point and clicks?
 		IFRAME.muted=false;
 		IFRAME.style.display = 'inline-block'
 		IFRAME.addEventListener("load", function() {
-			IFRAME.style.width = IFRAME.contentWindow.document.body.scrollWidth + 'px'
-			IFRAME.style.height = IFRAME.contentWindow.document.body.scrollHeight + 'px'
+			IFRAME.style.width = IFRAME.contentWindow.document.body.scrollWidth + 50 + 'px'
+			IFRAME.style.height = IFRAME.contentWindow.document.body.scrollHeight + 50 + 'px'
 			console.log(IFRAME.contentWindow.document.body.scrollWidth)
 		});
 		
@@ -351,18 +351,6 @@ Add music to Drop, Point and clicks?
 		//setTab(null)
 		hidePage(tab)
 		//setTab(null)
-	}
-
-	IFRAME.contentWindow.onhashchange = function() {
-		console.log('blah blah blah')
-	}
-
-	window.onhashchange = function() {
-		console.log('blah blah blah')
-	}
-
-	window.onhashchange = function() {
-		console.log('blah blah blah')
 	}
 
 	function closeIframe() {
