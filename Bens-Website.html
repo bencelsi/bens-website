@@ -303,11 +303,7 @@ Add music to Drop, Point and clicks?
 	const WEB_PATH = "https://bencelsi.github.io/"
 	const LOCALS = getAll('local')
 	let IFRAME = get('iframe')
-	window.onpopstate = (event) => {
-	console.log(
-		`location: ${document.location}, state: ${JSON.stringify(event.state)}`,
-	);
-	};
+	
 	let tabs = {
 		'musicPage': 'music/',
 		'artPage': 'art/art.html?q=',
@@ -331,8 +327,8 @@ Add music to Drop, Point and clicks?
 		playSound('shared/sound/hit', .5)
 		window.scrollTo(0, document.body.scrollHeight);
 		//IFRAME.remove()
-		IFRAME = document.createElement("iframe")
-		get('iframeDiv').appendChild(IFRAME)
+		//IFRAME = document.createElement("iframe")
+		//get('iframeDiv').appendChild(IFRAME)
 		console.log(src)
 		IFRAME.src = src
 		IFRAME.muted=false;
