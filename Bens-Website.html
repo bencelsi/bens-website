@@ -344,6 +344,9 @@ Add music to Drop, Point and clicks?
 			IFRAME.style.width = IFRAME.contentWindow.document.body.scrollWidth + 50 + 'px'
 			IFRAME.style.height = IFRAME.contentWindow.document.body.scrollHeight + 50 + 'px'
 			console.log(IFRAME.contentWindow.document.body.scrollWidth)
+			IFRAME.contentWindow.onhashchange = () => {
+				
+			}
 		});
 		
 
