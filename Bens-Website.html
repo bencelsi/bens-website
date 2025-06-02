@@ -323,8 +323,8 @@ Add music to Drop, Point and clicks?
 		for (let el of get(tab[0]).getElementsByTagName('h2')) {
 			let link = el.getAttribute('link')
 			if (link != undefined) el.onclick = (e) => {
-				if (e.metaKey) window.open(tab[1] + link, '_blank').focus();
-				else openIframe(tab[1] + link) 
+				if (e.metaKey) window.open(tab[1] + link, '_blank').focus(); // new tab
+				else openIframe(tab[1] + link)
 			}
 			el.onmouseover = () => { playSound('shared/sound/click', .2) }
 		}
@@ -340,12 +340,13 @@ Add music to Drop, Point and clicks?
 		IFRAME.src = src
 		IFRAME.muted=false;
 		IFRAME.style.display = 'inline-block'
-
-		if (IFRAME_DIMS[src] != null) {
+		IFRAME.addEventListener("load", function() {
 			IFRAME.style.width = IFRAME.contentWindow.document.body.scrollWidth + 'px'
 			IFRAME.style.height = IFRAME.contentWindow.document.body.scrollHeight + 'px'
-		}
+			console.log(IFRAME.contentWindow.document.body.scrollWidth)
+		});
 		
+
 		setMusic(null)
 		//setTab(null)
 		hidePage(tab)
@@ -370,8 +371,6 @@ Add music to Drop, Point and clicks?
 		IFRAME.src = 'about:blank'
 		IFRAME.muted=true;
 	}
-
-
 
 	if (isLocal) {  // show local links
 		for (let local of LOCALS) local.style.display = 'block' 
