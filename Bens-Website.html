@@ -340,12 +340,16 @@ Add music to Drop, Point and clicks?
 		IFRAME.src = src
 		IFRAME.muted=false;
 		IFRAME.style.display = 'inline-block'
+		if (!isLocal) {
+			IFRAME.style.width = '0px'
+			IFRAME.style.height = '0px'
+		}
 		IFRAME.addEventListener("load", function() {
 			IFRAME.style.width = IFRAME.contentWindow.document.body.scrollWidth + 50 + 'px'
 			IFRAME.style.height = IFRAME.contentWindow.document.body.scrollHeight + 50 + 'px'
 			console.log(IFRAME.contentWindow.document.body.scrollWidth)
 			IFRAME.contentWindow.onhashchange = () => {
-				
+				console.log("oooOOo")
 			}
 		});
 		
