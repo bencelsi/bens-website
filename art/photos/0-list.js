@@ -1,4 +1,4 @@
-let photos = [
+let photosList = [
 "1910.jpeg",
 "1973.jpeg",
 "1stAve.jpeg",

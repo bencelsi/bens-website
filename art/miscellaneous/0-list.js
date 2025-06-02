@@ -4,6 +4,7 @@ let miscellaneousList = [
 "OffallyGood!.jpeg",
 "Severance.jpg",
 "SovietMonopoly.jpeg",
+"Sunland",
 "Teapots.png",
 "TheActualBeachBoys.jpeg",
 "ThiccSpaghetti.jpg",

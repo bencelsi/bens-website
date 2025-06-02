@@ -17,12 +17,6 @@ dirs = [
     "music/albums/old-piano/",
 ]
 
-def toCamelCase(s):
-    # Use regular expression substitution to replace underscores and hyphens with spaces,
-    # then title case the string (capitalize the first letter of each word), and remove spaces
-    s = sub(r"(_|-)+", " ", s).title().replace(" ", "")
-    # Join the string, ensuring the first letter is lowercase
-    return ''.join([s[0].lower(), s[1:]])
 
 fileNames = []
 for filename in os.listdir("/Users/bencelsi/LocalDrive/CODE•••••••••••••••••••••••••/github/bencelsi.github.io/" + dir):
@@ -37,6 +31,13 @@ if os.path.exists(dir + "/0-list.js"):
 print(dir)
 print(dir.rsplit('/', 1))
 print(dir.rsplit('/', 1)[0])
+
+def toCamelCase(s):
+    # Use regular expression substitution to replace underscores and hyphens with spaces,
+    # then title case the string (capitalize the first letter of each word), and remove spaces
+    s = sub(r"(_|-)+", " ", s).title().replace(" ", "")
+    # Join the string, ensuring the first letter is lowercase
+    return ''.join([s[0].lower(), s[1:]])
 
 f = open(dir + "/0-list.js", "a")
 f.write("let " + toCamelCase(dir.rsplit('/', 1)[1]) + "List = [\n")

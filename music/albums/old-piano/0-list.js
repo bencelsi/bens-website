@@ -13,6 +13,7 @@ let oldPianoList = [
 "Forgotten Escape.m4a",
 "Freedom Party.m4a",
 "Friend Death.m4a",
+"Hymn to Nikkal.m4a",
 "Inspiring Musical.m4a",
 "Japanese Dream Journey.mp3",
 "Nighttime Barnyard.mp3",

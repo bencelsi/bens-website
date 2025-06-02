@@ -13,6 +13,10 @@
 
 		audio { height: 30px; width: 250px }
 
+		#home:hover { filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }
+		#highlighted { filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }
+		
+
 		h1 { text-shadow: 0 0 40px red; }
 
 		.caption { 
@@ -40,9 +44,8 @@
 			filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
 		}
 
-		.button, a { cursor: url(../shared/cursor.png), auto; }
-
-		#home:hover { filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }
+		.button, a { cursor: url(../shared/cursor.png), auto }
+		
 	</style>
 </head>
 <body>
@@ -68,8 +71,6 @@
 	<br><br>
 
 <script src="../shared/shared.js"></script>
-
-<script src="../songs/0-list.js"></script>
 <script src="albums/miscellaneous/0-list.js"></script>
 <script src="albums/griven/0-list.js"></script>
 <script src="albums/mashups/0-list.js"></script>
@@ -77,11 +78,24 @@
 <script src="albums/podcasts/0-list.js"></script>
 <script src="albums/songs/0-list.js"></script>
 <script>
-// TODO: dynamically add script based on query param
+/* 
+TODO: dynamically add script based on query param
+TODO: show image corresponing to song (if applicable)
+TODO: 
+
+Ideal wold - 
+store bounces per project.
+have tools for:
 
 
-let config = {
-					//title					//list				//numbered	//cover
+BYOA - assemble custom albums
+All - view 'newest' version of all bounces
+All All - view all, including old versions
+rename song files & logic
+
+*/
+
+let config = {		//title					//list				//numbered	//cover
 	'miscellaneous':['Miscellaneous',		miscellaneousList,	false,		'Teapots.png'		],
 	'mashups':		['Mashups',				mashupsList,		true,		'Mashups.jpg'		],
 	'griven': 		['Griven Music', 		grivenList,			true, 		'griven.png'		],
@@ -120,21 +134,32 @@ for (let i = 0; i < songs.length; i++) {
 	let songAudioTd = document.createElement("td")
 	let songAudio = document.createElement("audio")
 	songAudio.src = songFolder + songs[i]
-	console.log(songFolder + songs[i])
+	//console.log(songFolder + songs[i])
 	songAudio.controls = true
 
-	songAudio.addEventListener("play", () => { stopAudios(i) })
+	songAudio.addEventListener("play", () => { 
+		for (let j = 0; j < songAudios.length && j != i; j++) {
+			songAudios[j].id = null
+			songAudios[j].pause()
+		}
+		songAudios[i].id = "highlighted"
+	})
+
+	songAudio.addEventListener("pause", () => { 
+		songAudios[i].id = null
+	})
 
 	songAudio.addEventListener("ended", () => {
+		if (!autoplayBox.checked) return
 		//songAudios[i].currentTime = 0
+		let nextIndex = i + 1;
 		if (shuffleBox.checked) {
-			let randomIndex = i
-			while (randomIndex == i) randomIndex = random(0, songAudios.length - 1)
-			songAudios[randomIndex].currentTime = 0
-			songAudios[randomIndex].play()
-		} else if (autoplayBox.checked && i < songAudios.length - 1) {
-			songAudios[i + 1].currentTime = 0
-			songAudios[i + 1].play()
+			nextIndex = i
+			while (nextIndex == i) nextIndex = random(0, songAudios.length - 1)
+		}
+		if (shuffleBox.checked || nextIndex < songAudios.length) {
+			songAudios[nextIndex].currentTime = 0
+			songAudios[nextIndex].play()
 		}
     })
 
@@ -149,12 +174,6 @@ for (let i = 0; i < songs.length; i++) {
 }
 
 // TODO - way to keep playing song when browsing website?
-
-function stopAudios(toSkip) {
-	for (let i = 0; i < songAudios.length; i++) {
-		if (i != toSkip) songAudios[i].pause()
-	}
-}
 
 
 let topSongs = [

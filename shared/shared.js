@@ -26,7 +26,6 @@ function shuffle(array) {
 
 let sounds = new Audio();
 function playSound(name, volume = 1, audio = sounds) { 
-    console.log(name)
     audio.volume = volume
     let src = name + (name.includes('.') ? '' : '.wav')
     if (audio.src != src) { audio.src = src }

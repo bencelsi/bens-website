@@ -1,6 +1,8 @@
 let paintingsList = [
 "BottleAndGoblet.jpg",
 "Chantarelle.jpg",
+"Harding.jpeg",
+"Mango.jpeg",
 "McKinley.JPG",
 "Pomegranate.JPG",
 "Renaissance.JPG",
@@ -8,7 +10,6 @@ let paintingsList = [
 "SkullPainting.JPG",
 "Taft.JPG",
 "TheodoreRoosevelt.JPG",
-// "TurkeyVulture.png",
-// "Mango"
-// "Winston"
-"WineAndOnion.jpg"]
+"Vulture.jpeg",
+"WineAndOnion.jpg",
+"Winston.jpeg"]
