@@ -341,22 +341,11 @@ Add music to Drop, Point and clicks?
 			IFRAME.style.width = IFRAME.contentWindow.document.body.scrollWidth + 50 + 'px'
 			IFRAME.style.height = IFRAME.contentWindow.document.body.scrollHeight + 50 + 'px'
 			console.log(IFRAME.contentWindow.location.href)
-			if (IFRAME.contentWindow.location.href == "") {
+			if (IFRAME.contentWindow.location.href == "about:blank") {
 				closeIframe()
 			}
 			console.log(IFRAME.contentWindow.document.body.scrollWidth)
-			IFRAME.contentWindow.onhashchange = () => {
-				console.log("oooOOo")
-			}
-			IFRAME.contentWindow.document.body.window.onhashchange = () => {
-				console.log("oooOOo2")
-			}
-			IFRAME.contentWindow.document.onhashchange = () => {
-				console.log("oooOOo3")
-			}
-			IFRAME.contentWindow.addEventListener('hashchange', function(){
-  				console.log('--000oo');
-			});
+			
 		});
 		
 
@@ -369,6 +358,9 @@ Add music to Drop, Point and clicks?
 	function closeIframe() {
 		if (IFRAME == null) return	
 		IFRAME.style.display = 'none'
+		IFRAME.remove()
+		IFRAME = document.createElement("iframe")
+		get('iframeDiv').appendChild(IFRAME)
 		IFRAME.src = 'about:blank'
 		IFRAME.muted=true;
 	}
