@@ -351,6 +351,12 @@ Add music to Drop, Point and clicks?
 			IFRAME.contentWindow.onhashchange = () => {
 				console.log("oooOOo")
 			}
+			IFRAME.contentWindow.document.body.window.onhashchange = () => {
+				console.log("oooOOo")
+			}
+			IFRAME.contentWindow.document.onhashchange = () => {
+				console.log("oooOOo")
+			}
 		});
 		
 
