@@ -357,6 +357,9 @@ Add music to Drop, Point and clicks?
 			IFRAME.contentWindow.document.onhashchange = () => {
 				console.log("oooOOo")
 			}
+			IFRAME.contentWindow.addEventListener('hashchange', function(){
+  				console.log('--000oo');
+			});
 		});
 		
 
