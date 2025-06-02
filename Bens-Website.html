@@ -358,6 +358,7 @@ Add music to Drop, Point and clicks?
 		get('iframeDiv').appendChild(IFRAME)
 		IFRAME.src = 'about:blank'
 		IFRAME.muted=true;
+		setTab(tab)
 	}
 
 	if (isLocal) {  // show local links
@@ -393,7 +394,6 @@ Add music to Drop, Point and clicks?
 
 	let secret = false
 	function setTab(newTab) {
-		closeIframe()
 		if (newTab != null) get(newTab + 'Page').style.display = 'inline-block'
 		if (newTab != tab) {
 			if (newTab != null) get(newTab + 'Tab').classList.add('selected')
