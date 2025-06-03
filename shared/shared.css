@@ -30,15 +30,12 @@ a:hover {
 summary {
 	font-size: 25px;
 	font-style: bold; 
-	cursor: url(shared/cursor.png), auto;
-	color: lightgoldenrodyellow; 
+	cursor: url(cursor.png), auto;
+	color: lavender; 
 	filter: drop-shadow(0 0 1rem blue)
 }
 
 .button { cursor: url(cursor.png), auto; }
 
-details {
-	color: lightgoldenrodyellow;
-}
 
 .local { display: none; }

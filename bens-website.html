@@ -70,12 +70,16 @@ Add music to Drop, Point and clicks?
 		#writingTab.selected 	{ filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
 		#videoTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
 		
-		.selected img { filter: drop-shadow(0 0 .25rem rgb(255, 214, 64)) }
+		.selected img { filter: drop-shadow(0 0 .25rem rgb(255, 214, 64)); opacity: 100%;  }
+		.tab:not(.selected) {
+			opacity: 60%; 
+		}
 
 		.tab {
 			display: inline-block;
 			margin-left: 60px; margin-right: 60px;
 			cursor: url(shared/cursor.png), auto;
+			
 		}
 
 		.page { display: none; }
@@ -173,20 +177,20 @@ Add music to Drop, Point and clicks?
 <!------------------------------------------------>
 <div id='writingPage' class='page'>
 	<br>
-	<details><summary>Miscellaneous</summary>
+	<details><summary>Miscellaneous</summary><br>
 		<a link='writing/writings/Either.html'>									Either					</a>
 		<a link='writing/gallery.html?q=palindromes'>							Palindromes				</a>
 		<a link='writing/gallery.html?q=alphabet-sayings'>						Alphabet Sayings		</a>
 		<a link='writing/gallery.html?q=miscellaneous'>							Miscellaneous			</a>
 	</details><br><br>
-	<details><summary>College</summary>
+	<details><summary>College</summary><br>
 		<a link='writing/writings/college/Christian-Bok.html' class='local'>	Christian Bök			</a>
 		<a link='writing/writings/college/Youre-Little.html' class='local'>		You're Little			</a>
 		<a link='writing/writings/college/ABBA-CD.html'>						ABBA CD					</a>
 		<a link='writing/writings/college/Raven.html'>							TheRaven.java			</a>
 		<a link='writing/writings/college/Nature.html'>							Nature Forging a Baby	</a>
 	</details><br><br>
-	<details><summary>High School</summary>
+	<details><summary>High School</summary><br>
 		<a link='writing/writings/high/Great-Apes.html'>					Great Apes</a>
 		<a link='writing/writings/high/Ough.html'>							Ough</a>
 		<a link='writing/writings/high/I-Am-From-Poem.html'>				I Am Dumb Poem</a>
@@ -194,7 +198,7 @@ Add music to Drop, Point and clicks?
 		<a link='writing/writings/high/Babylon.html'>						By the Waters of Babylon: The Reawakening</a>
 		<a link='writing/writings/high/Mr-Oates.html'>						Mr. Oates</a>
 	</details><br><br>
-	<details><summary>Middle School</summary>
+	<details><summary>Middle School</summary><br>
 		<a link='writing/writings/middle/Shakespearean-Friday.html'>		Shakespearean Friday			</a>
 		<a link='writing/writings/middle/Ms-Knottethin.html'>				Ms. Knottethin					</a>
 		<a link='writing/writings/middle/The-Church.html'>					The Church						</a>
@@ -209,7 +213,7 @@ Add music to Drop, Point and clicks?
 		<a link='writing/writing/writings/middle/Planet-Limericks.html'>	Planet Limericks				</a>
 		<a link='writing/writing/writings/middle/Da-Vinci-Code-Poem.html'>	Da Vinci Code Poem				</a>
 	</details><br><br>
-	<details><summary>Elementary School</summary>
+	<details><summary>Elementary School</summary><br>
 		<a link='writing/writings/elementary/Flagellants.html'>				The Flagellants					</a>
 		<a link='writing/writings/elementary/Bush.html'>					The Adventures of George W. Bush</a>
 		<a link='writing/writings/elementary/John-Adams-poem.html'>			John Adams Poem					</a>
