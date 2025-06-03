@@ -9,32 +9,36 @@ body {
 }
 
 a {
-	color: pink; 
+	display: block;
+	font-size: 20px;
+	padding: 10px;
+	color: pink;
+	font-weight: bold;
+	/* color: pink; */
+	cursor: url(cursor.png), auto;
 	font-style: normal;
 	text-decoration: none;
-	cursor: url(shared/cursor.png), auto;
-	h2 { img { display: none; } }
+	a { img { display: none; } }
 }
 
-a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem white); }
-
-
-h2 	{
-	color: lightgray;
-	cursor: url(shared/cursor.png), auto;
-}
-
-h2:hover { 
+a:hover { 
+	background-color: transparent; 
+	filter: drop-shadow(0 0 2rem white); 
 	color: white;
-	filter: drop-shadow(0 0 1.5rem rgb(255, 255, 255));
 }
 
 summary {
 	font-size: 25px;
+	font-style: bold; 
 	cursor: url(shared/cursor.png), auto;
+	color: lightgoldenrodyellow; 
+	filter: drop-shadow(0 0 1rem blue)
 }
 
 .button { cursor: url(cursor.png), auto; }
 
+details {
+	color: lightgoldenrodyellow;
+}
 
 .local { display: none; }

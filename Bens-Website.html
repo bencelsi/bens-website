@@ -65,7 +65,6 @@ Add music to Drop, Point and clicks?
 		#gamesTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(0, 200, 55)); }
 		#writingTab:not(.selected):hover 	{ filter: drop-shadow(0 0 1rem rgb(255, 210, 0)); }
 		#videoTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(0, 130, 255)); }
-		#writingPage { details { color: yellow; }}
 
 		#musicTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(255, 0, 0)); }
 		#artTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
@@ -82,9 +81,6 @@ Add music to Drop, Point and clicks?
 		}
 
 		.page { display: none; }
-
-		summary { color: yellow; font-style: bold; 
-			filter: drop-shadow(0 0 1rem blue) }
 
 		
 
@@ -128,51 +124,50 @@ Add music to Drop, Point and clicks?
 <!------------------------------------------------>
 <div id='musicPage' class='page'>
 	<!-- TODO: Luigi and Drew should open video in iframe -->
-	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'>	<h2>The Ballad of Luigi				</h2></a>
-	<h2 link='songs.html?q=miscellaneous'>					Miscellaneous						</h2>
-	<h2 link='songs.html?q=mashups'>						Mashups								</h2>
-	<h2 link='songs.html?q=podcasts'>						Music for Podcasts					</h2>
-	<h2 link='songs.html?q=griven'>							Griven Music						</h2>
-	<h2 link='songs.html?q=old-piano'>						Old Piano Songs						</h2>
-	<h2 link='chords.html'>									Chords & Lyrics						</h2>
-	<h2 link='video.html?q=rebeccasAnimations'>				Music for Rebecca's Animations		</h2>
-	<a href='https://www.youtube.com/watch?v=NzcUOxN2IuM'>	<h2>Drew's Blues: A Rock Operettta	</h2></a>
-<br>•••••<br><br>
-	<h2 link='songs.html?q=songs' class='local'>			Songs								</h2>
-	<h2 link='albums.html' class='local'>					Albums								</h2>
-	
+	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'>	The Ballad of Luigi					</a>
+	<a link='music/songs.html?q=miscellaneous'>					Miscellaneous						</a>
+	<a link='music/songs.html?q=mashups'>							Mashups								</a>
+	<a link='music/songs.html?q=podcasts'>						Music for Podcasts					</a>
+	<a link='music/songs.html?q=griven'>							Griven Music						</a>
+	<a link='music/songs.html?q=old-piano'>						Old Piano Songs						</a>
+	<a link='music/chords.html'>									Chords & Lyrics						</a>
+	<a link='video/video.html?q=rebeccasAnimations'>				Music for Rebecca's Animations		</a>
+	<a href='https://www.youtube.com/watch?v=NzcUOxN2IuM'>	Drew's Blues: A Rock Operettta		</a>
+	<br><br><br>
+	<a link='music/songs.html?q=songs' class='local'>				Songs								</a>
+	<a link='music/albums.html' class='local'>					Albums								</a>
 </div>
 
 <!------------------------------------------------>
 <!-- A R T -->
 <!------------------------------------------------>
 <div id='artPage' class='page'>
-	<h2 link="paintings">			Paintings					</h2>
-	<h2 link="drawings">			Drawings					</h2>
-	<h2 link="photos">				Photos						</h2>
-	<h2 link="uw-daily">			UW Daily Illustrations		</h2>
-	<h2 link="life-of-pika">		Life of Pika Illustrations	</h2>
-	<h2 link="dead-end">			Dead End Test Renders		</h2>
-	<h2 link="miscellaneous">		Miscellaneous				</h2>
+	<a link="art/art.html?q=paintings">			Paintings					</a>
+	<a link="art/art.html?q=drawings">			Drawings					</a>
+	<a link="art/art.html?q=photos">			Photos						</a>
+	<a link="art/art.html?q=uw-daily">			UW Daily Illustrations		</a>
+	<a link="art/art.html?q=life-of-pika">		Life of Pika Illustrations	</a>
+	<a link="art/art.html?q=dead-end">			Dead End Test Renders		</a>
+	<a link="art/art.html?q=miscellaneous">		Miscellaneous				</a>
 </div>
 
 <!------------------------------------------------>
 <!-- G A M E S -->
 <!------------------------------------------------>
 <div id='gamesPage' class='page'>
-	<h2 link="tetriven">											Tetriven				</h2>
-	<h2 link="nabanagrams">											Nabanagrams				</h2>
-	<h2 link="chord-wheel">											Chord Wheel				</h2>
-	<h2 link="automata">											Automata				</h2>
-	<h2 link="point-and-clicks">									Point & Clicks			</h2>
-	<h2 link="catan-o-rama">										Catan-o-Rama!			</h2>
-	<a href='cirque-de-sabotage'>									<h2>Cirque de Sabotage	</h2></a>
-	<a href='mxbbi'>												<h2>MXBBI				</h2></a>
-	<a href='drop'>													<h2>Drop				</h2></a>
-	<a href='https://scratch.mit.edu/projects/1448075/fullscreen'>	<h2>Griven				</h2></a>
-	<a href='https://scratch.mit.edu/projects/379323/fullscreen/'>	<h2>Grounded			</h2></a>
-	<a href='soviet-monopoly' 	class='local'> 						<h2>Soviet Monopoly		</h2></a>
-	<a href='game-of-cards' 	class='local'> 						<h2>Game of Cards		</h2></a>
+	<a link="https://bencelsi.github.io/tetriven">									Tetriven				</a>
+	<a link="https://bencelsi.github.io/nabanagrams">								Nabanagrams				</a>
+	<a link="https://bencelsi.github.io/chord-wheel">								Chord Wheel				</a>
+	<a link="https://bencelsi.github.io/automata">									Automata				</a>
+	<a link="https://bencelsi.github.io/point-and-clicks">							Point & Clicks			</a>
+	<a link="https://bencelsi.github.io/catan-o-rama">								Catan-o-Rama!			</a>
+	<a link='https://bencelsi.github.io/cirque-de-sabotage'>						Cirque de Sabotage		</a>
+	<a link='https://bencelsi.github.io/mxbbi'>										MXBBI					</a>
+	<a link='https://bencelsi.github.io/drop'>										Drop					</a>
+	<a href='https://scratch.mit.edu/projects/1448075/fullscreen'>	Griven					</a>
+	<a href='https://scratch.mit.edu/projects/379323/fullscreen/'>	Grounded				</a>
+	<a href='soviet-monopoly' 	class='local'> 						Soviet Monopoly			</a>
+	<a href='game-of-cards' 	class='local'> 						Game of Cards			</a>
 </div>
 
 <!------------------------------------------------>
@@ -181,46 +176,46 @@ Add music to Drop, Point and clicks?
 <div id='writingPage' class='page'>
 	<br>
 	<details><summary>Miscellaneous</summary>
-		<h2 link='writings/Either.html'>								Either					</h2>
-		<h2 link='gallery.html?q=palindromes'>							Palindromes				</h2>
-		<h2 link='gallery.html?q=alphabet-sayings'>						Alphabet Sayings		</h2>
-		<h2 link='gallery.html?q=miscellaneous'>						Miscellaneous			</h2>
+		<a link='writing/writings/Either.html'>									Either					</a>
+		<a link='writing/gallery.html?q=palindromes'>							Palindromes				</a>
+		<a link='writing/gallery.html?q=alphabet-sayings'>						Alphabet Sayings		</a>
+		<a link='writing/gallery.html?q=miscellaneous'>							Miscellaneous			</a>
 	</details><br><br>
 	<details><summary>College</summary>
-		<h2 link='writings/college/Christian-Bok.html' class='local'>	Christian Bök			</h2>
-		<h2 link='writings/college/Youre-Little.html' class='local'>	You're Little			</h2>
-		<h2 link='writings/college/ABBA-CD.html'>						ABBA CD					</h2>
-		<h2 link='writings/college/Raven.html'>							TheRaven.java			</h2>
-		<h2 link='writings/college/Nature.html'>						Nature Forging a Baby	</h2>
+		<a link='writing/writings/college/Christian-Bok.html' class='local'>	Christian Bök			</a>
+		<a link='writing/writings/college/Youre-Little.html' class='local'>		You're Little			</a>
+		<a link='writing/writings/college/ABBA-CD.html'>						ABBA CD					</a>
+		<a link='writing/writings/college/Raven.html'>							TheRaven.java			</a>
+		<a link='writing/writings/college/Nature.html'>							Nature Forging a Baby	</a>
 	</details><br><br>
 	<details><summary>High School</summary>
-		<h2 link='writings/high/Great-Apes.html'>					Great Apes</h2>
-		<h2 link='writings/high/Ough.html'>							Ough</h2>
-		<h2 link='writings/high/I-Am-From-Poem.html'>				I Am Dumb Poem</h2>
-		<h2 link='writings/high/Fruit-Flies.html'>					Fruit Flies</h2>
-		<h2 link='writings/high/Babylon.html'>						By the Waters of Babylon: The Reawakening</h2>
-		<h2 link='writings/high/Mr-Oates.html'>						Mr. Oates</h2>
+		<a link='writing/writings/high/Great-Apes.html'>					Great Apes</a>
+		<a link='writing/writings/high/Ough.html'>							Ough</a>
+		<a link='writing/writings/high/I-Am-From-Poem.html'>				I Am Dumb Poem</a>
+		<a link='writing/writings/high/Fruit-Flies.html'>					Fruit Flies</a>
+		<a link='writing/writings/high/Babylon.html'>						By the Waters of Babylon: The Reawakening</a>
+		<a link='writing/writings/high/Mr-Oates.html'>						Mr. Oates</a>
 	</details><br><br>
 	<details><summary>Middle School</summary>
-		<h2 link='writings/middle/Shakespearean-Friday.html'>		Shakespearean Friday</h2>
-		<h2 link='writings/middle/Ms-Knottethin.html'>				Ms. Knottethin</h2>
-		<h2 link='writings/middle/The-Church.html'>					The Church</h2>
-		<h2 link='writings/middle/Zirconium.html'>					Zirconium</h2>
-		<h2 link='writings/middle/Ode-to-Oden.html'>				Ode to Oden</h2>
-		<!-- <h2 link='writings/middle/Josh-Hauser.html'>			Josh Hauser</h2> -->
-		<h2 link='writings/middle/Life-of-Bob.html'>				Life of Bob</h2>
-		<h2 link='writings/middle/How-To.html'>						How to Write a How-To Essay</h2>
-		<h2 link='writings/middle/Lewis-Carroll.html'>				The 'Lewis Carroll Poem' Poem</h2>
-		<h2 link='writings/middle/Mystery-Object-Poem.html'>		Mystery Object Poem</h2>
-		<h2 link='writings/middle/Newport-Field-Trip-Haikus.html'>	Newport Field Trip Haikus</h2>
-		<h2 link='writings/middle/Planet-Limericks.html'>			Planet Limericks</h2>
-		<h2 link='writings/middle/Da-Vinci-Code-Poem.html'>			Da Vinci Code Poem</h2>
+		<a link='writing/writings/middle/Shakespearean-Friday.html'>		Shakespearean Friday			</a>
+		<a link='writing/writings/middle/Ms-Knottethin.html'>				Ms. Knottethin					</a>
+		<a link='writing/writings/middle/The-Church.html'>					The Church						</a>
+		<a link='writing/writings/middle/Zirconium.html'>					Zirconium						</a>
+		<a link='writing/writings/middle/Ode-to-Oden.html'>					Ode to Oden						</a>
+		<!-- <a link='writings/middle/Josh-Hauser.html'>			Josh Hauser</a> -->
+		<a link='writing/writings/middle/Life-of-Bob.html'>					Life of Bob						</a>
+		<a link='writing/writings/middle/How-To.html'>						How to Write a How-To Essay		</a>
+		<a link='writing/writings/middle/Lewis-Carroll.html'>				The 'Lewis Carroll Poem' Poem	</a>
+		<a link='writing/writings/middle/Mystery-Object-Poem.html'>			Mystery Object Poem				</a>
+		<a link='writing/writings/middle/Newport-Field-Trip-Haikus.html'>	Newport Field Trip Haikus		</a>
+		<a link='writing/writing/writings/middle/Planet-Limericks.html'>	Planet Limericks				</a>
+		<a link='writing/writing/writings/middle/Da-Vinci-Code-Poem.html'>	Da Vinci Code Poem				</a>
 	</details><br><br>
 	<details><summary>Elementary School</summary>
-		<h2 link='writings/elementary/Flagellants.html'>			The Flagellants</h2>
-		<h2 link='writings/elementary/Bush.html'>					The Adventures of George W. Bush</h2>
-		<h2 link='writings/elementary/John-Adams-poem.html'>		John Adams Poem</h2>
-		<!-- <h2 link='writings/elementary/Princess-Fred-Jr.html'>		Princess Fred Jr.</h2> -->
+		<a link='writing/writings/elementary/Flagellants.html'>				The Flagellants					</a>
+		<a link='writing/writings/elementary/Bush.html'>					The Adventures of George W. Bush</a>
+		<a link='writing/writings/elementary/John-Adams-poem.html'>			John Adams Poem					</a>
+		<!-- <a link='writings/elementary/Princess-Fred-Jr.html'>		Princess Fred Jr.</a> -->
 		<!-- Wickepedia Clown -->
 		<!-- Dr. Dadoewizgone -->
 	</details><br><br>
@@ -230,11 +225,11 @@ Add music to Drop, Point and clicks?
 <!-- V I D E O -->
 <!------------------------------------------------>
 <div id='videoPage' class='page'>
-	<h2 link='video.html?q=all'>				All Videos</h2><br>
-	<h2 link='video.html?q=musicVideos'>		Music Videos</h2><br>
-	<h2 link='video.html?q=liveAction'>			Live Action</h2><br>
-	<h2 link='video.html?q=all'>				Animation</h2><br>
-	<h2 link='video.html?q=miscellaneous'>		Miscellaneous</h2><br>
+	<a link='video/video.html?q=all'>				All Videos			</a>
+	<a link='video/video.html?q=musicVideos'>		Music Videos		</a>
+	<a link='video/video.html?q=liveAction'>		Live Action			</a>
+	<a link='video/video.html?q=all'>				Animation			</a>
+	<a link='video/video.html?q=miscellaneous'>	Miscellaneous		</a>
 </div>
 <br><br>
 
@@ -242,10 +237,11 @@ Add music to Drop, Point and clicks?
 <!-- I F R A M E-->
 <!------------------------------------------------>
 
-
 <div id="iframeDiv">
 	<iframe id="iframe" src="source:blank"></iframe>
 </div>
+
+
 <!-- <img src="gif/footer.gif"> -->
 <br><br><br>
 </body>	
@@ -256,42 +252,48 @@ Add music to Drop, Point and clicks?
 <!------------------------------------------------>
 <script src='shared/shared.js'></script>
 <script>
-	const WEB_PATH = "https://bencelsi.github.io/"
 	const LOCALS = getAll('local')
 	let IFRAME = get('iframe')
 	
-	let tabs = {
-		'musicPage': 'music/',
-		'artPage': 'art/art.html?q=',
-		'gamesPage': WEB_PATH,
-		'writingPage': 'writing/',
-		'videoPage': 'video/',
-	}
+	let pages = [
+		'musicPage',
+		'artPage',
+		'gamesPage',
+		'writingPage',
+		'videoPage'
+	]
 
-	for (let tab of Object.entries(tabs)) {
-		for (let el of get(tab[0]).getElementsByTagName('h2')) {
-			let link = el.getAttribute('link')
-			if (link != undefined) el.onclick = (e) => {
+	for (let page of pages) {
+		for (let a of get(page).getElementsByTagName('a')) {
+			let link = a.getAttribute('link')
+			if (link != undefined) a.onclick = (e) => {
 				if (e.metaKey) window.open(tab[1] + link, '_blank').focus(); // new tab
-				else openIframe(tab[1] + link)
+				else { 
+					console.log(link)
+					openIframe(link) }
 			}
-			el.onmouseover = () => { playSound('shared/sound/click', .2) }
+			a.onmouseover = () => { playSound('shared/sound/click', .2) }
+		}
+	}
+	if (isLocal) {  // show local links
+		for (let local of LOCALS) local.style.display = 'block' 
+		for (a of getAll('a')) {
+			if (a.parentElement != null && a.parentElement.id == 'gamesPage') {
+				//a.href = a.href.replace('https://bencelsi.github.io/', '') + '/index.html'
+			}
 		}
 	}
 
 	function openIframe(src) {
 		playSound('shared/sound/hit', .5)
 		window.scrollTo(0, document.body.scrollHeight);
-		//IFRAME.remove()
-		//IFRAME = document.createElement("iframe")
-		//get('iframeDiv').appendChild(IFRAME)
 		console.log(src)
 		IFRAME.src = src
 		IFRAME.muted=false;
 		IFRAME.style.display = 'inline-block'
 		if (!isLocal) {
 			//IFRAME.style.width = '1px'
-			IFRAME.style.height = '1px'
+			IFRAME.style.height = '0px'
 		}
 		IFRAME.addEventListener("load", function() {
 			console.log("Load .........")
@@ -299,16 +301,13 @@ Add music to Drop, Point and clicks?
 				closeIframe()
 				console.log("Close!")
 			}
-			//IFRAME.style.width = IFRAME.contentWindow.document.body.scrollWidth + 50 + 'px'
-			IFRAME.style.height = Math.max(500, IFRAME.contentWindow.document.body.scrollHeight) + 'px'
+			IFRAME.style.width = Math.max(1000, IFRAME.contentWindow.document.body.scrollWidth) + 'px'
+			IFRAME.style.height = Math.max(700, IFRAME.contentWindow.document.body.scrollHeight) + 'px'
 			console.log(IFRAME.contentWindow.location.href)
-			
 		});
 
 		setMusic(null)
-		//setTab(null)
 		hidePage(tab)
-		//setTab(null)
 	}
 
 	function closeIframe() {
@@ -324,14 +323,7 @@ Add music to Drop, Point and clicks?
 
 	function iframeOpen() { return IFRAME.src != "about:blank" }
 
-	if (isLocal) {  // show local links
-		for (let local of LOCALS) local.style.display = 'block' 
-		for (link of getAll('a')) {
-			if (link.parentElement != null && link.parentElement.id == 'gamesPage') {
-				link.href = link.href.replace('/bencelsi.github.io', '') + '/index.html'
-			}
-		}
-	}
+	
 
 	const music = new Audio(); music.loop = true;
 	const voice = new Audio();
@@ -395,14 +387,11 @@ Add music to Drop, Point and clicks?
 	}
 
 	function setBackgroundColor() {
-		console.log(tab)
 		let newColor = backgroundColors[tab]
 		if (newColor != null) document.body.style.backgroundColor = newColor
 	}
 
-	function hidePage(name) {
-		get(name + 'Page').style.display = 'none'
-	}
+	function hidePage(name) { get(name + 'Page').style.display = 'none' }
 	
 	get('header').onclick = () => { 
 		playSound('shared/sound/dream.mp3', .5)
