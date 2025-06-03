@@ -200,7 +200,7 @@ Add music to Drop, Point and clicks?
 	</details><br><br>
 	<details><summary>Middle School</summary><br>
 		<a link='writing/writings/middle/Shakespearean-Friday.html'>		Shakespearean Friday			</a>
-		<a link='writing/writings/middle/Ms-Knottethin.html'>				Ms. Knottethin					</a>
+		<a link='writing/writings/middle/Ms-Knottethin.html'>				Ms. Knottson					</a>
 		<a link='writing/writings/middle/The-Church.html'>					The Church						</a>
 		<a link='writing/writings/middle/Zirconium.html'>					Zirconium						</a>
 		<a link='writing/writings/middle/Ode-to-Oden.html'>					Ode to Oden						</a>
@@ -252,7 +252,7 @@ Add music to Drop, Point and clicks?
 <!------------------------------------------------>
 <script src='shared/shared.js'></script>
 <script>
-	const LOCALS = getAll('local')
+	
 	let IFRAME = get('iframe')
 	
 	let pages = [
@@ -304,14 +304,13 @@ Add music to Drop, Point and clicks?
 			IFRAME.style.width = Math.max(1000, IFRAME.contentWindow.document.body.scrollWidth + 15) + 'px'
 			IFRAME.style.height = Math.max(700, IFRAME.contentWindow.document.body.scrollHeight) + 'px'
 			console.log(IFRAME.contentWindow.location.href)
-		});
-
+		})
 		setMusic(null)
 		hidePage(tab)
 	}
 
 	function closeIframe() {
-		if (!iframeOpen()) return	
+		if (!isIframeOpen()) return	
 		IFRAME.remove()
 		IFRAME.style.display = 'none'
 		IFRAME = document.createElement("iframe")
@@ -321,9 +320,7 @@ Add music to Drop, Point and clicks?
 		setTab(tab)
 	}
 
-	function iframeOpen() { return IFRAME.src != "about:blank" }
-
-	
+	function isIframeOpen() { return IFRAME.src != "about:blank" }
 
 	const music = new Audio(); music.loop = true;
 	const voice = new Audio();
@@ -336,8 +333,6 @@ Add music to Drop, Point and clicks?
 	}
 
 	let tab = null
-
-	if (isLocal) { for (let local of LOCALS) local.style.display = 'block' }
 	
 	for (let summary of getAll('summary')) summary.onclick = () => { playSound('shared/sound/click2') }
 
@@ -350,7 +345,7 @@ Add music to Drop, Point and clicks?
 	let secret = false
 
 	function setTab(newTab) {
-		if (iframeOpen()) closeIframe()
+		if (isIframeOpen()) closeIframe()
 		if (newTab != null) get(newTab + 'Page').style.display = 'inline-block'
 		if (newTab != tab) {
 			if (newTab != null) get(newTab + 'Tab').classList.add('selected')

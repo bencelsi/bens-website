@@ -1,6 +1,10 @@
 let isLocal = location.hostname == ""
 if (isLocal) document.title = "." + document.title
 
+const LOCALS = getAll('local')
+if (isLocal) { for (let local of LOCALS) local.style.display = 'block' }
+
+
 function get(id) { return document.getElementById(id) }
 
 function getAll(name) { 
@@ -28,6 +32,7 @@ let sounds = new Audio();
 function playSound(name, volume = 1, audio = sounds) { 
     audio.volume = volume
     let src = name + (name.includes('.') ? '' : '.wav')
+    console.log(src)
     if (audio.src != src) { audio.src = src }
     audio.play();
 }
