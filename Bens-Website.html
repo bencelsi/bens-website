@@ -348,7 +348,7 @@ Add music to Drop, Point and clicks?
 	}
 
 	function closeIframe() {
-		if (IFRAME == null) return	
+		if (!iframeOpen()) return	
 		IFRAME.remove()
 		IFRAME.style.display = 'none'
 		IFRAME = document.createElement("iframe")
@@ -357,6 +357,8 @@ Add music to Drop, Point and clicks?
 		IFRAME.muted=true;
 		setTab(tab)
 	}
+
+	function iframeOpen() { return IFRAME.src != "about:blank" }
 
 	if (isLocal) {  // show local links
 		for (let local of LOCALS) local.style.display = 'block' 
@@ -391,7 +393,8 @@ Add music to Drop, Point and clicks?
 
 	let secret = false
 	function setTab(newTab) {
-		closeIframe()
+		if (iframeOpen()) closeIframe()
+
 		if (newTab != null) get(newTab + 'Page').style.display = 'inline-block'
 		
 		if (newTab != tab) {
