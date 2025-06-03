@@ -113,12 +113,10 @@ const ALL_VIDEOS = {
 	["Bingo's Fantastic Journey",												EMBED_URL + 'in3JswOAFDw'	],
 	["A Brief History of Galvanism",											EMBED_URL + 'A312PsGlMTk'	],
 	["Kelso's Choices",															EMBED_URL + 'tm5si5WQUqY'	],
-	["Maloy's Jewelry Workshop Commercial",										EMBED_URL + '8m9JRKYb5Ho'	]
-],
-
+	["Maloy's Jewelry Workshop Commercial",										EMBED_URL + '8m9JRKYb5Ho'	]],
 }
 
-let videos = ALL_VIDEOS[new URLSearchParams(window.location.search).get('set')]
+let videos = ALL_VIDEOS[new URLSearchParams(window.location.search).get('q')]
 if (videos == null) {
 	videos = [ALL_VIDEOS['liveAction'], ALL_VIDEOS['musicVideos'], ALL_VIDEOS['animation'], ALL_VIDEOS['miscellaneous']].flat()
 }
