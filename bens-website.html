@@ -1,0 +1,418 @@
+<!--
+    ____            _          _       __     __         _ __     
+   / __ )___  ____ ( )_____   | |     / /__  / /_  _____(_) /____ 
+  / __  / _ \/ __ \|// ___/   | | /| / / _ \/ __ \/ ___/ / __/ _ \
+ / /_/ /  __/ / / / (__  )    | |/ |/ /  __/ /_/ (__  ) / /_/  __/
+/_____/\___/_/ /_/ /____/     |__/|__/\___/_.___/____/_/\__/\___/ 
+                                                                  
+(ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
+
+TODOS:
+Use nodejs for live server https://stackoverflow.com/questions/6084360/using-node-js-as-a-simple-web-server
+Compress website loops to be more 90s
+Add Fun Fun Fun Fun Fun Fun Fun to mashups
+Fix music videos
+Left/right arrow usable for left/right nav?
+Ctrl or cmd click - link takes you to new tab
+Mute music button
+Add are you sure you want to quit when exiting iframe
+iFrame per tab? So you can return. Or just new iframe everytime
+
+BUGFIXES
+make summaries non-selectable
+Music - make lyrics & chords in parens by song
+
+FEATURES/CONTENT TO ADD
+Rainbow-ify links 
+Add back buttons to iframe?
+Scroll to bottom on iframe?
+Add miscellaneous album for Eno EP?
+Create contact page, misc link page?
+
+OTHER 
+Maybe make filesystem script in Java (not python)
+Create simple sound js 'library' for sound, shared stuff, etc - use across projects
+Capitalize repo names & lowercase-ify htmls?
+Square Thumbnails for games/artwork, show many at once? Or at least collapsibles
+Make private
+
+LO PRI
+custom domain? na...
+Make Videos listed on sight, but still viewable as a gallery
+When click a tab 2nd time, close all collapsibles
+Idea... when you go to other pages, music continues, but hi-passed
+Make header letters changeable when clicked
+Add music to Drop, Point and clicks?
+-->
+
+<!DOCTYPE html>
+<head>
+	<title>Ben's Website!!!</title>
+	<link rel='icon' type='image/x-icon' href='favicon.ico'>
+	<link rel="stylesheet" href="shared/shared.css">
+	<style type='text/css'>
+		
+		#header { filter: drop-shadow(0 0 2rem rgb(132, 0, 255)); cursor: url(shared/cursor.png), auto; }
+		#header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
+
+		.subheader img { height: 30px; margin-top: 5px;}
+		
+		#tabMenu { display: inline-block; }
+		
+		#artTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(200, 0, 255)); }
+		#musicTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(255, 0, 0)); }
+		#gamesTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(0, 200, 55)); }
+		#writingTab:not(.selected):hover 	{ filter: drop-shadow(0 0 1rem rgb(255, 210, 0)); }
+		#videoTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(0, 130, 255)); }
+		#musicTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(255, 0, 0)); }
+		#artTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
+		#gamesTab.selected		{ filter: drop-shadow(0 0 1.5rem rgb(0, 200, 55)); }
+		#writingTab.selected 	{ filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
+		#videoTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
+		
+		.selected img { filter: drop-shadow(0 0 .25rem rgb(255, 214, 64)) }
+
+		.tab {
+			display: inline-block;
+			margin-left: 60px; margin-right: 60px;
+			cursor: url(shared/cursor.png), auto;
+		}
+
+		.page { display: none; }
+
+		
+
+		#iframeDiv { margin: auto }
+
+		iframe {
+			/* width: 100%; height: 100%; */
+			border: solid black 20px;
+			/* border: none; */
+			width: 1100px; height: 1000px;
+			display: none;
+			margin: auto;
+			filter: drop-shadow(0 0 4rem rgb(40, 38, 99));
+		}
+
+	</style>
+</head>
+<!--------------------------------------------------------------------------->
+<body><br>
+<div id='header'>
+	<img src='gif/letters/B1.gif'/> <img src='gif/letters/E1.gif'/> <img src='gif/letters/N1.gif'/> 
+	<!-- <img src='gif/letters/C2.gif'/><img src='gif/letters/E3.gif'/><img src='gif/letters/L1.gif'/><img src='gif/letters/S3.gif'/><img src='gif/letters/gold-i.gif'/> -->
+	<img src='gif/letters/apostrophe2.gif'/> <img src='gif/letters/S1.gif'/><br>
+	<div class='subheader'>
+		<img src=gif/letters/gold-w.gif><img src=gif/letters/gold-e.gif><img src=gif/letters/gold-b.gif><img src=gif/letters/gold-s.gif><img src=gif/letters/gold-i.gif><img src=gif/letters/gold-t.gif><img src=gif/letters/gold-e.gif> <img src=gif/letters/exclamation2.gif style='height: 35px;'>
+	</div>
+</div>
+<br>
+
+<!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
+<div id='tabMenu'>
+	<div class='tab' id='musicTab'>		<img src='gif/tabs/guitar.gif'/></div>
+	<div class='tab' id='artTab'>		<img src='gif/tabs/pallette.gif'/></div>
+	<div class='tab' id='videoTab'>		<img src='gif/tabs/TV.gif'/></div>
+	<div class='tab' id='gamesTab'>		<img src='gif/tabs/computer.gif'/></div>
+	<div class='tab' id='writingTab'>	<img src='gif/tabs/book.gif'/></div>
+</div>
+<br><br><br><br>
+<!------------------------------------------------>
+<!-- M U S I C -->
+<!------------------------------------------------>
+<div id='musicPage' class='page'>
+	<!-- TODO: Luigi and Drew should open video in iframe -->
+	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'>		The Ballad of Luigi					</a>
+	<a link='music/songs.html?q=miscellaneous'>					Miscellaneous						</a>
+	<a link='music/songs.html?q=mashups'>						Mashups								</a>
+	<a link='music/songs.html?q=podcasts'>						Music for Podcasts					</a>
+	<a link='music/songs.html?q=griven'>						Griven Music						</a>
+	<a link='music/songs.html?q=old-piano'>						Old Piano Songs						</a>
+	<a link='music/chords.html'>								Chords & Lyrics						</a>
+	<a link='video/video.html?q=rebeccasAnimations'>			Music for Rebecca's Animations		</a>
+	<a href='https://www.youtube.com/watch?v=NzcUOxN2IuM'>		Drew's Blues: A Rock Operettta		</a>
+	<br><br><br>
+	<a link='music/songs.html?q=songs' class='local'>			Songs								</a>
+	<a link='music/albums.html' class='local'>					Albums								</a>
+</div>
+
+<!------------------------------------------------>
+<!-- A R T -->
+<!------------------------------------------------>
+<div id='artPage' class='page'>
+	<a link="art/art.html?q=paintings">			Paintings					</a>
+	<a link="art/art.html?q=drawings">			Drawings					</a>
+	<a link="art/art.html?q=photos">			Photos						</a>
+	<a link="art/art.html?q=uw-daily">			UW Daily Illustrations		</a>
+	<a link="art/art.html?q=life-of-pika">		Life of Pika Illustrations	</a>
+	<a link="art/art.html?q=dead-end">			Dead End Test Renders		</a>
+	<a link="art/art.html?q=miscellaneous">		Miscellaneous				</a>
+</div>
+
+<!------------------------------------------------>
+<!-- G A M E S -->
+<!------------------------------------------------>
+<div id='gamesPage' class='page'>
+	<a link="https://bencelsi.github.io/tetriven">									Tetriven				</a>
+	<a link="https://bencelsi.github.io/nabanagrams">								Nabanagrams				</a>
+	<a link="https://bencelsi.github.io/chord-wheel">								Chord Wheel				</a>
+	<a link="https://bencelsi.github.io/automata">									Automata				</a>
+	<a link="https://bencelsi.github.io/point-and-clicks">							Point & Clicks			</a>
+	<a link="https://bencelsi.github.io/catan-o-rama">								Catan-o-Rama!			</a>
+	<a link='https://bencelsi.github.io/cirque-de-sabotage'>						Cirque de Sabotage		</a>
+	<a link='https://bencelsi.github.io/mxbbi'>										MXBBI					</a>
+	<a link='https://bencelsi.github.io/drop'>										Drop					</a>
+	<a href='https://scratch.mit.edu/projects/1448075/fullscreen'>	Griven					</a>
+	<a href='https://scratch.mit.edu/projects/379323/fullscreen/'>	Grounded				</a>
+	<a href='soviet-monopoly' 	class='local'> 						Soviet Monopoly			</a>
+	<a href='game-of-cards' 	class='local'> 						Game of Cards			</a>
+</div>
+
+<!------------------------------------------------>
+<!-- W R I T I N G -->
+<!------------------------------------------------>
+<div id='writingPage' class='page'>
+	<br>
+	<details><summary>Miscellaneous</summary>
+		<a link='writing/writings/Either.html'>									Either					</a>
+		<a link='writing/gallery.html?q=palindromes'>							Palindromes				</a>
+		<a link='writing/gallery.html?q=alphabet-sayings'>						Alphabet Sayings		</a>
+		<a link='writing/gallery.html?q=miscellaneous'>							Miscellaneous			</a>
+	</details><br><br>
+	<details><summary>College</summary>
+		<a link='writing/writings/college/Christian-Bok.html' class='local'>	Christian Bök			</a>
+		<a link='writing/writings/college/Youre-Little.html' class='local'>		You're Little			</a>
+		<a link='writing/writings/college/ABBA-CD.html'>						ABBA CD					</a>
+		<a link='writing/writings/college/Raven.html'>							TheRaven.java			</a>
+		<a link='writing/writings/college/Nature.html'>							Nature Forging a Baby	</a>
+	</details><br><br>
+	<details><summary>High School</summary>
+		<a link='writing/writings/high/Great-Apes.html'>					Great Apes</a>
+		<a link='writing/writings/high/Ough.html'>							Ough</a>
+		<a link='writing/writings/high/I-Am-From-Poem.html'>				I Am Dumb Poem</a>
+		<a link='writing/writings/high/Fruit-Flies.html'>					Fruit Flies</a>
+		<a link='writing/writings/high/Babylon.html'>						By the Waters of Babylon: The Reawakening</a>
+		<a link='writing/writings/high/Mr-Oates.html'>						Mr. Oates</a>
+	</details><br><br>
+	<details><summary>Middle School</summary>
+		<a link='writing/writings/middle/Shakespearean-Friday.html'>		Shakespearean Friday			</a>
+		<a link='writing/writings/middle/Ms-Knottethin.html'>				Ms. Knottethin					</a>
+		<a link='writing/writings/middle/The-Church.html'>					The Church						</a>
+		<a link='writing/writings/middle/Zirconium.html'>					Zirconium						</a>
+		<a link='writing/writings/middle/Ode-to-Oden.html'>					Ode to Oden						</a>
+		<!-- <a link='writings/middle/Josh-Hauser.html'>			Josh Hauser</a> -->
+		<a link='writing/writings/middle/Life-of-Bob.html'>					Life of Bob						</a>
+		<a link='writing/writings/middle/How-To.html'>						How to Write a How-To Essay		</a>
+		<a link='writing/writings/middle/Lewis-Carroll.html'>				The 'Lewis Carroll Poem' Poem	</a>
+		<a link='writing/writings/middle/Mystery-Object-Poem.html'>			Mystery Object Poem				</a>
+		<a link='writing/writings/middle/Newport-Field-Trip-Haikus.html'>	Newport Field Trip Haikus		</a>
+		<a link='writing/writing/writings/middle/Planet-Limericks.html'>	Planet Limericks				</a>
+		<a link='writing/writing/writings/middle/Da-Vinci-Code-Poem.html'>	Da Vinci Code Poem				</a>
+	</details><br><br>
+	<details><summary>Elementary School</summary>
+		<a link='writing/writings/elementary/Flagellants.html'>				The Flagellants					</a>
+		<a link='writing/writings/elementary/Bush.html'>					The Adventures of George W. Bush</a>
+		<a link='writing/writings/elementary/John-Adams-poem.html'>			John Adams Poem					</a>
+		<!-- <a link='writings/elementary/Princess-Fred-Jr.html'>		Princess Fred Jr.</a> -->
+		<!-- Wickepedia Clown -->
+		<!-- Dr. Dadoewizgone -->
+	</details><br><br>
+</div>
+
+<!------------------------------------------------>
+<!-- V I D E O -->
+<!------------------------------------------------>
+<div id='videoPage' class='page'>
+	<a link='video/video.html?q=all'>				All Videos			</a>
+	<a link='video/video.html?q=musicVideos'>		Music Videos		</a>
+	<a link='video/video.html?q=liveAction'>		Live Action			</a>
+	<a link='video/video.html?q=all'>				Animation			</a>
+	<a link='video/video.html?q=miscellaneous'>	Miscellaneous		</a>
+</div>
+<br><br>
+
+<!------------------------------------------------>
+<!-- I F R A M E-->
+<!------------------------------------------------>
+<div id="iframeDiv">
+	<iframe id="iframe" src="source:blank"></iframe>
+</div>
+
+<!-- <img src="gif/footer.gif"> -->
+<br><br><br>
+</body>	
+
+<!-- iframe per tab? -->
+<!------------------------------------------------>
+<!-- S C R I P T S -->
+<!------------------------------------------------>
+<script src='shared/shared.js'></script>
+<script>
+	const LOCALS = getAll('local')
+	let IFRAME = get('iframe')
+	
+	let pages = [
+		'musicPage',
+		'artPage',
+		'gamesPage',
+		'writingPage',
+		'videoPage'
+	]
+
+	for (let page of pages) {
+		for (let a of get(page).getElementsByTagName('a')) {
+			let link = a.getAttribute('link')
+			if (link != undefined) a.onclick = (e) => {
+				if (e.metaKey) window.open(tab[1] + link, '_blank').focus(); // new tab
+				else { 
+					console.log(link)
+					openIframe(link) }
+			}
+			a.onmouseover = () => { playSound('shared/sound/click', .2) }
+		}
+	}
+	if (isLocal) {  // show local links
+		for (let local of LOCALS) local.style.display = 'block' 
+		for (a of getAll('a')) {
+			if (a.parentElement != null && a.parentElement.id == 'gamesPage') {
+				//a.href = a.href.replace('https://bencelsi.github.io/', '') + '/index.html'
+			}
+		}
+	}
+
+	function openIframe(src) {
+		playSound('shared/sound/hit', .5)
+		window.scrollTo(0, document.body.scrollHeight);
+		console.log(src)
+		IFRAME.src = src
+		IFRAME.muted=false;
+		IFRAME.style.display = 'inline-block'
+		if (!isLocal) {
+			//IFRAME.style.width = '1px'
+			IFRAME.style.height = '0px'
+		}
+		IFRAME.addEventListener("load", function() {
+			console.log("Load .........")
+			if (IFRAME.contentWindow.location.href == "about:blank") {
+				closeIframe()
+				console.log("Close!")
+			}
+			IFRAME.style.width = Math.max(1000, IFRAME.contentWindow.document.body.scrollWidth + 15) + 'px'
+			IFRAME.style.height = Math.max(700, IFRAME.contentWindow.document.body.scrollHeight) + 'px'
+			console.log(IFRAME.contentWindow.location.href)
+		});
+
+		setMusic(null)
+		hidePage(tab)
+	}
+
+	function closeIframe() {
+		if (!iframeOpen()) return	
+		IFRAME.remove()
+		IFRAME.style.display = 'none'
+		IFRAME = document.createElement("iframe")
+		get('iframeDiv').appendChild(IFRAME)
+		IFRAME.src = 'about:blank'
+		IFRAME.muted=true;
+		setTab(tab)
+	}
+
+	function iframeOpen() { return IFRAME.src != "about:blank" }
+
+	
+
+	const music = new Audio(); music.loop = true;
+	const voice = new Audio();
+	const songTabs = {
+		'music' : 		['420 Loop',			.5],
+		'art' : 		['Chill Loop',			.5],
+		'games' : 		['Roach',				.5],
+		'writing' : 	['Spaghettiloop',		.5],
+		'video' : 		['Country Tuff',		.5],
+	}
+
+	let tab = null
+
+	if (isLocal) { for (let local of LOCALS) local.style.display = 'block' }
+	
+	for (let summary of getAll('summary')) summary.onclick = () => { playSound('shared/sound/click2') }
+
+	const tabParam = new URLSearchParams(window.location.search).get('tab');
+	for (const tab of ['music', 'art', 'games', 'writing', 'video']) {
+		if (tab == tabParam) setTab(tabParam)
+		get(tab + 'Tab').onclick = () => { setTab(tab) }
+	}
+
+	let secret = false
+
+	function setTab(newTab) {
+		if (iframeOpen()) closeIframe()
+		if (newTab != null) get(newTab + 'Page').style.display = 'inline-block'
+		if (newTab != tab) {
+			if (newTab != null) get(newTab + 'Tab').classList.add('selected')
+			if (tab != null) {
+				get(tab + 'Tab').classList.remove('selected')
+				get(tab + 'Page').style.display = 'none'
+			}
+		}
+		setMusic(newTab == null ? null : songTabs[newTab][0])
+
+		if (newTab == null ) { secret = false } 
+		else {
+			if (newTab == tab && newTab == 'games') { //secret game - iframe within iframe?
+				playSound('shared/sound/tabs/' + (secret ? 'secret' : 'games-x') + '.mp3', 1, voice)
+				secret = !secret
+			} else {
+				secret = false
+				playSound('shared/sound/tabs/' + newTab + (tab == newTab ? '-x' : '4') + '.mp3', 1, voice)
+			}
+			playSound('shared/sound/pop', .7)
+			music.volume = songTabs[newTab][1]
+		}
+		tab = newTab;
+		setBackgroundColor()
+	}
+
+	const backgroundColors = {
+		null: 			'black',
+		'music': 		'rgb(25, 0, 10)',
+		'art': 			'rgb(20, 0, 20)',
+		'games': 		'rgb(0, 15, 0)',
+		'writing': 		'rgb(20, 10, 0)',
+		'video': 		'rgb(0, 0, 25)'
+	}
+
+	function setBackgroundColor() {
+		let newColor = backgroundColors[tab]
+		if (newColor != null) document.body.style.backgroundColor = newColor
+	}
+
+	function hidePage(name) { get(name + 'Page').style.display = 'none' }
+	
+	get('header').onclick = () => { 
+		playSound('shared/sound/dream.mp3', .5)
+		playSound('shared/sound/tabs/bens2.mp3', 1, voice)
+		setTab(null)
+	}
+
+	function setMusic(song, volume = .2) {
+		if (song == null) music.pause() 
+		else {
+			music.src = 'music/albums/miscellaneous/' + song + (song.includes('.') ? '' : '.mp3') 
+			music.volume = volume
+			music.play() 
+		}
+	}
+	
+	// var msg = new SpeechSynthesisUtterance();
+	// 	msg.text = "Hello World";
+	// 	window.speechSynthesis.speak(msg);
+
+	const IFRAME_DIMS = {
+		'music/songs.html?q=miscellaneous' : 	[1000, 1200],
+		'music/songs.html?q=griven' : 			[1000, 800],
+		'music/songs.html?q=mashups' : 			[1000, 800],
+		'music/songs.html?q=old-piano' : 		[1000, 1700],
+	}
+</script>
+</html>
