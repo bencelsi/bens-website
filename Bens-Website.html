@@ -316,7 +316,7 @@ Add music to Drop, Point and clicks?
 
 	function openIframe(src) {
 		playSound('shared/sound/hit', .5)
-		window.scrollTo(0, document.body.scrollHeight);
+		//window.scrollTo(0, document.body.scrollHeight);
 		//IFRAME.remove()
 		//IFRAME = document.createElement("iframe")
 		//get('iframeDiv').appendChild(IFRAME)
@@ -325,15 +325,19 @@ Add music to Drop, Point and clicks?
 		IFRAME.muted=false;
 		IFRAME.style.display = 'inline-block'
 		if (!isLocal) {
-			IFRAME.style.width = '0px'
-			IFRAME.style.height = '0px'
+			//IFRAME.style.width = '1px'
+			IFRAME.style.height = '1px'
 		}
 		IFRAME.addEventListener("load", function() {
 			console.log("Load .........")
+			if (IFRAME.contentWindow.location.href == "about:blank") {
+				closeIframe()
+				console.log("Close!")
+			}
 			//IFRAME.style.width = IFRAME.contentWindow.document.body.scrollWidth + 50 + 'px'
 			IFRAME.style.height = IFRAME.contentWindow.document.body.scrollHeight + 50 + 'px'
 			console.log(IFRAME.contentWindow.location.href)
-			if (IFRAME.contentWindow.location.href == "about:blank") closeIframe()
+			
 		});
 
 		setMusic(null)
