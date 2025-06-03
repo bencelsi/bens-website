@@ -1,15 +1,40 @@
 body {
 	background-image: url(../gif/stars.gif); 
+	background-blend-mode: exclusion;
+	background-color: black;
     color: white; 
     font-family: "Lucida Console", monospace;
 	text-align: center;
 	font-size: 15px;
 }
 
-a { color: pink; font-style: normal; text-decoration: none;}
+a {
+	color: pink; 
+	font-style: normal;
+	text-decoration: none;
+	cursor: url(shared/cursor.png), auto;
+	h2 { img { display: none; } }
+}
 
-.button, a { cursor: url(cursor.png), auto; }
+a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem white); }
 
-#writingPage { details {
-	color: yellow;
-}}
+
+h2 	{
+	color: lightgray;
+	cursor: url(shared/cursor.png), auto;
+}
+
+h2:hover { 
+	color: white;
+	filter: drop-shadow(0 0 1.5rem rgb(255, 255, 255));
+}
+
+summary {
+	font-size: 25px;
+	cursor: url(shared/cursor.png), auto;
+}
+
+.button { cursor: url(cursor.png), auto; }
+
+
+.local { display: none; }

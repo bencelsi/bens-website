@@ -49,41 +49,15 @@ Add music to Drop, Point and clicks?
 <head>
 	<title>Ben's Website!!!</title>
 	<link rel='icon' type='image/x-icon' href='favicon.ico'>
+	<link rel="stylesheet" href="shared/shared.css">
 	<style type='text/css'>
-		body {
-			background-image: url(gif/stars.gif); color: white; font-family: 'Lucida Console', monospace;
-			margin: 0; height: 100%;
-			text-align: center;
-			font-size: 14px;
-		}
-
+		
 		#header { filter: drop-shadow(0 0 2rem rgb(132, 0, 255)); cursor: url(shared/cursor.png), auto; }
-
 		#header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
 
-		.website img { height: 30px; margin-top: 5px;}
+		.subheader img { height: 30px; margin-top: 5px;}
 
-		h2 	{
-			color: lightgray;
-			cursor: url(shared/cursor.png), auto;
-		}
-
-		h2:hover { 
-			color: white;
-			filter: drop-shadow(0 0 1.5rem rgb(255, 255, 255));
-		 }
 		
-		a {
-			text-decoration: none;
-			cursor: url(shared/cursor.png), auto;
-			h2 { img { display: none; } }
-		}
-
-		summary {
-			font-size: 25px;
-			cursor: url(shared/cursor.png), auto;
-		}
-
 		#tabMenu { display: inline-block; }
 		
 		#artTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(200, 0, 255)); }
@@ -91,13 +65,14 @@ Add music to Drop, Point and clicks?
 		#gamesTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(0, 200, 55)); }
 		#writingTab:not(.selected):hover 	{ filter: drop-shadow(0 0 1rem rgb(255, 210, 0)); }
 		#videoTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(0, 130, 255)); }
-		
+		#writingPage { details { color: yellow; }}
+
 		#musicTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(255, 0, 0)); }
 		#artTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
 		#gamesTab.selected		{ filter: drop-shadow(0 0 1.5rem rgb(0, 200, 55)); }
 		#writingTab.selected 	{ filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
 		#videoTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
-
+		
 		.selected img { filter: drop-shadow(0 0 .25rem rgb(255, 214, 64)) }
 
 		.tab {
@@ -111,18 +86,7 @@ Add music to Drop, Point and clicks?
 		summary { color: yellow; font-style: bold; 
 			filter: drop-shadow(0 0 1rem blue) }
 
-		a:hover { background-color: transparent; filter: drop-shadow(0 0 2rem white); }
-
-		.local { display: none; }
-
-		.unselectable {
-			-webkit-touch-callout: none;
-			-webkit-user-select: none;
-			-khtml-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-		}
+		
 
 		#iframeDiv { margin: auto }
 
@@ -130,7 +94,7 @@ Add music to Drop, Point and clicks?
 			/* width: 100%; height: 100%; */
 			border: solid black 20px;
 			/* border: none; */
-			width: 1300px; height: 1000px;
+			width: 1100px; height: 1000px;
 			display: none;
 			margin: auto;
 			filter: drop-shadow(0 0 4rem rgb(40, 38, 99));
@@ -141,10 +105,10 @@ Add music to Drop, Point and clicks?
 <!--------------------------------------------------------------------------->
 <body><br>
 <div id='header'>
-	<img src='gif/letters/B1.gif'/><img src='gif/letters/E1.gif'/><img src='gif/letters/N1.gif'/>
+	<img src='gif/letters/B1.gif'/> <img src='gif/letters/E1.gif'/> <img src='gif/letters/N1.gif'/> 
 	<!-- <img src='gif/letters/C2.gif'/><img src='gif/letters/E3.gif'/><img src='gif/letters/L1.gif'/><img src='gif/letters/S3.gif'/><img src='gif/letters/gold-i.gif'/> -->
-	<img src='gif/letters/apostrophe2.gif'/><img src='gif/letters/S1.gif'/><br>
-	<div class='website'>
+	<img src='gif/letters/apostrophe2.gif'/> <img src='gif/letters/S1.gif'/><br>
+	<div class='subheader'>
 		<img src=gif/letters/gold-w.gif><img src=gif/letters/gold-e.gif><img src=gif/letters/gold-b.gif><img src=gif/letters/gold-s.gif><img src=gif/letters/gold-i.gif><img src=gif/letters/gold-t.gif><img src=gif/letters/gold-e.gif> <img src=gif/letters/exclamation2.gif style='height: 35px;'>
 	</div>
 </div>
@@ -172,9 +136,10 @@ Add music to Drop, Point and clicks?
 	<h2 link='songs.html?q=griven'>							Griven Music						</h2>
 	<h2 link='songs.html?q=old-piano'>						Old Piano Songs						</h2>
 	<h2 link='chords.html'>									Chords & Lyrics						</h2>
+	<h2 link='video.html?q=rebeccasAnimations'>				Music for Rebecca's Animations		</h2>
+<br>•••••<br><br>
 	<h2 link='songs.html?q=songs' class='local'>			Songs								</h2>
 	<h2 link='albums.html' class='local'>					Albums								</h2>
-	<h2 link='video.html?q=rebeccasAnimations'>				Music for Rebecca's Animations		</h2>
 	
 </div>
 
@@ -317,7 +282,7 @@ Add music to Drop, Point and clicks?
 
 	function openIframe(src) {
 		playSound('shared/sound/hit', .5)
-		//window.scrollTo(0, document.body.scrollHeight);
+		window.scrollTo(0, document.body.scrollHeight);
 		//IFRAME.remove()
 		//IFRAME = document.createElement("iframe")
 		//get('iframeDiv').appendChild(IFRAME)
@@ -336,7 +301,7 @@ Add music to Drop, Point and clicks?
 				console.log("Close!")
 			}
 			//IFRAME.style.width = IFRAME.contentWindow.document.body.scrollWidth + 50 + 'px'
-			IFRAME.style.height = IFRAME.contentWindow.document.body.scrollHeight + 50 + 'px'
+			IFRAME.style.height = IFRAME.contentWindow.document.body.scrollHeight + 'px'
 			console.log(IFRAME.contentWindow.location.href)
 			
 		});
@@ -392,11 +357,10 @@ Add music to Drop, Point and clicks?
 	}
 
 	let secret = false
+
 	function setTab(newTab) {
 		if (iframeOpen()) closeIframe()
-
 		if (newTab != null) get(newTab + 'Page').style.display = 'inline-block'
-		
 		if (newTab != tab) {
 			if (newTab != null) get(newTab + 'Tab').classList.add('selected')
 			if (tab != null) {
@@ -404,7 +368,6 @@ Add music to Drop, Point and clicks?
 				get(tab + 'Page').style.display = 'none'
 			}
 		}
-
 		setMusic(newTab == null ? null : songTabs[newTab][0])
 
 		if (newTab == null ) { secret = false } 
@@ -420,6 +383,22 @@ Add music to Drop, Point and clicks?
 			music.volume = songTabs[newTab][1]
 		}
 		tab = newTab;
+		setBackgroundColor()
+	}
+
+	const backgroundColors = {
+		null: 			'black',
+		'music': 		'rgb(25, 0, 10)',
+		'art': 			'rgb(20, 0, 20)',
+		'games': 		'rgb(0, 15, 0)',
+		'writing': 		'rgb(20, 10, 0)',
+		'video': 		'rgb(0, 0, 30)'
+	}
+
+	function setBackgroundColor() {
+		console.log(tab)
+		let newColor = backgroundColors[tab]
+		if (newColor != null) document.body.style.backgroundColor = newColor
 	}
 
 	function hidePage(name) {
@@ -441,7 +420,6 @@ Add music to Drop, Point and clicks?
 		}
 	}
 	
-
 	// var msg = new SpeechSynthesisUtterance();
 	// 	msg.text = "Hello World";
 	// 	window.speechSynthesis.speak(msg);
