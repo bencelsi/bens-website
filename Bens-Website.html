@@ -56,7 +56,6 @@ Add music to Drop, Point and clicks?
 		#header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
 
 		.subheader img { height: 30px; margin-top: 5px;}
-
 		
 		#tabMenu { display: inline-block; }
 		
@@ -65,7 +64,6 @@ Add music to Drop, Point and clicks?
 		#gamesTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(0, 200, 55)); }
 		#writingTab:not(.selected):hover 	{ filter: drop-shadow(0 0 1rem rgb(255, 210, 0)); }
 		#videoTab:not(.selected):hover 		{ filter: drop-shadow(0 0 1rem rgb(0, 130, 255)); }
-
 		#musicTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(255, 0, 0)); }
 		#artTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(200, 0, 255)); }
 		#gamesTab.selected		{ filter: drop-shadow(0 0 1.5rem rgb(0, 200, 55)); }
@@ -118,7 +116,7 @@ Add music to Drop, Point and clicks?
 	<div class='tab' id='gamesTab'>		<img src='gif/tabs/computer.gif'/></div>
 	<div class='tab' id='writingTab'>	<img src='gif/tabs/book.gif'/></div>
 </div>
-<br><br>
+<br><br><br><br>
 <!------------------------------------------------>
 <!-- M U S I C -->
 <!------------------------------------------------>
@@ -236,11 +234,9 @@ Add music to Drop, Point and clicks?
 <!------------------------------------------------>
 <!-- I F R A M E-->
 <!------------------------------------------------>
-
 <div id="iframeDiv">
 	<iframe id="iframe" src="source:blank"></iframe>
 </div>
-
 
 <!-- <img src="gif/footer.gif"> -->
 <br><br><br>
@@ -301,7 +297,7 @@ Add music to Drop, Point and clicks?
 				closeIframe()
 				console.log("Close!")
 			}
-			IFRAME.style.width = Math.max(1000, IFRAME.contentWindow.document.body.scrollWidth) + 'px'
+			IFRAME.style.width = Math.max(1000, IFRAME.contentWindow.document.body.scrollWidth + 15) + 'px'
 			IFRAME.style.height = Math.max(700, IFRAME.contentWindow.document.body.scrollHeight) + 'px'
 			console.log(IFRAME.contentWindow.location.href)
 		});
