@@ -8,6 +8,7 @@
 (ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
 
 TODOS:
+Use nodejs for live server https://stackoverflow.com/questions/6084360/using-node-js-as-a-simple-web-server
 Compress website loops to be more 90s
 Add Fun Fun Fun Fun Fun Fun Fun to mashups
 Fix music videos
@@ -390,7 +391,9 @@ Add music to Drop, Point and clicks?
 
 	let secret = false
 	function setTab(newTab) {
+		closeIframe()
 		if (newTab != null) get(newTab + 'Page').style.display = 'inline-block'
+		
 		if (newTab != tab) {
 			if (newTab != null) get(newTab + 'Tab').classList.add('selected')
 			if (tab != null) {
