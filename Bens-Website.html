@@ -162,6 +162,7 @@ Add music to Drop, Point and clicks?
 <!-- M U S I C -->
 <!------------------------------------------------>
 <div id='musicPage' class='page'>
+	<!-- TODO: Luigi and Drew should open video in iframe -->
 	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'>	<h2>The Ballad of Luigi				</h2></a>
 	<h2 link='songs.html?q=miscellaneous'>					Miscellaneous						</h2>
 	<h2 link='songs.html?q=mashups'>						Mashups								</h2>
@@ -169,20 +170,11 @@ Add music to Drop, Point and clicks?
 	<a href='https://www.youtube.com/watch?v=NzcUOxN2IuM'>	<h2>Drew's Blues: A Rock Operettta	</h2></a>
 	<h2 link='songs.html?q=griven'>							Griven Music						</h2>
 	<h2 link='songs.html?q=old-piano'>						Old Piano Songs						</h2>
-
 	<h2 link='chords.html'>									Chords & Lyrics						</h2>
 	<h2 link='songs.html?q=songs' class='local'>			Songs								</h2>
 	<h2 link='albums.html' class='local'>					Albums								</h2>
-	<br><br><br>
-	<details><summary>Music for Rebeccas's Animations</summary>
-		<a href='https://www.youtube.com/watch?v=7wnEuywiGb4'>	<h2>The Summer Dragons</h2></a>
-		<a href='https://www.youtube.com/watch?v=DRHOmGiXeqs'>	<h2>The Blue Gecko</h2></a>
-		<a href='https://www.youtube.com/watch?v=7s0P97t_Xbg'>	<h2>Frog Chase</h2></a>
-		<a href='https://www.youtube.com/watch?v=in3JswOAFDw'>	<h2>Bingo's Fantastic Journey</h2></a>
-		<a href='https://www.youtube.com/watch?v=A312PsGlMTk'>	<h2>A Brief History of Galvanism</h2></a>
-		<a href='https://www.youtube.com/watch?v=tm5si5WQUqY'>	<h2>Kelso's Choices</h2></a>
-		<a href='https://www.youtube.com/watch?v=8m9JRKYb5Ho'>	<h2>Maloy's Jewelry Workshop Commercial</h2></a>
-	</details><br>
+	<h2 link='video.html?q=rebeccasAnimations'>				Music for Rebecca's Animations		</h2>
+	
 </div>
 
 <!------------------------------------------------>
@@ -286,8 +278,7 @@ Add music to Drop, Point and clicks?
 
 
 <div id="iframeDiv">
-	<iframe id="iframe" src=""></iframe>
-	
+	<iframe id="iframe" src="source:blank"></iframe>
 </div>
 <br><br>
 <img src="gif/footer.gif">
@@ -338,7 +329,8 @@ Add music to Drop, Point and clicks?
 			IFRAME.style.height = '0px'
 		}
 		IFRAME.addEventListener("load", function() {
-			IFRAME.style.width = IFRAME.contentWindow.document.body.scrollWidth + 50 + 'px'
+			console.log("Load .........")
+			//IFRAME.style.width = IFRAME.contentWindow.document.body.scrollWidth + 50 + 'px'
 			IFRAME.style.height = IFRAME.contentWindow.document.body.scrollHeight + 50 + 'px'
 			console.log(IFRAME.contentWindow.location.href)
 			if (IFRAME.contentWindow.location.href == "about:blank") closeIframe()
@@ -352,8 +344,8 @@ Add music to Drop, Point and clicks?
 
 	function closeIframe() {
 		if (IFRAME == null) return	
-		IFRAME.style.display = 'none'
 		IFRAME.remove()
+		IFRAME.style.display = 'none'
 		IFRAME = document.createElement("iframe")
 		get('iframeDiv').appendChild(IFRAME)
 		IFRAME.src = 'about:blank'
