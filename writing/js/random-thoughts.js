@@ -36,7 +36,8 @@ let randomThoughts = [
 "When it comes to colonizing India, there are Hindus and Hindon'ts",
 "Smokey needs a shirt and Pooh needs pants",
 "Would Ryan Gosling be as successful if he was named Ryan Duckling",
-"Is Finding Nemo a fish out of water story?"
+"Is Finding Nemo a fish out of water story?",
+"British people say ‘arse’ instead of ‘ass’, but they don’t pronounce their Rs, so it kind of cancels out"
 //"Porn stars should get their name tattoo so everyone can google them easily",
 //"Chat GPT is a virtue signaller",
 //"Plaid pantry logo isn't plaid, and olive garden's logos isn't olives",
