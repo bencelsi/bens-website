@@ -37,7 +37,8 @@ let randomThoughts = [
 "Smokey needs a shirt and Pooh needs pants",
 "Would Ryan Gosling be as successful if he was named Ryan Duckling",
 "Is Finding Nemo a fish out of water story?",
-"British people say ‘arse’ instead of ‘ass’, but they don’t pronounce their Rs, so it kind of cancels out"
+"British people say ‘arse’ instead of ‘ass’, but they don’t pronounce their Rs, so it kind of cancels out",
+"Is 'ineffible' a minced swear for 'unfuckable'?"
 //"Porn stars should get their name tattoo so everyone can google them easily",
 //"Chat GPT is a virtue signaller",
 //"Plaid pantry logo isn't plaid, and olive garden's logos isn't olives",
