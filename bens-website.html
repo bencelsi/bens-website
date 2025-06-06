@@ -13,7 +13,6 @@ Compress website loops to be more 90s
 Add Fun Fun Fun Fun Fun Fun Fun to mashups
 Fix music videos
 Left/right arrow usable for left/right nav?
-Ctrl or cmd click - link takes you to new tab
 Mute music button
 Add are you sure you want to quit when exiting iframe
 iFrame per tab? So you can return. Or just new iframe everytime
@@ -51,10 +50,13 @@ Add music to Drop, Point and clicks?
 	<link rel='icon' type='image/x-icon' href='favicon.ico'>
 	<link rel="stylesheet" href="shared/shared.css">
 	<style type='text/css'>
-		
-		#header { filter: drop-shadow(0 0 2rem rgb(132, 0, 255)); cursor: url(shared/cursor.png), auto; }
+		#header { width: 350px; margin: auto; filter: drop-shadow(0 0 2rem rgb(132, 0, 255)); cursor: url(shared/cursor.png), auto;}
 		#header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
-
+		.speaker { opacity: 70%; width: 60px; cursor: url(shared/cursor.png) }
+		#speaker1 { float: right; }
+		#speaker2 { float: left; }
+		
+		#speakerHeader { }
 		.subheader img { height: 30px; margin-top: 5px;}
 		
 		#tabMenu { display: inline-block; }
@@ -71,22 +73,16 @@ Add music to Drop, Point and clicks?
 		#videoTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
 		
 		.selected img { filter: drop-shadow(0 0 .25rem rgb(255, 214, 64)); opacity: 100%;  }
-		.tab:not(.selected) {
-			opacity: 60%; 
-		}
-		.tab:not(.selected):hover {
-			opacity: 75%; 
-		}
+		.tab:not(.selected) { opacity: 60%; }
+		.tab:not(.selected):hover { opacity: 75%; }
 
 		.tab {
 			display: inline-block;
 			margin-left: 60px; margin-right: 60px;
 			cursor: url(shared/cursor.png), auto;
-			
 		}
 
 		.page { display: none; }
-
 
 		#iframeDiv { margin: auto }
 
@@ -94,22 +90,24 @@ Add music to Drop, Point and clicks?
 			/* width: 100%; height: 100%; */
 			border: solid black 20px;
 			/* border: none; */
-			width: 1300px; height: 1000px;
+			width: 1400px; height: 1100px;
 			display: none;
 			margin: auto;
 			filter: drop-shadow(0 0 4rem rgb(40, 38, 99));
 		}
-
 	</style>
 </head>
 <!--------------------------------------------------------------------------->
 <body><br>
+<img src="gif/speaker.png" id="speaker1" class="speaker">
+<img src="gif/speaker.png" id="speaker2" class="speaker">
 <div id='header'>
 	<img src='gif/letters/B1.gif'/> <img src='gif/letters/E1.gif'/> <img src='gif/letters/N1.gif'/> 
 	<!-- <img src='gif/letters/C2.gif'/><img src='gif/letters/E3.gif'/><img src='gif/letters/L1.gif'/><img src='gif/letters/S3.gif'/><img src='gif/letters/gold-i.gif'/> -->
 	<img src='gif/letters/apostrophe2.gif'/> <img src='gif/letters/S1.gif'/><br>
+	<!-- <img src="gif/speaker.gif" id="speaker"> -->
 	<div class='subheader'>
-		<img src=gif/letters/gold-w.gif><img src=gif/letters/gold-e.gif><img src=gif/letters/gold-b.gif><img src=gif/letters/gold-s.gif><img src=gif/letters/gold-i.gif><img src=gif/letters/gold-t.gif><img src=gif/letters/gold-e.gif> <img src=gif/letters/exclamation2.gif style='height: 35px;'>
+		<img src=gif/letters/gold-w.gif> <img src=gif/letters/gold-e.gif> <img src=gif/letters/gold-b.gif><img src=gif/letters/gold-s.gif><img src=gif/letters/gold-i.gif><img src=gif/letters/gold-t.gif><img src=gif/letters/gold-e.gif><img src=gif/letters/exclamation2.gif style='height: 35px;'>
 	</div>
 </div>
 <br>
@@ -159,19 +157,19 @@ Add music to Drop, Point and clicks?
 <!-- G A M E S -->
 <!------------------------------------------------>
 <div id='gamesPage' class='page'>
-	<a link="https://bencelsi.github.io/tetriven">									Tetriven				</a>
-	<a link="https://bencelsi.github.io/nabanagrams">								Nabanagrams				</a>
-	<a link="https://bencelsi.github.io/chord-wheel">								Chord Wheel				</a>
-	<a link="https://bencelsi.github.io/automata">									Automata				</a>
-	<a link="https://bencelsi.github.io/point-and-clicks">							Point & Clicks			</a>
-	<a link="https://bencelsi.github.io/catan-o-rama">								Catan-o-Rama!			</a>
-	<a link='https://bencelsi.github.io/cirque-de-sabotage'>						Cirque de Sabotage		</a>
-	<a link='https://bencelsi.github.io/mxbbi'>										MXBBI					</a>
-	<a link='https://bencelsi.github.io/drop'>										Drop					</a>
-	<a href='https://scratch.mit.edu/projects/1448075/fullscreen'>	Griven					</a>
-	<a href='https://scratch.mit.edu/projects/379323/fullscreen/'>	Grounded				</a>
-	<a href='soviet-monopoly' 	class='local'> 						Soviet Monopoly			</a>
-	<a href='game-of-cards' 	class='local'> 						Game of Cards			</a>
+	<a link="https://bencelsi.github.io/tetriven">						Tetriven				</a>
+	<a link="https://bencelsi.github.io/nabanagrams">					Nabanagrams				</a>
+	<a link="https://bencelsi.github.io/chord-wheel">					Chord Wheel				</a>
+	<a link="https://bencelsi.github.io/automata">						Automata				</a>
+	<a link="https://bencelsi.github.io/point-and-clicks">				Point & Clicks			</a>
+	<a link="https://bencelsi.github.io/catan-o-rama">					Catan-o-Rama!			</a>
+	<a link='https://bencelsi.github.io/cirque-de-sabotage'>			Cirque de Sabotage		</a>
+	<a link='https://bencelsi.github.io/mxbbi'>							MXBBI					</a>
+	<a link='https://bencelsi.github.io/drop'>							Drop					</a>
+	<a href='https://scratch.mit.edu/projects/1448075/fullscreen'>		Griven					</a>
+	<a href='https://scratch.mit.edu/projects/379323/fullscreen/'>		Grounded				</a>
+	<a href='soviet-monopoly' 	class='local'> 							Soviet Monopoly			</a>
+	<a href='game-of-cards' 	class='local'> 							Game of Cards			</a>
 </div>
 
 <!------------------------------------------------>
@@ -206,7 +204,7 @@ Add music to Drop, Point and clicks?
 		<a link='writing/writings/middle/The-Church.html'>					The Church						</a>
 		<a link='writing/writings/middle/Zirconium.html'>					Zirconium						</a>
 		<a link='writing/writings/middle/Ode-to-Oden.html'>					Ode to Oden						</a>
-		<!-- <a link='writings/middle/Josh-Hauser.html'>			Josh Hauser</a> -->
+		<!-- <a link='writings/middle/Josh-Hauser.html'>					Josh Hauser						</a> -->
 		<a link='writing/writings/middle/Life-of-Bob.html'>					Life of Bob						</a>
 		<a link='writing/writings/middle/How-To.html'>						How to Write a How-To Essay		</a>
 		<a link='writing/writings/middle/Lewis-Carroll.html'>				The 'Lewis Carroll Poem' Poem	</a>
@@ -219,7 +217,7 @@ Add music to Drop, Point and clicks?
 		<a link='writing/writings/elementary/Flagellants.html'>				The Flagellants					</a>
 		<a link='writing/writings/elementary/Bush.html'>					The Adventures of George W. Bush</a>
 		<a link='writing/writings/elementary/John-Adams-poem.html'>			John Adams Poem					</a>
-		<!-- <a link='writings/elementary/Princess-Fred-Jr.html'>		Princess Fred Jr.</a> -->
+		<!-- <a link='writings/elementary/Princess-Fred-Jr.html'>			Princess Fred Jr.				</a> -->
 		<!-- Wickepedia Clown -->
 		<!-- Dr. Dadoewizgone -->
 	</details><br><br>
@@ -233,7 +231,7 @@ Add music to Drop, Point and clicks?
 	<a link='video/video.html?q=musicVideos'>		Music Videos		</a>
 	<a link='video/video.html?q=liveAction'>		Live Action			</a>
 	<a link='video/video.html?q=all'>				Animation			</a>
-	<a link='video/video.html?q=miscellaneous'>	Miscellaneous		</a>
+	<a link='video/video.html?q=miscellaneous'>		Miscellaneous		</a>
 </div>
 <br><br>
 
@@ -256,28 +254,33 @@ Add music to Drop, Point and clicks?
 <script>
 	
 	let IFRAME = get('iframe')
+	let muted = false;
+	let pages = [ 'musicPage', 'artPage', 'gamesPage', 'writingPage', 'videoPage' ]
+	let SPEAKER1 = get('speaker1')
+	let SPEAKER2 = get('speaker2')
 	
-	let pages = [
-		'musicPage',
-		'artPage',
-		'gamesPage',
-		'writingPage',
-		'videoPage'
-	]
+	SPEAKER1.onclick = SPEAKER2.onclick = () => {
+		muted = !muted
+		setMusic()
+		setSpeaker('gif/speaker' + (muted ? '-muted.png' : (music.paused ? '.png' : '.gif')))
+	}
 
+	function setSpeaker(src) {
+		SPEAKER1.src = src
+		SPEAKER2.src = src
+	}
+	
 	for (let page of pages) {
 		for (let a of get(page).getElementsByTagName('a')) {
 			let link = a.getAttribute('link')
 			if (link != undefined) a.onclick = (e) => {
-				if (e.metaKey) window.open(tab[1] + link, '_blank').focus(); // new tab
-				else { 
-					console.log(link)
-					openIframe(link) }
+				if (e.metaKey) window.open(tab[1] + link, '_blank').focus() // new tab
+				else openIframe(link)
 			}
 			a.onmouseover = () => { playSound('shared/sound/click', .2) }
 		}
 	}
-	if (isLocal) {  // show local links
+	if (isLocal) {  // if local, show local links
 		for (let local of LOCALS) local.style.display = 'block' 
 		for (a of getAll('a')) {
 			if (a.parentElement != null && a.parentElement.id == 'gamesPage') {
@@ -286,28 +289,25 @@ Add music to Drop, Point and clicks?
 		}
 	}
 
+
+	get('header').onclick = () => { 
+		playSound('shared/sound/dream.mp3', .5)
+		playSound('shared/sound/tabs/bens2.mp3', 1, voice)
+		setTab(null)
+	}
+
 	function openIframe(src) {
 		playSound('shared/sound/hit', .5)
 		window.scrollTo(0, document.body.scrollHeight);
-		console.log(src)
 		IFRAME.src = src
-		IFRAME.muted=false;
 		IFRAME.style.display = 'inline-block'
-		if (!isLocal) {
-			//IFRAME.style.width = '1px'
-			IFRAME.style.height = '0px'
-		}
+		if (!isLocal) IFRAME.style.height = '0px'
 		IFRAME.addEventListener("load", function() {
-			console.log("Load .........")
-			if (IFRAME.contentWindow.location.href == "about:blank") {
-				closeIframe()
-				console.log("Close!")
-			}
+			if (IFRAME.contentWindow.location.href == "about:blank") closeIframe()
 			IFRAME.style.width = Math.max(1000, IFRAME.contentWindow.document.body.scrollWidth + 15) + 'px'
 			IFRAME.style.height = Math.max(700, IFRAME.contentWindow.document.body.scrollHeight) + 'px'
-			console.log(IFRAME.contentWindow.location.href)
 		})
-		setMusic(null)
+		setMusic()
 		hidePage(tab)
 	}
 
@@ -318,7 +318,6 @@ Add music to Drop, Point and clicks?
 		IFRAME = document.createElement("iframe")
 		get('iframeDiv').appendChild(IFRAME)
 		IFRAME.src = 'about:blank'
-		IFRAME.muted=true;
 		setTab(tab)
 	}
 
@@ -339,6 +338,7 @@ Add music to Drop, Point and clicks?
 	for (let summary of getAll('summary')) summary.onclick = () => { playSound('shared/sound/click2') }
 
 	const tabParam = new URLSearchParams(window.location.search).get('tab');
+
 	for (const tab of ['music', 'art', 'games', 'writing', 'video']) {
 		if (tab == tabParam) setTab(tabParam)
 		get(tab + 'Tab').onclick = () => { setTab(tab) }
@@ -356,9 +356,8 @@ Add music to Drop, Point and clicks?
 				get(tab + 'Page').style.display = 'none'
 			}
 		}
-		setMusic(newTab == null ? null : songTabs[newTab][0])
-
-		if (newTab == null ) { secret = false } 
+		
+		if (newTab == null) { secret = false } 
 		else {
 			if (newTab == tab && newTab == 'games') { //secret game - iframe within iframe?
 				playSound('shared/sound/tabs/' + (secret ? 'secret' : 'games-x') + '.mp3', 1, voice)
@@ -371,6 +370,7 @@ Add music to Drop, Point and clicks?
 			music.volume = songTabs[newTab][1]
 		}
 		tab = newTab;
+		if (!muted) setMusic()
 		setBackgroundColor()
 	}
 
@@ -390,15 +390,14 @@ Add music to Drop, Point and clicks?
 
 	function hidePage(name) { get(name + 'Page').style.display = 'none' }
 	
-	get('header').onclick = () => { 
-		playSound('shared/sound/dream.mp3', .5)
-		playSound('shared/sound/tabs/bens2.mp3', 1, voice)
-		setTab(null)
-	}
 
-	function setMusic(song, volume = .2) {
-		if (song == null) music.pause() 
-		else {
+	function setMusic(volume = .2) {
+		if (muted || tab == null || isIframeOpen()) {
+			setSpeaker('gif/speaker' + (muted ? '-muted.png' : '.png'))
+			music.pause()
+		} else {
+			setSpeaker('gif/speaker.gif')
+			let song = songTabs[tab][0]
 			music.src = 'music/albums/miscellaneous/' + song + (song.includes('.') ? '' : '.mp3') 
 			music.volume = volume
 			music.play() 
