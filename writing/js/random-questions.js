@@ -33,7 +33,7 @@ let randomQuestions = [
 "Is a front door inside or outside?",
 "Boxer briefs? More like brief boxers",
 "Which is worse, TikToks or Ted talks?",
-"Is divorce the opposite of polygamy?",
+"Is divorce just polygamy in the opposite direction?", //"Is divorce the opposite of polygamy?", 
 
 //MASKERS
 "Jesus: the original nepo baby?",

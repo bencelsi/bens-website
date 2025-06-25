@@ -6,10 +6,10 @@ from re import sub
 # todo - automatically do on all dirs
 
 if len(sys.argv) == 1:
-    dir = input("Enter a dir name continue...")
+    dir = input("Enter a dir name continue... ")
 else:
     dir = sys.argv[1]
-print("This will lists files in " + dir + "into a js array in files.js")
+print("This will lists files in " + dir + " into a js array in files.js")
 
 dirs = [
     "music/albums/griven/",

@@ -66,6 +66,7 @@ let palindromes = [
 "Do get ahi tuna, ya nut. I hate god.",
 "God damn, madam! I'm a damn mad dog!",
 "Sniff. On a panini, in a pan of fins", //eh
+"I sniff up a puffin, si.",
 "Sex I'm to peruse? Sure, pot mixes.",
 "Boo! Nate gets a taste? Get a noob!",
 "Emus said, “I am a maid, I assume?”",
@@ -282,6 +283,7 @@ let palindromes = [
 "Nag Roy Moore: lap at a pale, roomy organ!", //eh
 "Ha, Fool! An ox on a loofah!",
 "“Hans may lay, or not, on royal yams.”\n“...Nah!”",
+"“Hans, is a Xanax as-is?“\n “Nah.“",
 "“PSA Greta, we popes use pope water.”\n“Gasp!”",
 "Burger are grub",
 "Noel got no dandelion oil, Edna! Don’t ogle on!",
@@ -315,6 +317,8 @@ let palindromes = [
 "Ha! That much cum? Tah-tah!",
 "Pity, a stupid race card. I puts away tip."
 ]
+
+
 // Nigga saggin’!
 
 // --------
@@ -323,9 +327,9 @@ let palindromes = [
 // Yo by no pseudo dues pony boy
 // 
 // Ned Rub Burden
-// 
+// Si Senor, one sis
 // Toilet Eliot
-// Renet, Silly niva’s a vinyl listener.
+// Re net, Silly Niva’s a vinyl listener.
 // Gaga’s tinny lung- a gnu? Lynn, its a gag.
 // Did I rev en masse? Yes, Sam.  Never I did.
 // Dev, Omsi is moved
@@ -342,7 +346,8 @@ let palindromes = [
 // Drat, Bill, I’ve named ‘em an evil libtard!
 // “Drat, Bill, I’ve lived as a devil. Evil Libtard!”
 // “Drat, Bill, I’ve won now.  Evil Libtard!”
-
+// Drat, Bill in an ill libtard
+// Drat, Bill in an ill libtard
 // Ya dats a pasta day
 // Good log
 // Did I put it up? I did!
@@ -778,7 +783,9 @@ let palindromes = [
 
 // No on talk- cow
 // I’m elated on an ode. tale mi
-// Is a Xanax as It 
+// 
+
+// W On Knees, Ishtar wraths i seen k
 
 
 // ALTERNATES
@@ -799,7 +806,6 @@ let palindromes = [
 // 
 // madam
 // Partner's rent rap
-
 
 
 // DAMN, A  MARACA TOGA GOT A CAR! A  MAN MAD!

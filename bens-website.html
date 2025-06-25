@@ -51,6 +51,7 @@ Add music to Drop, Point and clicks?
 		#header { width: 350px; margin: auto; filter: drop-shadow(0 0 2rem rgb(132, 0, 255)); cursor: url(shared/cursor.png), auto;}
 		#header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
 		.speaker { opacity: 60%; width: 70px; cursor: url(shared/cursor.png), auto; margin-left: 15px; margin-right: 15px;}
+		.speaker:hover { opacity: 100;}
 		#speaker1 { float: right; }
 		#speaker2 { float: left; }
 		
@@ -272,7 +273,8 @@ Add music to Drop, Point and clicks?
 		for (let a of get(page).getElementsByTagName('a')) {
 			let link = a.getAttribute('link')
 			if (link != undefined) a.onclick = (e) => {
-				if (e.metaKey) window.open(tab[1] + link, '_blank').focus() // new tab
+				console.log(tab)
+				if (e.metaKey) window.open(link, '_blank').focus() // new tab
 				else openIframe(link)
 			}
 			a.onmouseover = () => { playSound('shared/sound/click', .2) }
