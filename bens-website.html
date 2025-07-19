@@ -71,8 +71,8 @@ Add music to Drop, Point and clicks?
 		#videoTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
 		
 		.selected img { filter: drop-shadow(0 0 .25rem rgb(255, 214, 64)); opacity: 100%;  }
-		.tab:not(.selected) { opacity: 60%; }
-		.tab:not(.selected):hover { opacity: 75%; }
+		.tab:not(.selected) { opacity: 70%; }
+		.tab:not(.selected):hover { opacity: 85%; }
 
 		.tab {
 			display: inline-block;
@@ -188,10 +188,24 @@ Add music to Drop, Point and clicks?
 		<a link='writing/writings/college/Raven.html'>							TheRaven.java			</a>
 		<a link='writing/writings/college/Nature.html'>							Nature Forging a Baby	</a>
 	</details><br><br>
-	<details><summary>High School</summary><br>
-		<a link='writing/writings/high/Great-Apes.html'>					Great Apes</a>
-		<a link='writing/writings/high/Ough.html'>							Ough</a>
-		<a link='writing/writings/high/I-Am-From-Poem.html'>				I Am Dumb Poem</a>
+	<details><summary>High School</summary><br><br>
+		<details><summary class="summary2">Poetry Portfolio</summary>
+
+			<a link='writing/writings/high/poetry-portfolio/Acrostic.html'>				Acrostic</a>
+			<a link='writing/writings/high/poetry-portfolio/Great-Apes.html'>			Great Apes</a>
+			<a link='writing/writings/high/poetry-portfolio/ABBA.html'>					ABBA</a>
+			<a link='writing/writings/high/poetry-portfolio/Ough.html'>					Ough</a>
+			<a link='writing/writings/high/poetry-portfolio/iGod-and-Cleverbot.html'>	iGod and Cleverbot</a>
+			<a link='writing/writings/high/poetry-portfolio/Murder-of-Haiku.html'>		Murder of Haiku</a>
+			<a link='writing/writings/high/poetry-portfolio/Writers-Block.html'>		Writer's Block</a>
+			<a link='writing/writings/high/poetry-portfolio/I-Am-Dumb-Poem.html'>		I Am Dumb Poem</a>
+			<a link='writing/writings/high/poetry-portfolio/Chemistry.html'>			Chemistry</a>
+			<a link='writing/writings/high/poetry-portfolio/Free-Verse.html'>			Free Verse, 20 Lines Minimum</a>
+			<a link='writing/writings/high/poetry-portfolio/Sack-Lunch.html'>			Sack Lunch</a>
+			<br>
+		</details>
+		<br>
+		<a link='writing/writings/high/The-Pencil-Story.html'>						The Pencil Story</a>
 		<a link='writing/writings/high/Fruit-Flies.html'>					Fruit Flies</a>
 		<a link='writing/writings/high/Babylon.html'>						By the Waters of Babylon: The Reawakening</a>
 		<a link='writing/writings/high/Mr-Oates.html'>						Mr. Oates</a>
@@ -325,13 +339,7 @@ Add music to Drop, Point and clicks?
 
 	const music = new Audio(); music.loop = true;
 	const voice = new Audio();
-	const songTabs = {
-		'music' : 		['420 Loop',			.5],
-		'art' : 		['Chill Loop',			.5],
-		'games' : 		['Roach',				.5],
-		'writing' : 	['Template',			.5],
-		'video' : 		['Country Tuff',		.5],
-	}
+	
 
 	let tab = null
 	
@@ -372,6 +380,13 @@ Add music to Drop, Point and clicks?
 		tab = newTab;
 		if (!muted) setMusic()
 		setBackgroundColor()
+	}
+	const songTabs = {
+		'music' : 		['Chill Loop',			.5],
+		'art' : 		['420 Loop',			.5],
+		'games' : 		['Roach',				.5],
+		'writing' : 	['Template',			.5],
+		'video' : 		['Country Tuff',		.5],
 	}
 
 	const backgroundColors = {

@@ -28,11 +28,16 @@ a:hover {
 }
 
 summary {
-	font-size: 25px;
-	font-style: bold; 
+	font-size: 30px;
+	font-style: bold;
 	cursor: url(cursor.png), auto;
 	color: lavender; 
 	filter: drop-shadow(0 0 1rem blue)
+}
+
+.summary2 {
+	color: rgb(157, 157, 255);
+	font-size: 25px;
 }
 
 .button { cursor: url(cursor.png), auto; }
