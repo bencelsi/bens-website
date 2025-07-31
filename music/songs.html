@@ -7,7 +7,7 @@
 		body {
 			margin: auto;
 			text-align: center;
-			width: 500px;
+			/* width: 500px; */
 			background-image: url(../gif/stars2.gif);
 		}
 
@@ -119,7 +119,6 @@ if (albumCover == null) get("albumCover").style.display = 'none'
 else get("albumCover").src = "albumCovers/" + albumCover
 get("title").innerHTML = title
 
-//	let songsDiv = get("songs")
 let songDiv = get("songs")
 let totalLength = 0;
 let songAudios = []
@@ -216,7 +215,7 @@ let space_jam = [
 	"Tightrope",
 	"Dark Sky",
 ]
-
+	
 function removeExtension(str) { return str.split('.').slice(0, -1).join('.') }
 
 </script>

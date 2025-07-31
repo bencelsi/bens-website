@@ -39,7 +39,8 @@ let randomThoughts = [
 "Is Finding Nemo a fish out of water story?",
 "British people say ‘arse’ instead of ‘ass’, but they don’t pronounce their Rs, so it kind of cancels out",
 "Is 'ineffible' a minced swear for 'unfuckable'?",
-"Garfunkel and Oates should have a nemesis named Simon Hall"
+"Garfunkel and Oates should have a nemesis named Simon Hall",
+"Elmo is a monster"
 //"Porn stars should get their name tattoo so everyone can google them easily",
 //"Chat GPT is a virtue signaller",
 //"Plaid pantry logo isn't plaid, and olive garden's logos isn't olives",

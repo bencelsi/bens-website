@@ -25,7 +25,7 @@
 <script src="life-of-pika/0-list.js"></script>
 <script src="miscellaneous/0-list.js"></script>
 <script src="paintings/0-list.js"></script>
-<script src="photos/0-list.js"></script>
+<script src="photography/0-list.js"></script>
 <script src="uw-daily/0-list.js"></script>
 <script>
 
@@ -42,7 +42,7 @@ let config = {
 	'life-of-pika':		['Life of Pika Illustrations',	lifeOfPikaList,		false,	false],
 	'paintings': 		['Paintings', 					paintingsList,		true, 	true],
 	'uw-daily':			['UW Daily Illustrations',		uwDailyList,		true,	true],
-	'photos':			['Photos',						photosList,			true,	true]
+	'photography':		['Photography',					photographyList,	true,	true]
 }
 
 let images, q, title
@@ -51,10 +51,10 @@ q = new URLSearchParams(window.location.search).get('q')
 console.log(q)
 title = config[q][0]
 images = config[q][1]
-if (q == "photos") {
-	title = "Photos"
+if (q == "photography") {
+	title = "Photography"
 	get("artScreen").style.width = "700px"
-	images = photosList
+	images = photographyList
 }
 
 get("title").innerHTML = title

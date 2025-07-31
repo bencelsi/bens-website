@@ -2,6 +2,7 @@ let paintingsList = [
 "BottleAndGoblet.jpg",
 "Chantarelle.jpg",
 "Harding.jpeg",
+"MaddieAndThePancakes.jpeg",
 "Mango.jpeg",
 "McKinley.JPG",
 "Pomegranate.JPG",
