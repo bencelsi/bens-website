@@ -37,7 +37,10 @@ let spoonerisms = [
 "There are Mountain Dews, and Mountain Don'ts",
 "Shanwows and shamwhats",
 "I'm pickin down what you’re laying up",
-"I don't have fingerless gloves, but I do have gloveless fingers"
+"I don't have fingerless gloves, but I do have gloveless fingers",
+"Jailtime for stealing: the price you pay for not paying the price",
+"Hotdog buns or hot dogbuns?",
+"I’m mixing your drink mix & drinking your mixed drinks"
 // "That’s not facial hair, that’s a hair facial",
 // "Why is it so dang bad to bang dad?",
 // "Touchdown in douchetown",

@@ -57,7 +57,12 @@ let oneLiners = [
 "Taj your own Hal!",
 "No, YOU goslavia",
 "If it's any constellation... the big dipper",
-"It's not my fault, it's San Andreas fault"
+"It's not my fault, it's San Andreas fault",
+"Intermittent fasting and furious",
+"Beach Boys 2 Men",
+"Margot Robert",
+"Father John Mitski",
+"Had Ed’ve edited it, Ed'd've edited it."
 
 //"Rim Job? more like grim job",
 //"Now that's an ass I could get behind",
