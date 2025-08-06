@@ -1,3 +1,8 @@
+* {
+    cursor: url(cursor/cursor.cur), pointer;
+}
+
+
 body {
 	background-image: url(../gif/stars.gif); 
 	background-blend-mode: exclusion;
@@ -15,7 +20,7 @@ a {
 	color: pink;
 	font-weight: bold;
 	/* color: pink; */
-	cursor: url(cursor.png), auto;
+	cursor: url(cursor/hand-point.cur), pointer;
 	font-style: normal;
 	text-decoration: none;
 	a { img { display: none; } }

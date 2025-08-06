@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="../shared/shared.css">
 	<style type='text/css'>
 
-		iframe { border: 40px solid black; filter: drop-shadow(0 0 5rem rgb(78, 78, 78)) }
+		iframe { border: 0px; filter: drop-shadow(0 0 5rem rgb(78, 78, 78)) }
 
 		/* #videoScreen { height: 480px; width: 854px; } */
 
@@ -16,7 +16,8 @@
 <div>
 	<div>
 		<h2 id='title'></h2><br>
-		<iframe id=youtubeScreen width=1280 height='720'></iframe>
+		<iframe id=youtubeScreen width=1152 height=648></iframe> <!-- (.9 * 720 x 1280) -->
+	
 		<!-- <video id='hostedScreen' width=1280 height='720' controls><source type='video/mp4'></video> -->
 		<br>
 	</div>
