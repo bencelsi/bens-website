@@ -49,7 +49,7 @@ Add music to Drop, Point and clicks?
 	<link rel='icon' type='image/x-icon' href='favicon.ico'>
 	<link rel="stylesheet" href="shared/shared.css">
 	<style type='text/css'>
-		#header { width: 350px; margin: auto; filter: drop-shadow(0 0 2rem rgb(132, 0, 255)); cursor: url(shared/cursor/hand-point.cur), auto;}
+		#header { width: 350px; margin: auto; filter: drop-shadow(0 0 2rem rgb(132, 0, 255)); }
 		#header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
 		.speaker { opacity: 60%; width: 70px; cursor: url(shared/cursor/hand-point.cur), auto; margin-left: 15px; margin-right: 15px;}
 		.speaker:hover { opacity: 100;}
@@ -71,7 +71,7 @@ Add music to Drop, Point and clicks?
 		#writingTab.selected 	{ filter: drop-shadow(0 0 1.5rem rgb(255, 210, 0)); }
 		#videoTab.selected 		{ filter: drop-shadow(0 0 1.5rem rgb(0, 130, 255)); }
 		
-		.selected img { filter: drop-shadow(0 0 .25rem rgb(255, 214, 64)); opacity: 100%;  }
+		.selected img { filter: drop-shadow(0 0 .25rem rgb(255, 214, 64)); opacity: 100%; }
 		.tab:not(.selected) { opacity: 65%; }
 		.tab:not(.selected):hover { opacity: 100%; }
 
@@ -91,12 +91,16 @@ Add music to Drop, Point and clicks?
 
 		iframe {
 			/* width: 100%; height: 100%; */
-			border: 0px;
-			/* border: none; */
+			border: none;
 			width: 1400px; height: 1100px;
 			display: none;
 			margin: auto;
 			filter: drop-shadow(0 0 4rem rgb(40, 38, 99));
+		}
+
+		h2 {
+			filter: drop-shadow(0 0 2.5rem rgb(255, 255, 255));
+			font-size: 40px;
 		}
 	</style>
 </head>
@@ -123,12 +127,13 @@ Add music to Drop, Point and clicks?
 	<div class='tab' id='gamesTab'>		<img src='gif/tabs/computer.gif'/></div>
 	<div class='tab' id='writingTab'>	<img src='gif/tabs/book.gif'/></div>
 </div>
-<br><br><br><br>
+<br>
 <!------------------------------------------------>
 <!-- M U S I C -->
 <!------------------------------------------------>
 <div id='musicPage' class='page'>
 	<!-- TODO: Luigi and Drew should open video in iframe -->
+	<h2>Music</h2>
 	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'>		The Ballad of Luigi					</a>
 	<a link='music/songs.html?q=miscellaneous'>					Miscellaneous						</a>
 	<a link='music/songs.html?q=mashups'>						Mashups								</a>
@@ -147,6 +152,7 @@ Add music to Drop, Point and clicks?
 <!-- A R T -->
 <!------------------------------------------------>
 <div id='artPage' class='page'>
+	<h2>Art</h2>
 	<a link="art/art.html?q=paintings">			Paintings					</a>
 	<a link="art/art.html?q=drawings">			Drawings					</a>
 	<a link="art/art.html?q=photography">		Photography					</a>
@@ -160,26 +166,31 @@ Add music to Drop, Point and clicks?
 <!-- G A M E S -->
 <!------------------------------------------------>
 <div id='gamesPage' class='page'>
+	<h2>Games</h2>
 	<a link="https://bencelsi.github.io/data-corp-inc">					Data Corp Inc.			</a>
 	<a link="https://bencelsi.github.io/tetriven">						Tetriven				</a>
 	<a link="https://bencelsi.github.io/nabanagrams">					Nabanagrams				</a>
+	<a href='game-of-cards'		class='local'>							Game of Cards			</a>
 	<a link="https://bencelsi.github.io/chord-wheel">					Chord Wheel				</a>
 	<a link="https://bencelsi.github.io/automata">						Automata				</a>
 	<a link="https://bencelsi.github.io/point-and-clicks">				Point & Clicks			</a>
 	<a link="https://bencelsi.github.io/catan-o-rama">					Catan-o-Rama!			</a>
+	<a href='soviet-monopoly'	class='local'>							Soviet Monopoly			</a>
 	<a link='https://bencelsi.github.io/cirque-de-sabotage'>			Cirque de Sabotage		</a>
 	<a href='https://bencelsi.github.io/mxbbi'>							MXBBI					</a>
 	<a link='https://bencelsi.github.io/drop'>							Drop					</a>
 	<a href='https://scratch.mit.edu/projects/1448075/fullscreen'>		Griven					</a>
-	<a href='https://scratch.mit.edu/projects/379323/fullscreen/'>		Grounded				</a>
-	<a href='soviet-monopoly'	class='local'>							Soviet Monopoly			</a>
-	<a href='game-of-cards'		class='local'>							Game of Cards			</a>
+	<a href='https://scratch.mit.edu/projects/379323/fullscreen/'> 		Grounded (Scratch Version)</a>
+	<a href='https://bencelsi.github.io/point-and-clicks/engine/engine.html?game=grounded'>Grounded (Fancy Version)</a>
+	
 </div>
 
 <!------------------------------------------------>
 <!-- W R I T I N G -->
 <!------------------------------------------------>
 <div id='writingPage' class='page'>
+	<h2>Writing</h2>
+	<!-- Come read a sentence or two! -->
 	<br>
 	<details><summary>Miscellaneous</summary><br>
 		<a link='writing/writings/Either.html'>									Either					</a>
@@ -244,6 +255,7 @@ Add music to Drop, Point and clicks?
 <!-- V I D E O -->
 <!------------------------------------------------>
 <div id='videoPage' class='page'>
+	<h2>Video</h2>
 	<a link='video/video.html?q=all'>				All Videos			</a>
 	<a link='video/video.html?q=musicVideos'>		Music Videos		</a>
 	<a link='video/video.html?q=liveAction'>		Live Action			</a>
