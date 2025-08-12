@@ -335,8 +335,10 @@ Add music to Drop, Point and clicks?
 		if (!isLocal) IFRAME.style.height = '0px'
 		IFRAME.addEventListener("load", function() {
 			if (IFRAME.contentWindow.location.href == "about:blank") closeIframe()
-			IFRAME.style.width = (IFRAME.contentDocument.body.scrollWidth + 15) + 'px'
-			IFRAME.style.height = (IFRAME.contentDocument.body.scrollHeight + 15) + 'px'
+			console.log('w ' + IFRAME.contentDocument.body.scrollWidth)
+			console.log('h ' + IFRAME.contentDocument.body.scrollHeight)
+			IFRAME.style.width = (IFRAME.contentDocument.body.scrollWidth + 25) + 'px'
+			IFRAME.style.height = (IFRAME.contentDocument.body.scrollHeight + 25) + 'px'
 		})
 		setMusic()
 		hidePage(tab)
