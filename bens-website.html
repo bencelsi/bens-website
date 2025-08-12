@@ -193,6 +193,7 @@ Add music to Drop, Point and clicks?
 	<!-- Come read a sentence or two! -->
 	<br>
 	<details><summary>Miscellaneous</summary><br>
+		<a link='writing/writings/LinkedIn.html'>								LinkedIn				</a>
 		<a link='writing/writings/Either.html'>									Either					</a>
 		<a link='writing/gallery.html?q=palindromes'>							Palindromes				</a>
 		<a link='writing/gallery.html?q=alphabet-sayings'>						Alphabet Sayings		</a>
@@ -331,12 +332,11 @@ Add music to Drop, Point and clicks?
 		window.scrollTo(0, document.body.scrollHeight);
 		IFRAME.src = src
 		IFRAME.style.display = 'inline-block'
-		console.log(IFRAME.contentWindow.document.body.scrollHeight)
 		if (!isLocal) IFRAME.style.height = '0px'
 		IFRAME.addEventListener("load", function() {
 			if (IFRAME.contentWindow.location.href == "about:blank") closeIframe()
-			IFRAME.style.width = Math.max(1000, IFRAME.contentDocument.body.scrollWidth + 15) + 'px'
-			IFRAME.style.height = Math.max(700, IFRAME.contentDocument.body.scrollHeight + 15) + 'px'
+			IFRAME.style.width = (IFRAME.contentDocument.body.scrollWidth + 15) + 'px'
+			IFRAME.style.height = (IFRAME.contentDocument.body.scrollHeight + 15) + 'px'
 		})
 		setMusic()
 		hidePage(tab)
