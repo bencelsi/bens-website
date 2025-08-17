@@ -1,9 +1,12 @@
 let drawingsList = [
 "Artichoke.JPG",
-"CherryTree.jpg",
+"CherryTree.JPG",
+"FaceTesselation.JPG",
 "Fountain.jpg",
+"Ghosts.jpeg",
+"Jion.jpeg",
 "Leander.jpg",
-"LivingRoom.JPG",
+"LivingRoom.jpeg",
 "Maddie1.jpeg",
 "Maddie2.jpeg",
 "Madhava.jpeg",
@@ -12,4 +15,5 @@ let drawingsList = [
 "Prab.jpg",
 "Sanjay.JPG",
 "Skull.JPG",
-"Sunflowers.JPG"]
+"Sunflowers.JPG",
+"Window.jpg"]

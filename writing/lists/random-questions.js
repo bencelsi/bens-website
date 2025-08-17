@@ -34,6 +34,7 @@ let randomQuestions = [
 "Boxer briefs? More like brief boxers",
 "Which is worse, TikToks or Ted talks?",
 "Is divorce just polygamy in the opposite direction?", //"Is divorce the opposite of polygamy?", 
+"Do you think the Lizard Wizard will ever embark on a solo career?",
 
 //MASKERS
 "Jesus: the original nepo baby?",

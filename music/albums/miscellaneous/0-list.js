@@ -14,5 +14,6 @@ let miscellaneousList = [
 "Round Black Glasses.mp3",
 "Space Jam.mp3",
 "Spaghettiloop.mp3",
+"Spheres in Perspective.wav",
 "Surfin'.mp3",
 "Template.mp3"]
