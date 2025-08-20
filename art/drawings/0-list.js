@@ -4,6 +4,7 @@ let drawingsList = [
 "FaceTesselation.JPG",
 "Fountain.jpg",
 "Ghosts.jpeg",
+"Informatics.png",
 "Jion.jpeg",
 "Leander.jpg",
 "LivingRoom.jpeg",

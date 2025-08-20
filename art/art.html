@@ -62,7 +62,7 @@ let index = 0
 if (config[q][2]) shuffle(images)
 
 get("left").onclick = () => {
-	playSound(CLICK, .5); index = decrement(index, images.length - 1); setImage()
+	playSound(CLICK, .5); index = decrement(index, images.length - 1); setImage(); console.log(images[index])
 }
 
 get("right").onclick = () => {
