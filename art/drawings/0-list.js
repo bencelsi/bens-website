@@ -1,7 +1,7 @@
 let drawingsList = [
 "Artichoke.JPG",
 "CherryTree.JPG",
-"FaceTesselation.JPG",
+"FaceTessellation.JPG",
 "Fountain.jpg",
 "Ghosts.jpeg",
 "Informatics.png",
