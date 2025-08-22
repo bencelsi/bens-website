@@ -10,7 +10,6 @@
 TODOS:
 Use nodejs for live server https://stackoverflow.com/questions/6084360/using-node-js-as-a-simple-web-server
 Compress website loops to be more 90s
-Add Fun Fun Fun Fun Fun Fun Fun to mashups
 Fix music videos
 Left/right arrow usable for left/right nav?
 Add are you sure you want to quit when exiting iframe
@@ -25,6 +24,10 @@ Music - make lyrics & chords in parens by song
 
 FEATURES/CONTENT TO ADD
 Rainbow-ify links 
+Add old animations
+Add Fun Fun Fun Fun Fun Fun Fun to mashups
+Add faces section
+Add round black glasses section?
 Scroll to bottom on iframe?
 Add miscellaneous album for Eno EP?
 Create contact page, misc link page?
@@ -43,6 +46,8 @@ When click a tab 2nd time, close all collapsibles
 Idea... when you go to other pages, music continues, but hi-passed
 Make header letters changeable when clicked
 Add music to Drop, Point and clicks?
+
+
 -->
 
 <!DOCTYPE html>
@@ -51,6 +56,12 @@ Add music to Drop, Point and clicks?
 	<link rel='icon' type='image/x-icon' href='favicon.ico'>
 	<link rel="stylesheet" href="shared/shared.css">
 	<style type='text/css'>
+		body {
+			user-select: none;        /* Standard */
+			-webkit-user-select: none; /* Safari */
+			-moz-user-select: none;   /* Firefox */
+			-ms-user-select: none;    /* IE/Edge */
+		}
 		#header { width: 350px; margin: auto; filter: drop-shadow(0 0 2rem rgb(132, 0, 255)); }
 		#header img:hover { filter: drop-shadow(0 0 2rem rgb(255, 0, 0)) }
 		.speaker { opacity: 60%; width: 70px; cursor: url(shared/cursor/hand-point.cur), auto; margin-left: 15px; margin-right: 15px;}
@@ -450,5 +461,27 @@ Add music to Drop, Point and clicks?
 		'music/songs.html?q=mashups' : 			[1000, 800],
 		'music/songs.html?q=old-piano' : 		[1000, 1700],
 	}
+
+	// Define pastel rainbow colors
+	const pastelRainbow = [
+		"#FFB3BA", // pastel red/pink
+		"#FFDFBA", // pastel orange
+		"#FFFFBA", // pastel yellow
+		"#BAFFC9", // pastel green
+		"#BAE1FF", // pastel blue
+		"#E3BAFF"  // pastel purple
+	];
+
+	// Get all <a> elements
+	const links = document.querySelectorAll("a");
+
+	// Loop through and assign colors in rainbow order
+	links.forEach((link, index) => {
+		const color = pastelRainbow[index % pastelRainbow.length];
+		link.style.color = color;
+	});
+
+
+
 </script>
 </html>

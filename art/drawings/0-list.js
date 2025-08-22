@@ -10,7 +10,7 @@ let drawingsList = [
 "LivingRoom.jpeg",
 "Maddie1.jpeg",
 "Maddie2.jpeg",
-"Madhava.jpeg",
+"Madhava.jpeg", 
 "Parents.JPG",
 "Popcorn.JPG",
 "Prab.jpg",
