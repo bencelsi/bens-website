@@ -276,6 +276,8 @@ let palindromes = [
 "Hon, I’d allow an AWOL lad in.\nOh?",
 "FISA? As if!",
 "An eggnog gong, Gena!",
+"Yoko Ono's in miso nook? Oy!",
+"Torsos rot.",
 "Ma, help! Pink nipple ham!",
 "“NURSE! YETI!”\nTepid, I pet it. Eyes run.",
 "Tip: Oh, Challah? Chop it!",

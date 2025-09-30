@@ -4,10 +4,9 @@ if (isLocal) document.title = "." + document.title
 const LOCALS = getAll('local')
 if (isLocal) { for (let local of LOCALS) local.style.display = 'block' }
 
-
 function get(id) { return document.getElementById(id) }
 
-function getAll(name) { 
+function getAll(name) {
     let byClass = document.getElementsByClassName(name)
     if (byClass.length != 0) return byClass
     return document.getElementsByTagName(name)

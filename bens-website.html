@@ -147,6 +147,7 @@ Add music to Drop, Point and clicks?
 <div id='musicPage' class='page'>
 	<!-- TODO: Luigi and Drew should open video in iframe -->
 	<h2>Music</h2>
+	<a href='https://www.youtube.com/watch?v=Zk6Q6SfcGYU'>		Beetle the Cat						</a>
 	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'>		The Ballad of Luigi					</a>
 	<a link='music/songs.html?q=mashups'>						Mashups								</a>
 	<a link='music/songs.html?q=miscellaneous'>					Miscellaneous						</a>
@@ -154,7 +155,7 @@ Add music to Drop, Point and clicks?
 	<a link='music/songs.html?q=griven'>						Music for Griven					</a>
 	<a link='video/video.html?q=rebeccasAnimations'>			Music for Rebecca's Animations		</a>
 	<a link='music/songs.html?q=old-piano'>						Old Piano Songs						</a>
-	<a link='music/chords.html'>								Chords & Lyrics						</a>
+	<a link='music/chords-and-lyrics.html'>						Chords & Lyrics						</a>
 	<a href='https://www.youtube.com/watch?v=NzcUOxN2IuM'>		Drew's Blues: A Rock Operettta		</a>
 	<br><br><br>
 	<a link='music/songs.html?q=songs' class='local'>			Songs								</a>
@@ -295,7 +296,6 @@ Add music to Drop, Point and clicks?
 <!------------------------------------------------>
 <script src='shared/shared.js'></script>
 <script>
-	
 	let IFRAME = get('iframe')
 	let muted = false;
 	let pages = [ 'musicPage', 'artPage', 'gamesPage', 'writingPage', 'videoPage' ]
@@ -477,8 +477,7 @@ Add music to Drop, Point and clicks?
 
 	// Loop through and assign colors in rainbow order
 	links.forEach((link, index) => {
-		const color = pastelRainbow[index % pastelRainbow.length];
-		link.style.color = color;
+		link.style.color = pastelRainbow[index % pastelRainbow.length];
 	});
 
 
