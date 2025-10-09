@@ -1,6 +1,6 @@
 const SECTION = 'section'; const CHORDS = 'chords'; const LYRICS = 'lyrics'
 
-const BUTTONS = document.getElementById('buttons')
+const BUTTONS = get('buttons')
 if (BUTTONS != null) {
     BUTTONS.innerHTML = 
 `<div id='buttons'>
@@ -11,7 +11,7 @@ Sections <input type="checkbox" id="sectionBox" checked>
 </div>`
 }
 
-const SONG = document.getElementById('song')
+const SONG = get('song')
 
 let text = SONG.innerHTML.split('\n')
 let result = ''
@@ -43,7 +43,7 @@ function lineType(line) {
     if (line.endsWith('`')) return CHORDS
     return LYRICS
 }
-const CENTER_BOX = document.getElementById('centerBox')
+const CENTER_BOX = get('centerBox')
 
 if (CENTER_BOX != null) {
     function setCentered() { SONG.style.textAlign = CENTER_BOX.checked ? 'center' : 'left'; }
@@ -57,7 +57,7 @@ setup('lyrics', 'lyricBox')
 
 function setup(name, boxName) {
     let elements = document.getElementsByClassName(name)    
-    let box = document.getElementById(boxName)
+    let box = get(boxName)
     if (box == null || elements == null) return
     let refresh = () => {
         for (i = 0; i < elements.length; i++) {
@@ -66,3 +66,5 @@ function setup(name, boxName) {
     }
     box.onclick = refresh; refresh()
 }
+
+function get(id) { return document.getElementById(id) }

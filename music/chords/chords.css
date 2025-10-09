@@ -13,7 +13,7 @@ h1, h2, h3 {
 
 .section { font-style: bold; color: red; font-size: 14pt; }
 
-.chords { color: magenta; line-height: 2 }
+.chords { color: plum; line-height: 2 }
 
 #buttons { 
     text-align: center; display: flex; width: fit-content; margin: auto; color: gray
