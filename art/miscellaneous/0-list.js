@@ -7,7 +7,7 @@ let miscellaneousList = [
 "Severance.jpg",
 "SovietMonopoly.jpeg",
 "Sunland.jpeg",
-"Suey.png"
+"Suey.png",
 "Teapots.png",
 "TheActualBeachBoys.jpeg",
 "ThiccSpaghetti.jpg",
