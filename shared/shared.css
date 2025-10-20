@@ -37,7 +37,8 @@ summary {
 	font-style: bold;
 	cursor: url(cursor.png), auto;
 	color: lavender; 
-	filter: drop-shadow(0 0 1rem blue)
+	filter: drop-shadow(0 0 1rem blue);
+	list-style: none;
 }
 
 .summary2 {

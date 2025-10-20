@@ -8,6 +8,7 @@
 (ASCII Font: slant https://patorjk.com/software/taag/#p=display&f=Slant)
 
 TODOS:
+Consistent vocab:  ... for subtab, 
 Use nodejs for live server https://stackoverflow.com/questions/6084360/using-node-js-as-a-simple-web-server
 Compress website loops to be more 90s
 Fix music videos
@@ -159,23 +160,20 @@ Add music to Drop, Point and clicks?
 
 	Mashups
 
-	
 	-->
 
-
-	<!-- TODO: Luigi and Drew should open video in iframe -->
+	<!-- TODO: Beetle, Luigi & Drew should open video in iframe -->
 	<h2>Music</h2>
-	<a href='https://www.youtube.com/watch?v=Zk6Q6SfcGYU'>		Beetle the Cat						</a>
-	<a href='https://www.youtube.com/watch?v=-yIAxvgeHmE'>		The Ballad of Luigi					</a>
+	<a link='https://www.youtube.com/watch?v=Zk6Q6SfcGYU'>		Music Videos						</a>
+	<a href='music/songs.html?q=songs'>							Songs								</a>
+	<a href='music/songs.html?q=miscellaneous'>					Instrumentals						</a>
 	<a link='music/songs.html?q=mashups'>						Mashups								</a>
-	
-	<a link='music/songs.html?q=mashups'>						Mashups								</a>
-	<a link='music/songs.html?q=miscellaneous'>					Miscellaneous						</a>
 	<a link='music/songs.html?q=podcasts'>						Podcast Music						</a>
-	<a link='music/songs.html?q=griven'>						Griven Music						</a>
 	<a link='video/video.html?q=rebeccasAnimations'>			Music for Rebecca's Animations		</a>
 	<a link='music/songs.html?q=old-piano'>						Old Piano Songs						</a>
 	<a link='music/chords-and-lyrics.html'>						Chords & Lyrics						</a>
+
+	<a link='music/songs.html?q=griven'>						Griven Music						</a>
 	<a href='https://www.youtube.com/watch?v=NzcUOxN2IuM'>		Drew's Blues: A Rock Operettta		</a>
 	<br><br><br>
 	<a link='music/songs.html?q=songs' class='local'>			Songs								</a>
@@ -190,6 +188,8 @@ Add music to Drop, Point and clicks?
 	<a link="art/art.html?q=paintings">			Paintings					</a>
 	<a link="art/art.html?q=drawings">			Drawings					</a>
 	<a link="art/art.html?q=photography">		Photography					</a>
+	<a link="art/art.html?q=photography">		Other...					</a>
+	
 	<a link="art/art.html?q=uw-daily">			UW Daily Illustrations		</a>
 	<a link="art/art.html?q=life-of-pika">		Life of Pika Illustrations	</a>
 	<a link="art/art.html?q=dead-end">			Dead End Test Renders		</a>
@@ -233,7 +233,7 @@ Add music to Drop, Point and clicks?
 		<a link='writing/gallery.html?q=alphabet-sayings'>						Alphabet Sayings		</a>
 		<a link='writing/gallery.html?q=miscellaneous'>							Miscellaneous			</a>
 	</details><br><br>
-	<details><summary>College</summary><br>
+	<details><summary>College...</summary><br>
 		<a link='writing/writings/college/Christian-Bok.html' class='local'>	Christian Bök			</a>
 		<a link='writing/writings/college/Youre-Little.html' class='local'>		You're Little			</a>
 		<a link='writing/writings/college/ABBA-CD.html'>						ABBA CD					</a>
@@ -361,7 +361,7 @@ Add music to Drop, Point and clicks?
 	}
 
 	function openIframe(src) {
-		playSound('shared/sound/hit', .5)
+		playSound('shared/sound/pop', .5)
 		window.scrollTo(0, document.body.scrollHeight);
 		IFRAME.src = src
 		IFRAME.style.display = 'inline-block'
@@ -373,7 +373,7 @@ Add music to Drop, Point and clicks?
 			IFRAME.style.width = (IFRAME.contentDocument.body.scrollWidth + 15) + 'px'
 			IFRAME.style.height = (IFRAME.contentDocument.body.scrollHeight + 135) + 'px'
 		})
-		setMusic()
+		if (tab == 'music') setMusic()
 		hidePage(tab)
 	}
 
