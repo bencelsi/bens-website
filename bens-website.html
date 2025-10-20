@@ -176,7 +176,7 @@ Add music to Drop, Point and clicks?
 	<a link='music/songs.html?q=griven'>						Griven Music						</a>
 	<a href='https://www.youtube.com/watch?v=NzcUOxN2IuM'>		Drew's Blues: A Rock Operettta		</a>
 	<br><br><br>
-	<a link='music/songs.html?q=songs' class='local'>			Songs								</a>
+	<a link='music/songs.html?q=allSongs' class='local'>		All Songs							</a>
 	<a link='music/albums.html' class='local'>					Albums								</a>
 </div>
 
@@ -292,7 +292,7 @@ Add music to Drop, Point and clicks?
 <div id='videoPage' class='page'>
 	<h2>Video</h2>
 	<a link='video/video.html?q=all'>				All Videos			</a>
-	<a link='video/video.html?q=musicVideos'>		Music Videos		</a>
+	<a link='video/video.html?q=songMusicVideos'>	Music Videos		</a>
 	<a link='video/video.html?q=liveAction'>		Live Action			</a>
 	<a link='video/video.html?q=animation'>			Animation			</a>
 	<a link='video/video.html?q=miscellaneous'>		Miscellaneous		</a>
@@ -305,7 +305,7 @@ Add music to Drop, Point and clicks?
 <div id="iframeDiv">
 	<iframe id="iframe" src="source:blank"></iframe>
 </div>
-
+	
 <!-- <img src="gif/footer.gif"> -->
 <br><br><br>
 </body>	
@@ -373,7 +373,7 @@ Add music to Drop, Point and clicks?
 			IFRAME.style.width = (IFRAME.contentDocument.body.scrollWidth + 15) + 'px'
 			IFRAME.style.height = (IFRAME.contentDocument.body.scrollHeight + 135) + 'px'
 		})
-		if (tab == 'music') setMusic()
+		if (tab == 'music' || tab == 'video' || tab == 'games') setMusic()
 		hidePage(tab)
 	}
 

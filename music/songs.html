@@ -71,6 +71,7 @@
 <script src="../shared/shared.js"></script>
 <script src="albums/miscellaneous/0-list.js"></script>
 <script src="albums/griven/0-list.js"></script>
+<script src="albums/all-songs/0-list.js"></script>
 <script src="albums/mashups/0-list.js"></script>
 <script src="albums/old-piano/0-list.js"></script>
 <script src="albums/podcasts/0-list.js"></script>
@@ -99,7 +100,8 @@ let config = {		//title					//list				//numbered	//cover
 	'griven': 		['Griven Music', 		grivenList,			true, 		'griven.png'		],
 	'podcasts':		['Music for Podcasts',	podcastsList,		false,		'breathe.jpg'		],
 	'old-piano':	['Old Piano Songs',		oldPianoList,		false,		'piano.png'			],
-	'songs':		['Songs',				songsList,			true,		'Moss Rock.png'		]
+	'all-songs':	['All Songs',			allSongsList,		false,		'Moss Rock.png'		],
+	'songs':		['Songs',				songsList,			true,		'Songs.jpg'			]
 }
 
 let q = new URLSearchParams(window.location.search).get('q')
