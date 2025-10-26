@@ -12,7 +12,7 @@ public class Toolkit {
     public static String rootDir =        userDir + "LocalDrive/";
     public static String bouncesDir =     rootDir + "MUSIC•••••••••••••••••••••••••/Audio/Bounces/Songs";
     public static String websiteDir =     rootDir + "CODE•••••••••••••••••••••••••/github/bencelsi.github.io/music/songs";
-    public static String homepageDir =    rootDir + "CODE•••••••••••••••••••••••••/github/bens-homepage/songs/song-files";
+    public static String homepageDir =    rootDir + "🟢\\ CODE/github/bens-homepage/songs/song-files";
     public static String googleDriveDir = userDir + "Google Drive/Music/Bounces (Google Drive)";
     public static String itunesDir =      userDir + "Music/iTunes/Automatically\\ Add\\ to\\ Music";
 
