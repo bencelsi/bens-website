@@ -19,7 +19,7 @@ dirs = [
 
 
 fileNames = []
-for filename in os.listdir("/Users/bencelsi/LocalDrive/CODE•••••••••••••••••••••••••/github/bencelsi.github.io/" + dir):
+for filename in os.listdir("/Users/bencelsi/LocalDrive/CODE/github/bencelsi.github.io/" + dir):
     if filename != ".DS_Store" and filename != "0-list.js":
         fileNames.append(filename)
 

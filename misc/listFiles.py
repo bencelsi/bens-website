@@ -14,7 +14,7 @@ def toCamelCase(s):
     return ''.join([s[0].lower(), s[1:]])
 
 photos = []
-for filename in os.listdir("/Users/bencelsi/LocalDrive/CODE•••••••••••••••••••••••••/github/bencelsi.github.io/art/" + dir):
+for filename in os.listdir("/Users/bencelsi/LocalDrive/CODE/github/bencelsi.github.io/art/" + dir):
     if filename != ".DS_Store":
         photos.append(filename)
 
