@@ -71,14 +71,14 @@
 <script src="../shared/shared.js"></script>
 <script src="albums/miscellaneous/0-list.js"></script>
 <script src="albums/griven/0-list.js"></script>
-<script src="albums/all-songs/0-list.js"></script>
+<script src="albums/TopBounces/0-list.js"></script>
 <script src="albums/mashups/0-list.js"></script>
 <script src="albums/old-piano/0-list.js"></script>
 <script src="albums/podcasts/0-list.js"></script>
 <script src="albums/songs/0-list.js"></script>
 <script>
 /* 
-TODO: dynamically add script based on query param
+TODO: dynamically add script based on query param?
 TODO: show image corresponing to song (if applicable)
 TODO: 
 
@@ -100,7 +100,7 @@ let config = {		//title					//list				//numbered	//cover
 	'griven': 		['Griven Music', 		grivenList,			true, 		'griven.png'		],
 	'podcasts':		['Music for Podcasts',	podcastsList,		false,		'breathe.jpg'		],
 	'old-piano':	['Old Piano Songs',		oldPianoList,		false,		'piano.png'			],
-	'all-songs':	['All Songs',			allSongsList,		false,		'Moss Rock.png'		],
+	'TopBounces':	['Top Bounces',			topBouncesList,		false,		'Moss Rock.png'		],
 	'songs':		['Songs',				songsList,			true,		'Songs.jpg'			]
 }
 
@@ -123,29 +123,30 @@ let songDiv = get("songs")
 let totalLength = 0;
 let songAudios = []
 
+
+
 for (let i = 0; i < songs.length; i++) {
 	let songNumber = document.createElement("td")
 	songNumber.innerHTML = i + 1 + "."
-	
 	let songTitle = document.createElement("td")
 	songTitle.innerHTML = removeExtension(songs[i])
-
 	let songAudioTd = document.createElement("td")
 	let songAudio = document.createElement("audio")
 	songAudio.src = songFolder + songs[i]
-	//console.log(songFolder + songs[i])
+	console.log(songFolder + songs[i])
 	songAudio.controls = true
 
 	songAudio.addEventListener("play", () => { 
-		for (let j = 0; j < songAudios.length && j != i; j++) {
-			songAudios[j].id = null
+		for (let j = 0; j < songAudios.length; j++) {
+			if (j == i) continue
+			songAudios[j].id = "unselected"
 			songAudios[j].pause()
 		}
 		songAudios[i].id = "highlighted"
 	})
 
 	songAudio.addEventListener("pause", () => { 
-		songAudios[i].id = null
+		songAudios[i].id = "unselected"
 	})
 
 	songAudio.addEventListener("ended", () => {
