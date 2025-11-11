@@ -233,7 +233,7 @@ Add music to Drop, Point and clicks?
 		<a link='writing/gallery.html?q=alphabet-sayings'>						Alphabet Sayings		</a>
 		<a link='writing/gallery.html?q=miscellaneous'>							Miscellaneous			</a>
 	</details><br><br>
-	<details><summary>College</summary><br>
+	<details><summary>College...</summary><br>
 		<a link='writing/writings/college/Christian-Bok.html' class='local'>	Christian Bök			</a>
 		<a link='writing/writings/college/Youre-Little.html' class='local'>		You're Little			</a>
 		<a link='writing/writings/college/ABBA-CD.html'>						ABBA CD					</a>
@@ -459,7 +459,7 @@ Add music to Drop, Point and clicks?
 	
 
 	function setMusic(volume = .2) {
-		if (muted || tab == null || isIframeOpen()) {
+		if (muted || tab == null || isIframeOpen() || isLocal) {
 			setSpeaker('gif/speaker' + (muted ? '-muted.png' : '.png'))
 			music.pause()
 		} else {
