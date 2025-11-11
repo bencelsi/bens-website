@@ -17,8 +17,7 @@
 	<div>
 		<h2 id='title'></h2><br>
 		<iframe id=youtubeScreen width=1152 height=648></iframe> <!-- (.9 * 720 x 1280) -->
-	
-		<!-- <video id='hostedScreen' width=1280 height='720' controls><source type='video/mp4'></video> -->
+		<video id='hostedScreen' width=1280 height='720' controls><source type='video/mp4'></video>
 		<br>
 	</div>
 	<br>
@@ -33,7 +32,7 @@
 // TODO: host everything, add 'thumbnails'
 
 const EMBED_URL = 		'https://youtube.com/embed/'
-//const VIDEO_SCREEN = 	get('hostedScreen')
+const VIDEO_SCREEN = 	get('hostedScreen')
 const YOUTUBE_SCREEN = 	get('youtubeScreen')
 const LEFT_BUTTON = 	get('left')
 const RIGHT_BUTTON =	get('right')
@@ -72,8 +71,21 @@ const ALL_VIDEOS = {
 	["Funny Fall (2003)",														EMBED_URL + '_ZfYnbAmSSs'	],
 	["When Robots Fight",														EMBED_URL + '1oGFcKeI83A' 	],
 	["His Biggest Mistake",														EMBED_URL + 'h3vyj5yZEmc'	],
+	["Everything Right is Wrong Again",											EMBED_URL + 'Wcy7xzgBQis'	],
 	["I Am a Robot", 															EMBED_URL + '0o0ZN87-Yj4'	],
-	["University of Washington of Thrones",										EMBED_URL + 'tEFIzkKNBFs'	]],
+	["University of Washington of Thrones",										EMBED_URL + 'tEFIzkKNBFs'	],
+	["A Doctor's Appointment in 1347", 											"doctor.mov"],
+	["Best Book Ever", 															"best-book-ever.mov"],
+	["Cleanup", 																"cleanup.mov"],
+	["The Homies and the Mystery of Death", 									"death.mov"],
+	["Ice Cube", 																"ice-cube.mov"],
+	["Magic Show", 																"magic-show.mov"],
+	["Mouse Trap", 																"mousetrap.mov"],
+	["Pencil Cans: The Movie", 													"pencil-cans.mov"],
+	["Rhoma", 																	"rhoma.mov"],
+	["T-Shirt", 																"t-shirt.mov"],
+	["The Dreaded Edge of the Table", 											"edge.mov"],
+],
 'miscellaneous': [
 	["Adam Driver.mp4",															EMBED_URL + '1l3XTtqRtTg'	],
 	["All Star But It's The Same As The Original And I Get A Copyright Strike",	EMBED_URL + 'XbtYqpFkQJo'	],
@@ -103,7 +115,8 @@ const ALL_VIDEOS = {
 	["Bingo's Fantastic Journey",												EMBED_URL + 'in3JswOAFDw'	],
 	["A Brief History of Galvanism",											EMBED_URL + 'A312PsGlMTk'	],
 	["Kelso's Choices",															EMBED_URL + 'tm5si5WQUqY'	],
-	["Maloy's Jewelry Workshop Commercial",										EMBED_URL + '8m9JRKYb5Ho'	]],
+	["Maloy's Jewelry Workshop Commercial",										EMBED_URL + '8m9JRKYb5Ho'	]
+	],
 }
 
 let videos = ALL_VIDEOS[new URLSearchParams(window.location.search).get('q')]
@@ -118,9 +131,20 @@ RANDOM_BUTTON.onclick = () => { index = random(0, videos.length - 1); setVideo()
 let index = 0; shuffle(videos); setVideo()
 
 function setVideo() {
+	let video = videos[index]
+	let isYoutube = video[1].startsWith(EMBED_URL)
+	//TODO: better
+	if (isYoutube) {
+		YOUTUBE_SCREEN.src = videos[index][1]
+		YOUTUBE_SCREEN.style.display = 'inline-block';
+		VIDEO_SCREEN.style.display = 'none';
+	} else {
+		VIDEO_SCREEN.src = 'videos/' + videos[index][1]
+		VIDEO_SCREEN.style.display = 'inline-block';
+		YOUTUBE_SCREEN.style.display = 'none';
+	}
 	TITLE.innerHTML = videos[index][0]
-	YOUTUBE_SCREEN.src = videos[index][1]
-	//VIDEO_SCREEN.src = 'videos/' + videos[index][1] + '.mp4'
+	
 }
 
 </script>
