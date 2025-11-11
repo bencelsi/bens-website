@@ -15,6 +15,7 @@ let drawingsList = [
 "Popcorn.JPG",
 "Prab.jpg",
 "Sanjay.JPG",
+"Sunland.jpeg",
 "Skull.JPG",
 "Sunflowers.JPG",
 "Window.jpg"]
