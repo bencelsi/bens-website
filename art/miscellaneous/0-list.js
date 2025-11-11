@@ -1,6 +1,7 @@
 let miscellaneousList = [
 "BusinessSpooner.jpeg",
 "DennisChair.png",
+"GarfunkelOates.png",
 "Gary.jpg",
 "Genders.png",
 "OffallyGood!.jpeg",
