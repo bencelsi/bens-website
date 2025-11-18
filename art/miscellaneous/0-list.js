@@ -1,7 +1,9 @@
 let miscellaneousList = [
 "BusinessSpooner.jpeg",
 "DennisChair.png",
-"GarfunkelOates.png",
+"GarfunkelOates.png", 
+//The Simon/Garfunkel/Oates/Hall Continuum (use color and lines to illustrate hair color and tallness )
+// Add ven circles, rotate 45 degrees
 "Gary.jpg",
 "Genders.png",
 "OffallyGood!.jpeg",

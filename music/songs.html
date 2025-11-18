@@ -93,6 +93,9 @@ All All - view all, including old versions
 rename song files & logic
 
 */
+if (typeof topBouncesList == 'undefined') {
+	topBouncesList = []
+}
 
 let config = {		//title					//list				//numbered	//cover
 	'miscellaneous':['Miscellaneous',		miscellaneousList,	false,		'Teapots.png'		],
