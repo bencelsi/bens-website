@@ -69,24 +69,13 @@
 	<br><br>
 
 <script src="../shared/shared.js"></script>
-<script src="albums/miscellaneous/0-list.js"></script>
-<script src="albums/griven/0-list.js"></script>
-<script src="albums/TopBounces/0-list.js"></script>
-<script src="albums/mashups/0-list.js"></script>
-<script src="albums/old-piano/0-list.js"></script>
-<script src="albums/podcasts/0-list.js"></script>
-<script src="albums/songs/0-list.js"></script>
-<script src="albums/dxarts/0-list.js"></script>
+<script src="songTable.js"></script>
+<script src="groupTable.js"></script>
 <script>
 /* 
 TODO: dynamically add script based on query param?
 TODO: show image corresponing to song (if applicable)
-TODO: 
-
-Ideal wold - 
-store bounces per project.
-have tools for:
-
+TODO: maybe just store separate groups as separate CSVs? easier to edit, easier to code...
 
 BYOA - assemble custom albums
 All - view 'newest' version of all bounces
@@ -94,53 +83,56 @@ All All - view all, including old versions
 rename song files & logic
 
 */
-if (typeof topBouncesList == 'undefined') {
-	topBouncesList = []
-}
-
-let config = {		//title					//list				//numbered	//cover
-	'miscellaneous':['Miscellaneous',		miscellaneousList,	false,		'Teapots.png'		],
-	'mashups':		['Mashups',				mashupsList,		true,		'Mashups.jpg'		],
-	'griven': 		['Griven Music', 		grivenList,			true, 		'griven.png'		],
-	'DXARTS': 		['DXARTS', 				dxartsList,			false, 		'dxarts.png'		],
-	'podcasts':		['Music for Podcasts',	podcastsList,		false,		'breathe.jpg'		],
-	'old-piano':	['Old Piano Songs',		oldPianoList,		false,		'piano.png'			],
-	'TopBounces':	['Top Bounces',			topBouncesList,		false,		'Moss Rock.png'		],
-	'songs':		['Songs',				songsList,			true,		'Songs.jpg'			]
-}
-
-let q = new URLSearchParams(window.location.search).get('q')
-let [title, songs, numbered, albumCover] = config[q]
-console.log(title)
-let songFolder = "albums/" + q + "/"
-let extension = ".mp3"
 
 const autoplayBox = get("autoplay"); const shuffleBox = get("shuffle")
+const songDiv = get("songs")
+const albumCover = get("albumCover")
+
 autoplayBox.onclick = () => { if (!autoplayBox.checked) shuffleBox.checked = false }
 shuffleBox.onclick = () => { if (shuffleBox.checked) autoplayBox.checked = true }
 
+const GROUP_COL = 4
+let group = new URLSearchParams(window.location.search).get('q')
 
-if (albumCover == null) get("albumCover").style.display = 'none'
-else get("albumCover").src = "albumCovers/" + albumCover
-document.title = title
+// find group image
+for (let i = 0; i < groupTable.length; i++) {
+	if (groupTable[i][0] == group) {
+		let groupImage = groupTable[i][1]
+		if (groupImage == '') get("albumCover").style.display = 'none'
+		else albumCover.src = "groupImages/" + groupImage
+		break
+	}
+}
+console.log(groupTable)
 
-let songDiv = get("songs")
-let totalLength = 0;
+
+let songDatas = [];
+// filter to songs in given group
+for (let i = 0; i < songTable.length; i++) {
+	let row = songTable[i]
+	if (group == row[GROUP_COL] || group == 'all') songDatas.push(row)
+}
+
 let songAudios = []
+for (let i = 0; i < songDatas.length; i++) addSong(songDatas[i], i)
 
 
+//document.title = title
 
-for (let i = 0; i < songs.length; i++) {
+function addSong(songData, i) {
+	let [title, extension, key, track, group, youtube, chords, image] = songData
+	
 	let songNumber = document.createElement("td")
 	songNumber.innerHTML = i + 1 + "."
 	let songTitle = document.createElement("td")
-	songTitle.innerHTML = removeExtension(songs[i])
+	songTitle.innerHTML = title
 	let songAudioTd = document.createElement("td")
 	let songAudio = document.createElement("audio")
-	songAudio.src = songFolder + songs[i]
-	//console.log(songFolder + songs[i])
+	songAudio.src = "groups/" + group + "/" + title + '.' + extension
+	console.log(songAudio.src)
 	songAudio.controls = true
 
+	// PLAY
 	songAudio.addEventListener("play", () => { 
 		for (let j = 0; j < songAudios.length; j++) {
 			if (j == i) continue
@@ -150,6 +142,7 @@ for (let i = 0; i < songs.length; i++) {
 		songAudios[i].id = "highlighted"
 	})
 
+	// PAUSE
 	songAudio.addEventListener("pause", () => { 
 		songAudios[i].id = "unselected"
 	})
@@ -172,55 +165,15 @@ for (let i = 0; i < songs.length; i++) {
 	songAudioTd.appendChild(songAudio)
 	
 	let row = document.createElement("tr")
-	if (!numbered) row.appendChild(songNumber)
+	//row.appendChild(songNumber) // make configurable?
 	row.appendChild(songTitle)
 	row.appendChild(songAudioTd)
 	songDiv.appendChild(row)
 }
 
+
 // TODO - way to keep playing song when browsing website?
 
-
-let topSongs = [
-	"Cats",
-	"Woke Up",
-	"Happened By Now",
-	"Play the Game",
-	"One Love",
-	"Feel Like a Fraud"
-]
-
-let moss_rock = [
-	"Cats",
-	"Woke Up",
-	"Play the Game",
-	"Leo",
-	"Round and Around",
-	"Going Electric!",
-	"Don't Get Me Down",
-	"Joe Frank",
-	"Spaghetti",
-	"Ill Go",
-	"Take You With Me",
-	"Breakfast on the Shore",
-	"Happened By Now",
-	"Miss You When You Go",
-	"Coming to a Close",
-	"Free",
-	"Feel Like a Fraud",
-	"Daisy",
-	"Golden Gate"
-]
-
-let space_jam = [
-	"Like a Star",
-	"Miyazaki Movies",
-	"Terrestrial Beauty",
-	"Joanie",
-	"Joe Frank",
-	"Tightrope",
-	"Dark Sky",
-]
 	
 function removeExtension(str) { return str.split('.').slice(0, -1).join('.') }
 

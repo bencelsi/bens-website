@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<title style='color: white'>Ben's Website!!!</title>
+	<title style='color: white'>Videos!</title>
 	<link rel='icon' type='image/x-icon' href='../favicon.ico'>
 	<link rel="stylesheet" href="../shared/shared.css">
 	<style type='text/css'>
@@ -16,7 +16,7 @@
 <div>
 	<div>
 		<h2 id='title'></h2><br>
-		<iframe id=youtubeScreen width=1152 height=648></iframe> <!-- (.9 * 720 x 1280) -->
+		<iframe id=youtubeScreen width=1152 height=648 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <!-- (.9 * 720 x 1280) -->
 		<video id='hostedScreen' width=1280 height='720' controls><source type='video/mp4'></video>
 		<br>
 	</div>
@@ -27,6 +27,7 @@
 	<br><br>
 </div>
 <script src='../shared/shared.js'></script>
+<script src='videoTable.js'></script>
 <script>
 // TODO: host everything with https://git-lfs.com/
 // TODO: host everything, add 'thumbnails'
@@ -39,130 +40,38 @@ const RIGHT_BUTTON =	get('right')
 const RANDOM_BUTTON = 	get('random')
 const TITLE = 			get('title')
 
-console.log('ok...')
-parseCsv()
+// Metadata Columns
 
-const ALL_VIDEOS = {
-'musicVideos': [
-	// Music videos
-	["ABBA Shreds!",															EMBED_URL + 'Bne3uCHS-Bw'	],
-	["The Ballad of Luigi", 													EMBED_URL + '-yIAxvgeHmE'	],
-	["Beetle the Cat",															EMBED_URL + 'Zk6Q6SfcGYU'	],
-	["Casiopea Forever",	 													EMBED_URL + '7_Iday6w0kI'	],
-	["Dream A Little Dream Of God",												EMBED_URL + 'emlw9bLSbcA'	],
-	["Drew's Blues: A Rock Operetta",											EMBED_URL + 'NzcUOxN2IuM'	],
-	["Everything Right is Wrong Again",											EMBED_URL + 'Wcy7xzgBQis'	],
-	["Fun, Fun, Fun, Fun, Fun, Fun, Fun", 										EMBED_URL + 'AurwJd0zw0I'	],
-	["Let's Go Ahead And Get Started 2", 										EMBED_URL + 'mJm6nD0hW88'	],
-	["I Wish They All Could Be California", 									EMBED_URL + 'aqviXXbtiUg'	],
-	["i yam what i yam",														EMBED_URL + 'Tdb0E7uegyc'	],
-	["Snakehips",																EMBED_URL + '5qnW6m7BPpI'	]],
-'songMusicVideos': [
-	// Song music videos
-	["The Ballad of Luigi", 													EMBED_URL + '-yIAxvgeHmE'	],
-	["Beetle the Cat",															EMBED_URL + 'Zk6Q6SfcGYU'	],
-	["Drew's Blues: A Rock Operettta",											EMBED_URL + 'NzcUOxN2IuM'	]],
-'liveAction': [
-	["Apple Jack the Ripper: Adventures of a Cereal Killer (2010)", 			EMBED_URL + 'LrtA9gXYt4c'	],
-	["The Banana Man", 															EMBED_URL + 'mfjrTnjbyJs'	],
-	["One Second A Day (2019)", 												EMBED_URL + 'LaAjKX-p5hk'	],
-	["Video Lab Detritus", 														EMBED_URL + 'dtdh8s74GI4'	],
-	["Intersections!",															EMBED_URL + 'eIqaIGZZzLg' 	],
-	["Let's Go Ahead And Get Started", 											EMBED_URL + 'Es_YxQToays'	]],
-'animation': [
-	// (add trolls)
-	["The Do(ugh)nut Man",														EMBED_URL + 'ilyPGt6T9T0'	],
-	["Funny Fall (2003)",														EMBED_URL + '_ZfYnbAmSSs'	],
-	["When Robots Fight",														EMBED_URL + '1oGFcKeI83A' 	],
-	["His Biggest Mistake",														EMBED_URL + 'h3vyj5yZEmc'	],
-	["Everything Right is Wrong Again",											EMBED_URL + 'Wcy7xzgBQis'	],
-	["I Am a Robot", 															EMBED_URL + '0o0ZN87-Yj4'	],
-	["University of Washington of Thrones",										EMBED_URL + 'tEFIzkKNBFs'	],
-	["A Doctor's Appointment in 1347", 											"doctor.mov"],
-	["Best Book Ever", 															"best-book-ever.mov"],
-	["Cleanup", 																"cleanup.mov"],
-	["The Homies and the Mystery of Death", 									"death.mov"],
-	["Ice Cube", 																"ice-cube.mov"],
-	["Magic Show", 																"magic-show.mov"],
-	["Mouse Trap", 																"mousetrap.mov"],
-	["Pencil Cans: The Movie", 													"pencil-cans.mov"],
-	["Rhoma", 																	"rhoma.mov"],
-	["T-Shirt", 																"t-shirt.mov"],
-	["The Dreaded Edge of the Table", 											"edge.mov"],
-],
-'miscellaneous': [
-	["Adam Driver.mp4",															EMBED_URL + '1l3XTtqRtTg'	],
-	["All Star But It's The Same As The Original And I Get A Copyright Strike",	EMBED_URL + 'XbtYqpFkQJo'	],
-	["Cat Reacts to Cats (2019) Trailer", 										EMBED_URL + 'W-ofqDuES7U'	],
-	["Champagne Music",															EMBED_URL + 'GTqxsACeoPQ'	],
-	["Dad Listen, Just Listen!", 												EMBED_URL + 'NGe5ujisd28'	],
-	["dancing queen but you're hiding in the bathroom during a school dance, but you're in a basement at 3am", 
-																				EMBED_URL + 'vCiM8z9-_iE'	],
-	["Blue Myself",																EMBED_URL + 'SDCCdpReEuQ'	],
-	["Don't Worry Be Happy",													EMBED_URL + 'yOaCePPiB9Y'	],
-	["Elton John's Parenting Advice",											EMBED_URL + 'CILBYRHcpvA'	],
-	["Homework", 																EMBED_URL + '5i2D7F1fmx0' 	],
-	["Honkin' Henry", 															EMBED_URL + 'D5ehn9a_iLY'	],
-	["How to Play Guitar",														EMBED_URL + 'awdspLT8f04'	],
-	["Ideas",																	EMBED_URL + 'YAtNl3pbYsg'	],
-	["My First Blender Movie",													EMBED_URL + '7uRKkHHZo5Y'	],
-	["Number Nine", 															EMBED_URL + 'IGXMVuIvInw'	],
-	["Pulp Fiction 1949",														EMBED_URL + 'ksxs5drHgTA'	],
-	["Pumpkin Bill?",															EMBED_URL + '5rfJa15sZbY'	],
-	["Slop it Up!",																EMBED_URL + 'IWYJtf5_u24'	],
-	["Underwear",																EMBED_URL + 'f7_Jbbqq0RY'	],
-	["You Didn't Have To Cut Me Ball", 											EMBED_URL + 'uQye8X1TvXI'	]],
-'rebeccasAnimations': [
-	["The Summer Dragons",														EMBED_URL + '7wnEuywiGb4'	],
-	["The Blue Gecko",															EMBED_URL + 'DRHOmGiXeqs'	],
-	["Frog Chase",																EMBED_URL + '7s0P97t_Xbg'	],
-	["Bingo's Fantastic Journey",												EMBED_URL + 'in3JswOAFDw'	],
-	["A Brief History of Galvanism",											EMBED_URL + 'A312PsGlMTk'	],
-	["Kelso's Choices",															EMBED_URL + 'tm5si5WQUqY'	],
-	["Maloy's Jewelry Workshop Commercial",										EMBED_URL + '8m9JRKYb5Ho'	]
-	],
+const TITLE_COL = 0, KEY_COL = 1, EXT_COL = 2, YT_COL = 3, GROUP_COL = 4, YEAR_COL = 5;
+
+let query = new URLSearchParams(window.location.search).get('q')
+
+let videos = [];
+for (let i = 0; i < videoTable.length; i++) {
+	let row = videoTable[i]
+	if (query == row[GROUP_COL] || query == 'ALL') videos.push(row)
 }
 
-let videos = ALL_VIDEOS[new URLSearchParams(window.location.search).get('q')]
-if (videos == null) {
-	videos = [ALL_VIDEOS['liveAction'], ALL_VIDEOS['musicVideos'], ALL_VIDEOS['animation'], ALL_VIDEOS['miscellaneous']].flat()
-}
+console.log(videos)
+let index = 0; 
+//shuffle(videos); 
+setVideo()
 
 LEFT_BUTTON.onclick = () => { index = decrement(index, videos.length - 1); setVideo() }
 RIGHT_BUTTON.onclick = () => { index = increment(index, videos.length - 1); setVideo() }
 RANDOM_BUTTON.onclick = () => { index = random(0, videos.length - 1); setVideo() }
 
-let index = 0; shuffle(videos); setVideo()
-
 function setVideo() {
+	console.log(videos)
 	let video = videos[index]
-	let isYoutube = video[1].startsWith(EMBED_URL)
-	//TODO: better
-	if (isYoutube) {
-		YOUTUBE_SCREEN.src = videos[index][1]
-		YOUTUBE_SCREEN.style.display = 'inline-block';
-		VIDEO_SCREEN.style.display = 'none';
-	} else {
-		VIDEO_SCREEN.src = 'videos/' + videos[index][1]
-		VIDEO_SCREEN.style.display = 'inline-block';
-		YOUTUBE_SCREEN.style.display = 'none';
-	}
-	TITLE.innerHTML = videos[index][0]
-}
-
-
-
-function parseCsv() {
-	console.log('aaa')
-	fetch("videoMetadata.csv")
-  		.then((res) => res.text())
-  		.then((text) => {
-
-			console.log('bb')
-			console.log(text)
-   		 // do something with "text"
-   		})
-  	.catch((e) => console.error(e));
+	let isYoutube = video[YT_COL] != ''
+	
+	if (isYoutube) YOUTUBE_SCREEN.src = EMBED_URL + videos[index][YT_COL]
+	else VIDEO_SCREEN.src = 'videos/' + videos[index][KEY_COL] + "." + videos[index][EXT_COL]
+	
+	VIDEO_SCREEN.style.display = isYoutube ? 'none' : 'inline-block'
+	YOUTUBE_SCREEN.style.display = isYoutube ? 'inline-block' : 'none'
+	TITLE.innerHTML = videos[index][TITLE_COL]
 }
 
 </script>

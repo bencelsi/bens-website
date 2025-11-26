@@ -57,6 +57,7 @@ Add music to Drop, Point and clicks?
 	<title>Ben's Website!!!</title>
 	<link rel='icon' type='image/x-icon' href='favicon.ico'>
 	<link rel="stylesheet" href="shared/shared.css">
+	<meta name="referrer" content="origin" />
 	<style type='text/css'>
 		body {
 			user-select: none;        /* Standard */
@@ -117,6 +118,7 @@ Add music to Drop, Point and clicks?
 			filter: drop-shadow(0 0 2.5rem rgb(255, 255, 255));
 			font-size: 40px;
 		}
+		
 	</style>
 </head>
 <!--------------------------------------------------------------------------->
@@ -292,11 +294,12 @@ Add music to Drop, Point and clicks?
 <!------------------------------------------------>
 <div id='videoPage' class='page'>
 	<h2>Video</h2>
-	<a link='video/video.html?q=all'>				All Videos			</a>
-	<a link='video/video.html?q=musicVideos'>		Music Videos		</a>
-	<a link='video/video.html?q=liveAction'>		Live Action			</a>
-	<a link='video/video.html?q=animation'>			Old Animation		</a>
-	<a link='video/video.html?q=miscellaneous'>		Miscellaneous		</a>
+	<a link='video/video.html?q=ALL'>				All Videos			</a>
+	<a link='video/video.html?q=MUSIC_VIDEO'>		Music Videos		</a>
+	<a link='video/video.html?q=MISCELLANEOUS'>		Miscellaneous		</a>
+	<a link='video/video.html?q=ANIMATION'>			Animation			</a>
+	<a link='video/video.html?q=OLD_STOPMOTION'>	Old Stopmotion		</a>
+	<a link='video/video.html?q=OLD_CGI'>			Old CGI				</a>
 </div>
 <br><br>
 
@@ -318,10 +321,10 @@ Add music to Drop, Point and clicks?
 <script src='shared/shared.js'></script>
 <script>
 	let IFRAME = get('iframe')
-	let muted = false;
 	let pages = [ 'musicPage', 'artPage', 'gamesPage', 'writingPage', 'videoPage' ]
 	let SPEAKER1 = get('speaker1')
 	let SPEAKER2 = get('speaker2')
+	let muted = false;
 	
 	SPEAKER1.onclick = SPEAKER2.onclick = () => {
 		muted = !muted
@@ -353,7 +356,6 @@ Add music to Drop, Point and clicks?
 			}
 		}
 	}
-
 
 	get('header').onclick = () => { 
 		playSound('shared/sound/dream.mp3', .5)
@@ -476,13 +478,6 @@ Add music to Drop, Point and clicks?
 	// 	msg.text = "Hello World";
 	// 	window.speechSynthesis.speak(msg);
 
-	const IFRAME_DIMS = {
-		'music/songs.html?q=miscellaneous' : 	[1000, 1200],
-		'music/songs.html?q=griven' : 			[1000, 800],
-		'music/songs.html?q=mashups' : 			[1000, 800],
-		'music/songs.html?q=old-piano' : 		[1000, 1700],
-	}
-
 	// Define pastel rainbow colors
 	const pastelRainbow = [
 		"#FFB3BA", // pastel red/pink
@@ -500,8 +495,6 @@ Add music to Drop, Point and clicks?
 	links.forEach((link, index) => {
 		link.style.color = pastelRainbow[index % pastelRainbow.length];
 	});
-
-
 
 </script>
 </html>
