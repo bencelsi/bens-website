@@ -39,6 +39,9 @@ const RIGHT_BUTTON =	get('right')
 const RANDOM_BUTTON = 	get('random')
 const TITLE = 			get('title')
 
+console.log('ok...')
+parseCsv()
+
 const ALL_VIDEOS = {
 'musicVideos': [
 	// Music videos
@@ -145,7 +148,21 @@ function setVideo() {
 		YOUTUBE_SCREEN.style.display = 'none';
 	}
 	TITLE.innerHTML = videos[index][0]
-	
+}
+
+
+
+function parseCsv() {
+	console.log('aaa')
+	fetch("videoMetadata.csv")
+  		.then((res) => res.text())
+  		.then((text) => {
+
+			console.log('bb')
+			console.log(text)
+   		 // do something with "text"
+   		})
+  	.catch((e) => console.error(e));
 }
 
 </script>

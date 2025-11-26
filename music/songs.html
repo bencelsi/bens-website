@@ -76,6 +76,7 @@
 <script src="albums/old-piano/0-list.js"></script>
 <script src="albums/podcasts/0-list.js"></script>
 <script src="albums/songs/0-list.js"></script>
+<script src="albums/dxarts/0-list.js"></script>
 <script>
 /* 
 TODO: dynamically add script based on query param?
@@ -101,6 +102,7 @@ let config = {		//title					//list				//numbered	//cover
 	'miscellaneous':['Miscellaneous',		miscellaneousList,	false,		'Teapots.png'		],
 	'mashups':		['Mashups',				mashupsList,		true,		'Mashups.jpg'		],
 	'griven': 		['Griven Music', 		grivenList,			true, 		'griven.png'		],
+	'DXARTS': 		['DXARTS', 				dxartsList,			false, 		'dxarts.png'		],
 	'podcasts':		['Music for Podcasts',	podcastsList,		false,		'breathe.jpg'		],
 	'old-piano':	['Old Piano Songs',		oldPianoList,		false,		'piano.png'			],
 	'TopBounces':	['Top Bounces',			topBouncesList,		false,		'Moss Rock.png'		],
@@ -109,7 +111,7 @@ let config = {		//title					//list				//numbered	//cover
 
 let q = new URLSearchParams(window.location.search).get('q')
 let [title, songs, numbered, albumCover] = config[q]
-
+console.log(title)
 let songFolder = "albums/" + q + "/"
 let extension = ".mp3"
 
@@ -120,7 +122,7 @@ shuffleBox.onclick = () => { if (shuffleBox.checked) autoplayBox.checked = true 
 
 if (albumCover == null) get("albumCover").style.display = 'none'
 else get("albumCover").src = "albumCovers/" + albumCover
-get("title").innerHTML = title
+document.title = title
 
 let songDiv = get("songs")
 let totalLength = 0;
@@ -136,7 +138,7 @@ for (let i = 0; i < songs.length; i++) {
 	let songAudioTd = document.createElement("td")
 	let songAudio = document.createElement("audio")
 	songAudio.src = songFolder + songs[i]
-	console.log(songFolder + songs[i])
+	//console.log(songFolder + songs[i])
 	songAudio.controls = true
 
 	songAudio.addEventListener("play", () => { 

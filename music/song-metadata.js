@@ -1,14 +1,12 @@
 let songMetadata = {				
-// The obvious question - add all songs to this framework? but is this necessary?
+// The obvious question - add all songs to this framework? but is this necessary? CSV easire?
 
 
-										//title				image		vid			chords  	 //audio section?
+										//keyword		vid			chords  	 //audio section?
 	//SONGS
 	"Beetle":							["Beetle",			1,	"Zk6Q6SfcGYU",		1		],	//mv
 	"The Ballad of Luigi":				["luigi",			1,	"-yIAxvgeHmE",		1		],	//mv
 	"Drew's Blues":						["drew",			1,	"NzcUOxN2IuM",		1		],	//mv
-
-
 
 	
 	//REBECCAS ANIMATION
