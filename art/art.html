@@ -20,46 +20,39 @@
 		</div>
 	</div>
 <script src="../shared/shared.js"></script>
-<script src="dead-end/0-list.js"></script>
-<script src="drawings/0-list.js"></script>
-<script src="life-of-pika/0-list.js"></script>
-<script src="miscellaneous/0-list.js"></script>
-<script src="paintings/0-list.js"></script>
-<script src="photography/0-list.js"></script>
-<script src="uw-daily/0-list.js"></script>
+<script src="artTable.js"></script>
+<script src="groups/photography/0-list.js"></script>
 <script>
 
 // TODO: show painting name
-// Add Prab, Oliver, Carson, Fountain painting! Artbook doodle, Maze etc
+// Add Oliver, Carson, Artbook doodle, Maze etc
 // Combine seattle candidates into one
 
 const CLICK = '../shared/sound/click.wav'
-let config = {
-	//dir				// title					// list				cycle	shuffle
-	'dead-end': 		['Dead End Test Renders', 		deadEndList, 		true, 	true],
-	'drawings': 		['Drawings', 					drawingsList,		true,	true],
-	'miscellaneous': 	['Miscellaneous', 				miscellaneousList,	true,	true],
-	'life-of-pika':		['Life of Pika Illustrations',	lifeOfPikaList,		false,	false],
-	'paintings': 		['Paintings', 					paintingsList,		true, 	true],
-	'uw-daily':			['UW Daily Illustrations',		uwDailyList,		true,	true],
-	'photography':		['Photography',					photographyList,	true,	true]
+
+
+//let images, q, title
+const FILENAME_COL = 0, GROUP_COL = 1
+
+let q = new URLSearchParams(window.location.search).get('q')
+
+let images = [];
+for (let i = 0; i < artTable.length; i++) {
+	let row = artTable[i]
+	if (row[GROUP_COL] == q || q == 'all') images.push(row)
 }
 
-let images, q, title
-
-q = new URLSearchParams(window.location.search).get('q')
 console.log(q)
-title = config[q][0]
-images = config[q][1]
+
 if (q == "photography") {
 	title = "Photography"
 	get("artScreen").style.width = "700px"
 	images = photographyList
 }
 
-get("title").innerHTML = title
+//get("title").innerHTML = title
 let index = 0
-if (config[q][2]) shuffle(images)
+//if (config[q][2]) shuffle(images)
 
 get("left").onclick = () => {
 	playSound(CLICK, .5); index = decrement(index, images.length - 1); setImage(); console.log(images[index])
@@ -73,7 +66,9 @@ get("random").onclick = () => {
 	playSound(CLICK, .5); index = random(0, images.length - 1); setImage()
 }
 
-function setImage() { get('artScreen').src = q + "/" + images[index] }
+function setImage() {
+	get('artScreen').src = 'groups/' + q + "/" + images[index][FILENAME_COL]
+}
 
 setImage()
 </script>

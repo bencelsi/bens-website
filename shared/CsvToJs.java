@@ -12,13 +12,21 @@ public class CsvToJs {
 	private static final String[] FILEPATHS = {
 		"music/songTable",
 		"video/videoTable",
-		"music/groupTable"
+		"art/artTable"
 	};
 
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 		for (String filepath : FILEPATHS) convertCsvToJs(filepath);
 	}
 
+	// For each group, Reads files, adds them to given CSV file (1st col = filename, 2nd col = group, subsequent columns blank)
+	// Use opencsv?
+	private static void addFilesToCsv() {
+
+	}
+
+
+	// Converts given CSV file (x.csv) to a JS list (with varname 'x') and writes that file (x.js)
 	private static void convertCsvToJs(String filepath) throws FileNotFoundException, IOException {
 		
 		String[] filepathSplit = filepath.split("/");

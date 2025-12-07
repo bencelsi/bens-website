@@ -92,25 +92,30 @@ autoplayBox.onclick = () => { if (!autoplayBox.checked) shuffleBox.checked = fal
 shuffleBox.onclick = () => { if (shuffleBox.checked) autoplayBox.checked = true }
 
 const GROUP_COL = 4
-let group = new URLSearchParams(window.location.search).get('q')
+let q = new URLSearchParams(window.location.search).get('q')
+
+let groupConfig = {
+	'podcasts': 		['breathe.jpg'],
+	'dxarts': 			['dxarts.png'],
+	'griven': 			['griven.png'],
+	'instrumentals': 	['Teapots.png'],
+	'mashups': 			['Mashups.jpg'],
+	'miscellaneous': 	['Teapots.png'],
+	'oldPiano': 		['piano.png'],
+	'topBounces': 		['Moss Rock.png'],
+	'songs': 			['Songs.jpg']
+}
 
 // find group image
-for (let i = 0; i < groupTable.length; i++) {
-	if (groupTable[i][0] == group) {
-		let groupImage = groupTable[i][1]
-		if (groupImage == '') get("albumCover").style.display = 'none'
-		else albumCover.src = "groupImages/" + groupImage
-		break
-	}
-}
-console.log(groupTable)
+
+albumCover.src = "groupImages/" + groupConfig[group][0]
 
 
 let songDatas = [];
 // filter to songs in given group
 for (let i = 0; i < songTable.length; i++) {
 	let row = songTable[i]
-	if (group == row[GROUP_COL] || group == 'all') songDatas.push(row)
+	if (q == row[GROUP_COL] || q == 'all') songDatas.push(row)
 }
 
 let songAudios = []

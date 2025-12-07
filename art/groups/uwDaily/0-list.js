@@ -1,5 +1,4 @@
 let uwDailyList = [
-".DS_Store",
 "420.jpg",
 "Hillary.jpg",
 "Stars.jpg",
