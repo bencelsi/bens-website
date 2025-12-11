@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <head>
 	<title>Ben's Website!!!</title>
-	<link rel='icon' type='image/x-icon' href='../favicon.ico'>
+	<link rel='icon' type='image/x-icon' href='../shared/favicon.ico'>
 	<link rel="stylesheet" href="../shared/shared.css">
 	<style type="text/css">
-		#artScreen { height: 700px;  margin: 15px;}
+		
+		#all {
+			position: relative;
+  			display: inline;
+		}
+		#book { 
+			height: 600px;
+			margin: auto;
+			display: block;
+			position: absolute;
+  			bottom: 200;
+  			right: 200;
+		}
+		#tab1 {
+			width: 300px;
+			position: absolute;
+  			bottom: 0;
+  			right: 100;
+		}
 	</style>
 </head>
 <body>
 	<br>
 	<!-- <a href="../index.html?tab=art" id="home">hm</a> -->
-	<div>
+	<div id="all">
 		<h1 style="color: purple;" id="title"><h1>
-		<div><img id="book"/></div>
+		<div>
+			<img id="tab1" src="images/tab1/h1.png"/>
+			<img id="book" src="images/pg0.png"/>
+		</div>
 	</div>
-<script src="../shared/shared.js"></script>
-<script src="artTable.js"></script>
-<script src="groups/photography/0-list.js"></script>
 <script>
+	const BOOK = document.getElementById('book');
+	const TAB1 = document.getElementById('tab1')
+
+	TAB1.onclick = function(event) {
+
+	}
+
+	let page = 0
+	BOOK.onclick = function(event) {
+		midPoint = page == 1 ? 575 : 675
+		
+		if (page == 0 || event.clientX > midPoint) {
+			page = Math.min(page + 1, 8)
+		} else {
+			page = Math.max(page - 1, 0)
+		}
+		console.log(event.clientX)
+		BOOK.src = "images/pg" + page + ".png"
+	}
 
 </script>
 </body>
