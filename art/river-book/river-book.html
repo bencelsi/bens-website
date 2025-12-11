@@ -2,51 +2,74 @@
 <head>
 	<title>Ben's Website!!!</title>
 	<link rel='icon' type='image/x-icon' href='../shared/favicon.ico'>
-	<link rel="stylesheet" href="../shared/shared.css">
+	<link rel="stylesheet" href="../../shared/shared.css">
 	<style type="text/css">
 		
 		#all {
 			position: relative;
-  			display: inline;
+			width: fit-content; /* Shrinks to the images’ size */
+			margin: 0 auto;     /* Centers the container */
 		}
-		#book { 
-			height: 600px;
-			margin: auto;
+
+		.img {
 			display: block;
-			position: absolute;
-  			bottom: 200;
-  			right: 200;
+			width: 200px; /* Example size */
 		}
-		#tab1 {
-			width: 300px;
+
+		#book {
+			height: 500px;
+			position: relative; /* Base */
+			z-index: 1;
+		}
+
+		.tab {
 			position: absolute;
-  			bottom: 0;
-  			right: 100;
+			top: 0;       /* Adjust to overlap more/less */
+			left: 0;
+			z-index: 2;   /* On top */	
+			display: none;
+		}
+
+		#tab1 {
+			width: 380px;
+			transform: translate(var(--x, 360px), var(--y, 120px));
+		}
+		#tab2 {
+			width: 370px;
+			transform: translate(var(--x, 360px), var(--y, 250px));
+		}
+		#tab3 {
+			width: 450px;
+			transform: translate(var(--x, 340px), var(--y, 360px));
 		}
 	</style>
 </head>
 <body>
 	<br>
 	<!-- <a href="../index.html?tab=art" id="home">hm</a> -->
-	<div id="all">
-		<h1 style="color: purple;" id="title"><h1>
-		<div>
-			<img id="tab1" src="images/tab1/h1.png"/>
-			<img id="book" src="images/pg0.png"/>
-		</div>
+	<h1 style="color: purple;" id="title">Generate Your Own River-Related Art Project<h1>
+	<div id = "all">
+		<img id="book" src="images/pg0.png"/>
+		<img id="tab1" class = "tab" src="images/tab1/1.png"/>
+		<img id="tab2" class = "tab" src="images/tab2/1.png"/>
+		<img id="tab3" class = "tab" src="images/tab3/1.png"/>
 	</div>
 <script>
 	const BOOK = document.getElementById('book');
-	const TAB1 = document.getElementById('tab1')
+	
+	const TABS = [
+		document.getElementById('tab1'),
+		document.getElementById('tab2'),
+		document.getElementById('tab3')
+	]
 
-	TAB1.onclick = function(event) {
-
-	}
+	let tabVals = [1, 1, 1]
+	let maxTabVals = [8, 10, 9]
 
 	let page = 0
 	BOOK.onclick = function(event) {
-		midPoint = page == 1 ? 575 : 675
-		
+		midPoint = page == 1 ? 670 : 750
+		console.log()
 		if (page == 0 || event.clientX > midPoint) {
 			page = Math.min(page + 1, 8)
 		} else {
@@ -54,6 +77,35 @@
 		}
 		console.log(event.clientX)
 		BOOK.src = "images/pg" + page + ".png"
+		update()
+	}
+
+	for (let i = 0; i <= 2; i++) {
+		let tab = TABS[i]
+		tab.onclick = (event) => {
+			if (event.clientX > 750) {
+				tabVals[i] = Math.min(tabVals[i] + 1, maxTabVals[i])
+				console.log('r')
+			} else {
+				tabVals[i] = Math.max(tabVals[i] - 1, 1)
+			}
+			console.log(event.clientX)
+			TABS[i].src = "images/tab" + (i + 1) + "/" + tabVals[i] + ".png"
+		}
+	}
+
+	function update() {
+		if (page == 0) {
+			for (let i = 0; i <= 2; i++) {
+				let tab = TABS[i]
+				tab.style.display = 'none'
+			}
+		} else {
+			for (let i = 0; i <= 2; i++) {
+				let tab = TABS[i]
+				tab.style.display = 'block'
+			}
+		}
 	}
 
 </script>
