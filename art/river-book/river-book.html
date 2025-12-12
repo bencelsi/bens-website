@@ -36,10 +36,10 @@
 		}
 		#tab2 {
 			width: 370px;
-			transform: translate(var(--x, 360px), var(--y, 250px));
+			transform: translate(var(--x, 375px), var(--y, 250px));
 		}
 		#tab3 {
-			width: 450px;
+			width: 440px;
 			transform: translate(var(--x, 340px), var(--y, 360px));
 		}
 	</style>
@@ -50,9 +50,9 @@
 	<h1 style="color: purple;" id="title">Generate Your Own River-Related Art Project Idea<h1>
 	<div id = "all">
 		<img id="book" src="images/pg0.png"/>
-		<img id="tab1" class = "tab" src="images/tab1/1.png"/>
-		<img id="tab2" class = "tab" src="images/tab2/1.png"/>
-		<img id="tab3" class = "tab" src="images/tab3/1.png"/>
+		<img id="tab1" class = "tab" src="images/tab1/0.png"/>
+		<img id="tab2" class = "tab" src="images/tab2/0.png"/>
+		<img id="tab3" class = "tab" src="images/tab3/0.png"/>
 	</div>
 <script>
 	const BOOK = document.getElementById('book');
@@ -63,19 +63,18 @@
 		document.getElementById('tab3')
 	]
 
-	let tabVals = [1, 1, 1]
+	let tabVals = [0, 0, 0]
 	let maxTabVals = [8, 10, 9]
 
 	let page = 0
 	BOOK.onclick = function(event) {
-		midPoint = page == 1 ? 670 : 750
-		console.log()
-		if (page == 0 || event.clientX > midPoint) {
+		midPoint = page == 1 ? 450 : 540
+		let x = relavativeX(event)
+		if (page == 0 || x > midPoint) {
 			page = Math.min(page + 1, 8)
 		} else {
 			page = Math.max(page - 1, 0)
 		}
-		console.log(event.clientX)
 		BOOK.src = "images/pg" + page + ".png"
 		update()
 	}
@@ -83,13 +82,12 @@
 	for (let i = 0; i <= 2; i++) {
 		let tab = TABS[i]
 		tab.onclick = (event) => {
-			if (event.clientX > 750) {
+			let x = relavativeX(event)
+			if (x > 190) {
 				tabVals[i] = Math.min(tabVals[i] + 1, maxTabVals[i])
-				console.log('r')
 			} else {
-				tabVals[i] = Math.max(tabVals[i] - 1, 1)
+				tabVals[i] = Math.max(tabVals[i] - 1, 0)
 			}
-			console.log(event.clientX)
 			TABS[i].src = "images/tab" + (i + 1) + "/" + tabVals[i] + ".png"
 		}
 	}
@@ -106,6 +104,11 @@
 				tab.style.display = 'block'
 			}
 		}
+	}
+
+	function relavativeX(e) {
+		var rect = e.target.getBoundingClientRect();
+		return e.clientX - rect.left; //x position within the element.
 	}
 
 </script>
