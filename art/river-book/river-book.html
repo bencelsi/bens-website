@@ -74,10 +74,7 @@
 		if (page == 0 || x > midPoint) page = Math.min(page + 1, 8)
 		else page = Math.max(page - 1, 0)
 		updatePage()
-		for (let i = 0; i <= 2; i++) {
-			let tab = TABS[i]
-			tab.style.display = page == 0 ? 'none' : 'block'
-		}
+		updateTabVisibility()
 	}
 
 	for (let i = 0; i <= 2; i++) {
@@ -98,6 +95,7 @@
 		}
 		page = random(1, 8)
 		updatePage()
+		updateTabVisibility()
 	} 
 
 	function updatePage() {
@@ -106,6 +104,13 @@
 
 	function updateTab(i) {
 		TABS[i].src = "images/tab" + (i + 1) + "/" + tabVals[i] + ".png"
+	}
+
+	function updateTabVisibility() {
+		for (let i = 0; i <= 2; i++) {
+			let tab = TABS[i]
+			tab.style.display = page == 0 ? 'none' : 'block'
+		}
 	}
 
 	function relavativeX(e) {
