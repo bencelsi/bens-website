@@ -44,24 +44,25 @@
 		}
 	</style>
 </head>
+
 <body>
 	<br>
 	<!-- <a href="../index.html?tab=art" id="home">hm</a> -->
 	<h1 style="color: purple;" id="title">Generate Your Own River-Related Art Project Idea<h1>
 	<div id = "all">
-		<img id="book" src="images/pg0.png"/>
+		<img id="book" src="images/pages/0.jpeg"/>
 		<img id="tab1" class = "tab" src="images/tab1/0.png"/>
 		<img id="tab2" class = "tab" src="images/tab2/0.png"/>
 		<img id="tab3" class = "tab" src="images/tab3/0.png"/>
 	</div>
+	<br>
+
+	<img src="../../gif/random.gif" id="randomButton"/>
+
+<script src="../../shared/shared.js"></script>
 <script>
-	const BOOK = document.getElementById('book');
-	
-	const TABS = [
-		document.getElementById('tab1'),
-		document.getElementById('tab2'),
-		document.getElementById('tab3')
-	]
+	const BOOK = get('book');
+	const TABS = [get('tab1'), get('tab2'), get('tab3')]
 
 	let tabVals = [0, 0, 0]
 	let maxTabVals = [8, 10, 9]
@@ -70,40 +71,41 @@
 	BOOK.onclick = function(event) {
 		midPoint = page == 1 ? 450 : 540
 		let x = relavativeX(event)
-		if (page == 0 || x > midPoint) {
-			page = Math.min(page + 1, 8)
-		} else {
-			page = Math.max(page - 1, 0)
+		if (page == 0 || x > midPoint) page = Math.min(page + 1, 8)
+		else page = Math.max(page - 1, 0)
+		updatePage()
+		for (let i = 0; i <= 2; i++) {
+			let tab = TABS[i]
+			tab.style.display = page == 0 ? 'none' : 'block'
 		}
-		BOOK.src = "images/pg" + page + ".png"
-		update()
 	}
 
 	for (let i = 0; i <= 2; i++) {
 		let tab = TABS[i]
 		tab.onclick = (event) => {
 			let x = relavativeX(event)
-			if (x > 190) {
-				tabVals[i] = Math.min(tabVals[i] + 1, maxTabVals[i])
-			} else {
-				tabVals[i] = Math.max(tabVals[i] - 1, 0)
-			}
-			TABS[i].src = "images/tab" + (i + 1) + "/" + tabVals[i] + ".png"
+			if (x > 190) tabVals[i] = Math.min(tabVals[i] + 1, maxTabVals[i])
+			else tabVals[i] = Math.max(tabVals[i] - 1, 0)
+			updateTab(i)
 		}
 	}
 
-	function update() {
-		if (page == 0) {
-			for (let i = 0; i <= 2; i++) {
-				let tab = TABS[i]
-				tab.style.display = 'none'
-			}
-		} else {
-			for (let i = 0; i <= 2; i++) {
-				let tab = TABS[i]
-				tab.style.display = 'block'
-			}
+
+	get('randomButton').onclick = () => {
+		for (let i = 0; i < 3; i++) {
+			tabVals[i] = random(0, maxTabVals[i])
+			updateTab(i)
 		}
+		page = random(1, 8)
+		updatePage()
+	} 
+
+	function updatePage() {
+		BOOK.src = "images/pages/" + page + ".jpeg"
+	}
+
+	function updateTab(i) {
+		TABS[i].src = "images/tab" + (i + 1) + "/" + tabVals[i] + ".png"
 	}
 
 	function relavativeX(e) {
