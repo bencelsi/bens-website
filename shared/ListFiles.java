@@ -34,7 +34,9 @@ public class ListFiles {
 		File dir = new File(path);
         List<String> filenames = new ArrayList<String>(); // Song name -> list of bounces
         for (File filename : dir.listFiles()) {
-            if (filename.isDirectory()) continue;
+            if (filename.isDirectory() || filename.getName().startsWith(".")) {
+				continue;
+			}
 			filenames.add(filename.getName());
         }
 
