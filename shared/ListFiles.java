@@ -8,6 +8,8 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
 
 public class ListFiles {
 	
@@ -39,7 +41,7 @@ public class ListFiles {
 		// 2. Scan csvFile, keep track of existing files
 		Scanner scanner = new Scanner(new File(csvFile));
 		StringBuilder result = new StringBuilder();
-		List<String> existingFilenames = new ArrayList<>();
+		Set<String> existingFilenames = new HashSet<>();
 		while (scanner.hasNextLine()) {
 			String line = scanner.nextLine();
 			String[] split = line.split(",");
@@ -50,6 +52,7 @@ public class ListFiles {
 
 		//3. Add filenames to csv file, skipping existing
 		for (String filename : filenames) {
+			if (existingFilenames.contains(filename)) continue;
 			result.append(filename + "," + groupName + "\n");
 		}
 

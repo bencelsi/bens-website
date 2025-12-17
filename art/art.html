@@ -39,18 +39,18 @@ for (let i = 0; i < artTable.length; i++) {
 	if (row[GROUP_COL] == q || q == 'all') images.push(row)
 }
 
-console.log(q)
-
 //get("title").innerHTML = title
 let index = 0
 //if (config[q][2]) shuffle(images)
 
 get("left").onclick = () => {
-	playSound(CLICK, .5); index = decrement(index, images.length - 1); setImage(); console.log(images[index])
+	playSound(CLICK, .5); index = decrement(index, images.length - 1); setImage();
+	console.log(images[index])
 }
 
 get("right").onclick = () => {
 	playSound(CLICK, .5); index = increment(index, images.length - 1); setImage()
+	console.log(images[index])
 }	
 
 get("random").onclick = () => {
