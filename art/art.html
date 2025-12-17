@@ -21,15 +21,12 @@
 	</div>
 <script src="../shared/shared.js"></script>
 <script src="artTable.js"></script>
-<script src="groups/photography/0-list.js"></script>
 <script>
 
 // TODO: show painting name
-// Add Oliver, Carson, Artbook doodle, Maze etc
-// Combine seattle candidates into one
+// Combine seattle candidates into one?
 
 const CLICK = '../shared/sound/click.wav'
-
 
 //let images, q, title
 const FILENAME_COL = 0, GROUP_COL = 1
@@ -44,11 +41,11 @@ for (let i = 0; i < artTable.length; i++) {
 
 console.log(q)
 
-if (q == "photography") {
-	title = "Photography"
-	get("artScreen").style.width = "700px"
-	images = photographyList
-}
+// if (q == "photography") {
+// 	title = "Photography"
+// 	get("artScreen").style.width = "700px"
+// 	images = photographyList
+// }
 
 //get("title").innerHTML = title
 let index = 0

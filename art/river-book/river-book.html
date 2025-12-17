@@ -74,7 +74,6 @@
 		if (page == 0 || x > midPoint) page = Math.min(page + 1, 8)
 		else page = Math.max(page - 1, 0)
 		updatePage()
-		updateTabVisibility()
 	}
 
 	for (let i = 0; i <= 2; i++) {
@@ -95,11 +94,11 @@
 		}
 		page = random(1, 8)
 		updatePage()
-		updateTabVisibility()
 	} 
 
 	function updatePage() {
 		BOOK.src = "images/pages/" + page + ".jpeg"
+		updateTabVisibility()
 	}
 
 	function updateTab(i) {
