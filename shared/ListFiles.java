@@ -35,33 +35,39 @@ public class ListFiles {
 
 		// 1. Scan directory
 		File dir = new File(path);
-        List<String> filenames = new ArrayList<String>(); // Song name -> list of bounces
+        List<String> filenamesInDir = new ArrayList<String>(); // Song name -> list of bounces
         for (File filename : dir.listFiles()) {
             if (filename.isDirectory() || filename.getName().startsWith(".")) {
 				continue;
 			}
-			filenames.add(filename.getName());
+			filenamesInDir.add(filename.getName());
         }
 
 		// 2. Scan csvFile, keep track of existing files
 		Scanner scanner = new Scanner(new File(csvFile));
 		StringBuilder result = new StringBuilder();
-		Set<String> existingFilenames = new HashSet<>();
+		Set<String> filenamesInCSV = new HashSet<>();
 		while (scanner.hasNextLine()) {
 			String line = scanner.nextLine();
 			String[] split = line.split(",");
 			//if file doesnt exist, remove it
-			if (!filenames.contains(split[0]) && split[1].equals(groupName)) continue;
-			existingFilenames.add(split[0]);
+			switch (category) {
+				case ART:
+					if (!filenamesInCSV.contains(split[0]) && split[1].equals(groupName)) continue;
+					break;
+				case MUSIC:
+					if (!filenamesInCSV.contains(split[0] + "." + split[1]) && split[2].equals(groupName)) continue;
+					break;
+			}
+			filenamesInCSV.add(split[0]);
 			result.append(line + "\n");
 		}
 		scanner.close();
 
 		//3. Add filenames to csv file, skipping existing
-		for (String filename : filenames) {
-			if (existingFilenames.contains(filename)) continue;
-			result.append(
-				toCsvLine(filename, groupName, category));
+		for (String filename : filenamesInDir) {
+			if (filenamesInCSV.contains(filename.split("\\.")[0])) continue;
+			result.append(toCsvLine(filename, groupName, category));
 		}
 
 		//4. Write to test file
