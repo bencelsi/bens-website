@@ -91,7 +91,7 @@ const albumCover = get("albumCover")
 autoplayBox.onclick = () => { if (!autoplayBox.checked) shuffleBox.checked = false }
 shuffleBox.onclick = () => { if (shuffleBox.checked) autoplayBox.checked = true }
 
-const GROUP_COL = 4
+const GROUP_COL = 2
 let q = new URLSearchParams(window.location.search).get('q')
 
 let groupConfig = {
@@ -125,7 +125,7 @@ for (let i = 0; i < songDatas.length; i++) addSong(songDatas[i], i)
 //document.title = title
 
 function addSong(songData, i) {
-	let [title, extension, key, track, group, youtube, chords, image] = songData
+	let [title, extension, group, key, track, youtube, chords, image] = songData
 	
 	let songNumber = document.createElement("td")
 	songNumber.innerHTML = i + 1 + "."

@@ -12,22 +12,25 @@ import java.util.Set;
 import java.util.HashSet;
 
 public class ListFiles {
-	
+	private enum Category {
+		ART,
+		MUSIC
+	}
 	private static final String[][] FILEPATHS = {
-		// directory to scan			//CSV to add to			//Group name
-		{"art/groups/photography", 		"art/artTable.csv",		"photography"	}
-		//{"music/groups/topBounces",	"music/songTable.csv",  "topBounces"	}
+		// directory to scan			//CSV to add to			//Group name	//category
+		{"art/groups/photography", 		"art/artTable.csv",		"photography",	"ART"}
+		//{"music/groups/topBounces",	"music/songTable.csv",  "topBounces"	"MUSIC"}
 	};
 
-	
-
 	public static void main(String[] args) throws FileNotFoundException, IOException {
-		listFiles("art/groups/photography",
-				"art/artTable.csv",
-				"photography");
+		// listFiles("art/groups/photography", "art/artTable.csv",
+		// 	"photography", Category.ART);
+
+		listFiles("music/groups/topBounces", "music/songTable.csv",
+			"topBounces", Category.MUSIC);
 	}
 
-	public static void listFiles(String path, String csvFile, String groupName) throws IOException {
+	public static void listFiles(String path, String csvFile, String groupName, Category category) throws IOException {
 		print("Running listFiles for path: " + path + ", csvFile: " + csvFile + ", group: " + groupName);
 
 		// 1. Scan directory
@@ -57,17 +60,27 @@ public class ListFiles {
 		//3. Add filenames to csv file, skipping existing
 		for (String filename : filenames) {
 			if (existingFilenames.contains(filename)) continue;
-			result.append(filename + "," + groupName + "\n");
+			result.append(
+				toCsvLine(filename, groupName, category));
 		}
 
-		// problem for 
-
-
 		//4. Write to test file
-		Path output = Paths.get(csvFile);
-		Files.writeString(output, result.toString(), StandardCharsets.UTF_8);
+		Files.writeString(Paths.get(csvFile), result.toString(), StandardCharsets.UTF_8);
 	}
 
+	private static String toCsvLine(String filename, String groupName, Category category) {
+		switch (category) {
+			case ART:
+				return filename + "," + groupName + "\n";
+			case MUSIC:
+				String[] split = filename.split("\\.");
+				String ext = split[1];
+				String name = split[0];
+				return name + "," + ext + "," + groupName + "\n";
+			default:
+				return "";
+		}
+	}
 
 
 	
