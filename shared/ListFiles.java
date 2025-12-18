@@ -47,6 +47,8 @@ public class ListFiles {
 		while (scanner.hasNextLine()) {
 			String line = scanner.nextLine();
 			String[] split = line.split(",");
+			//if file doesnt exist, remove it
+			if (!filenames.contains(split[0]) && split[1].equals(groupName)) continue;
 			existingFilenames.add(split[0]);
 			result.append(line + "\n");
 		}
@@ -58,11 +60,17 @@ public class ListFiles {
 			result.append(filename + "," + groupName + "\n");
 		}
 
+		// problem for 
+
+
 		//4. Write to test file
 		Path output = Paths.get(csvFile);
 		Files.writeString(output, result.toString(), StandardCharsets.UTF_8);
 	}
 
+
+
+	
 	private static void print(String msg) {
 		System.out.println(msg);
 	}
