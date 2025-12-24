@@ -62,7 +62,9 @@ let oneLiners = [
 "Beach Boys 2 Men",
 "Margot Robert",
 "Father John Mitski",
-"Had Ed’ve edited it, Ed'd've edited it."
+"Had Ed’ve edited it, Ed'd've edited it.",
+"Safeway’s not safe",
+"'Ahhh! They chopped of my feet!'\nhe said defeatedly."
 
 //"Rim Job? more like grim job",
 //"Now that's an ass I could get behind",
