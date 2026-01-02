@@ -83,7 +83,7 @@ let songTable = [
 ["Maloy's Jewelry Workshop", "mp3", "rebeccasAnimations", "", "", "8m9JRKYb5Ho", ],
 ["The Blue Gecko", "m4a", "rebeccasAnimations", "", "", "DRHOmGiXeqs", ],
 ["The Summer Dragons", "mp3", "rebeccasAnimations", "", "", "7wnEuywiGb4", ],
-["Beetle the Cat", "mp3", "songs", "beetle", "", "Zk6Q6SfcGYU", "1", ],
+["Beetle!", "wav", "songs", "beetle", "", "gVwltuhKRAI", "1", ],
 ["The Ballad of Luigi", "mp3", "songs", "luigi", "", "-yIAxvgeHmE", "1", ],
 ["Disjointed", "mp3", "topBounces", ],
 ["Summery Morning", "mp3", "topBounces", ],
