@@ -162,7 +162,7 @@ let songTable = [
 ["Dark and Cold", "mp3", "topBounces", ],
 ["Ojie", "mp3", "topBounces", ],
 ["Where Do We Go", "mp3", "topBounces", ],
-["Beetle the Cat", "mp3", "topBounces", ],
+["Beetle!", "wav", "topBounces", ],
 ["Workin So Hard", "mp3", "topBounces", ],
 ["Jinx", "mp3", "topBounces", ],
 ["Breakfast on the Shore", "mp3", "topBounces", ],
