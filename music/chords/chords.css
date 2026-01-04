@@ -11,12 +11,24 @@ h1, h2, h3 {
     text-align: center;
 }
 
-.section { font-style: bold; color: red; font-size: 14pt; }
+.section { font-style: bold; color: red; font-size: 16pt; }
 
 .chords { color: rgb(255, 140, 255); line-height: 2 }
 
 #buttons { 
-    text-align: center; display: flex; width: fit-content; margin: auto; color: gray
+    text-align: center; display: none; width: fit-content; margin: auto; color: white;
+}
+
+input {
+    accent-color: #5a13ff;
+    width: 20px;
+}
+
+#optionsToggle {
+    color: gray;
+    text-align: center;
+    cursor: url('../../shared/cursor.png'), auto;
+    font-size: 10pt;
 }
 
 #song {

@@ -1,14 +1,22 @@
 const SECTION = 'section'; const CHORDS = 'chords'; const LYRICS = 'lyrics'
 
-const BUTTONS = get('buttons')
-if (BUTTONS != null) {
-    BUTTONS.innerHTML = 
-`<div id='buttons'>
-Sections <input type="checkbox" id="sectionBox" checked>
-    Lyrics <input type="checkbox" id="lyricBox" checked>
+const OPTIONS = get('options')
+if (OPTIONS != null) {
+    OPTIONS.innerHTML = 
+`<div id='optionsToggle'>...</div><div id='buttons'>
     Chords <input type="checkbox" id="chordBox" checked>
+    Lyrics <input type="checkbox" id="lyricBox" checked>
+    Sections <input type="checkbox" id="sectionBox" checked>
     Centered <input type="checkbox" id="centerBox">
 </div>`
+}
+const OPTIONS_BUTTONS = get('buttons')
+const TOGGLE = get('optionsToggle')
+let optionsOpen = false
+TOGGLE.onclick = () => {
+    optionsOpen = !optionsOpen
+    OPTIONS_BUTTONS.style.display = optionsOpen ? 'flex' : 'none'
+    TOGGLE.innerHTML = optionsOpen ? '(close)' : '...'
 }
 
 const SONG = get('song')
