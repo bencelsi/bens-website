@@ -27,7 +27,7 @@ input {
 #optionsToggle {
     color: gray;
     text-align: center;
-    cursor: url('../../shared/cursor.png'), auto;
+    cursor: url('../../shared/cursor/cursor.png'), auto;
     font-size: 10pt;
 }
 
