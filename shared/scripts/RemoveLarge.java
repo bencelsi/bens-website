@@ -1,26 +1,11 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.List;
-import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.Set;
-import java.util.HashSet;
 
 public class RemoveLarge {
 	
-	private static final String[][] FILEPATHS = {
-		// directory to scan			//CSV to add to			//Group name
-		{"art/groups/photography", 		"art/artTable.csv",		"photography"	}
-		//{"music/groups/topBounces",	"music/songTable.csv",  "topBounces"	}
-	};
-
-	
-
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 		removeLarge("art/groups/photography");
 	}
