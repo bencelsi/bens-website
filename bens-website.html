@@ -127,26 +127,26 @@ Add music to Drop, Point and clicks?
 </head>
 <!--------------------------------------------------------------------------->
 <body><br>
-<img src="gif/speaker.png" id="speaker1" class="speaker">
-<img src="gif/speaker.png" id="speaker2" class="speaker">
+<img src="shared/gif/speaker.png" id="speaker1" class="speaker">
+<img src="shared/gif/speaker.png" id="speaker2" class="speaker">
 <div id='header'>
-	<img src='gif/letters/B1.gif'/> <img src='gif/letters/E1.gif'/> <img src='gif/letters/N1.gif'/> 
-	<!-- <img src='gif/letters/C2.gif'/><img src='gif/letters/E3.gif'/><img src='gif/letters/L1.gif'/><img src='gif/letters/S3.gif'/><img src='gif/letters/gold-i.gif'/> -->
-	<img src='gif/letters/apostrophe2.gif'/> <img src='gif/letters/S1.gif'/><br>
-	<!-- <img src="gif/speaker.gif" id="speaker"> -->
+	<img src='shared/gif/letters/B1.gif'/> <img src='shared/gif/letters/E1.gif'/> <img src='shared/gif/letters/N1.gif'/> 
+	<!-- <img src='shared/gif/letters/C2.gif'/><img src='shared/gif/letters/E3.gif'/><img src='shared/gif/letters/L1.gif'/><img src='shared/gif/letters/S3.gif'/><img src='shared/gif/letters/gold-i.gif'/> -->
+	<img src='shared/gif/letters/apostrophe2.gif'/> <img src='shared/gif/letters/S1.gif'/><br>
+	<!-- <img src="shared/gif/speaker.gif" id="speaker"> -->
 	<div class='subheader'>
-		<img src=gif/letters/gold-w.gif> <img src=gif/letters/gold-e.gif> <img src=gif/letters/gold-b.gif><img src=gif/letters/gold-s.gif><img src=gif/letters/gold-i.gif><img src=gif/letters/gold-t.gif><img src=gif/letters/gold-e.gif><img src=gif/letters/exclamation2.gif style='height: 35px;'>
+		<img src=shared/gif/letters/gold-w.gif> <img src=shared/gif/letters/gold-e.gif> <img src=shared/gif/letters/gold-b.gif><img src=shared/gif/letters/gold-s.gif><img src=shared/gif/letters/gold-i.gif><img src=shared/gif/letters/gold-t.gif><img src=shared/gif/letters/gold-e.gif><img src=shared/gif/letters/exclamation2.gif style='height: 35px;'>
 	</div>
 </div>
 <br>
 
 <!-- Idea: ear (music), eye (art/video), mouth (writing), brain (games), nose (for miscellany)-->
 <div id='tabMenu'>
-	<div class='tab' id='musicTab'>		<img src='gif/tabs/guitar.gif'/></div>
-	<div class='tab' id='artTab'>		<img src='gif/tabs/pallette.gif'/></div>
-	<div class='tab' id='videoTab'>		<img src='gif/tabs/TV.gif'/></div>
-	<div class='tab' id='gamesTab'>		<img src='gif/tabs/computer.gif'/></div>
-	<div class='tab' id='writingTab'>	<img src='gif/tabs/book.gif'/></div>
+	<div class='tab' id='musicTab'>		<img src='shared/gif/tabs/guitar.gif'/></div>
+	<div class='tab' id='artTab'>		<img src='shared/gif/tabs/pallette.gif'/></div>
+	<div class='tab' id='videoTab'>		<img src='shared/gif/tabs/TV.gif'/></div>
+	<div class='tab' id='gamesTab'>		<img src='shared/gif/tabs/computer.gif'/></div>
+	<div class='tab' id='writingTab'>	<img src='shared/gif/tabs/book.gif'/></div>
 </div>
 <br>
 <!------------------------------------------------>
@@ -328,7 +328,7 @@ Add music to Drop, Point and clicks?
 	<iframe id="iframe" src="source:blank"></iframe>
 </div>
 	
-<!-- <img src="gif/footer.gif"> -->
+<!-- <img src="shared/gif/footer.gif"> -->
 <br><br><br>
 </body>	
 
@@ -348,7 +348,7 @@ Add music to Drop, Point and clicks?
 		muted = !muted
 		setMusic()
 		playSound('shared/sound/trill.wav')
-		setSpeaker('gif/speaker' + (muted ? '-muted.png' : (music.paused ? '.png' : '.gif')))
+		setSpeaker('shared/gif/speaker' + (muted ? '-muted.png' : (music.paused ? '.png' : '.gif')))
 	}
 
 	function setSpeaker(src) {
@@ -481,10 +481,10 @@ Add music to Drop, Point and clicks?
 
 	function setMusic(volume = .2) {
 		if (muted || tab == null || isIframeOpen() || isLocal) {
-			setSpeaker('gif/speaker' + (muted ? '-muted.png' : '.png'))
+			setSpeaker('shared/gif/speaker' + (muted ? '-muted.png' : '.png'))
 			music.pause()
 		} else {
-			setSpeaker('gif/speaker.gif')
+			setSpeaker('shared/gif/speaker.gif')
 			let song = songTabs[tab][0]
 			music.src = 'music/albums/miscellaneous/' + song + (song.includes('.') ? '' : '.mp3') 
 			music.volume = volume

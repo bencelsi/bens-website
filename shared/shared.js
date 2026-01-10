@@ -39,13 +39,13 @@ function playSound(name, volume = 1, audio = sounds) {
 try {
     get("home").innerHTML = 
     // `<img src='../shared/bens.jpg' style='width: 125px'>`
-    `<img src='../gif/earth3.gif' >`
+    `<img src='../shared/gif/earth3.gif' >`
 // `<div>
-//     <img src='gif/letters/B1.gif'/>
-//     <img src='gif/letters/E1.gif'/>
-//     <img src='gif/letters/N1.gif'/>
-//     <img src='gif/letters/apostrophe.gif'/>
-//     <img src='gif/letters/S1.gif'/>
+//     <img src='shared/gif/letters/B1.gif'/>
+//     <img src='shared/gif/letters/E1.gif'/>
+//     <img src='shared/gif/letters/N1.gif'/>
+//     <img src='shared/gif/letters/apostrophe.gif'/>
+//     <img src='shared/gif/letters/S1.gif'/>
 //     <span><h3>W E B S I T E ! ! !</h3></span>
 // </div>`
 } catch(e) {}
