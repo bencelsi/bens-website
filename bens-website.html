@@ -173,7 +173,7 @@ Add music to Drop, Point and clicks?
 	<h2 id="music">Music</h2>
 	<!-- <a link='video/video.html?q=songMusicVideos'>				Music Videos						</a> -->
 	<a href='music/songs.html?q=songs'>							Songs								</a>
-	<a href='music/songs.html?q=miscellaneous'>					Instrumentals						</a>
+	<a href='music/songs.html?q=instrumentals'>					Instrumentals						</a>
 	<a link='music/songs.html?q=mashups'>						Mashups								</a>
 	<a link='music/songs.html?q=dxarts'>						DXARTS								</a>
 	<a link='music/songs.html?q=podcasts'>						Podcast Music						</a>
@@ -484,7 +484,7 @@ Add music to Drop, Point and clicks?
 		} else {
 			setSpeaker('shared/gif/speaker.gif')
 			let song = songTabs[tab][0]
-			music.src = 'music/albums/miscellaneous/' + song + (song.includes('.') ? '' : '.mp3') 
+			music.src = 'music/albums/instrumentals/' + song + (song.includes('.') ? '' : '.mp3') 
 			music.volume = volume
 			music.play() 
 		}

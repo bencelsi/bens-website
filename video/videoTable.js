@@ -43,7 +43,7 @@ let videoTable = [
 ["Slop it Up!", "slopItUp", "", "IWYJtf5_u24", "MISCELLANEOUS", "2025", ],
 ["Snakehips", "snakehips", "", "5qnW6m7BPpI", "MISCELLANEOUS", "2015", ],
 ["T-Shirt", "tshirt", "mov", "", "OLD_STOPMOTION", "?", ],
-["The Ballad of Luigi", "luigi", "", "-yIAxvgeHmE", "MUSIC_VIDEO", "2025", ],
+["The Ballad of Luigi", "luigi", "mov", "", "MUSIC_VIDEO", "2025", ],
 ["The Banana Man", "bananaMan", "", "mfjrTnjbyJs", "MISC", "2019", ],
 ["The Do(ugh)nut Man", "doughnutMan", "", "ilyPGt6T9T0", "OLD_CGI", "2010", ],
 ["The Dreaded Edge of the Table", "dreadedEdge", "mov", "", "OLD_STOPMOTION", "?", ],

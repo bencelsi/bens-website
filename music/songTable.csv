@@ -1,4 +1,3 @@
-***TITLE,***EXTENSION,***GROUP,***KEY,***TRACK,***YOUTUBE,***CHORDS,***IMAGE
 Assignment 2,wav,dxarts,,1,,,
 Assignment 3,wav,dxarts,,2,,,
 Final,wav,dxarts,,9,,,
@@ -18,30 +17,23 @@ Griven Walkthrough,mp3,griven,,4,,,
 100 Degrees,mp3,instrumentals,,,,,
 420 Loop,mp3,instrumentals,,,,,
 Chill Loop,mp3,instrumentals,,,,,
-Country,mp3,instrumentals,,,,,
-High Jam,mp3,instrumentals,,,,,
 Joe Frank,wav,instrumentals,,,,,
 Jordan,mp3,instrumentals,,,,,
 Jungleloop,mp3,instrumentals,,,,,
-Looooop,mp3,instrumentals,,,,,
 Nirvana Loop,mp3,instrumentals,,,,,
 Quant Drum Loop,mp3,instrumentals,,,,,
 Roach,mp3,instrumentals,,,,,
 Round Black Glasses,mp3,instrumentals,,,,,
 Space Jam,mp3,instrumentals,,,,,
-Spaghetti Loop,mp3,instrumentals,,,,,
 Spheres in Perspective,wav,instrumentals,,,,,
 Surfin',mp3,instrumentals,,,,,
 Template,mp3,instrumentals,,,,,
 California,wav,mashups,,,aqviXXbtiUg,,
 Disco,mp3,mashups,,,,,
 Don't Bring Me Diamonds,mp3,mashups,,,bbd8sI2k7fk,,
-Dream a Little Dream of God,mp3,mashups,,,emlw9bLSbcA,,
-Fun Fun Fun Fun Fun Fun Fun,,mashups,,,AurwJd0zw0I,,
 I-IV-V,mp3,mashups,,,,,
 Mountains at Last,mp3,mashups,,,1ioAXzjOMWU,,
 One Impala,mp3,mashups,,,Z2dzon0iNFo,,
-Drew's Blues: A Rock Operetta,mp3,musicals,drew,,NzcUOxN2IuM,,
 Action Park Theme,m4a,oldPiano,,,,,
 Angry Gershwin,m4a,oldPiano,,,,,
 Bond,m4a,oldPiano,,,,,
@@ -56,7 +48,6 @@ Foggy Polychords,m4a,oldPiano,,,,,
 Forgotten Escape,m4a,oldPiano,,,,,
 Freedom Party,m4a,oldPiano,,,,,
 Friend Death,m4a,oldPiano,,,,,
-Hymn to Nikkal,m4a,oldPiano,,,,,
 Inspiring Musical,m4a,oldPiano,,,,,
 Japanese Dream Journey,mp3,oldPiano,,,,,
 Nighttime Barnyard,mp3,oldPiano,,,,,
@@ -76,7 +67,6 @@ Western Mafia,m4a,oldPiano,,,,,
 Based On,wav,podcasts,,,,,
 The Civil Experiment,wav,podcasts,,,,,
 Users,mp3,podcasts,,,,,
-A Brief History of Galvanism,m4a,rebeccasAnimations,,,A312PsGlMTk,,
 Bingo's Fantastic Journey,m4a,rebeccasAnimations,,,in3JswOAFDw,,
 Frog Chase,wav,rebeccasAnimations,,,7s0P97t_Xbg,,
 Maloy's Jewelry Workshop,mp3,rebeccasAnimations,,,8m9JRKYb5Ho,,
@@ -111,7 +101,6 @@ Blood in the Water,mp3,topBounces
 In My Bones,mp3,topBounces
 Falling Down,mp3,topBounces
 Burn,mp3,topBounces
-0-list,js,topBounces
 Classic Chorus,mp3,topBounces
 Don't Let Go (Power Riff),mp3,topBounces
 Alligator Swamp,mp3,topBounces
@@ -161,7 +150,6 @@ Cats,mp3,topBounces
 Dark and Cold,mp3,topBounces
 Ojie,mp3,topBounces
 Where Do We Go,mp3,topBounces
-Beetle!,wav,topBounces
 Workin So Hard,mp3,topBounces
 Jinx,mp3,topBounces
 Breakfast on the Shore,mp3,topBounces
@@ -175,7 +163,6 @@ Don't Go Near the Edge,mp3,topBounces
 Free Your Mind,mp3,topBounces
 Deli Song,mp3,topBounces
 Walkalong,mp3,topBounces
-Mary S, Young Park,topBounces
 Rising Sun,mp3,topBounces
 Let's Go Down,mp3,topBounces
 Drive On,mp3,topBounces
@@ -230,3 +217,21 @@ Run the World,mp3,topBounces
 Lay Down,mp3,topBounces
 Mean Old Man,mp3,topBounces
 Big Adventure,mp3,topBounces
+Hymn To Nikkal,m4a,oldPiano
+Beetle the Cat,mp3,songs
+Drew's Blues,mp3,songs
+Love to Give,mp3,topBounces
+Beetle the Cat,mp3,topBounces
+Downtown,mp3,topBounces
+Faye Dunaway,mp3,topBounces
+The Ballad of Luigi,mp3,topBounces
+Joe Frank,mp3,topBounces
+I Wish They All Could Be California,mp3,mashups
+Dream A Little Dream Of God,mp3,mashups
+A Brief History Of Galvanism,m4a,rebeccasAnimations
+Mom's Birthday Movie,mp3,rebeccasAnimations
+Highjam,mp3,instrumentals
+Loooop,mp3,instrumentals
+Spaghettiloop,mp3,instrumentals
+Country Tuff,mp3,instrumentals
+Mary S, Young Park,topBounces
