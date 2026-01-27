@@ -106,7 +106,6 @@ let artTable = [
 ["ch8_2.png", "lifeOfPika", ],
 ["ch8_3.png", "lifeOfPika", ],
 ["ch8_1.png", "lifeOfPika", ],
-["ArtLine.jpg", "miscellaneous", ],
 ["chs.jpg", "miscellaneous", ],
 ["wolf2.jpeg", "miscellaneous", ],
 ["FeminineCollage.jpg", "miscellaneous", ],
@@ -779,4 +778,5 @@ let artTable = [
 ["oxxxford.jpg", "uwDaily", ],
 ["vets.jpg", "uwDaily", ],
 ["bob hasegawa.JPG", "uwDaily", ],
+["ArtLink.jpg", "miscellaneous", ],
 ]
