@@ -107,9 +107,7 @@ let groupConfig = {
 }
 
 // find group image
-
 albumCover.src = "groupImages/" + groupConfig[q][0]
-
 
 let songDatas = [];
 // filter to songs in given group
@@ -181,8 +179,6 @@ function addSong(songData, i) {
 	row.appendChild(songAudioTd)
 	songDiv.appendChild(row)
 }
-
-
 	
 function removeExtension(str) { return str.split('.').slice(0, -1).join('.') }
 
