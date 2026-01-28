@@ -219,7 +219,6 @@ let songTable = [
 ["Mean Old Man", "mp3", "topBounces", ],
 ["Big Adventure", "mp3", "topBounces", ],
 ["Hymn To Nikkal", "m4a", "oldPiano", ],
-["Beetle the Cat", "mp3", "songs", ],
 ["Drew's Blues", "mp3", "songs", ],
 ["Love to Give", "mp3", "topBounces", ],
 ["Beetle the Cat", "mp3", "topBounces", ],

@@ -34,10 +34,14 @@ const FILENAME_COL = 0, GROUP_COL = 1
 let q = new URLSearchParams(window.location.search).get('q')
 
 let images = [];
+ 
 for (let i = 0; i < artTable.length; i++) {
 	let row = artTable[i]
 	if (row[GROUP_COL] == q || q == 'all') images.push(row)
 }
+
+if (images[0][2] == null) { shuffle(images) }
+else { images.sort((a, b) => { return a[2] - b[2] }) }
 
 //get("title").innerHTML = title
 let index = 0

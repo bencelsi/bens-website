@@ -119,8 +119,14 @@ for (let i = 0; i < songTable.length; i++) {
 }
 
 let songAudios = []
-for (let i = 0; i < songDatas.length; i++) addSong(songDatas[i], i)
 
+// shuffle or sort by tracklist
+if (songDatas[0][4] == null) { shuffle(songDatas) } 
+else { songDatas.sort((a, b) => { return a[4] - b[4] }) }
+
+for (let i = 0; i < songDatas.length; i++) {
+	addSong(songDatas[i], i)
+}
 
 //document.title = title
 
