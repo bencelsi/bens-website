@@ -1,38 +1,19 @@
 <!DOCTYPE html>
 <head>
 	<title>Ben's Website!!!</title>
-	<link rel='icon' type='image/x-icon' href='../ico/favicon.ico'>
+	<link rel='icon' type='image/x-icon' href='../shared/favicon.ico'>
 	<link rel="stylesheet" href="../shared/shared.css">
 	<style type="text/css">
-		body {
-			margin: auto;
-			text-align: center;
-			/* width: 500px; */
-			background-image: url(../shared/gif/stars2.gif);
-		}
-
-		audio { height: 30px; width: 250px }
-
-		#home:hover { filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }
-		#highlighted { filter: drop-shadow(0 0 1rem rgb(255, 255, 255)) }
-		
-		.caption {
-			display: block; 
-			color: white;
-			text-decoration: none;
-		}
+		audio { height: 30px; width: 250px; }
 
 		.row { display: table; }
 		
-		.albumCover {
-			width: 400px; height: 400px; 
+		#albumCover {
+			width: 250px; height: 250px; 
 			filter: drop-shadow(0 0 4.5rem rgb(0, 79, 136));
 		}
 
-		#songs {
-			margin-left: auto;
-  			margin-right: auto;
-		}
+		#songs { margin-left: auto; margin-right: auto; }
 
 		td {
 			color:rgb(119, 171, 255);
@@ -40,36 +21,27 @@
 			text-shadow: 0 0 30px rgb(0, 0, 0);
 			filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
 		}
-
-		.button, a { cursor: url(../shared/cursor/cursor.png), auto }
-		
 	</style>
 </head>
 <body>
 	<!-- <a href="../index.html?tab=music" id="home"></a> -->
 	<div id="AllSongs">
-		<h1 id="title"></h1>
-		<br>
-		<img id="albumCover" style="width: 300px; height: 300px; filter: drop-shadow(0 0 4.5rem rgb(0, 79, 136));">
+		<h1 id="title"></h1><br>
+		<img id="albumCover">
 		<!-- 'https://raw.githubusercontent.com/bencelsi/bencelsi.github.io/master/music/.mp3' -->
 		<br><br>
 		<table id="songs">
-		</table>
-		<br>
+		</table><br>
 		<!-- <div>
 			<img src="../shared/gif/arrowl.gif" class="button" id="left"/>
 			<img src="../shared/gif/arrowr.gif" class="button" id="right"/>
 		</div> -->
 		<br>
 		Autoplay <input type="checkbox" id="autoplay" checked/>
-		Shuffle <input type="checkbox" id="shuffle"/>
-		<br><br>
-	<div>
-	<br><br>
-
+		Shuffle <input type="checkbox" id="shuffle"/><br><br>
+	<div><br><br>
 <script src="../shared/shared.js"></script>
 <script src="songTable.js"></script>
-<script src="groupTable.js"></script>
 <script>
 /* 
 TODO: dynamically add script based on query param?
@@ -84,7 +56,8 @@ rename song files & logic
 
 */
 
-const autoplayBox = get("autoplay"); const shuffleBox = get("shuffle")
+const autoplayBox = get("autoplay"); 
+const shuffleBox = get("shuffle")
 const songDiv = get("songs")
 const albumCover = get("albumCover")
 
@@ -95,19 +68,25 @@ const GROUP_COL = 2
 let q = new URLSearchParams(window.location.search).get('q')
 
 let groupConfig = {
-	'podcasts': 		['breathe.jpg'],
-	'dxarts': 			['dxarts.png'],
-	'griven': 			['griven.png'],
-	'instrumentals': 	['Teapots.png'],
-	'mashups': 			['Mashups.jpg'],
-	'miscellaneous': 	['Teapots.png'],
-	'oldPiano': 		['piano.png'],
-	'topBounces': 		['Moss Rock.png'],
-	'songs': 			['Songs.jpg']
+	'podcasts': 		['Podcast Music', 'breathe.jpg'],
+	'dxarts': 			['DXARTS', 'dxarts.png'],
+	'griven': 			['Griven Music', 'griven.png'],
+	'instrumentals': 	['Instrumentals', 'Teapots.png'],
+	'mashups': 			['Mashups', 'Mashups.jpg'],
+	'miscellaneous': 	['Teapots', 'Teapots.png'],
+	'oldPiano': 		['Old Piano', 'piano.png'],
+	'songs': 			['Songs.jpg'],
+	'topBounces': 		['Top Bounces', 'Moss Rock.png'],
+	'looplike':			['Loop Like', 'Greenery.JPG'],
+	'shorts':			['Shorts', 'Greenery.JPG']
 }
 
 // find group image
-albumCover.src = "groupImages/" + groupConfig[q][0]
+if (groupConfig[q] != null) {
+	albumCover.src = "groupImages/" + groupConfig[q][1]
+	document.title = groupConfig[q][0]
+}
+
 
 let songDatas = [];
 // filter to songs in given group
@@ -126,7 +105,6 @@ for (let i = 0; i < songDatas.length; i++) {
 	addSong(songDatas[i], i)
 }
 
-//document.title = title
 
 function addSong(songData, i) {
 	let [title, extension, group, key, track, youtube, chords, image] = songData
@@ -179,8 +157,6 @@ function addSong(songData, i) {
 	row.appendChild(songAudioTd)
 	songDiv.appendChild(row)
 }
-	
-function removeExtension(str) { return str.split('.').slice(0, -1).join('.') }
 
 </script>
 </body>

@@ -110,7 +110,7 @@ Add music to Drop, Point and clicks?
 		#iframeDiv { margin: auto }
 
 		iframe {
-			/* width: 100%; height: 100%; */
+			width: 100%; /* height: 100%; */
 			border: none;
 			width: 1400px; height: 1100px;
 			display: none;
@@ -216,7 +216,7 @@ Add music to Drop, Point and clicks?
 	<a href='game-of-cards'		class='local'>							Game of Cards			</a>
 	<a link="https://bencelsi.github.io/chord-wheel">					Chord Wheel				</a>
 	<a link="https://bencelsi.github.io/automata">						Automata				</a>
-	<a link="https://bencelsi.github.io/point-and-clicks">				Point & Clicks			</a>
+	<a href="https://bencelsi.github.io/point-and-clicks">				Point & Clicks			</a>
 	<a link="https://bencelsi.github.io/catan-o-rama">					Catan-o-Rama!			</a>
 	<a href='soviet-monopoly'	class='local'>							Soviet Monopoly			</a>
 	<a link='https://bencelsi.github.io/cirque-de-sabotage'>			Cirque de Sabotage		</a>
@@ -439,7 +439,7 @@ Add music to Drop, Point and clicks?
 		if (newTab == null) { secret = false } 
 		else {
 			if (newTab == tab && newTab == 'games') { //secret game - iframe within iframe?
-				playSound('shared/sound/tabs/' + (secret ? 'secret' : 'games-x') + '.mp3', 1, voice)
+				//playSound('shared/sound/tabs/' + (secret ? 'secret' : 'games-x') + '.mp3', 1, voice)
 				secret = !secret
 			} else {
 				secret = false

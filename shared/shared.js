@@ -49,3 +49,5 @@ try {
 //     <span><h3>W E B S I T E ! ! !</h3></span>
 // </div>`
 } catch(e) {}
+
+function removeExtension(str) { return str.split('.').slice(0, -1).join('.') }
