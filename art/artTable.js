@@ -807,4 +807,5 @@ let artTable = [
 ["zombies.jpeg", "photography", ],
 ["zza.jpeg", "photography", ],
 ["WitchettyGrub.jpg", "paintings", ],
+["TheCrabbzler.jpeg", "miscellaneous", ],
 ]
