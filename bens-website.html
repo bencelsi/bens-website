@@ -105,8 +105,9 @@ Add music to Drop, Point and clicks?
 		#iframeDiv { margin: auto }
 
 		iframe {
-			width: 100%; height: 100%;
-			border: none;
+			width: 100%; 
+			height: 1500px;
+			border: none; margin: none; padding: none;
 			/* width: 1400px; height: 1100px; */
 			display: none;
 			margin: auto;
@@ -128,7 +129,6 @@ Add music to Drop, Point and clicks?
 	<img src='shared/gif/letters/B1.gif'/> <img src='shared/gif/letters/E1.gif'/> <img src='shared/gif/letters/N1.gif'/> 
 	<!-- <img src='shared/gif/letters/C2.gif'/><img src='shared/gif/letters/E3.gif'/><img src='shared/gif/letters/L1.gif'/><img src='shared/gif/letters/S3.gif'/><img src='shared/gif/letters/gold-i.gif'/> -->
 	<img src='shared/gif/letters/apostrophe2.gif'/> <img src='shared/gif/letters/S1.gif'/><br>
-	<!-- <img src="shared/gif/speaker.gif" id="speaker"> -->
 	<div class='subheader'>
 		<img src=shared/gif/letters/gold-w.gif> <img src=shared/gif/letters/gold-e.gif> <img src=shared/gif/letters/gold-b.gif><img src=shared/gif/letters/gold-s.gif><img src=shared/gif/letters/gold-i.gif><img src=shared/gif/letters/gold-t.gif><img src=shared/gif/letters/gold-e.gif><img src=shared/gif/letters/exclamation2.gif style='height: 35px;'>
 		<div class="local" style="color: gray;">(l  o  c  a  l...)</div>
@@ -350,14 +350,8 @@ Add music to Drop, Point and clicks?
 		for (let a of get(page).getElementsByTagName('a')) {
 			let link = a.getAttribute('link')
 			if (link != undefined) a.onclick = (e) => {
-				console.log(isLocal)
-				if (e.metaKey || isLocal) {
-					window.open(link, '_blank').focus() // new tab
-					console.log('newTab')
-				} else {
-					console.log('iframe')
-					openIframe(link)
-				} 
+				if (e.metaKey) { window.open(link, '_blank').focus() } // new tab 
+				else { openIframe(link) } 
 			}
 			a.onmouseover = () => { playSound('shared/sound/click', .2) }
 		}

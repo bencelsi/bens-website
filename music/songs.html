@@ -26,8 +26,9 @@
 <body>
 	<!-- <a href="../index.html?tab=music" id="home"></a> -->
 	<div id="AllSongs">
-		<h1 id="title"></h1><br>
+		<br>
 		<img id="albumCover">
+		<h1 id="title"></h1><br>
 		<!-- 'https://raw.githubusercontent.com/bencelsi/bencelsi.github.io/master/music/.mp3' -->
 		<br><br>
 		<table id="songs">
@@ -59,6 +60,7 @@ rename song files & logic
 const autoplayBox = get("autoplay"); 
 const shuffleBox = get("shuffle")
 const songDiv = get("songs")
+const titleDiv = get("title")
 const albumCover = get("albumCover")
 
 autoplayBox.onclick = () => { if (!autoplayBox.checked) shuffleBox.checked = false }
@@ -85,6 +87,7 @@ let groupConfig = {
 if (groupConfig[q] != null) {
 	albumCover.src = "groupImages/" + groupConfig[q][1]
 	document.title = groupConfig[q][0]
+	titleDiv.innerHTML = groupConfig[q][0]
 }
 
 
