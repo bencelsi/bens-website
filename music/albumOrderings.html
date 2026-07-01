@@ -32,12 +32,7 @@
 		<!-- 'https://raw.githubusercontent.com/bencelsi/bencelsi.github.io/master/music/.mp3' -->
 		<br><br>
 		<table id="songs">
-		</table><br>
-		<!-- <div>
-			<img src="../shared/gif/arrowl.gif" class="button" id="left"/>
-			<img src="../shared/gif/arrowr.gif" class="button" id="right"/>
-		</div> -->
-		<br>
+		</table><br><br>
 		Autoplay <input type="checkbox" id="autoplay" checked/>
 		Shuffle <input type="checkbox" id="shuffle"/><br><br>
 	<div><br><br>
@@ -45,14 +40,8 @@
 <script src="songTable.js"></script>
 <script>
 /* 
-TODO: dynamically add script based on query param?
-TODO: show image corresponing to song (if applicable)
-TODO: maybe just store separate groups as separate CSVs? easier to edit, easier to code...
-TODO - way to keep playing song when browsing website?
 
-All - view 'newest' version of all bounces
-All All - view all, including old versions
-rename song files & logic
+This is for quickly testing album orderings
 */
 
 const autoplayBox = get("autoplay"); 
@@ -68,60 +57,43 @@ shuffleBox.onclick = () => { if (shuffleBox.checked) autoplayBox.checked = true 
 const GROUP_COL = 2
 let q = new URLSearchParams(window.location.search).get('q')
 
-let groupConfig = {
-	'podcasts': 		['Podcast Music', 'breathe.jpg'],
-	'dxarts': 			['DXARTS', 'dxarts.png'],
-	'griven': 			['Griven Music', 'griven.png'],
-	'instrumentals': 	['Instrumentals', 'Teapots.png'],
-	'mashups': 			['Mashups', 'Mashups.jpg'],
-	'miscellaneous': 	['Teapots', 'Teapots.png'],
-	'oldPiano': 		['Old Piano', 'piano.png'],
-	'songs': 			['Songs.jpg'],
-	'topBounces': 		['Top Bounces', 'Moss Rock.png'],
-	'looplike':			['Loop Like', 'Greenery.JPG'],
-	'shorts':			['Shorts', 'Greenery.JPG']
-}
+let songOrder = [
+	"Beetle the Cat",
+	"Day Song",
+	"Spaghetti Forever",
+	"Pick up the Phone",
+	"Lonely Boy",
+	"Downtempo",
+	"Hello Now",
+	"Little Too High",
+	"Golden Gate"
+]
 
 // find group image
-if (groupConfig[q] != null) {
-	albumCover.src = "groupImages/" + groupConfig[q][1]
-	document.title = groupConfig[q][0]
-	titleDiv.innerHTML = groupConfig[q][0]
-}
+//albumCover.src = "groupImages/" 
+document.title = "Album Orderings"
+titleDiv.innerHTML = "Album Orderings"
 
-
-let songDatas = [];
-// filter to songs in given group
-for (let i = 0; i < songTable.length; i++) {
-	let row = songTable[i]
-	if (q == row[GROUP_COL] || q == 'all') songDatas.push(row)
-}
 
 let songAudios = []
+let totalLength = 0;
 
 // shuffle or sort by tracklist
-if (songDatas[0][4] == null) { shuffle(songDatas) }
-else { songDatas.sort((a, b) => { return a[4] - b[4] }) }
 
-for (let i = 0; i < songDatas.length; i++) {
-	addSong(songDatas[i], i)
+for (let i = 0; i < songOrder.length; i++) {
+	addSong(songOrder[i], i)
 }
-
-let totalLength = 0
 
 displayTotal()
 
-function addSong(songData, i) {
-	let [title, extension, group, key, track, youtube, chords, image] = songData
-	
-	let songNumber = document.createElement("td")
-	songNumber.innerHTML = i + 1 + "."
-	let songTitle = document.createElement("td")
-	songTitle.innerHTML = title
+function addSong(songName, i) {
+	let songNumberTd = document.createElement("td")
+	songNumberTd.innerHTML = i + 1 + "."
+	let songTitleTd = document.createElement("td")
+	songTitleTd.innerHTML = songName
 	let songAudioTd = document.createElement("td")
 	let songAudio = document.createElement("audio")
-	songAudio.src = "groups/" + group + "/" + title + '.' + extension
-	console.log(songAudio.src)
+	songAudio.src = "groups/topBounces/" + songName + '.mp3'
 	songAudio.controls = true
 
 	// PLAY
@@ -156,6 +128,7 @@ function addSong(songData, i) {
 	// GET LENGTH
 	songAudio.addEventListener('loadedmetadata', function() {
 		totalLength += songAudio.duration;
+		console.log(songAudio)
     });
 
 	songAudios.push(songAudio)
@@ -163,7 +136,7 @@ function addSong(songData, i) {
 	
 	let row = document.createElement("tr")
 	//row.appendChild(songNumber) // make configurable?
-	row.appendChild(songTitle)
+	row.appendChild(songTitleTd)
 	row.appendChild(songAudioTd)
 	songDiv.appendChild(row)
 }

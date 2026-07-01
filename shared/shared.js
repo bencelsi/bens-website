@@ -12,11 +12,23 @@ function getAll(name) {
     return document.getElementsByTagName(name)
 }
 
+// to use: await d(1);
+function d(seconds) { return new Promise(resolve => setTimeout(resolve, seconds * 1000)) }
+
 function random(min, max) { return (min + (Math.floor(Math.random() * (max + 1 - min)))) }
 
 function increment(value, maxValue) { return value === maxValue ? 0 : value + 1 }
 
 function decrement(value, maxValue) { return value === 0 ? maxValue : value - 1 }
+
+async function displayTotal() {
+	await d(1);
+	const hours = Math.floor(totalLength / 3600);
+	const minutes = Math.floor((totalLength / 60) % 60);
+	const seconds = Math.floor(totalLength % 60).toString().padStart(2, '0');
+	totalLengthDiv.innerHTML = '(Total Length: ' +
+		(hours == 0 ? `${minutes}:${seconds})` : `${hours}:${minutes}:${seconds})`)
+}
 
 function shuffle(array) {
     for (i = 0; i < array.length; i++) {

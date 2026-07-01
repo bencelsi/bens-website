@@ -67,7 +67,8 @@ let oneLiners = [
 "'Ahhh! They chopped of my feet!'\nhe said defeatedly.",
 "Boyz II Men Reunion Tour: Men II Gravez",
 "'Who goes there?' can be about an intruder, or a high school",
-"If you know you know, you know?"
+"If you know you know, you know?",
+"The Jonas Brothers + The Haim Sisters = The Heinous Siblings"
 
 //"Rim Job? more like grim job",
 //"Now that's an ass I could get behind",

@@ -172,6 +172,7 @@ Add music to Drop, Point and clicks?
 	<br><br><br>
 	<a link='music/songs.html?q=topBounces' class='local'>		Top Bounces							</a>
 	<a link='music/albums.html' class='local'>					Albums								</a>
+	<a link='music/albumOrderings.html' class='local'>			Album Orderings						</a>
 </div>
 
 <!-- 🟪🟪 ----------------------------------------->
@@ -187,7 +188,7 @@ Add music to Drop, Point and clicks?
 	<a link="art/art.html?q=uwDaily">			UW Daily Illustrations		</a>
 	<a link="art/art.html?q=lifeOfPika">		Life of Pika Illustrations	</a>
 	<a link="art/art.html?q=deadEnd">			Dead End Test Renders		</a>
-	<a link="art/river-book/river-book.html">	Generate Your Own River-Related Art Project	Idea</a>
+	<a href="art/river-book/river-book.html">	Generate Your Own River-Related Art Project	Idea</a>
 	<a link="art/art.html?q=miscellaneous">		Miscellaneous				</a>
 </div>
 
@@ -316,8 +317,7 @@ Add music to Drop, Point and clicks?
 <div id="iframeDiv">
 	<iframe id="iframe" src="source:blank"></iframe>
 </div>
-	
-<!-- <img src="shared/gif/footer.gif"> -->
+
 <br><br><br>
 </body>	
 
@@ -400,7 +400,6 @@ Add music to Drop, Point and clicks?
 
 	const music = new Audio(); music.loop = true;
 	const voice = new Audio();
-	
 
 	let tab = null
 	
@@ -495,8 +494,7 @@ Add music to Drop, Point and clicks?
 		"#E3BAFF"  // pastel purple
 	];
 	// Get all <a> elements, oop through and assign colors in rainbow order
-	const links = document.querySelectorAll("a");
-	links.forEach((link, index) => {
+	document.querySelectorAll("a").forEach((link, index) => {
 		link.style.color = PASTEL_RAINBOW[index % PASTEL_RAINBOW.length];
 	});
 
