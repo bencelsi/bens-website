@@ -1,12 +1,12 @@
-Assignment 2,wav,dxarts,,1,,,
-Assignment 3,wav,dxarts,,2,,,
+Assignment 2,wav,dxarts,,7,,,
 Final,wav,dxarts,,9,,,
 Lab 3,wav,dxarts,,3,,,
 Lab 4,wav,dxarts,,4,,,
 Lab 5,wav,dxarts,,5,,,
-Lab 6,wav,dxarts,,6,,,
-Lab 7,wav,dxarts,,7,,,
 Midterm,wav,dxarts,,8,,,
+Lab 2,wav,dxarts,,2,,,
+Lab 1,wav,dxarts,,1,,,
+Assignment 1,wav,dxarts,,6,,,
 Griven Credits,mp3,griven,,6,,,
 Griven Epilogue,mp3,griven,,7,,,
 Griven Menu,mp3,griven,,1,,,
@@ -28,12 +28,84 @@ Space Jam,mp3,instrumentals,,,,,
 Spheres in Perspective,wav,instrumentals,,,,,
 Surfin',mp3,instrumentals,,,,,
 Template,mp3,instrumentals,,,,,
+Highjam,mp3,instrumentals,,,,,
+Loooop,mp3,instrumentals,,,,,
+Spaghettiloop,mp3,instrumentals,,,,,
+Country Tuff,mp3,instrumentals,,,,,
+Short Loop,mp3,looplike,,,,,
+Drum Jam,mp3,looplike,,,,,
+Anni,mp3,looplike,,,,,
+Jordan Loop,mp3,looplike,,,,,
+December Loop,mp3,looplike,,,,,
+Partridge Jam,mp3,looplike,,,,,
+Luskin Loop,mp3,looplike,,,,,
+Space Jam,mp3,looplike,,,,,
+E Minor Jam,mp3,looplike,,,,,
+Country Loop,mp3,looplike,,,,,
+Twang Jam,wav,looplike,,,,,
+Resolute Loop,mp3,looplike,,,,,
+Pink Loop,mp3,looplike,,,,,
+3-jam,mp3,looplike,,,,,
+Heavy,mp3,looplike,,,,,
+Bad,mp3,looplike,,,,,
+Chill Loop,mp3,looplike,,,,,
+Phong Loop,mp3,looplike,,,,,
+Jazz Jamm,mp3,looplike,,,,,
+Nirvana Loop,mp3,looplike,,,,,
+New Place Jam,mp3,looplike,,,,,
+Little Star,mp3,looplike,,,,,
+Guitar Loop,mp3,looplike,,,,,
+I Feel Funny,mp3,looplike,,,,,
+Lounge Loop,mp3,looplike,,,,,
+Drama Squid,mp3,looplike,,,,,
+Noir Loop,mp3,looplike,,,,,
+Ben Phong Loop,mp3,looplike,,,,,
+Bright Loop,mp3,looplike,,,,,
+Waiting For Something,mp3,looplike,,,,,
+80s Synth,mp3,looplike,,,,,
+Bah Loop,mp3,looplike,,,,,
+Jungle Loop,mp3,looplike,,,,,
+James Loop,mp3,looplike,,,,,
+Major Loop,mp3,looplike,,,,,
+Waffles,mp3,looplike,,,,,
+Freedom loop,mp3,looplike,,,,,
+Country,mp3,looplike,,,,,
+Template Loop,mp3,looplike,,,,,
+4:20 Loop,mp3,looplike,,,,,
+Mmm Loop,mp3,looplike,,,,,
+Quant Drum Loop,mp3,looplike,,,,,
+Basic Template Jam,mp3,looplike,,,,,
+Gras,wav,looplike,,,,,
+Denmo,mp3,looplike,,,,,
+Demo Whateva,mp3,looplike,,,,,
+Drudje,mp3,looplike,,,,,
+Groovy Loop,mp3,looplike,,,,,
+Little Bit of Water,mp3,looplike,,,,,
+Fun Loop,mp3,looplike,,,,,
+Mac-esque,mp3,looplike,,,,,
+Koto,mp3,looplike,,,,,
+Angel Loop,mp3,looplike,,,,,
+Prod Test,mp3,looplike,,,,,
+High Jam,mp3,looplike,,,,,
+Drunk,mp3,looplike,,,,,
+New Demo,mp3,looplike,,,,,
+Living Room Loop,mp3,looplike,,,,,
+Harmony Loop,mp3,looplike,,,,,
+A7 Loop,mp3,looplike,,,,,
+Rock Jam,mp3,looplike,,,,,
+Offbeat Drumloop,mp3,looplike,,,,,
+Dubdubba,mp3,looplike,,,,,
+Gruv Loop,mp3,looplike,,,,,
+Been Around a While,wav,looplike,,,,,
+Gras,mp3,looplike,,,,,
+Been Around a While,mp3,looplike,,,,,
 California,wav,mashups,,,aqviXXbtiUg,,
 Disco,mp3,mashups,,,,,
 Don't Bring Me Diamonds,mp3,mashups,,,bbd8sI2k7fk,,
 I-IV-V,mp3,mashups,,,,,
 Mountains at Last,mp3,mashups,,,1ioAXzjOMWU,,
 One Impala,mp3,mashups,,,Z2dzon0iNFo,,
+Dream A Little Dream Of God,mp3,mashups,,,,,
 Action Park Theme,m4a,oldPiano,,,,,
 Angry Gershwin,m4a,oldPiano,,,,,
 Bond,m4a,oldPiano,,,,,
@@ -64,6 +136,7 @@ Urban Beat,m4a,oldPiano,,,,,
 Wandering C,m4a,oldPiano,,,,,
 Western 20's,m4a,oldPiano,,,,,
 Western Mafia,m4a,oldPiano,,,,,
+Hymn To Nikkal,m4a,oldPiano,,,,,
 Based On,wav,podcasts,,,,,
 The Civil Experiment,wav,podcasts,,,,,
 Users,mp3,podcasts,,,,,
@@ -72,283 +145,220 @@ Frog Chase,wav,rebeccasAnimations,,,7s0P97t_Xbg,,
 Maloy's Jewelry Workshop,mp3,rebeccasAnimations,,,8m9JRKYb5Ho,,
 The Blue Gecko,m4a,rebeccasAnimations,,,DRHOmGiXeqs,,
 The Summer Dragons,mp3,rebeccasAnimations,,,7wnEuywiGb4,,
-Beetle!,wav,songs,beetle,,gVwltuhKRAI,1,
+A Brief History Of Galvanism,m4a,rebeccasAnimations,,,,,
+Mom's Birthday Movie,mp3,rebeccasAnimations,,,,,
+Fade Out,mp3,shorts,,,,,
+Float Away,mp3,shorts,,,,,
+Harpsicord,mp3,shorts,,,,,
+Highway,mp3,shorts,,,,,
+Small,mp3,shorts,,,,,
+First,mp3,shorts,,,,,
+Predictive Text,mp3,shorts,,,,,
+Don't Let Go,mp3,shorts,,,,,
+Bodylight,mp3,shorts,,,,,
+River Rocks,mp3,shorts,,,,,
+There's a Bomb,mp3,shorts,,,,,
+Simple,mp3,shorts,,,,,
+Take Me Out There,mp3,shorts,,,,,
+Pregame,mp3,shorts,,,,,
+Hammer Jam,mp3,shorts,,,,,
+Don't Tell Me You're Too Far,mp3,shorts,,,,,
+Raincheck,aif,shorts,,,,,
+I Know I Know,mp3,shorts,,,,,
+Falling (All On My Own),mp3,shorts,,,,,
+Watch Out Now,mp3,shorts,,,,,
+Serena,mp3,shorts,,,,,
+West Fandango,mp3,shorts,,,,,
+Watertower,mp3,shorts,,,,,
+Take a Look at What you Do to yourself again,mp3,shorts,,,,,
+Monkey,wav,shorts,,,,,
+Tadpoles,mp3,shorts,,,,,
+Random Jam,mp3,shorts,,,,,
+Fast Car,mp3,shorts,,,,,
+Breakdown,mp3,shorts,,,,,
+Take a Walk,mp3,shorts,,,,,
+Left Out,mp3,shorts,,,,,
+I've Been Feeling You,mp3,shorts,,,,,
+Let Me Fly,mp3,shorts,,,,,
+Fuckaround,mp3,shorts,,,,,
+We Know Better,aif,shorts,,,,,
+Bare Bones,mp3,shorts,,,,,
+Trenchcoat,mp3,shorts,,,,,
+Runnin,mp3,shorts,,,,,
+One Take,mp3,shorts,,,,,
+We Know Better,mp3,shorts,,,,,
+Raincheck,mp3,shorts,,,,,
 The Ballad of Luigi,mp3,songs,luigi,,-yIAxvgeHmE,1,
-Disjointed,mp3,topBounces
-Summery Morning,mp3,topBounces
-80s Now,mp3,topBounces
-Crypt,mp3,topBounces
-Where Did She Go,mp3,topBounces
-Fade Out,mp3,topBounces
-Southern Australia,mp3,topBounces
-Writing's on the Wall,mp3,topBounces
-McCartney-esque,mp3,topBounces
-Touch My Neck,mp3,topBounces
-Simple Song,mp3,topBounces
-Love Conquers All,mp3,topBounces
-Hum,mp3,topBounces
-Downtempo,mp3,topBounces
-Oh Baby,mp3,topBounces
-Walking in the Dark,mp3,topBounces
-Warming Up,mp3,topBounces
-Take Me Out,mp3,topBounces
-Fly Fly Around,mp3,topBounces
-Don't Get Me Down,mp3,topBounces
-Its Hard To Write A Song On A Guitar,mp3,topBounces
-Scary Door,mp3,topBounces
-Capeman,mp3,topBounces
-Blood in the Water,mp3,topBounces
-In My Bones,mp3,topBounces
-Falling Down,mp3,topBounces
-Burn,mp3,topBounces
-Classic Chorus,mp3,topBounces
-Don't Let Go (Power Riff),mp3,topBounces
-Alligator Swamp,mp3,topBounces
-Good Time to Go,mp3,topBounces
-Surf Song,mp3,topBounces
-Off Track,mp3,topBounces
-Like a Star,mp3,topBounces
-Johnny,mp3,topBounces
-A Little Too High,mp3,topBounces
-Terrestrial Beauty,mp3,topBounces
-Rainy Days Shorter,mp3,topBounces
-Bad Intentions,mp3,topBounces
-For You,mp3,topBounces
-Motorcycle,mp3,topBounces
-Hard to Get Around,mp3,topBounces
-Woke Up,mp3,topBounces
-Cha Cha,mp3,topBounces
-Although,mp3,topBounces
-Guess You Had to Be There,mp3,topBounces
-Watermelon,mp3,topBounces
-Hangin' On,mp3,topBounces
-Round and Around,mp3,topBounces
-Keep Down,mp3,topBounces
-Gettin Over It,mp3,topBounces
-High School,mp3,topBounces
-Great American,mp3,topBounces
-Feelin Like Shit,mp3,topBounces
-Wasted,mp3,topBounces
-Old Friend,mp3,topBounces
-Take it Slow,mp3,topBounces
-Bad Dog,mp3,topBounces
-Blue Water,mp3,topBounces
-Run Away Natalia,mp3,topBounces
-Weekend,mp3,topBounces
-Paint a Picture,mp3,topBounces
-Crumb,mp3,topBounces
-Play the Game,mp3,topBounces
-Way Back,mp3,topBounces
-Tightrope,mp3,topBounces
-Happened By Now,mp3,topBounces
-Arena,mp3,topBounces
-Joanie,mp3,topBounces
-Soul is Tired,mp3,topBounces
-One Love,mp3,topBounces
-Spaghetti Forever,mp3,topBounces
-Cats,mp3,topBounces
-Dark and Cold,mp3,topBounces
-Ojie,mp3,topBounces
-Where Do We Go,mp3,topBounces
-Workin So Hard,mp3,topBounces
-Jinx,mp3,topBounces
-Breakfast on the Shore,mp3,topBounces
-Take You With Me,mp3,topBounces
-Advocating,mp3,topBounces
-We Will Be Taking Over,mp3,topBounces
-Embarrassed,mp3,topBounces
-Go Around,mp3,topBounces
-Breckenridge,mp3,topBounces
-Don't Go Near the Edge,mp3,topBounces
-Free Your Mind,mp3,topBounces
-Deli Song,mp3,topBounces
-Walkalong,mp3,topBounces
-Rising Sun,mp3,topBounces
-Let's Go Down,mp3,topBounces
-Drive On,mp3,topBounces
-Days with Him,mp3,topBounces
-Miyazaki Movies,mp3,topBounces
-Lonely Boy,mp3,topBounces
-I'm Fine,mp3,topBounces
-Drown,mp3,topBounces
-Miss You When You Go,mp3,topBounces
-Come Dream With Me,mp3,topBounces
-Music Flows Through Me,mp3,topBounces
-Golden Gate,mp3,topBounces
-Sweet Little Bird,mp3,topBounces
-Day Song,mp3,topBounces
-Like a Dog,mp3,topBounces
-All Alone,mp3,topBounces
-I Found Out,mp3,topBounces
-Absolved,mp3,topBounces
-Maddie,mp3,topBounces
-Trinidad,mp3,topBounces
-Little Spider,mp3,topBounces
-Now and Then,mp3,topBounces
-Matt Lauer,mp3,topBounces
-Army,mp3,topBounces
-Feel Like a Fraud,mp3,topBounces
-Desiree,mp3,topBounces
-Oceany Song,mp3,topBounces
-Where Are We Now,mp3,topBounces
-Wordless,mp3,topBounces
-I Promise,mp3,topBounces
-Once Upon a Time,mp3,topBounces
-Besides Me,mp3,topBounces
-Coming to a Close,mp3,topBounces
-Daisy,mp3,topBounces
-Slo Mo,mp3,topBounces
-Walk Home,mp3,topBounces
-Lonely Heart,mp3,topBounces
-Wasting,mp3,topBounces
-Stuck in a Loop,mp3,topBounces
-Inner Shell,mp3,topBounces
-Buzzards,mp3,topBounces
-Runaway,mp3,topBounces
-Why Did You Have To Do It,mp3,topBounces
-Runaround Kid,mp3,topBounces
-High Art,mp3,topBounces
-Hello Now,mp3,topBounces
-Trenchcoat,mp3,topBounces
-Follow,mp3,topBounces
-When I'm Gone,mp3,topBounces
-Fall Farther,mp3,topBounces
-Run the World,mp3,topBounces
-Lay Down,mp3,topBounces
-Mean Old Man,mp3,topBounces
-Big Adventure,mp3,topBounces
-Hymn To Nikkal,m4a,oldPiano
-Drew's Blues,mp3,songs
-Love to Give,mp3,topBounces
-Beetle the Cat,mp3,topBounces
-Downtown,mp3,topBounces
-Faye Dunaway,mp3,topBounces
-The Ballad of Luigi,mp3,topBounces
-Joe Frank,mp3,topBounces
-Dream A Little Dream Of God,mp3,mashups
-A Brief History Of Galvanism,m4a,rebeccasAnimations
-Mom's Birthday Movie,mp3,rebeccasAnimations
-Highjam,mp3,instrumentals
-Loooop,mp3,instrumentals
-Spaghettiloop,mp3,instrumentals
-Country Tuff,mp3,instrumentals
-Short Loop,mp3,looplike
-Drum Jam,mp3,looplike
-Anni,mp3,looplike
-Jordan Loop,mp3,looplike
-December Loop,mp3,looplike
-Partridge Jam,mp3,looplike
-Luskin Loop,mp3,looplike
-Space Jam,mp3,looplike
-E Minor Jam,mp3,looplike
-Country Loop,mp3,looplike
-Twang Jam,wav,looplike
-Resolute Loop,mp3,looplike
-Pink Loop,mp3,looplike
-3-jam,mp3,looplike
-Heavy,mp3,looplike
-Bad,mp3,looplike
-Chill Loop,mp3,looplike
-Phong Loop,mp3,looplike
-Jazz Jamm,mp3,looplike
-Nirvana Loop,mp3,looplike
-New Place Jam,mp3,looplike
-Little Star,mp3,looplike
-Guitar Loop,mp3,looplike
-I Feel Funny,mp3,looplike
-Lounge Loop,mp3,looplike
-Drama Squid,mp3,looplike
-Noir Loop,mp3,looplike
-Ben Phong Loop,mp3,looplike
-Bright Loop,mp3,looplike
-Waiting For Something,mp3,looplike
-80s Synth,mp3,looplike
-Bah Loop,mp3,looplike
-Jungle Loop,mp3,looplike
-James Loop,mp3,looplike
-Major Loop,mp3,looplike
-Waffles,mp3,looplike
-Freedom loop,mp3,looplike
-Country,mp3,looplike
-Template Loop,mp3,looplike
-4:20 Loop,mp3,looplike
-Mmm Loop,mp3,looplike
-Quant Drum Loop,mp3,looplike
-Basic Template Jam,mp3,looplike
-Gras,wav,looplike
-Denmo,mp3,looplike
-Demo Whateva,mp3,looplike
-Drudje,mp3,looplike
-Groovy Loop,mp3,looplike
-Little Bit of Water,mp3,looplike
-Fun Loop,mp3,looplike
-Mac-esque,mp3,looplike
-Koto,mp3,looplike
-Angel Loop,mp3,looplike
-Prod Test,mp3,looplike
-High Jam,mp3,looplike
-Drunk,mp3,looplike
-New Demo,mp3,looplike
-Living Room Loop,mp3,looplike
-Harmony Loop,mp3,looplike
-A7 Loop,mp3,looplike
-Rock Jam,mp3,looplike
-Offbeat Drumloop,mp3,looplike
-Dubdubba,mp3,looplike
-Gruv Loop,mp3,looplike
-Been Around a While,wav,looplike
-Spaghetti Forever,wav,topBounces
-Miyazaki Movies,wav,topBounces
-Day Song,wav,topBounces
-Miss You When You Go,wav,topBounces
-Drown,wav,topBounces
-I'm Fine,wav,topBounces
-Besides Me,wav,topBounces
-Walkalong,aif,topBounces
-Like a Dog,aif,topBounces
-Disjointed,wav,topBounces
-Scary Door,wav,topBounces
-Guess You Had to Be There,wav,topBounces
-Old Friend,wav,topBounces
-Classic Chorus,aif,topBounces
-Arena,wav,topBounces
+Disjointed,mp3,topBounces,,,,,
+Summery Morning,mp3,topBounces,,,,,
+80s Now,mp3,topBounces,,,,,
+Crypt,mp3,topBounces,,,,,
+Where Did She Go,mp3,topBounces,,,,,
+Fade Out,mp3,topBounces,,,,,
+Southern Australia,mp3,topBounces,,,,,
+Writing's on the Wall,mp3,topBounces,,,,,
+McCartney-esque,mp3,topBounces,,,,,
+Touch My Neck,mp3,topBounces,,,,,
+Simple Song,mp3,topBounces,,,,,
+Love Conquers All,mp3,topBounces,,,,,
+Hum,mp3,topBounces,,,,,
+Downtempo,mp3,topBounces,,,,,
+Oh Baby,mp3,topBounces,,,,,
+Walking in the Dark,mp3,topBounces,,,,,
+Warming Up,mp3,topBounces,,,,,
+Take Me Out,mp3,topBounces,,,,,
+Fly Fly Around,mp3,topBounces,,,,,
+Don't Get Me Down,mp3,topBounces,,,,,
+Its Hard To Write A Song On A Guitar,mp3,topBounces,,,,,
+Scary Door,mp3,topBounces,,,,,
+Capeman,mp3,topBounces,,,,,
+Blood in the Water,mp3,topBounces,,,,,
+In My Bones,mp3,topBounces,,,,,
+Falling Down,mp3,topBounces,,,,,
+Burn,mp3,topBounces,,,,,
+Classic Chorus,mp3,topBounces,,,,,
+Don't Let Go (Power Riff),mp3,topBounces,,,,,
+Alligator Swamp,mp3,topBounces,,,,,
+Good Time to Go,mp3,topBounces,,,,,
+Surf Song,mp3,topBounces,,,,,
+Off Track,mp3,topBounces,,,,,
+Like a Star,mp3,topBounces,,,,,
+Johnny,mp3,topBounces,,,,,
+A Little Too High,mp3,topBounces,,,,,
+Terrestrial Beauty,mp3,topBounces,,,,,
+Rainy Days Shorter,mp3,topBounces,,,,,
+Bad Intentions,mp3,topBounces,,,,,
+For You,mp3,topBounces,,,,,
+Motorcycle,mp3,topBounces,,,,,
+Hard to Get Around,mp3,topBounces,,,,,
+Woke Up,mp3,topBounces,,,,,
+Cha Cha,mp3,topBounces,,,,,
+Although,mp3,topBounces,,,,,
+Guess You Had to Be There,mp3,topBounces,,,,,
+Watermelon,mp3,topBounces,,,,,
+Hangin' On,mp3,topBounces,,,,,
+Round and Around,mp3,topBounces,,,,,
+Keep Down,mp3,topBounces,,,,,
+Gettin Over It,mp3,topBounces,,,,,
+High School,mp3,topBounces,,,,,
+Great American,mp3,topBounces,,,,,
+Feelin Like Shit,mp3,topBounces,,,,,
+Wasted,mp3,topBounces,,,,,
+Old Friend,mp3,topBounces,,,,,
+Take it Slow,mp3,topBounces,,,,,
+Bad Dog,mp3,topBounces,,,,,
+Blue Water,mp3,topBounces,,,,,
+Run Away Natalia,mp3,topBounces,,,,,
+Weekend,mp3,topBounces,,,,,
+Paint a Picture,mp3,topBounces,,,,,
+Crumb,mp3,topBounces,,,,,
+Play the Game,mp3,topBounces,,,,,
+Way Back,mp3,topBounces,,,,,
+Tightrope,mp3,topBounces,,,,,
+Happened By Now,mp3,topBounces,,,,,
+Arena,mp3,topBounces,,,,,
+Joanie,mp3,topBounces,,,,,
+Soul is Tired,mp3,topBounces,,,,,
+One Love,mp3,topBounces,,,,,
+Spaghetti Forever,mp3,topBounces,,,,,
+Cats,mp3,topBounces,,,,,
+Dark and Cold,mp3,topBounces,,,,,
+Ojie,mp3,topBounces,,,,,
+Where Do We Go,mp3,topBounces,,,,,
+Workin So Hard,mp3,topBounces,,,,,
+Jinx,mp3,topBounces,,,,,
+Breakfast on the Shore,mp3,topBounces,,,,,
+Take You With Me,mp3,topBounces,,,,,
+Advocating,mp3,topBounces,,,,,
+We Will Be Taking Over,mp3,topBounces,,,,,
+Embarrassed,mp3,topBounces,,,,,
+Go Around,mp3,topBounces,,,,,
+Breckenridge,mp3,topBounces,,,,,
+Don't Go Near the Edge,mp3,topBounces,,,,,
+Free Your Mind,mp3,topBounces,,,,,
+Deli Song,mp3,topBounces,,,,,
+Walkalong,mp3,topBounces,,,,,
+Rising Sun,mp3,topBounces,,,,,
+Let's Go Down,mp3,topBounces,,,,,
+Drive On,mp3,topBounces,,,,,
+Days with Him,mp3,topBounces,,,,,
+Miyazaki Movies,mp3,topBounces,,,,,
+Lonely Boy,mp3,topBounces,,,,,
+I'm Fine,mp3,topBounces,,,,,
+Drown,mp3,topBounces,,,,,
+Miss You When You Go,mp3,topBounces,,,,,
+Come Dream With Me,mp3,topBounces,,,,,
+Music Flows Through Me,mp3,topBounces,,,,,
+Golden Gate,mp3,topBounces,,,,,
+Sweet Little Bird,mp3,topBounces,,,,,
+Day Song,mp3,topBounces,,,,,
+Like a Dog,mp3,topBounces,,,,,
+All Alone,mp3,topBounces,,,,,
+I Found Out,mp3,topBounces,,,,,
+Absolved,mp3,topBounces,,,,,
+Maddie,mp3,topBounces,,,,,
+Trinidad,mp3,topBounces,,,,,
+Little Spider,mp3,topBounces,,,,,
+Now and Then,mp3,topBounces,,,,,
+Matt Lauer,mp3,topBounces,,,,,
+Army,mp3,topBounces,,,,,
+Feel Like a Fraud,mp3,topBounces,,,,,
+Desiree,mp3,topBounces,,,,,
+Oceany Song,mp3,topBounces,,,,,
+Where Are We Now,mp3,topBounces,,,,,
+Wordless,mp3,topBounces,,,,,
+I Promise,mp3,topBounces,,,,,
+Once Upon a Time,mp3,topBounces,,,,,
+Besides Me,mp3,topBounces,,,,,
+Coming to a Close,mp3,topBounces,,,,,
+Daisy,mp3,topBounces,,,,,
+Slo Mo,mp3,topBounces,,,,,
+Walk Home,mp3,topBounces,,,,,
+Lonely Heart,mp3,topBounces,,,,,
+Wasting,mp3,topBounces,,,,,
+Stuck in a Loop,mp3,topBounces,,,,,
+Inner Shell,mp3,topBounces,,,,,
+Buzzards,mp3,topBounces,,,,,
+Runaway,mp3,topBounces,,,,,
+Why Did You Have To Do It,mp3,topBounces,,,,,
+Runaround Kid,mp3,topBounces,,,,,
+High Art,mp3,topBounces,,,,,
+Hello Now,mp3,topBounces,,,,,
+Trenchcoat,mp3,topBounces,,,,,
+Follow,mp3,topBounces,,,,,
+When I'm Gone,mp3,topBounces,,,,,
+Fall Farther,mp3,topBounces,,,,,
+Run the World,mp3,topBounces,,,,,
+Lay Down,mp3,topBounces,,,,,
+Mean Old Man,mp3,topBounces,,,,,
+Big Adventure,mp3,topBounces,,,,,
+Love to Give,mp3,topBounces,,,,,
+Beetle the Cat,mp3,topBounces,,,,,
+Downtown,mp3,topBounces,,,,,
+Faye Dunaway,mp3,topBounces,,,,,
+The Ballad of Luigi,mp3,topBounces,,,,,
+Joe Frank,mp3,topBounces,,,,,
+Spaghetti Forever,wav,topBounces,,,,,
+Miyazaki Movies,wav,topBounces,,,,,
+Day Song,wav,topBounces,,,,,
+Miss You When You Go,wav,topBounces,,,,,
+Drown,wav,topBounces,,,,,
+I'm Fine,wav,topBounces,,,,,
+Besides Me,wav,topBounces,,,,,
+Walkalong,aif,topBounces,,,,,
+Like a Dog,aif,topBounces,,,,,
+Disjointed,wav,topBounces,,,,,
+Scary Door,wav,topBounces,,,,,
+Guess You Had to Be There,wav,topBounces,,,,,
+Old Friend,wav,topBounces,,,,,
+Classic Chorus,aif,topBounces,,,,,
+Arena,wav,topBounces,,,,,
+Sad Ahhhh 1,mp3,topBounces,,,,,
+Little Too High,mp3,topBounces,,,,,
+Pick Up the Phone,mp3,topBounces,,,,,
+Around the Block,mp3,topBounces,,,,,
+Overwhelmed,mp3,topBounces,,,,,
+Know Now,mp3,topBounces,,,,,
+Amp Mic Cowboy,mp3,topBounces,,,,,
+Beetle! The Cat!,wav,songs
 Mary S, Young Park,topBounces
-Fade Out,mp3,shorts
-Float Away,mp3,shorts
-Harpsicord,mp3,shorts
-Highway,mp3,shorts
-Small,mp3,shorts
-First,mp3,shorts
-Predictive Text,mp3,shorts
-Don't Let Go,mp3,shorts
-Bodylight,mp3,shorts
-River Rocks,mp3,shorts
-There's a Bomb,mp3,shorts
-Simple,mp3,shorts
-Take Me Out There,mp3,shorts
-Pregame,mp3,shorts
-Hammer Jam,mp3,shorts
-Don't Tell Me You're Too Far,mp3,shorts
-Raincheck,aif,shorts
-I Know I Know,mp3,shorts
-Falling (All On My Own),mp3,shorts
-Watch Out Now,mp3,shorts
-Serena,mp3,shorts
-West Fandango,mp3,shorts
-Watertower,mp3,shorts
-Take a Look at What you Do to yourself again,mp3,shorts
-Monkey,wav,shorts
-Tadpoles,mp3,shorts
-Random Jam,mp3,shorts
-Fast Car,mp3,shorts
-Breakdown,mp3,shorts
-Take a Walk,mp3,shorts
-Left Out,mp3,shorts
-I've Been Feeling You,mp3,shorts
-Let Me Fly,mp3,shorts
-Fuckaround,mp3,shorts
-We Know Better,aif,shorts
-Bare Bones,mp3,shorts
-Trenchcoat,mp3,shorts
-Runnin,mp3,shorts
-One Take,mp3,shorts
