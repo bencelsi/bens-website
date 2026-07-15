@@ -121,8 +121,11 @@ function addSong(songData, i) {
 	songTitle.innerHTML = title
 	let songAudioTd = document.createElement("td")
 	let songAudio = document.createElement("audio")
-	songAudio.src = "groups/" + group + "/" + title + '.' + extension
-	console.log(songAudio.src)
+	songAudio.src = encodeURIComponent("groups/" + group + "/" + title + '.' + extension)
+	if (title.startsWith("Ma")) {
+		console.log("groups/" + group + "/" + title + '.' + extension)
+		console.log(songAudio.src)
+	}
 	songAudio.controls = true
 
 	// PLAY
