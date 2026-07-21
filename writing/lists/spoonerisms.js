@@ -35,7 +35,7 @@ let spoonerisms = [
 "I’m hardly easy, but easily hard",
 "Keep on onning keep",
 "There are Mountain Dews, and Mountain Don'ts",
-"Shanwows and shamwhats",
+"Shamwows and shamwhats",
 "I'm pickin down what you’re laying up",
 "I don't have fingerless gloves, but I do have gloveless fingers",
 "Jailtime for stealing: the price you pay for not paying the price",

@@ -10,8 +10,8 @@ let randomQuestions = [
 "Do starfish have 5 armpits, or 1 armpit?",
 "Is it considered ghosting if they died?",
 "When will.i.am dies, will he become become will.i.was?",
-"What do Earth Wind and Fire have against water?",
-"Haddock: tintin’s foil?",
+"What do 'Earth Wind and Fire' have against water?",
+"Haddock: Tintin’s foil?",
 "Gal Gadot’s husband: Guy Gadot?",
 "German Las Vegas: Das Vegas?",
 "Is God a one hit wonder?",
@@ -34,7 +34,7 @@ let randomQuestions = [
 "Boxer briefs? More like brief boxers",
 "Which is worse, TikToks or Ted talks?",
 "Is divorce just polygamy in the opposite direction?", //"Is divorce the opposite of polygamy?", 
-"Do you think the Lizard Wizard will ever embark on a solo career?",
+"Will the Lizard Wizard ever embark on a solo career?",
 
 //MASKERS
 "Jesus: the original nepo baby?",

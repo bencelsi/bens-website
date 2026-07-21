@@ -68,7 +68,8 @@ let oneLiners = [
 "Boyz II Men Reunion Tour: Men II Gravez",
 "'Who goes there?' can be about an intruder, or a high school",
 "If you know you know, you know?",
-"The Jonas Brothers + The Haim Sisters = The Heinous Siblings"
+"The Jonas Brothers + The Haim Sisters = The Heinous Siblings",
+"If alcohol is a depressant, how come I get depressed when I <i>stop</i> drinking it?"
 
 //"Rim Job? more like grim job",
 //"Now that's an ass I could get behind",

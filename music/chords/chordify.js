@@ -24,7 +24,6 @@ const TOGGLE = get('optionsToggle')
 const CENTER_BOX = get('centerBox')
 const TRANSPOSE_UP = get('transposeUp')
 const TRANSPOSE_DOWN = get('transposeDown')
-const TRANSPOSE_RESET = get('transposeReset')
 
 let transpose = 0;
 
@@ -112,8 +111,6 @@ TRANSPOSE_UP.onclick = () => { transpose += 1; render() }
 
 TRANSPOSE_DOWN.onclick = () => { transpose -= 1; render() }
 
-TRANSPOSE_RESET.onclick = () => { transpose = 0; render() }
-
 // Process a line containing chords, preserving the spacing/positioning
 function transposeLine(line, steps) {
     // Regex to find chunks of non-whitespace characters (the chords)
@@ -128,7 +125,7 @@ function transposeLine(line, steps) {
     });
 }
 
-// Helper to transpose a single chord token (e.g., "C#m7" or "Bb")
+// Helper to transpose a single chord
 function transposeChord(chord, steps) {
     if (!chord.trim()) return chord;
 

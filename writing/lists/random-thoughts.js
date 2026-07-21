@@ -32,7 +32,7 @@ let randomThoughts = [
 "Monsters Inc. is a corporation",
 "Any bar can become a rooftop bar if you go on the roof",
 "Never shop for food while hungry, never shop for clothes while naked",
-"Law school should be called 'School of Law'",
+"Law school would be way cooler if it was called 'School of Law'",
 "When it comes to colonizing India, there are Hindus and Hindon'ts",
 "Smokey needs a shirt and Pooh needs pants",
 "Would Ryan Gosling be as successful if he was named Ryan Duckling",
@@ -41,10 +41,12 @@ let randomThoughts = [
 "Is 'ineffible' a minced swear for 'unfuckable'?",
 "Garfunkel and Oates should have a nemesis named Simon Hall",
 "Elmo is a monster",
-"Owen Wilson's initials are the same as his signature phrase ('oh wow!')"
+"Owen Wilson's initials are the same as his signature phrase ('oh wow!')",
+"'Wasn't that great' can mean its own opposite, ie:\n\n'Wasn't that great?' vs. 'Wasn't that great.'",
+"'It’s a Wonderful Life' is just the inverse of 'A Christmas Carol'",
+"Plaid Pantry's logo isn't plaid, and Olive Garden's logo isn't olives",
 //"Porn stars should get their name tattoo so everyone can google them easily",
 //"Chat GPT is a virtue signaller",
-//"Plaid pantry logo isn't plaid, and olive garden's logos isn't olives",
 //"A door is to a doorway as a donut hole is to a donut",
 //"Sometimes Mad Men feels like a video game cutscene"
 ]
