@@ -5,3 +5,8 @@ music/groups/shorts/*
 music/groups/8-bit/*
 music/albums.html
 .DS_Store
+
+music/chords/songs/*
+!music/chords/songs/beetle-the-cat.html
+!music/chords/songs/drews-blues.html
+!music/chords/songs/the-ballad-of-luigi.html
